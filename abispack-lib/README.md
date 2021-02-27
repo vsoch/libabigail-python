@@ -67,6 +67,8 @@ from abispack import read_corpus
 corpus = read_corpus("pusheenalibrary.so")
 ```
 
+This will likely be a `Corpus` object that we can further interact with.
+
 ### Write a corpus to abixml
 
 We technically could have Spack call libabigail from the command line,
@@ -74,8 +76,7 @@ dump a result into an xml file, and then gzip that, but it would be better
 if we could easily do this from spack (calling our application here):
 
 ```python
-from abispack import write_corpus
-success = write_xml_corpus("pusheenalibrary.so", gzip=True)
+succes = corpus.write_to_xml(gzip=True)
 ```
 
 This would likely also accept an output file name, but default to the library plus extension needed (e.g., pusheenalibrary.gzip or pusheenalibrary.xml)
@@ -87,8 +88,9 @@ Given that we have an exported corpus (per the function directly above) we would
 to be able to read it, and have the same corpus that we might have read with `read_corpus`.
 
 ```python
-from abispack import read_abixml
-corpus = read_abixml("pusheenacorpus.gzip")
+from abispack import LibabigailParser
+parser = LibabigailParser()
+corpus = parser.read_abixml("pusheenacorpus.gzip")
 ```
 
 As you can see above, the file being read could be compressed (or not).
@@ -99,22 +101,15 @@ Once we've identified what parts of the ABI output are important for
 the application, we would then want Spack to be able to easily ask for them.
 
 ```python
-from abispack import read_corpus
-corpus = read_corpus("pusheenalibrary.so")
-```
-
-Actually, in this context, it might make sense to have a class to handle this,
-like:
-
-```python
-from abispack import LibabigailParser
-parser = LibabigailParser()
-parser.read_corpus("pusheenalibrary.so")
-subcorpus = parser.subcorpus() # probably need a more specific name here
+corpus.subcorpus()
 ```
 
 We'd probably want arguments here to specify if we want to make subcorpus
 groups from ELF and/or abixml, and then return them organized as such.
+Ben also notes that we would want to have something akin to a `CorpusGroup`
+that is returned from the above (I think).
+
+A `CorpusGroup` is generally a collection of Corpora.
 
 ### Compatability
 
