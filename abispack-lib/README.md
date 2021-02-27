@@ -17,8 +17,30 @@ $ docker build -t abispack .
 We will want to bind the code directory (to write files and work interactively):
 
 ```bash
-$ docker run -it --rm -v $PWD/src:/code/src abispack bash
+$ docker run -it --rm -v $PWD/:/code/ abispack bash
 ```
+
+## Queries that we want
+
+From discussion in slack with Todd. We want to:
+
+### Query for functions and attributes
+
+We want to be able to query for packages that have a particular ABI. This means asking:
+
+ - what builds of packages have particular functions?
+ - what do different build version of packages do?
+
+Given that we've identified some subcorpus to be important, we might also want to
+query on other attributes. This approach suggests that storing the entire binary
+would be harder to query (as opposed to storing the attributes directly in the database).
+As an example:
+
+> "What builds have functions with type signatures like NOODLE"
+
+With this information, we would be able to "build up the inputs to a dependency solve" (Todd's quote)
+and what we _don't_ want to do is end up with solves (solutions) that look at every
+single build in the database, meaning we should prune before that happens.
 
 ## Functions that we want
 
