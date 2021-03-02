@@ -20,6 +20,17 @@ We will want to bind the code directory (to write files and work interactively):
 $ docker run -it --rm -v $PWD/:/code/ abispack bash
 ```
 
+## What is the high level design?
+
+This is from discussion with @bwoodard.
+
+
+1. For each executable, we need to store a corpus_group
+2. For each library, we also need to store a corpus_group (so ecah build should have a unique provenance based on these groups)
+3. Then it is a tree reduction probably combined with Nate's splicing.
+4. If `abidiff(lib1, lib2)` then they are compatible.
+5. if `abicompat(app, lib1, lib2)` then those are splicable when that concept is extended to all the binaries in the package.
+
 ## Queries that we want
 
 From discussion in slack with Todd. We want to:
