@@ -20,6 +20,22 @@ We will want to bind the code directory (to write files and work interactively):
 $ docker run -it --rm -v $PWD/:/code/ abispack bash
 ```
 
+## Compiling
+
+You can then compile the library, which will appear in [bin](bin) by doing:
+
+```bash
+$ make
+```
+
+To generate the Python bindings with shroud, do:
+
+```bash
+$ make shroud
+```
+
+And they will appear in [abispack](abispack).
+
 ## What is the high level design?
 
 This is from discussion with @bwoodard.

@@ -1,0 +1,20 @@
+library: abispack
+
+# This must be relative to python directory targeted by shroud
+cxx_header: ../include/abispack.h
+
+options:
+  wrap_fortran: False
+  wrap_c: False
+  wrap_python: True
+  debug: True
+
+declarations:
+- decl: namespace abispack
+  declarations:
+  - decl: class Libabigail
+    declarations:
+    - decl: int HelloWorld()
+    - decl: int Load(string path)
+    - decl: int GetVersion()
+  - decl: void Load(string path)

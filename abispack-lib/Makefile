@@ -2,18 +2,22 @@
 CLEANEXTS   = o a 
 
 # Specify the target file and the install directory
-OUTPUTFILE  = abispack.o
+OUTPUTFILE  = bin/abispack
 SRCFILES = src/abispack.cpp
-INCLUDES = -I/libabigail-1.8/include
-CFLAGS = -g -Wall $(INCLUDES)
+INCLUDES = $(shell pkg-config --cflags-only-I libabigail)
+CFLAGS = -g -Wall $(INCLUDES) $(shell pkg-config --cflags-only-other libabigail)
+LDFLAGS = $(shell pkg-config --libs libabigail)
 
 # Default target
 .PHONY: all
 all: $(OUTPUTFILE)
 
+shroud:
+	shroud abispack.yml --outdir-python abispack
+
 # Build abispack.o from source files
 $(OUTPUTFILE): $(SRCFILES)
-	g++ -o $(OUTPUTFILE) -Iinclude $(SRCFILES) $(CFLAGS)
+	g++ -o $(OUTPUTFILE) -Iinclude $(SRCFILES) $(CFLAGS) $(LDFLAGS) -std=gnu++11
 
 .PHONY: clean 
 clean:
