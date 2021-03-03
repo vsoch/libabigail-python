@@ -13,7 +13,7 @@ LDFLAGS = $(shell pkg-config --libs libabigail)
 all: $(OUTPUTFILE) $(OUTPUTFILE).o $(OUTPUTFILE).so
 
 shroud:
-	shroud abispack.yml --outdir-python abispack
+	shroud abispack.yaml --outdir-python abispack
 
 # Build abispack.o from source files
 $(OUTPUTFILE): $(SRCFILES)

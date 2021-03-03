@@ -14,7 +14,7 @@ declarations:
   declarations:
   - decl: class Libabigail
     declarations:
-    - decl: int HelloWorld(void)
-    - decl: int Load(string path)
-    - decl: int GetVersion(void)
-  - decl: void Load(string path)
+    - decl: int HelloWorld()
+    - decl: int Load(std::string path)
+    - decl: int GetVersion()
+  - decl: void LoadParser(abispack::Libabigail& parser, std::string path)

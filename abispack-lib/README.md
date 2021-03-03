@@ -38,7 +38,7 @@ And they will appear in [abispack](abispack).
 
 ## What is the high level design?
 
-This is from discussion with @bwoodard.
+This is from discussion with @woodard.
 
 
 1. For each executable, we need to store a corpus_group

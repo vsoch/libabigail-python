@@ -2,6 +2,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 
 namespace abispack
 {
@@ -14,5 +15,5 @@ namespace abispack
         static int GetVersion ();
     };
     
-    void Load(std::string path);
+    void LoadParser(Libabigail& parser, std::string path);
 }

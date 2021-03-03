@@ -6,7 +6,7 @@
 #include <Python.h>
 
 // cxx_header
-#include "../include/abispack.h"
+#include "../include/abispack.hpp"
 
 // splicer begin header.include
 // splicer end header.include

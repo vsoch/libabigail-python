@@ -64,7 +64,7 @@ PY_HelloWorld(
 // Requested: py_native_scalar_result
 // Match:     py_default
 // ----------------------------------------
-// Argument:  string path +value
+// Argument:  std::string path +value
 // Attrs:     +intent(in)
 // Exact:     py_string_scalar_in
 static char PY_Load__doc__[] =

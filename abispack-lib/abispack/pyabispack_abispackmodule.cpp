@@ -25,42 +25,58 @@
 // splicer end namespace.abispack.additional_functions
 
 // ----------------------------------------
-// Function:  void Load
+// Function:  void LoadParser
 // Exact:     py_default
 // ----------------------------------------
-// Argument:  string path +value
+// Argument:  abispack::Libabigail & parser
+// Attrs:     +intent(inout)
+// Requested: py_shadow_&_inout
+// Match:     py_default
+// ----------------------------------------
+// Argument:  std::string path +value
 // Attrs:     +intent(in)
 // Exact:     py_string_scalar_in
-static char PY_Load__doc__[] =
+static char PY_LoadParser__doc__[] =
 "documentation"
 ;
 
 static PyObject *
-PY_Load(
+PY_LoadParser(
   PyObject *SHROUD_UNUSED(self),
   PyObject *args,
   PyObject *kwds)
 {
-// splicer begin namespace.abispack.function.load
+// splicer begin namespace.abispack.function.load_parser
+    ABI_abispack_Libabigail * parser;
+    PY_Libabigail * SHPy_parser;
     char * path;
     const char *SHT_kwlist[] = {
+        "parser",
         "path",
         nullptr };
+    PY_Libabigail * SHPy_parser = nullptr;
 
-    if (!PyArg_ParseTupleAndKeywords(args, kwds, "s:Load",
-        const_cast<char **>(SHT_kwlist), &path))
+    if (!PyArg_ParseTupleAndKeywords(args, kwds, "O!s:LoadParser",
+        const_cast<char **>(SHT_kwlist), &PY_Libabigail_Type,
+        &SHPy_parser, &path))
         return nullptr;
 
     // post_declare
+    abispack::Libabigail & SH_parser =
+        static_cast<abispack::Libabigail *>(parser->addr);
     std::string SH_path(path);
 
-    abispack::Load(SH_path);
-    Py_RETURN_NONE;
-// splicer end namespace.abispack.function.load
+    abispack::LoadParser(SH_parser, SH_path);
+
+    // post_call
+    SHPy_parser = Py_BuildValue("O", SH_parser);
+
+    return (PyObject *) SHPy_parser;
+// splicer end namespace.abispack.function.load_parser
 }
 static PyMethodDef PY_methods[] = {
-{"Load", (PyCFunction)PY_Load, METH_VARARGS|METH_KEYWORDS,
-    PY_Load__doc__},
+{"LoadParser", (PyCFunction)PY_LoadParser, METH_VARARGS|METH_KEYWORDS,
+    PY_LoadParser__doc__},
 {nullptr,   (PyCFunction)nullptr, 0, nullptr}            /* sentinel */
 };
 
