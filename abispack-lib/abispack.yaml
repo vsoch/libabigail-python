@@ -1,7 +1,7 @@
 library: abispack
 
 # This must be relative to python directory targeted by shroud
-cxx_header: ../include/abispack.hpp
+cxx_header: ../abispack.hpp
 
 options:
   wrap_fortran: False

@@ -3,7 +3,7 @@ CLEANEXTS   = o a
 
 # Specify the target file and the install directory
 OUTPUTFILE  = bin/abispack
-SRCFILES = src/abispack.cpp
+SRCFILES = abispack.cpp
 INCLUDES = $(shell pkg-config --cflags-only-I libabigail)
 CFLAGS = -g -Wall $(INCLUDES) $(shell pkg-config --cflags-only-other libabigail)
 LDFLAGS = $(shell pkg-config --libs libabigail)
@@ -13,7 +13,9 @@ LDFLAGS = $(shell pkg-config --libs libabigail)
 all: $(OUTPUTFILE) $(OUTPUTFILE).o $(OUTPUTFILE).so
 
 shroud:
+	cp setup.py _setup.py
 	shroud abispack.yaml --outdir-python abispack
+	cp _setup.py setup.py
 
 # Build abispack.o from source files
 $(OUTPUTFILE): $(SRCFILES)

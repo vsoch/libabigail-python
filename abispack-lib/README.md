@@ -34,7 +34,34 @@ To generate the Python bindings with shroud, do:
 $ make shroud
 ```
 
-And they will appear in [abispack](abispack).
+And they will appear in [abispack](abispack). You should then build your Python
+extension!
+
+```bash
+$ python3 setup.py install
+$ python3 setup.py build # this also works without installing
+```
+
+**Importantly** shroud doesn't seem
+to handle having *.cpp files separate from the *.hpp - if you separate them the
+library will compile and report a missing symbol (see [this issue](https://github.com/LLNL/shroud/issues/223)). This is why the
+structure here is flattened. It's also important that we install from GitHub master,
+because the current release on pypi (llnl-shroud) has an error with strings.
+
+## Python
+
+Once you have your extension built and installed, you can test it out in ipython!
+
+```bash
+import abispack
+
+In [2]: parser = abispack.abispack.Libabigail()
+
+In [3]: parser.GetVersion()
+1.8.0
+```
+
+Woohoo! This is great progress!
 
 ## What is the high level design?
 

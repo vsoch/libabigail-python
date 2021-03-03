@@ -8,13 +8,14 @@ module = Extension(
          'abispack/pyabispack_Libabigailtype.cpp',
          'abispack/pyabispack_abispackmodule.cpp',
          'abispack/pyabispackmodule.cpp',
-         'abispack/pyabispackutil.cpp'
+         'abispack/pyabispackutil.cpp',
+         'abispack.cpp'
     ],
     language='c++',
-    include_dirs = None,
-#    libraries = ['tcl83'],
-#    library_dirs = ['/usr/local/lib'],      
-#    extra_compile_args = [ '-O0', '-g' ],
+    include_dirs = ['/usr/local/include/libabigail', '/usr/include/libxml2'],
+    libraries = ['abigail'],
+    library_dirs = ['/usr/local/lib', '/usr/local/lib/libabigail'], 
+    extra_compile_args = [ '-g' ],
 #    extra_link_args =
 )
 
