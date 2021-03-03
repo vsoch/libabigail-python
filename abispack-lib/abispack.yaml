@@ -17,4 +17,3 @@ declarations:
     - decl: int HelloWorld()
     - decl: int Load(std::string path)
     - decl: int GetVersion()
-  - decl: void LoadParser(abispack::Libabigail& parser, std::string path)
