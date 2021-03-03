@@ -10,15 +10,21 @@ LDFLAGS = $(shell pkg-config --libs libabigail)
 
 # Default target
 .PHONY: all
-all: $(OUTPUTFILE)
+all: $(OUTPUTFILE) $(OUTPUTFILE).o $(OUTPUTFILE).so
 
 shroud:
 	shroud abispack.yml --outdir-python abispack
 
 # Build abispack.o from source files
 $(OUTPUTFILE): $(SRCFILES)
-	g++ -o $(OUTPUTFILE) -Iinclude $(SRCFILES) $(CFLAGS) $(LDFLAGS) -std=gnu++11
+	g++ -o $(OUTPUTFILE) -Iinclude $(SRCFILES) $(CFLAGS) $(LDFLAGS)
+
+$(OUTPUTFILE).o: $(SRCFILES)
+	g++ -c -o $(OUTPUTFILE).o -fPIC -Iinclude $(SRCFILES) $(CFLAGS) $(LDFLAGS)
+
+$(OUTPUTFILE).so: $(OUTPUTFILE).o
+	g++ -shared -o $(OUTPUTFILE).so $(OUTPUTFILE).o
 
 .PHONY: clean 
 clean:
-	rm $(OUTPUTFILE)
+	rm $(OUTPUTFILE) $(OUTPUTFILE).o $(OUTPUTFILE.so)
