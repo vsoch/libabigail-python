@@ -14,7 +14,7 @@ all: $(OUTPUTFILE) $(OUTPUTFILE).o $(OUTPUTFILE).so
 
 shroud:
 	cp setup.py _setup.py
-	shroud abispack.yaml --outdir-python abispack
+	shroud abispack.yaml --outdir-python abispack --outdir abispack
 	cp _setup.py setup.py
 
 # Build abispack.o from source files

@@ -1,3 +1,4 @@
+*.f
 abispack.log
 abispack.json
 bin/abispack

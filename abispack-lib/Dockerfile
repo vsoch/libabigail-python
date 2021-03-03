@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y build-essential \
     python3-pip
 
 # Yes we are cheating with xmltodict :)
-RUN pip3 install ipython xmltodict && \
+RUN pip3 install ipython xmltodict numpy && \
     git clone https://github.com/llnl/shroud && \
     cd shroud && \
     pip3 install .

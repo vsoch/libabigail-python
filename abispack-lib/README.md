@@ -5,7 +5,9 @@ functions, inputs and outputs, that spack would want to interact with libabigail
 and then to send some metadata to a monitor server (or otherwise use it
 to drive a solver).
 
-## Development Environment
+## Getting Started
+
+### 1. Development Environment
 
 Since we want to use libabigail.so, the easiest thing to do is provide an
 equivalent development container. Build it first:
@@ -20,7 +22,11 @@ We will want to bind the code directory (to write files and work interactively):
 $ docker run -it --rm -v $PWD/:/code/ abispack bash
 ```
 
-## Compiling
+Note that development of [llnl/shroud](https://github.com/llnl/shroud) is quite active, so it could be common
+that something works, and if you rebuild the container with an updated develop branch,
+something is broken. This happened to me once.
+
+### 2. Compiling
 
 You can then compile the library, which will appear in [bin](bin) by doing:
 
@@ -48,17 +54,27 @@ library will compile and report a missing symbol (see [this issue](https://githu
 structure here is flattened. It's also important that we install from GitHub master,
 because the current release on pypi (llnl-shroud) has an error with strings.
 
-## Python
+### 3. Python Usage
 
 Once you have your extension built and installed, you can test it out in ipython!
 
-```bash
+```python
 import abispack
 
 In [2]: parser = abispack.abispack.Libabigail()
 
 In [3]: parser.GetVersion()
 1.8.0
+```
+
+Here is an example of reading a corpus (but we don't return, print, or do anything with it:
+
+```python
+import abispack
+parser = abispack.abispack.Libabigail()
+
+parser.ReadElfCorpus("/usr/local/lib/libabigail.so")
+# Out[3]: 0
 ```
 
 Woohoo! This is great progress!
