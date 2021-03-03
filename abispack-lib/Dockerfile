@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y build-essential \
     python3-pip
 
 # Yes we are cheating with xmltodict :)
-RUN pip3 install ipython xmltodict
+RUN pip3 install ipython xmltodict llnl-shroud
 RUN ldconfig && \ 
     wget http://mirrors.kernel.org/sourceware/libabigail/libabigail-${LIBABIGAIL_VERSION}.tar.gz && \
     tar -xvf libabigail-${LIBABIGAIL_VERSION}.tar.gz && \

@@ -2,7 +2,7 @@
 // Functions for spack to interact with libabigail (or other ABI libraries)
 
 #include <iostream>
-#include "abispack.h"
+#include "abispack.hpp"
 #include "abg-corpus.h"
 #include "abg-config.h"
 #include "abg-comp-filter.h"

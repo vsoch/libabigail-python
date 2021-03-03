@@ -5,20 +5,22 @@ from setuptools import setup, Extension
 module = Extension(
     'abispack',
     sources=[
+         'src/abispack.cpp',
          'abispack/pyabispack_Libabigailtype.cpp',
          'abispack/pyabispack_abispackmodule.cpp',
          'abispack/pyabispackmodule.cpp',
-         'abispack/pyabispackutil.cpp'
+         'abispack/pyabispackutil.cpp',
     ],
     language='c++',
-    include_dirs = None,
-#    libraries = ['tcl83'],
-#    library_dirs = ['/usr/local/lib'],      
-#    extra_compile_args = [ '-O0', '-g' ],
-#    extra_link_args =
+    include_dirs = ['include', '/usr/local/include/libabigail', '/usr/include/libxml2'],
+    libraries = ['abigail'],
+    library_dirs = ['/usr/local/lib'],      
+    extra_compile_args = [ '-g'],
+    extra_link_args = []
 )
 
 setup(
     name='abispack',
     ext_modules = [module],
 )
+
