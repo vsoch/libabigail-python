@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "abispack.hpp"
 #include "abg-corpus.h"
 #include "abg-config.h"
@@ -11,8 +12,11 @@
 #include "abg-suppression.h"
 #include "abg-tools-utils.h"
 #include "abg-reader.h"
+#include "abg-writer.h"
 #include "abg-dwarf-reader.h"
 
+using std::ostream;
+using std::ofstream;
 using abigail::corpus_sptr;
 using abigail::dwarf_reader::create_read_context;
 using abigail::dwarf_reader::read_context;
@@ -21,6 +25,11 @@ using abigail::dwarf_reader::read_corpus_from_elf;
 using abigail::dwarf_reader::status;
 using abigail::ir::environment_sptr;
 using abigail::tools_utils::get_library_version_string;
+using abigail::tools_utils::temp_file;
+using abigail::tools_utils::temp_file_sptr;
+using abigail::xml_writer::create_write_context;
+using abigail::xml_writer::write_context_sptr;
+using abigail::xml_writer::write_corpus;
 
 
 namespace abispack {
@@ -31,7 +40,8 @@ namespace abispack {
         return 0;
     }
       
-    int Libabigail::ReadElfCorpus(std::string in_file_path, 
+    // Read an elf corpus and save to temporary file
+    std::string Libabigail::ReadElfCorpus(std::string in_file_path, 
         bool load_all_types, 
         bool linux_kernel_mode)
     {
@@ -51,8 +61,16 @@ namespace abispack {
         read_context& ctxt = *c;
         status s = abigail::dwarf_reader::STATUS_UNKNOWN;
         corpus_sptr corpus = read_corpus_from_elf(ctxt, s);
-        //std::cout << corpus;
-        return 0;
+
+        // Create a write context and save to temporary file
+        const write_context_sptr& write_ctxt = create_write_context(corpus->get_environment(), std::cout);
+        temp_file_sptr tmp_file = temp_file::create();
+        ofstream of(tmp_file->get_path(), std::ios_base::trunc);
+        set_ostream(*write_ctxt, of);
+        int exit_code = write_corpus(*write_ctxt, corpus, 0);
+        of.close();
+        std::cout << exit_code;
+        return tmp_file->get_path();
     }
     
     int Libabigail::Load (std::string path) {

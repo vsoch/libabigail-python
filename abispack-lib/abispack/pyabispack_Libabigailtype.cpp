@@ -128,10 +128,9 @@ PY_GetVersion(
 }
 
 // ----------------------------------------
-// Function:  int ReadElfCorpus
+// Function:  std::string ReadElfCorpus
 // Attrs:     +intent(result)
-// Requested: py_native_scalar_result
-// Match:     py_default
+// Exact:     py_string_scalar_result
 // ----------------------------------------
 // Argument:  std::string in_file_path +value
 // Attrs:     +intent(in)
@@ -168,7 +167,7 @@ PY_ReadElfCorpus_2(
         "load_all_types",
         "linux_kernel_mode",
         nullptr };
-    int SHCXX_rv;
+    std::string SHCXX_rv;
     PyObject * SHTPy_rv = nullptr;
 
     if (args != nullptr) SH_nargs += PyTuple_Size(args);
@@ -217,7 +216,8 @@ PY_ReadElfCorpus_2(
     }
 
     // post_call
-    SHTPy_rv = PyInt_FromLong(SHCXX_rv);
+    SHTPy_rv = PyString_FromStringAndSize(SHCXX_rv.data(),
+        SHCXX_rv.size());
 
     return (PyObject *) SHTPy_rv;
 // splicer end namespace.abispack.class.Libabigail.method.read_elf_corpus
