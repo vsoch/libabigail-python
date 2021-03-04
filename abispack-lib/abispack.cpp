@@ -13,9 +13,15 @@
 #include "abg-reader.h"
 #include "abg-dwarf-reader.h"
 
+using abigail::corpus_sptr;
+using abigail::dwarf_reader::create_read_context;
+using abigail::dwarf_reader::read_context;
+using abigail::dwarf_reader::read_context_sptr;
+using abigail::dwarf_reader::read_corpus_from_elf;
+using abigail::dwarf_reader::status;
+using abigail::ir::environment_sptr;
+using abigail::tools_utils::get_library_version_string;
 
-// abg-ir.h
-// abg-corpus.h
 
 namespace abispack {
 
@@ -30,20 +36,21 @@ namespace abispack {
         bool linux_kernel_mode)
     {
 
+        // TODO: we need input validating here
         // Note sure what this is
         std::vector<char**> prepared_di_root_paths;
         
         // Create a new environment and context
-        abigail::ir::environment_sptr env(new abigail::ir::environment);
-        abigail::dwarf_reader::read_context_sptr c = abigail::dwarf_reader::create_read_context(in_file_path,
+        environment_sptr env(new abigail::ir::environment);
+        read_context_sptr c = create_read_context(in_file_path,
             prepared_di_root_paths,
             env.get(),
             load_all_types,
             linux_kernel_mode);
 
-        abigail::dwarf_reader::read_context& ctxt = *c;
-        abigail::dwarf_reader::status s = abigail::dwarf_reader::STATUS_UNKNOWN;
-        abigail::corpus_sptr corpus = abigail::dwarf_reader::read_corpus_from_elf(ctxt, s);
+        read_context& ctxt = *c;
+        status s = abigail::dwarf_reader::STATUS_UNKNOWN;
+        corpus_sptr corpus = read_corpus_from_elf(ctxt, s);
         //std::cout << corpus;
         return 0;
     }
@@ -55,7 +62,7 @@ namespace abispack {
     }
     
     int Libabigail::GetVersion () {
-        auto version = abigail::tools_utils::get_library_version_string();
+        auto version = get_library_version_string();
         std::cout << version + "\n";
         return 0;
     }
