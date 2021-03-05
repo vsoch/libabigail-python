@@ -14,8 +14,6 @@ declarations:
   declarations:
   - decl: class Libabigail
     declarations:
-    - decl: int HelloWorld()
-    - decl: int Load(std::string path)
     - decl: int GetVersion()
     - decl: std::string ReadElfCorpusAndWriteXML(std::string in_file_path, 
             std::string out_file_path,

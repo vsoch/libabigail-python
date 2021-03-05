@@ -32,75 +32,6 @@ PY_Libabigail_tp_del (PY_Libabigail *self)
 }
 
 // ----------------------------------------
-// Function:  int HelloWorld
-// Attrs:     +intent(result)
-// Requested: py_native_scalar_result
-// Match:     py_default
-static char PY_HelloWorld__doc__[] =
-"documentation"
-;
-
-static PyObject *
-PY_HelloWorld(
-  PY_Libabigail *self,
-  PyObject *SHROUD_UNUSED(args),
-  PyObject *SHROUD_UNUSED(kwds))
-{
-// splicer begin namespace.abispack.class.Libabigail.method.hello_world
-    PyObject * SHTPy_rv = nullptr;
-
-    int SHCXX_rv = self->obj->HelloWorld();
-
-    // post_call
-    SHTPy_rv = PyInt_FromLong(SHCXX_rv);
-
-    return (PyObject *) SHTPy_rv;
-// splicer end namespace.abispack.class.Libabigail.method.hello_world
-}
-
-// ----------------------------------------
-// Function:  int Load
-// Attrs:     +intent(result)
-// Requested: py_native_scalar_result
-// Match:     py_default
-// ----------------------------------------
-// Argument:  std::string path +value
-// Attrs:     +intent(in)
-// Exact:     py_string_scalar_in
-static char PY_Load__doc__[] =
-"documentation"
-;
-
-static PyObject *
-PY_Load(
-  PY_Libabigail *self,
-  PyObject *args,
-  PyObject *kwds)
-{
-// splicer begin namespace.abispack.class.Libabigail.method.load
-    char * path;
-    const char *SHT_kwlist[] = {
-        "path",
-        nullptr };
-    PyObject * SHTPy_rv = nullptr;
-
-    if (!PyArg_ParseTupleAndKeywords(args, kwds, "s:Load",
-        const_cast<char **>(SHT_kwlist), &path))
-        return nullptr;
-
-    // post_declare
-    std::string SH_path(path);
-
-    int SHCXX_rv = self->obj->Load(SH_path);
-
-    // post_call
-    SHTPy_rv = PyInt_FromLong(SHCXX_rv);
-
-    return (PyObject *) SHTPy_rv;
-// splicer end namespace.abispack.class.Libabigail.method.load
-}
-
-// ----------------------------------------
 // Function:  int GetVersion
 // Attrs:     +intent(result)
 // Requested: py_native_scalar_result
@@ -240,10 +171,6 @@ PY_ReadElfCorpusAndWriteXML_2(
 // splicer begin namespace.abispack.class.Libabigail.impl.after_methods
 // splicer end namespace.abispack.class.Libabigail.impl.after_methods
 static PyMethodDef PY_Libabigail_methods[] = {
-    {"HelloWorld", (PyCFunction)PY_HelloWorld, METH_NOARGS,
-        PY_HelloWorld__doc__},
-    {"Load", (PyCFunction)PY_Load, METH_VARARGS|METH_KEYWORDS,
-        PY_Load__doc__},
     {"GetVersion", (PyCFunction)PY_GetVersion, METH_NOARGS,
         PY_GetVersion__doc__},
     {"ReadElfCorpusAndWriteXML",

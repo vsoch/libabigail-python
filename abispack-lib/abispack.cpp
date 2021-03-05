@@ -33,13 +33,7 @@ using abigail::xml_writer::write_context_sptr;
 using abigail::xml_writer::write_corpus_to_archive;
 
 namespace abispack {
-
-    std::string path;
-    
-    int Libabigail::HelloWorld() {
-        return 0;
-    }
-      
+          
     // Read an elf corpus and save to temporary file
     std::string Libabigail::ReadElfCorpusAndWriteXML(std::string in_file_path, 
         std::string out_file_path,
@@ -65,13 +59,7 @@ namespace abispack {
         WriteCorpus(corpus, out_file_path);
         return out_file_path;
     }
-    
-    int Libabigail::Load (std::string path) {
-        path = path;
-        // auto corpus = abigail::dwarf_reader::read_corpus_from_elf(path);
-        return 0;
-    }
-    
+        
     int Libabigail::GetVersion () {
         auto version = get_library_version_string();
         std::cout << version + "\n";
