@@ -23,6 +23,7 @@ using abigail::dwarf_reader::read_context;
 using abigail::dwarf_reader::read_context_sptr;
 using abigail::dwarf_reader::read_corpus_from_elf;
 using abigail::dwarf_reader::status;
+using abigail::ir::environment;
 using abigail::ir::environment_sptr;
 using abigail::tools_utils::get_library_version_string;
 using abigail::tools_utils::temp_file;
@@ -46,12 +47,11 @@ namespace abispack {
         bool linux_kernel_mode)
     {
 
-        // TODO: we need input validating here
-        // Note sure what this is
+        // Read in the corpus
         std::vector<char**> prepared_di_root_paths;
         
         // Create a new environment and context
-        environment_sptr env(new abigail::ir::environment);
+        environment_sptr env(new environment);
         read_context_sptr c = create_read_context(in_file_path,
             prepared_di_root_paths,
             env.get(),
@@ -62,14 +62,7 @@ namespace abispack {
         status s = abigail::dwarf_reader::STATUS_UNKNOWN;
         corpus_sptr corpus = read_corpus_from_elf(ctxt, s);
 
-        // Create a write context and save to temporary file
-        temp_file_sptr tmp_file = temp_file::create();
-
-        const write_context_sptr& write_ctxt = create_write_context(corpus->get_environment(), std::cout);
-        ofstream of(out_file_path, std::ios_base::trunc);
-        set_ostream(*write_ctxt, of);
-        int exit_code = write_corpus(*write_ctxt, corpus, 0);
-        of.close();
+        WriteCorpus(corpus, out_file_path);
         return out_file_path;
     }
     
@@ -84,18 +77,18 @@ namespace abispack {
         std::cout << version + "\n";
         return 0;
     }
-
-    void LoadParser(abispack::Libabigail& parser, std::string path) {
-        parser.path = path;
+    
+    int WriteCorpus(corpus_sptr corpus, std::string out_file_path) {
+        const write_context_sptr& write_ctxt = create_write_context(corpus->get_environment(), std::cout);
+        ofstream of(out_file_path, std::ios_base::trunc);
+        set_ostream(*write_ctxt, of);
+        write_corpus(*write_ctxt, corpus, 0);
+        of.close();
+        return 0;
     }
 }
 
 
 int main() {
-
-    abispack::Libabigail parser;
-    std::string path = "/usr/local/lib/libabigail.so";
-    abispack::LoadParser(parser, path);
-    std::cout << parser.path << "\n";
     return 0; 
 }

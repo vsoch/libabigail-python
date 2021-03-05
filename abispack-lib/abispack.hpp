@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "abg-corpus.h"
+
+using abigail::corpus_sptr;
 
 namespace abispack
 {
@@ -20,5 +23,5 @@ namespace abispack
             bool linux_kernel_mode = false);
     };
     
-    void LoadParser(Libabigail& parser, std::string path);
+    int WriteCorpus(corpus_sptr corpus, std::string out_file_path);
 }
