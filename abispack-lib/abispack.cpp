@@ -29,8 +29,7 @@ using abigail::tools_utils::temp_file;
 using abigail::tools_utils::temp_file_sptr;
 using abigail::xml_writer::create_write_context;
 using abigail::xml_writer::write_context_sptr;
-using abigail::xml_writer::write_corpus;
-
+using abigail::xml_writer::write_corpus_to_archive;
 
 namespace abispack {
 
@@ -41,7 +40,8 @@ namespace abispack {
     }
       
     // Read an elf corpus and save to temporary file
-    std::string Libabigail::ReadElfCorpus(std::string in_file_path, 
+    std::string Libabigail::ReadElfCorpusAndWriteXML(std::string in_file_path, 
+        std::string out_file_path,
         bool load_all_types, 
         bool linux_kernel_mode)
     {
@@ -63,14 +63,14 @@ namespace abispack {
         corpus_sptr corpus = read_corpus_from_elf(ctxt, s);
 
         // Create a write context and save to temporary file
-        const write_context_sptr& write_ctxt = create_write_context(corpus->get_environment(), std::cout);
         temp_file_sptr tmp_file = temp_file::create();
-        ofstream of(tmp_file->get_path(), std::ios_base::trunc);
+
+        const write_context_sptr& write_ctxt = create_write_context(corpus->get_environment(), std::cout);
+        ofstream of(out_file_path, std::ios_base::trunc);
         set_ostream(*write_ctxt, of);
         int exit_code = write_corpus(*write_ctxt, corpus, 0);
         of.close();
-        std::cout << exit_code;
-        return tmp_file->get_path();
+        return out_file_path;
     }
     
     int Libabigail::Load (std::string path) {

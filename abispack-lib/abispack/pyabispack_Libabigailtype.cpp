@@ -128,11 +128,15 @@ PY_GetVersion(
 }
 
 // ----------------------------------------
-// Function:  std::string ReadElfCorpus
+// Function:  std::string ReadElfCorpusAndWriteXML
 // Attrs:     +intent(result)
 // Exact:     py_string_scalar_result
 // ----------------------------------------
 // Argument:  std::string in_file_path +value
+// Attrs:     +intent(in)
+// Exact:     py_string_scalar_in
+// ----------------------------------------
+// Argument:  std::string out_file_path +value
 // Attrs:     +intent(in)
 // Exact:     py_string_scalar_in
 // ----------------------------------------
@@ -145,25 +149,27 @@ PY_GetVersion(
 // Attrs:     +intent(in)
 // Requested: py_bool_scalar_in
 // Match:     py_bool_in
-static char PY_ReadElfCorpus_2__doc__[] =
+static char PY_ReadElfCorpusAndWriteXML_2__doc__[] =
 "documentation"
 ;
 
 static PyObject *
-PY_ReadElfCorpus_2(
+PY_ReadElfCorpusAndWriteXML_2(
   PY_Libabigail *self,
   PyObject *args,
   PyObject *kwds)
 {
-// splicer begin namespace.abispack.class.Libabigail.method.read_elf_corpus
+// splicer begin namespace.abispack.class.Libabigail.method.read_elf_corpus_and_write_xml
     Py_ssize_t SH_nargs = 0;
     char * in_file_path;
+    char * out_file_path;
     bool load_all_types;
     PyObject * SHPy_load_all_types;
     bool linux_kernel_mode;
     PyObject * SHPy_linux_kernel_mode;
     const char *SHT_kwlist[] = {
         "in_file_path",
+        "out_file_path",
         "load_all_types",
         "linux_kernel_mode",
         nullptr };
@@ -172,42 +178,51 @@ PY_ReadElfCorpus_2(
 
     if (args != nullptr) SH_nargs += PyTuple_Size(args);
     if (kwds != nullptr) SH_nargs += PyDict_Size(args);
-    if (!PyArg_ParseTupleAndKeywords(args, kwds, "s|O!O!:ReadElfCorpus",
-        const_cast<char **>(SHT_kwlist), &in_file_path, &PyBool_Type,
-        &SHPy_load_all_types, &PyBool_Type, &SHPy_linux_kernel_mode))
+    if (!PyArg_ParseTupleAndKeywords(args, kwds,
+        "ss|O!O!:ReadElfCorpusAndWriteXML",
+        const_cast<char **>(SHT_kwlist), &in_file_path, &out_file_path,
+        &PyBool_Type, &SHPy_load_all_types, &PyBool_Type,
+        &SHPy_linux_kernel_mode))
         return nullptr;
     switch (SH_nargs) {
-    case 1:
-        {
-            // post_declare
-            std::string SH_in_file_path(in_file_path);
-
-            SHCXX_rv = self->obj->ReadElfCorpus(SH_in_file_path);
-            break;
-        }
     case 2:
         {
             // post_declare
             std::string SH_in_file_path(in_file_path);
+            std::string SH_out_file_path(out_file_path);
 
-            // pre_call
-            load_all_types = PyObject_IsTrue(SHPy_load_all_types);
-
-            SHCXX_rv = self->obj->ReadElfCorpus(SH_in_file_path,
-                load_all_types);
+            SHCXX_rv =
+                self->obj->ReadElfCorpusAndWriteXML(SH_in_file_path,
+                SH_out_file_path);
             break;
         }
     case 3:
         {
             // post_declare
             std::string SH_in_file_path(in_file_path);
+            std::string SH_out_file_path(out_file_path);
+
+            // pre_call
+            load_all_types = PyObject_IsTrue(SHPy_load_all_types);
+
+            SHCXX_rv =
+                self->obj->ReadElfCorpusAndWriteXML(SH_in_file_path,
+                SH_out_file_path, load_all_types);
+            break;
+        }
+    case 4:
+        {
+            // post_declare
+            std::string SH_in_file_path(in_file_path);
+            std::string SH_out_file_path(out_file_path);
 
             // pre_call
             load_all_types = PyObject_IsTrue(SHPy_load_all_types);
             linux_kernel_mode = PyObject_IsTrue(SHPy_linux_kernel_mode);
 
-            SHCXX_rv = self->obj->ReadElfCorpus(SH_in_file_path,
-                load_all_types, linux_kernel_mode);
+            SHCXX_rv =
+                self->obj->ReadElfCorpusAndWriteXML(SH_in_file_path,
+                SH_out_file_path, load_all_types, linux_kernel_mode);
             break;
         }
     default:
@@ -220,7 +235,7 @@ PY_ReadElfCorpus_2(
         SHCXX_rv.size());
 
     return (PyObject *) SHTPy_rv;
-// splicer end namespace.abispack.class.Libabigail.method.read_elf_corpus
+// splicer end namespace.abispack.class.Libabigail.method.read_elf_corpus_and_write_xml
 }
 // splicer begin namespace.abispack.class.Libabigail.impl.after_methods
 // splicer end namespace.abispack.class.Libabigail.impl.after_methods
@@ -231,8 +246,10 @@ static PyMethodDef PY_Libabigail_methods[] = {
         PY_Load__doc__},
     {"GetVersion", (PyCFunction)PY_GetVersion, METH_NOARGS,
         PY_GetVersion__doc__},
-    {"ReadElfCorpus", (PyCFunction)PY_ReadElfCorpus_2,
-        METH_VARARGS|METH_KEYWORDS, PY_ReadElfCorpus_2__doc__},
+    {"ReadElfCorpusAndWriteXML",
+        (PyCFunction)PY_ReadElfCorpusAndWriteXML_2,
+        METH_VARARGS|METH_KEYWORDS,
+        PY_ReadElfCorpusAndWriteXML_2__doc__},
     // splicer begin namespace.abispack.class.Libabigail.PyMethodDef
     // splicer end namespace.abispack.class.Libabigail.PyMethodDef
     {nullptr,   (PyCFunction)nullptr, 0, nullptr}            /* sentinel */

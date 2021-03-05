@@ -67,14 +67,15 @@ In [3]: parser.GetVersion()
 1.8.0
 ```
 
-Here is an example of reading a corpus (but we don't return, print, or do anything with it:
+Here is an example of reading and writing a corpus to xml. You are required
+to provide the path to the output file:
 
 ```python
 import abispack
 parser = abispack.abispack.Libabigail()
 
-parser.ReadElfCorpus("/usr/local/lib/libabigail.so")
-# Out[3]: 0
+parser.ReadElfCorpusAndWriteXML("/usr/local/lib/libabigail.so", "libabigail.xml")
+# Out[2]: 'libabigail.xml'
 ```
 
 Woohoo! This is great progress!

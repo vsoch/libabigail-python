@@ -17,6 +17,7 @@ declarations:
     - decl: int HelloWorld()
     - decl: int Load(std::string path)
     - decl: int GetVersion()
-    - decl: std::string ReadElfCorpus(std::string in_file_path, 
+    - decl: std::string ReadElfCorpusAndWriteXML(std::string in_file_path, 
+            std::string out_file_path,
             bool load_all_types = true, 
             bool linux_kernel_mode = false);
