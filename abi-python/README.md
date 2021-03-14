@@ -1,6 +1,24 @@
 # abi-python
 
-Here I want to make an attempt to use [pyelftools](https://github.com/eliben/pyelftools/blob/master/examples/dwarf_die_tree.py)
+Here I want to make an attempt to start and think about what it means for something to
+be ABI compatible. This means that we will need to:
+
+1. Create a toy project that can be assessed, meaning a simple application and two libraries (one compatible, and one not)
+2. Generate output for libabigail, including a corpuses and a diff. We will attempt to re-create this output with Python. 
+3. Start writing up what it means to be ABI compatible. We will want to eventually map this to checks we can do in code/logic.
+4. Dump a corpora into logic statements (called atoms). We will want to combine this with logic statements about ABI compatability to hand to a solver.
+
+## 1. Toy Project
+
+Let's start with an application that is compiled to generate 
+
+
+1. Create a simple application and two libraries, one compatible, and one not
+2. Create a list of requirements for ABI compatibility
+3. Use libabigail to generate diffs and xml output for each
+4. Try to generate same output with [pyelftools](https://github.com/eliben/pyelftools/blob/master/examples/dwarf_die_tree.py) in Python.
+5. Create a list 
+
 to perform the same kind of analysis afforded by [libabigail](https://sourceware.org/git/libabigail.git), but entirely in Python.
 The reason is because I don't think libabigail exposes an API that is intuitive or easy enough for a developer
 or data scientist to work with. If it really comes down to reading binary dwarf information into a Corpus
