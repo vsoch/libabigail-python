@@ -153,7 +153,7 @@ class Corpus:
     variables, and nested Dwarf Information Entries
     """
 
-    def __init__(self, filename=None):
+    def __init__(self, filename=None, include_dwarf_entries=False):
         self.elfheader = {}
 
         # This could be split into variables / symbols
@@ -162,13 +162,16 @@ class Corpus:
         self.dynamic_tags = {}
         self.architecture = None
         self._soname = None
-        self.read_elf_corpus(filename)
+        self.read_elf_corpus(filename, include_dwarf_entries)
 
     def __str__(self):
         return "[Corpus:%s]" % self.path
 
     def __repr__(self):
         return str(self)
+
+    def exists(self):
+        return self.path is not None and os.path.exists(self.path)
 
     @property
     def soname():
@@ -220,7 +223,7 @@ class ABIParser:
     def __repr__(self):
         return str(self)
 
-    def get_corpus_from_elf(self, filename):
+    def get_corpus_from_elf(self, filename, include_dwarf_entries=False):
         """Given an elf binary, read it in with elfutils ELFFile and then
         iterate through dwarf info to generate a tree.
         """
@@ -229,7 +232,7 @@ class ABIParser:
             sys.exit("%s does not exist." % filename)
 
         # Create a new corpus to interact with
-        return Corpus(filename)
+        return Corpus(filename, include_dwarf_entries)
 
 
 def get_die_filepath(die):

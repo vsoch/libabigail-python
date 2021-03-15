@@ -79,7 +79,7 @@ This isn't hugely complicated, but it's a place to start!
 
 ## 3. Logic Program
 
-We next want to be able to use the start of work from [read_elf_corpus.py](read_elf_corpus.py)
+We next want to be able to use the start of work from [corpus.py](corpus.py)
 to dump out the corpora for each into a set of facts. Once we have these facts, we can start to work
 on rules that indicate ABI compatability (or actually, not, because we can theoretically stop as soon as we find a reason
 something is not). For this purpose, we are going to want to use clingo and the
@@ -91,7 +91,7 @@ $ docker build -f Dockerfile.clingo -t clingo .
 ```
 
 We are going to use a combination of spack's solver [asp.py](https://github.com/spack/spack/blob/develop/lib/spack/spack/solver/asp.py)
-and [read_elf_corpus.py](read_elf_corpus.py) to try and accomplish the same.
+and [corpus.py](corpus.py) to try and accomplish the same.
 
 ```bash
 $ docker run -it --rm -v $PWD/:/code clingo bash
@@ -109,3 +109,9 @@ result = is_compatible("simple-example/math-client", "simple-example/libmath-v1.
 ```
 
 **under development**
+
+## 4. Rules
+
+I'm going to start out by writing out a list of rules that determine ABI compatibility,
+and we will want to have these represented in actual rules for the solver.
+See [rules.md](rules.md) for this development.

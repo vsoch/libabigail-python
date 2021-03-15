@@ -11,7 +11,7 @@ RUN /bin/bash -c "conda install -y -c conda-forge mamba && \
     source activate clingo-env && \
     conda clean --all -y && \
     pip install pyelftools && \
-    conda install clingo ipython"
+    conda install clingo ipython six"
 RUN echo "source activate clingo-env" > ~/.bashrc
 ENV PATH /opt/conda/envs/clingo-env/bin:${PATH}
 ENTRYPOINT /bin/bash
