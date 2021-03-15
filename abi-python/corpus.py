@@ -215,7 +215,7 @@ class ABIParser:
         pass
 
     def __str__(self):
-        return "[ABIParser:%s]" % self.corpus.filename
+        return "[ABIParser]"
 
     def __repr__(self):
         return str(self)
