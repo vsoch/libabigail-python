@@ -10,80 +10,102 @@ be ABI compatible. This means that we will need to:
 
 ## 1. Toy Project
 
-Let's start with an application that is compiled to generate 
+Let's start with an application that is compiled with an initial library to generate
+a simple math program. This is in the folder [simple-example](simple-example)
+and can be compiled with g++ as follows:
 
-
-1. Create a simple application and two libraries, one compatible, and one not
-2. Create a list of requirements for ABI compatibility
-3. Use libabigail to generate diffs and xml output for each
-4. Try to generate same output with [pyelftools](https://github.com/eliben/pyelftools/blob/master/examples/dwarf_die_tree.py) in Python.
-5. Create a list 
-
-to perform the same kind of analysis afforded by [libabigail](https://sourceware.org/git/libabigail.git), but entirely in Python.
-The reason is because I don't think libabigail exposes an API that is intuitive or easy enough for a developer
-or data scientist to work with. If it really comes down to reading binary dwarf information into a Corpus
-object and comparing the intersection, I don't think this should be so hard to do.
-
-## Usage
-
-The simplest use case is to read a binary (ELF) and return a corpus. We can
-do this with the ABIParser.
-
-```python
-from abipython import ABIParser
-parser = ABIParser()
+```bash
+make
 ```
 
-We can then ask for a corpus:
+## 2. Abidw, Abidiff, and Abicompat
 
-```python
-corpus = parser.get_corpus_from_elf(filename)
+The makefile also generates a slightly modified version of the library (which we don't
+link against the app). The goal will be to use abicompat to show they aren't compatible.
+Since we don't have libabigail locally, we can again build and spin up a container to generate
+some output files.
+
+```bash
+$ docker build -t abigail .
 ```
 
-Currently, we don't parse the die (and this component is not finished). I'm
-not sure how we are doing the ABI comparison so I'm not able to implement this.
-However we can look at a corpus header and symbols:
+Then run the container, binding the present working directory where we compiled
+the example so we can run abidw on it.
 
-```python
-corpus = parser.get_corpus_from_elf(filename)
-
-corpus.elfheader
-{'e_ident': Container({'EI_MAG': [127, 69, 76, 70], 'EI_CLASS': 'ELFCLASS64', 'EI_DATA': 'ELFDATA2LSB', 'EI_VERSION': 'EV_CURRENT', 'EI_OSABI': 'ELFOSABI_SYSV', 'EI_ABIVERSION': 0}),
- 'e_type': 'ET_DYN',
- 'e_machine': 'EM_X86_64',
- 'e_version': 'EV_CURRENT',
- 'e_entry': 934544,
- 'e_phoff': 64,
- 'e_shoff': 63644640,
- 'e_flags': 0,
- 'e_ehsize': 64,
- 'e_phentsize': 56,
- 'e_phnum': 12,
- 'e_shentsize': 64,
- 'e_shnum': 40,
- 'e_shstrndx': 39}
-
-corpus.elfsymbols
-{'': {'type': 'STT_FILE', 'binding': 'STB_LOCAL', 'visibility': 'STV_DEFAULT'},
- 'abg-traverse.cc': {'type': 'STT_FILE',
-  'binding': 'STB_LOCAL',
-  'visibility': 'STV_DEFAULT'},
- '_ZN7abigail2ir16traversable_baseC2Ev.cold': {'type': 'STT_FUNC',
-  'binding': 'STB_LOCAL',
-  'visibility': 'STV_DEFAULT'},
- 'abg-ir.cc': {'type': 'STT_FILE',
-  'binding': 'STB_LOCAL',
-  'visibility': 'STV_DEFAULT'},
- '_ZNK7abigail2ir9decl_base15get_scoped_nameEv.localalias': {'type': 'STT_FUNC',
-  'binding': 'STB_LOCAL',
-  'visibility': 'STV_DEFAULT'},
- '_ZN7abigail2ir19ir_traversable_base8traverseERNS0_15ir_node_visitorE.localalias': {'type': 'STT_FUNC',
-  'binding': 'STB_LOCAL',
-  'visibility': 'STV_DEFAULT'},
- '_ZNK7abigail2ir9decl_base8get_hashEv.cold': {'type': 'STT_FUNC',
-  'binding': 'STB_LOCAL',
-  'visibility': 'STV_DEFA
-...
+```bash
+$ docker run -it --rm -v $PWD/:/code abigail bash
 ```
 
-I'm not sure if this will be useful or if it was just a learning exercise for me.
+Generate libabigail output.
+
+```bash
+$ cd simple-example/
+# which abidw
+/usr/local/bin/abidw
+$ abidw 
+```
+
+I don't think we can output xml for an abidiff, but we can see what libabigail says is different:
+
+```bash
+# abidiff libmath-v1.so libmath-v2.so --dump-diff-tree
+Functions changes summary: 1 Removed, 0 Changed, 1 Added functions
+Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
+
+1 Removed function:
+
+  [D] 'method double MathLibrary::Arithmetic::Add(double)'    {_ZN11MathLibrary10Arithmetic3AddEdd}
+
+1 Added function:
+
+  [A] 'method int MathLibrary::Arithmetic::Add(int)'    {_ZN11MathLibrary10Arithmetic3AddEii}
+```
+
+We can't get xml for abicompat either, but if we run it against the two libraries we get the
+same answer:
+
+```bash
+# abicompat math-client libmath-v1.so libmath-v2.so 
+ELF file 'math-client' is not ABI compatible with 'libmath-v2.so' due to differences with 'libmath-v1.so' below:
+Functions changes summary: 1 Removed, 0 Changed, 0 Added function
+Variables changes summary: 0 Removed, 0 Changed, 0 Added variable
+
+1 Removed function:
+
+  [D] 'method double MathLibrary::Arithmetic::Add(double)'    {_ZN11MathLibrary10Arithmetic3AddEdd}
+```
+
+This isn't hugely complicated, but it's a place to start!
+
+## 3. Logic Program
+
+We next want to be able to use the start of work from [read_elf_corpus.py](read_elf_corpus.py)
+to dump out the corpora for each into a set of facts. Once we have these facts, we can start to work
+on rules that indicate ABI compatability (or actually, not, because we can theoretically stop as soon as we find a reason
+something is not). For this purpose, we are going to want to use clingo and the
+python wrapper to interact with it, so we will again use a container. We need to install
+the Python bindings for clingo, along with ipython (for easier development):
+
+```bash
+$ docker build -f Dockerfile.clingo -t clingo .
+```
+
+We are going to use a combination of spack's solver [asp.py](https://github.com/spack/spack/blob/develop/lib/spack/spack/solver/asp.py)
+and [read_elf_corpus.py](read_elf_corpus.py) to try and accomplish the same.
+
+```bash
+$ docker run -it --rm -v $PWD/:/code clingo bash
+```
+
+We can then use the `is_compatible` function in [asp.py](asp.py) to develop.
+Note that I installed ipython in the container too because it's nice to work with.
+We can then develop by way of asking if our second library is compatible with the
+first application (it should be).
+
+```python
+# /code is our present working directory
+from asp import is_compatible
+result = is_compatible("simple-example/math-client", "simple-example/libmath-v1.so")
+```
+
+**under development**

@@ -1,4 +1,4 @@
-# read_elf_corpus.py
+# Corpus.py
 # This is a script that will help me to develop a Corpus class, into which
 # we can load an entire DIE tree. This is based on the elftools example:
 # dwarf_die_tree.py. Specifically, if we inspect a binary, there are .debug_info
@@ -215,7 +215,7 @@ class ABIParser:
         pass
 
     def __str__(self):
-        return "[ABIParser:%s]" % self.filename
+        return "[ABIParser:%s]" % self.corpus.filename
 
     def __repr__(self):
         return str(self)
