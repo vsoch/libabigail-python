@@ -14,3 +14,6 @@ canroar(vanessa).
 
 % An entity is a dinosaur if they are living, have tiny arms, and can roar.
 dinosaur(Entity) :- living(Entity), armsize(Entity, "small"), canroar(Entity).
+
+% Show only the dinosaur atoms
+#show dinosaur/1.

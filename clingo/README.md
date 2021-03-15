@@ -74,4 +74,11 @@ Time         : 0.003s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.001s
 ```
 
-We have concluded that vanessa is a dinosaur!
+We have concluded that vanessa is a dinosaur! Note that the above shows all atoms. We can
+ask clingo to only show the dinosaur atoms by adding this to the file:
+
+```lp
+% Show only the dinosaur atoms
+#show dinosaur/1.
+```
+Where "1" is the "arity" - the number of arguments.
