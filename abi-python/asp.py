@@ -296,46 +296,46 @@ class PyclingoDriver(object):
 
         solve_kwargs = {}
         # Won't work after this, need to write files
-        #solve_kwargs = {
+        # solve_kwargs = {
         #    "assumptions": self.assumptions,
         #    "on_model": on_model,
         #    "on_core": cores.append,
-        #}
-        #if clingo_cffi:
+        # }
+        # if clingo_cffi:
         #    solve_kwargs["on_unsat"] = cores.append
-        solve_result = self.control.solve(**solve_kwargs)
-        timer.phase("solve")
+        # solve_result = self.control.solve(**solve_kwargs)
+        # timer.phase("solve")
 
         # once done, construct the solve result
-        result.satisfiable = solve_result.satisfiable
+        # result.satisfiable = solve_result.satisfiable
 
-        def stringify(x):
-            if clingo_cffi:
-                # Clingo w/ CFFI will throw an exception on failure
-                try:
-                    return x.string
-                except RuntimeError:
-                    return str(x)
-            else:
-                return x.string or str(x)
+        # def stringify(x):
+        #    if clingo_cffi:
+        #        # Clingo w/ CFFI will throw an exception on failure
+        #        try:
+        #            return x.string
+        #        except RuntimeError:
+        #            return str(x)
+        #    else:
+        #        return x.string or str(x)
 
-        if result.satisfiable:
-            min_cost, best_model = min(models)
-            tuples = [
-                (sym.name, [stringify(a) for a in sym.arguments]) for sym in best_model
-            ]
-            result.answers.append((list(min_cost)))
+        # if result.satisfiable:
+        #    min_cost, best_model = min(models)
+        #    tuples = [
+        #        (sym.name, [stringify(a) for a in sym.arguments]) for sym in best_model
+        #    ]
+        #    result.answers.append((list(min_cost)))
 
-        elif cores:
-            symbols = dict((a.literal, a.symbol) for a in self.control.symbolic_atoms)
-            for core in cores:
-                core_symbols = []
-                for atom in core:
-                    sym = symbols[atom]
-                    if sym.name == "rule":
-                        sym = sym.arguments[0].string
-                    core_symbols.append(sym)
-                result.cores.append(core_symbols)
+        # elif cores:
+        #    symbols = dict((a.literal, a.symbol) for a in self.control.symbolic_atoms)
+        #    for core in cores:
+        #        core_symbols = []
+        #        for atom in core:
+        #            sym = symbols[atom]
+        #            if sym.name == "rule":
+        #                sym = sym.arguments[0].string
+        #            core_symbols.append(sym)
+        #        result.cores.append(core_symbols)
 
         if timers:
             timer.write()
@@ -353,11 +353,9 @@ class ABICompatSolverSetup(object):
     def __init__(self):
         self.gen = None  # set by setup()
 
-    # TODO: what would a condition be here for ABI?
-    #                condition_id = self.condition(cond, dep.spec, pkg.name)
-    #                self.gen.fact(fn.dependency_condition(
-    #                    condition_id, pkg.name, dep.spec.name
-    #                ))
+        # A lookup of DIEs based on corpus path (first key) and id
+        # (second key) DIE == Dwarf Information Entry
+        self.die_lookup = {}
 
     def condition(self, required_spec, imposed_spec=None, name=None):
         """Generate facts for a dependency or virtual provider condition.
@@ -402,6 +400,63 @@ class ABICompatSolverSetup(object):
 
         return condition_id
 
+    def generate_dwarf_info_entries(self, corpora):
+        """Iterate over the Dwarf Information Entires (DIEs) for each corpus,
+        and add them as facts
+        """
+        # A helper function to generate a unique id for a DIE
+        # corpus path + abbrev_code for the DIE
+        def uid(corpus, die):
+            return "%s:%s" % (corpus.path, die.abbrev_code)
+
+        for corpus in corpora:
+            if corpus.path not in self.die_lookup:
+                self.die_lookup[corpus.path] = {}
+
+            for entry in corpus.iter_dwarf_information_entries():
+
+                # Skip entries without tags
+                if not entry.tag:
+                    continue
+
+                if entry.abbrev_code not in self.die_lookup[corpus.path]:
+                    pass
+                    # TODO: not sure how to structure the relationship
+
+                # Flatten attributes into dictionary
+
+                # Try creating flattened entries for now
+                unique_id = uid(corpus, entry)
+                self.gen.fact(AspFunction(entry.tag, args=[unique_id]))
+
+                # Do we need these relationships as facts?
+                [
+                    self.gen.fact(fn.has_child(unique_id, uid(corpus, child)))
+                    for child in entry.iter_children()
+                ]
+
+                # Add all attributes
+                # We could add others too:
+                # AttributeValue(name='DW_AT_stmt_list',
+                #                form='DW_FORM_sec_offset',
+                #                value=0, raw_value=0, offset=41)
+                for attr_name, attribute in entry.attributes.items():
+
+                    # DW_TAG_compiler_unit_attr
+                    self.gen.fact(
+                        AspFunction(
+                            entry.tag + "_attr",
+                            args=[unique_id, attr_name, attribute.value],
+                        )
+                    )
+                    # DW_TAG_compiler_unit_form
+                    self.gen.fact(
+                        AspFunction(
+                            entry.tag + "_form",
+                            args=[unique_id, attr_name, attribute.form],
+                        )
+                    )
+
     def generate_elf_symbols(self, corpora):
         """For each corpus, write out elf symbols as facts. Note that we are
         trying a more detailed approach with facts/atoms being named (e.g.,
@@ -414,13 +469,31 @@ class ABICompatSolverSetup(object):
 
         """
         for corpus in corpora:
-            symbol_id = next(self._condition_id_counter)
+            self.gen.h2("Corpus symbols: %s" % corpus.path)
             for symbol, meta in corpus.elfsymbols.items():
                 self.gen.fact(fn.symbol(symbol))
                 self.gen.fact(fn.symbol_type(symbol, meta["type"]))
                 self.gen.fact(fn.symbol_binding(symbol, meta["binding"]))
                 self.gen.fact(fn.symbol_visibility(symbol, meta["visibility"]))
                 self.gen.fact(fn.has_symbol(corpus.path, symbol))
+
+    def generate_needed(self, corpora):
+        """Given a list of corpora, add needed libraries from dynamic tags."""
+        for corpus in corpora:
+            for needed in corpus.dynamic_tags.get("needed", []):
+                self.gen.fact(fn.corpus_needs_library(corpus.path, needed))
+
+    def generate_dwarf_information_entries(self, corpora):
+        """Given a list of corpora, add needed libraries from dynamic tags."""
+        for corpus in corpora:
+            for entry in corpus.iter_dwarf_information_entries():
+                self.gen.fact(fn.corpus_needs_library(corpus.path, needed))
+
+    # TODO: what would a condition be here for ABI?
+    #            condition_id = self.condition(cond, dep.spec, pkg.name)
+    #                self.gen.fact(fn.dependency_condition(
+    #                    condition_id, pkg.name, dep.spec.name
+    #                ))
 
     def generate_corpus_metadata(self, corpora):
         """Given a list of corpora, create a fact for each one. If we need them,
@@ -430,6 +503,8 @@ class ABICompatSolverSetup(object):
         # This would need to be changed if we don't have the binary handy
         for corpus in corpora:
             hdr = corpus.elfheader
+
+            self.gen.h2("Corpus facts: %s" % corpus.path)
             self.gen.fact(fn.corpus(corpus.path))
 
             # e_ident is ELF identification
@@ -522,17 +597,19 @@ class ABICompatSolverSetup(object):
         # rules to generate an ASP program.
         self.gen = driver
 
+        self.gen.h1("Corpus Facts")
+
         # Generate high level corpus metadata facts (e.g., header)
         self.generate_corpus_metadata([corpusA, corpusB])
+
+        # Dynamic libraries that are needed
+        self.generate_needed([corpusA, corpusB])
 
         # generate all elf symbols (might be able to make this smaller set)
         self.generate_elf_symbols([corpusA, corpusB])
 
-        # TODO: here we would want to write constraints for corpus needs?
-        self.gen.h1("General Constraints")
-
-        for corpus in [corpusA, corpusB]:
-            self.gen.h2("Corpus rules: %s" % corpus.path)
+        # Generate dwarf information entries
+        self.generate_dwarf_info_entries([corpusA, corpusB])
 
 
 def is_compatible(

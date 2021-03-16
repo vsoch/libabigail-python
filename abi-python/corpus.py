@@ -137,7 +137,7 @@ class CorpusReader(ELFFile):
 
             return tags
 
-    def parse_dwarf_entries(self):
+    def _iter_dwarf_information_entries(self):
         dwarfinfo = self.elffile.get_dwarf_info()
 
         # A CU is a Compilation Unit
@@ -145,7 +145,19 @@ class CorpusReader(ELFFile):
 
             # A DIE is a dwarf information entry
             for die in cu.iter_DIEs():
-                result = parse_children(die)
+                yield die
+
+    def iter_dwarf_information_entries(self):
+        """We possibly want to return this in json (why defined as a separate
+        function from _iter_dwarf_information_entries) although right now is
+        just serving the same result!
+        """
+        for die in self._iter_dwarf_information_entries():
+            yield die
+
+    def parse_dwarf_entries(self):
+        for die in self._iter_dwarf_information_entries():
+            result = parse_children(die)
 
 
 class Corpus:
@@ -153,7 +165,7 @@ class Corpus:
     variables, and nested Dwarf Information Entries
     """
 
-    def __init__(self, filename=None, include_dwarf_entries=False):
+    def __init__(self, filename, include_dwarf_entries=False):
         self.elfheader = {}
 
         # This could be split into variables / symbols
@@ -162,7 +174,7 @@ class Corpus:
         self.dynamic_tags = {}
         self.architecture = None
         self._soname = None
-        self.read_elf_corpus(filename, include_dwarf_entries)
+        self.read_elf_corpus(include_dwarf_entries)
 
     def __str__(self):
         return "[Corpus:%s]" % self.path
@@ -189,11 +201,17 @@ class Corpus:
     def rpath():
         return self.dynamic_tags.get("rpath")
 
-    def read_elf_corpus(self, filename, include_dwarf_entries=False):
+    def iter_dwarf_information_entries(self):
+        """Return flattened list of DIEs (Dwarf Information Entrys"""
+        reader = CorpusReader(self.path)
+        for entry in reader.iter_dwarf_information_entries():
+            yield entry
+
+    def read_elf_corpus(self, include_dwarf_entries=False):
         """Read the entire elf corpus, including dynamic and other sections
         expected for showing ABI information
         """
-        reader = CorpusReader(filename)
+        reader = CorpusReader(self.path)
 
         # Read in the header section as part of the corpus
         self.elfheader = reader.header
