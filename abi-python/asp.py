@@ -410,6 +410,8 @@ class ABICompatSolverSetup(object):
             return "%s:%s" % (corpus.path, die.abbrev_code)
 
         for corpus in corpora:
+
+            self.gen.h2("Corpus DIE: %s" % corpus.path)
             if corpus.path not in self.die_lookup:
                 self.die_lookup[corpus.path] = {}
 
@@ -442,11 +444,16 @@ class ABICompatSolverSetup(object):
                 #                value=0, raw_value=0, offset=41)
                 for attr_name, attribute in entry.attributes.items():
 
+                    # Ensure we don't write bytes
+                    value = attribute.value
+                    if isinstance(value, bytes):
+                        value = value.decode('utf-8')
+
                     # DW_TAG_compiler_unit_attr
                     self.gen.fact(
                         AspFunction(
                             entry.tag + "_attr",
-                            args=[unique_id, attr_name, attribute.value],
+                            args=[unique_id, attr_name, value],
                         )
                     )
                     # DW_TAG_compiler_unit_form
@@ -471,6 +478,11 @@ class ABICompatSolverSetup(object):
         for corpus in corpora:
             self.gen.h2("Corpus symbols: %s" % corpus.path)
             for symbol, meta in corpus.elfsymbols.items():
+
+                # It begins with a NULL symbol, not sure it's useful
+                if not symbol:
+                    continue
+
                 self.gen.fact(fn.symbol(symbol))
                 self.gen.fact(fn.symbol_type(symbol, meta["type"]))
                 self.gen.fact(fn.symbol_binding(symbol, meta["binding"]))

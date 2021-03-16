@@ -36,11 +36,6 @@ corpus_needs_library("/code/simple-example/math-client","libc.so.6").
 %----------------------------------------------------------------------------
 % Corpus symbols: /code/simple-example/math-client
 %----------------------------------------------------------------------------
-symbol("").
-symbol_type("","STT_FILE").
-symbol_binding("","STB_LOCAL").
-symbol_visibility("","STV_DEFAULT").
-has_symbol("/code/simple-example/math-client","").
 symbol("crtstuff.c").
 symbol_type("crtstuff.c","STT_FILE").
 symbol_binding("crtstuff.c","STB_LOCAL").
@@ -295,11 +290,6 @@ has_symbol("/code/simple-example/math-client","_ZNSt8ios_base4InitD1Ev@@GLIBCXX_
 %----------------------------------------------------------------------------
 % Corpus symbols: /code/simple-example/libmath-v1.so
 %----------------------------------------------------------------------------
-symbol("").
-symbol_type("","STT_FILE").
-symbol_binding("","STB_LOCAL").
-symbol_visibility("","STV_DEFAULT").
-has_symbol("/code/simple-example/libmath-v1.so","").
 symbol("crtstuff.c").
 symbol_type("crtstuff.c","STT_FILE").
 symbol_binding("crtstuff.c","STB_LOCAL").
@@ -425,6 +415,10 @@ symbol_type("__gmon_start__","STT_NOTYPE").
 symbol_binding("__gmon_start__","STB_WEAK").
 symbol_visibility("__gmon_start__","STV_DEFAULT").
 has_symbol("/code/simple-example/libmath-v1.so","__gmon_start__").
+
+%----------------------------------------------------------------------------
+% Corpus DIE: /code/simple-example/math-client
+%----------------------------------------------------------------------------
 DW_TAG_compile_unit("/code/simple-example/math-client:1").
 has_child("/code/simple-example/math-client:1","/code/simple-example/math-client:2").
 has_child("/code/simple-example/math-client:1","/code/simple-example/math-client:53").
@@ -757,13 +751,13 @@ has_child("/code/simple-example/math-client:1","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:1","/code/simple-example/math-client:102").
 has_child("/code/simple-example/math-client:1","/code/simple-example/math-client:103").
 has_child("/code/simple-example/math-client:1","/code/simple-example/math-client:105").
-DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_producer","b'GNU C++14 9.3.0 -mtune=generic -march=x86-64 -g -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection'").
+DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_producer","GNU C++14 9.3.0 -mtune=generic -march=x86-64 -g -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection").
 DW_TAG_compile_unit_form("/code/simple-example/math-client:1","DW_AT_producer","DW_FORM_strp").
 DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_language",4).
 DW_TAG_compile_unit_form("/code/simple-example/math-client:1","DW_AT_language","DW_FORM_data1").
-DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_name","b'MathClient.cpp'").
+DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_name","MathClient.cpp").
 DW_TAG_compile_unit_form("/code/simple-example/math-client:1","DW_AT_name","DW_FORM_strp").
-DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_comp_dir","b'/home/vanessa/Desktop/Code/lp/abi-python/simple-example'").
+DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_comp_dir","/home/vanessa/Desktop/Code/lp/abi-python/simple-example").
 DW_TAG_compile_unit_form("/code/simple-example/math-client:1","DW_AT_comp_dir","DW_FORM_strp").
 DW_TAG_compile_unit_attr("/code/simple-example/math-client:1","DW_AT_low_pc",4681).
 DW_TAG_compile_unit_form("/code/simple-example/math-client:1","DW_AT_low_pc","DW_FORM_addr").
@@ -992,7 +986,7 @@ has_child("/code/simple-example/math-client:2","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:2","/code/simple-example/math-client:11").
 has_child("/code/simple-example/math-client:2","/code/simple-example/math-client:11").
 has_child("/code/simple-example/math-client:2","/code/simple-example/math-client:52").
-DW_TAG_namespace_attr("/code/simple-example/math-client:2","DW_AT_name","b'std'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:2","DW_AT_name","std").
 DW_TAG_namespace_form("/code/simple-example/math-client:2","DW_AT_name","DW_FORM_string").
 DW_TAG_namespace_attr("/code/simple-example/math-client:2","DW_AT_decl_file",25).
 DW_TAG_namespace_form("/code/simple-example/math-client:2","DW_AT_decl_file","DW_FORM_data1").
@@ -1001,7 +995,7 @@ DW_TAG_namespace_form("/code/simple-example/math-client:2","DW_AT_decl_line","DW
 DW_TAG_namespace_attr("/code/simple-example/math-client:2","DW_AT_sibling",4052).
 DW_TAG_namespace_form("/code/simple-example/math-client:2","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:3").
-DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_name","b'__cxx11'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_name","__cxx11").
 DW_TAG_namespace_form("/code/simple-example/math-client:3","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_decl_file",7).
 DW_TAG_namespace_form("/code/simple-example/math-client:3","DW_AT_decl_file","DW_FORM_data1").
@@ -1679,7 +1673,7 @@ DW_TAG_imported_declaration_attr("/code/simple-example/math-client:6","DW_AT_imp
 DW_TAG_imported_declaration_form("/code/simple-example/math-client:6","DW_AT_import","DW_FORM_ref4").
 DW_TAG_structure_type("/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:8").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'nothrow_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","nothrow_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -1695,7 +1689,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:8").
 has_child("/code/simple-example/math-client:8","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_name","b'nothrow_t'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_name","nothrow_t").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_decl_file",4).
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_decl_file","DW_FORM_data1").
@@ -1703,7 +1697,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_decl_line",94
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_decl_column",14).
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_linkage_name","b'_ZNSt9nothrow_tC4Ev'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_linkage_name","_ZNSt9nothrow_tC4Ev").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_declaration","DW_FORM_flag_present").
@@ -1722,7 +1716,7 @@ DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",668).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'nothrow'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","nothrow").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",4).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -1730,7 +1724,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",98)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",26).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt7nothrow'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt7nothrow").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",705).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -1742,7 +1736,7 @@ DW_TAG_namespace("/code/simple-example/math-client:12").
 has_child("/code/simple-example/math-client:12","/code/simple-example/math-client:13").
 has_child("/code/simple-example/math-client:12","/code/simple-example/math-client:10").
 has_child("/code/simple-example/math-client:12","/code/simple-example/math-client:5").
-DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_name","b'__exception_ptr'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_name","__exception_ptr").
 DW_TAG_namespace_form("/code/simple-example/math-client:12","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_decl_file",5).
 DW_TAG_namespace_form("/code/simple-example/math-client:12","DW_AT_decl_file","DW_FORM_data1").
@@ -1768,7 +1762,7 @@ has_child("/code/simple-example/math-client:13","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:13","/code/simple-example/math-client:19").
 has_child("/code/simple-example/math-client:13","/code/simple-example/math-client:21").
 has_child("/code/simple-example/math-client:13","/code/simple-example/math-client:22").
-DW_TAG_class_type_attr("/code/simple-example/math-client:13","DW_AT_name","b'exception_ptr'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:13","DW_AT_name","exception_ptr").
 DW_TAG_class_type_form("/code/simple-example/math-client:13","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:13","DW_AT_byte_size",8).
 DW_TAG_class_type_form("/code/simple-example/math-client:13","DW_AT_byte_size","DW_FORM_data1").
@@ -1781,7 +1775,7 @@ DW_TAG_class_type_form("/code/simple-example/math-client:13","DW_AT_decl_column"
 DW_TAG_class_type_attr("/code/simple-example/math-client:13","DW_AT_sibling",1195).
 DW_TAG_class_type_form("/code/simple-example/math-client:13","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_M_exception_object'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_M_exception_object").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",5).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -1798,7 +1792,7 @@ has_child("/code/simple-example/math-client:15","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:15","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_name","b'exception_ptr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_name","exception_ptr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_decl_file","DW_FORM_data1").
@@ -1806,7 +1800,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_decl_line",8
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_decl_column",16).
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptrC4EPv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptrC4EPv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:15","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:15","DW_AT_declaration","DW_FORM_flag_present").
@@ -1828,7 +1822,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:17").
 has_child("/code/simple-example/math-client:17","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_name","b'_M_addref'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_name","_M_addref").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_decl_file","DW_FORM_data1").
@@ -1836,7 +1830,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_decl_line",8
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptr9_M_addrefEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptr9_M_addrefEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_declaration","DW_FORM_flag_present").
@@ -1853,7 +1847,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:17").
 has_child("/code/simple-example/math-client:17","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_name","b'_M_release'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_name","_M_release").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_decl_file","DW_FORM_data1").
@@ -1861,7 +1855,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_decl_line",8
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptr10_M_releaseEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptr10_M_releaseEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:17","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:17","DW_AT_declaration","DW_FORM_flag_present").
@@ -1878,7 +1872,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:18","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","b'_M_get'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","_M_get").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_file","DW_FORM_data1").
@@ -1886,7 +1880,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_line",8
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_column",13).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","b'_ZNKSt15__exception_ptr13exception_ptr6_M_getEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","_ZNKSt15__exception_ptr13exception_ptr6_M_getEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_type",4912).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_type","DW_FORM_ref4").
@@ -1905,7 +1899,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:19").
 has_child("/code/simple-example/math-client:19","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","b'exception_ptr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","exception_ptr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_file","DW_FORM_data1").
@@ -1913,7 +1907,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_line",9
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptrC4Ev'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptrC4Ev").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_accessibility","DW_FORM_data1").
@@ -1933,7 +1927,7 @@ has_child("/code/simple-example/math-client:19","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:19","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","b'exception_ptr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","exception_ptr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_file","DW_FORM_data1").
@@ -1941,7 +1935,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_line",9
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptrC4ERKS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptrC4ERKS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_accessibility","DW_FORM_data1").
@@ -1964,7 +1958,7 @@ has_child("/code/simple-example/math-client:19","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:19","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","b'exception_ptr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","exception_ptr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_file","DW_FORM_data1").
@@ -1972,7 +1966,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptrC4EDn'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptrC4EDn").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_accessibility","DW_FORM_data1").
@@ -1995,7 +1989,7 @@ has_child("/code/simple-example/math-client:19","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:19","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","b'exception_ptr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","exception_ptr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_file","DW_FORM_data1").
@@ -2003,7 +1997,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptrC4EOS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptrC4EOS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_accessibility","DW_FORM_data1").
@@ -2026,7 +2020,7 @@ has_child("/code/simple-example/math-client:20","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:20","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_name","b'operator='").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_name","operator=").
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_decl_file","DW_FORM_data1").
@@ -2034,7 +2028,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptraSERKS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptraSERKS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_type",7742).
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_type","DW_FORM_ref4").
@@ -2059,7 +2053,7 @@ has_child("/code/simple-example/math-client:20","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:20","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_name","b'operator='").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_name","operator=").
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_decl_file","DW_FORM_data1").
@@ -2067,7 +2061,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptraSEOS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptraSEOS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:20","DW_AT_type",7742).
 DW_TAG_subprogram_form("/code/simple-example/math-client:20","DW_AT_type","DW_FORM_ref4").
@@ -2092,7 +2086,7 @@ has_child("/code/simple-example/math-client:19","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:19","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","b'~exception_ptr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","~exception_ptr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_file","DW_FORM_data1").
@@ -2100,7 +2094,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptrD4Ev'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptrD4Ev").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_accessibility","DW_FORM_data1").
@@ -2125,7 +2119,7 @@ has_child("/code/simple-example/math-client:19","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:19","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","b'swap'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_name","swap").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_file","DW_FORM_data1").
@@ -2133,7 +2127,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","b'_ZNSt15__exception_ptr13exception_ptr4swapERS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_linkage_name","_ZNSt15__exception_ptr13exception_ptr4swapERS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:19","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:19","DW_AT_accessibility","DW_FORM_data1").
@@ -2155,7 +2149,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:21").
 has_child("/code/simple-example/math-client:21","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_name","b'operator bool'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_name","operator bool").
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_decl_file","DW_FORM_data1").
@@ -2163,7 +2157,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_decl_column",16).
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_linkage_name","b'_ZNKSt15__exception_ptr13exception_ptrcvbEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_linkage_name","_ZNKSt15__exception_ptr13exception_ptrcvbEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:21","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:21","DW_AT_type","DW_FORM_ref4").
@@ -2186,7 +2180,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:22").
 has_child("/code/simple-example/math-client:22","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_name","b'__cxa_exception_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_name","__cxa_exception_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_decl_file","DW_FORM_data1").
@@ -2194,7 +2188,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_linkage_name","b'_ZNKSt15__exception_ptr13exception_ptr20__cxa_exception_typeEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_linkage_name","_ZNKSt15__exception_ptr13exception_ptr20__cxa_exception_typeEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:22","DW_AT_type",7760).
 DW_TAG_subprogram_form("/code/simple-example/math-client:22","DW_AT_type","DW_FORM_ref4").
@@ -2234,7 +2228,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:23").
 has_child("/code/simple-example/math-client:23","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_name","b'rethrow_exception'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_name","rethrow_exception").
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_decl_file",5).
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_decl_file","DW_FORM_data1").
@@ -2242,7 +2236,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_decl_column",8).
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_linkage_name","b'_ZSt17rethrow_exceptionNSt15__exception_ptr13exception_ptrE'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_linkage_name","_ZSt17rethrow_exceptionNSt15__exception_ptr13exception_ptrE").
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:23","DW_AT_noreturn","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:23","DW_AT_noreturn","DW_FORM_flag_present").
@@ -2254,7 +2248,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",738).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:24").
-DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","b'nullptr_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","nullptr_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_decl_file",7).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_file","DW_FORM_data1").
@@ -2265,7 +2259,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_type",7707).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_type","DW_FORM_ref4").
 DW_TAG_class_type("/code/simple-example/math-client:25").
-DW_TAG_class_type_attr("/code/simple-example/math-client:25","DW_AT_name","b'type_info'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:25","DW_AT_name","type_info").
 DW_TAG_class_type_form("/code/simple-example/math-client:25","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:25","DW_AT_declaration","True").
 DW_TAG_class_type_form("/code/simple-example/math-client:25","DW_AT_declaration","DW_FORM_flag_present").
@@ -2279,7 +2273,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:28").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:29").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'integral_constant<bool, false>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","integral_constant<bool, false>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -2292,7 +2286,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",1379).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:26").
-DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_name","b'value'").
+DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_name","value").
 DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_decl_file",6).
 DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_decl_file","DW_FORM_data1").
@@ -2309,7 +2303,7 @@ DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_declaration","DW
 DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_const_expr","True").
 DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_const_expr","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'value_type'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","value_type").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",6).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -2323,7 +2317,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:18","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","b'operator std::integral_constant<bool, false>::value_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","operator std::integral_constant<bool, false>::value_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_file",6).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_file","DW_FORM_data1").
@@ -2331,7 +2325,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_column",17).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","b'_ZNKSt17integral_constantIbLb0EEcvbEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","_ZNKSt17integral_constantIbLb0EEcvbEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_type",1287).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_type","DW_FORM_ref4").
@@ -2350,7 +2344,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:18","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","b'operator()'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","operator()").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_file",6).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_file","DW_FORM_data1").
@@ -2358,7 +2352,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_column",28).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","b'_ZNKSt17integral_constantIbLb0EEclEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","_ZNKSt17integral_constantIbLb0EEclEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_type",1287).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_type","DW_FORM_ref4").
@@ -2374,12 +2368,12 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:9","DW_AT_type","
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:9","DW_AT_artificial","True").
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:9","DW_AT_artificial","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:28").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","b'_Tp'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","_Tp").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_name","DW_FORM_string").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_type",7748).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_value_param("/code/simple-example/math-client:29").
-DW_TAG_template_value_param_attr("/code/simple-example/math-client:29","DW_AT_name","b'__v'").
+DW_TAG_template_value_param_attr("/code/simple-example/math-client:29","DW_AT_name","__v").
 DW_TAG_template_value_param_form("/code/simple-example/math-client:29","DW_AT_name","DW_FORM_string").
 DW_TAG_template_value_param_attr("/code/simple-example/math-client:29","DW_AT_type",7748).
 DW_TAG_template_value_param_form("/code/simple-example/math-client:29","DW_AT_type","DW_FORM_ref4").
@@ -2395,7 +2389,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:28").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:29").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'integral_constant<bool, true>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","integral_constant<bool, true>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -2408,7 +2402,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",1501).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:26").
-DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_name","b'value'").
+DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_name","value").
 DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_decl_file",6).
 DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_decl_file","DW_FORM_data1").
@@ -2425,7 +2419,7 @@ DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_declaration","DW
 DW_TAG_member_attr("/code/simple-example/math-client:26","DW_AT_const_expr","True").
 DW_TAG_member_form("/code/simple-example/math-client:26","DW_AT_const_expr","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'value_type'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","value_type").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",6).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -2439,7 +2433,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:18","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","b'operator std::integral_constant<bool, true>::value_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","operator std::integral_constant<bool, true>::value_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_file",6).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_file","DW_FORM_data1").
@@ -2447,7 +2441,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_column",17).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","b'_ZNKSt17integral_constantIbLb1EEcvbEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","_ZNKSt17integral_constantIbLb1EEcvbEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_type",1409).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_type","DW_FORM_ref4").
@@ -2466,7 +2460,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:18").
 has_child("/code/simple-example/math-client:18","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","b'operator()'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_name","operator()").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_file",6).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_file","DW_FORM_data1").
@@ -2474,7 +2468,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_decl_column",28).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","b'_ZNKSt17integral_constantIbLb1EEclEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_linkage_name","_ZNKSt17integral_constantIbLb1EEclEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:18","DW_AT_type",1409).
 DW_TAG_subprogram_form("/code/simple-example/math-client:18","DW_AT_type","DW_FORM_ref4").
@@ -2490,12 +2484,12 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:9","DW_AT_type","
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:9","DW_AT_artificial","True").
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:9","DW_AT_artificial","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:28").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","b'_Tp'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","_Tp").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_name","DW_FORM_string").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_type",7748).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_value_param("/code/simple-example/math-client:29").
-DW_TAG_template_value_param_attr("/code/simple-example/math-client:29","DW_AT_name","b'__v'").
+DW_TAG_template_value_param_attr("/code/simple-example/math-client:29","DW_AT_name","__v").
 DW_TAG_template_value_param_form("/code/simple-example/math-client:29","DW_AT_name","DW_FORM_string").
 DW_TAG_template_value_param_attr("/code/simple-example/math-client:29","DW_AT_type",7748).
 DW_TAG_template_value_param_form("/code/simple-example/math-client:29","DW_AT_type","DW_FORM_ref4").
@@ -2505,7 +2499,7 @@ DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",1384).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'size_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","size_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",7).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -2516,7 +2510,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:30").
-DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_name","b'__swappable_details'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_name","__swappable_details").
 DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_decl_file",6).
 DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_decl_file","DW_FORM_data1").
@@ -2525,7 +2519,7 @@ DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_decl_line","D
 DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_decl_column",13).
 DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_decl_column","DW_FORM_data1").
 DW_TAG_namespace("/code/simple-example/math-client:30").
-DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_name","b'__swappable_with_details'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_name","__swappable_with_details").
 DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:30","DW_AT_decl_file",6).
 DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_decl_file","DW_FORM_data1").
@@ -2536,7 +2530,7 @@ DW_TAG_namespace_form("/code/simple-example/math-client:30","DW_AT_decl_column",
 DW_TAG_structure_type("/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:31").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:28").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__is_integer<long double>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__is_integer<long double>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -2565,19 +2559,19 @@ DW_TAG_enumeration_type_form("/code/simple-example/math-client:31","DW_AT_decl_c
 DW_TAG_enumeration_type_attr("/code/simple-example/math-client:31","DW_AT_sibling",1570).
 DW_TAG_enumeration_type_form("/code/simple-example/math-client:31","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_enumerator("/code/simple-example/math-client:32").
-DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_name","b'__value'").
+DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_name","__value").
 DW_TAG_enumerator_form("/code/simple-example/math-client:32","DW_AT_name","DW_FORM_strp").
 DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_const_value",0).
 DW_TAG_enumerator_form("/code/simple-example/math-client:32","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_template_type_param("/code/simple-example/math-client:28").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","b'_Tp'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","_Tp").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_name","DW_FORM_string").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_type",4813).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_type","DW_FORM_ref4").
 DW_TAG_structure_type("/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:31").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:28").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__is_integer<double>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__is_integer<double>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -2606,19 +2600,19 @@ DW_TAG_enumeration_type_form("/code/simple-example/math-client:31","DW_AT_decl_c
 DW_TAG_enumeration_type_attr("/code/simple-example/math-client:31","DW_AT_sibling",1614).
 DW_TAG_enumeration_type_form("/code/simple-example/math-client:31","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_enumerator("/code/simple-example/math-client:32").
-DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_name","b'__value'").
+DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_name","__value").
 DW_TAG_enumerator_form("/code/simple-example/math-client:32","DW_AT_name","DW_FORM_strp").
 DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_const_value",0).
 DW_TAG_enumerator_form("/code/simple-example/math-client:32","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_template_type_param("/code/simple-example/math-client:28").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","b'_Tp'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","_Tp").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_name","DW_FORM_string").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_type",4806).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_type","DW_FORM_ref4").
 DW_TAG_structure_type("/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:31").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:28").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__is_integer<float>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__is_integer<float>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -2647,18 +2641,18 @@ DW_TAG_enumeration_type_form("/code/simple-example/math-client:31","DW_AT_decl_c
 DW_TAG_enumeration_type_attr("/code/simple-example/math-client:31","DW_AT_sibling",1658).
 DW_TAG_enumeration_type_form("/code/simple-example/math-client:31","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_enumerator("/code/simple-example/math-client:32").
-DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_name","b'__value'").
+DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_name","__value").
 DW_TAG_enumerator_form("/code/simple-example/math-client:32","DW_AT_name","DW_FORM_strp").
 DW_TAG_enumerator_attr("/code/simple-example/math-client:32","DW_AT_const_value",0).
 DW_TAG_enumerator_form("/code/simple-example/math-client:32","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_template_type_param("/code/simple-example/math-client:28").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","b'_Tp'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_name","_Tp").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_name","DW_FORM_string").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:28","DW_AT_type",4799).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:28","DW_AT_type","DW_FORM_ref4").
 DW_TAG_structure_type("/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:8").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'piecewise_construct_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","piecewise_construct_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -2674,7 +2668,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:8").
 has_child("/code/simple-example/math-client:8","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_name","b'piecewise_construct_t'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_name","piecewise_construct_t").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_decl_file",9).
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_decl_file","DW_FORM_data1").
@@ -2682,7 +2676,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_decl_line",76
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_decl_column",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_linkage_name","b'_ZNSt21piecewise_construct_tC4Ev'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_linkage_name","_ZNSt21piecewise_construct_tC4Ev").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:8","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:8","DW_AT_declaration","DW_FORM_flag_present").
@@ -2701,7 +2695,7 @@ DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",1668).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:33").
-DW_TAG_variable_attr("/code/simple-example/math-client:33","DW_AT_name","b'piecewise_construct'").
+DW_TAG_variable_attr("/code/simple-example/math-client:33","DW_AT_name","piecewise_construct").
 DW_TAG_variable_form("/code/simple-example/math-client:33","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:33","DW_AT_decl_file",9).
 DW_TAG_variable_form("/code/simple-example/math-client:33","DW_AT_decl_file","DW_FORM_data1").
@@ -2718,7 +2712,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:33","DW_AT_const_value","
 DW_TAG_variable_attr("/code/simple-example/math-client:33","DW_AT_const_expr","True").
 DW_TAG_variable_form("/code/simple-example/math-client:33","DW_AT_const_expr","DW_FORM_flag_present").
 DW_TAG_namespace("/code/simple-example/math-client:34").
-DW_TAG_namespace_attr("/code/simple-example/math-client:34","DW_AT_name","b'__debug'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:34","DW_AT_name","__debug").
 DW_TAG_namespace_form("/code/simple-example/math-client:34","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:34","DW_AT_decl_file",10).
 DW_TAG_namespace_form("/code/simple-example/math-client:34","DW_AT_decl_file","DW_FORM_data1").
@@ -2746,7 +2740,7 @@ has_child("/code/simple-example/math-client:35","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:35","/code/simple-example/math-client:39").
 has_child("/code/simple-example/math-client:35","/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:35","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:35","DW_AT_name","b'char_traits<char>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:35","DW_AT_name","char_traits<char>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:35","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:35","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:35","DW_AT_byte_size","DW_FORM_data1").
@@ -2763,7 +2757,7 @@ has_child("/code/simple-example/math-client:36","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:36","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_name","b'assign'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_name","assign").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_decl_file","DW_FORM_data1").
@@ -2771,7 +2765,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_decl_line",2
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE6assignERcRKc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_linkage_name","_ZNSt11char_traitsIcE6assignERcRKc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_declaration","DW_FORM_flag_present").
@@ -2784,7 +2778,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",7870).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:24").
-DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","b'char_type'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","char_type").
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_decl_file",11).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_file","DW_FORM_data1").
@@ -2802,7 +2796,7 @@ has_child("/code/simple-example/math-client:37","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:37","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","b'eq'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","eq").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_file","DW_FORM_data1").
@@ -2810,7 +2804,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE2eqERKcS2_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","_ZNSt11char_traitsIcE2eqERKcS2_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_type","DW_FORM_ref4").
@@ -2829,7 +2823,7 @@ has_child("/code/simple-example/math-client:37","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:37","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","b'lt'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","lt").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_file","DW_FORM_data1").
@@ -2837,7 +2831,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE2ltERKcS2_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","_ZNSt11char_traitsIcE2ltERKcS2_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_type","DW_FORM_ref4").
@@ -2857,7 +2851,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'compare'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","compare").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -2865,7 +2859,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE7compareEPKcS2_m'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE7compareEPKcS2_m").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -2886,7 +2880,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'length'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","length").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -2894,7 +2888,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE6lengthEPKc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE6lengthEPKc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",1506).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -2911,7 +2905,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'find'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","find").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -2919,7 +2913,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE4findEPKcmRS1_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE4findEPKcmRS1_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7876).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -2942,7 +2936,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'move'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","move").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -2950,7 +2944,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE4moveEPcPKcm'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE4moveEPcPKcm").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7882).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -2973,7 +2967,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'copy'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","copy").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -2981,7 +2975,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE4copyEPcPKcm'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE4copyEPcPKcm").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7882).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3004,7 +2998,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'assign'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","assign").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3012,7 +3006,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE6assignEPcmc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE6assignEPcmc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7882).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3033,7 +3027,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'to_char_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","to_char_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3041,7 +3035,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE12to_char_typeERKi'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE12to_char_typeERKi").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",1774).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3053,7 +3047,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",7888).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:24").
-DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","b'int_type'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","int_type").
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_decl_file",11).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_file","DW_FORM_data1").
@@ -3070,7 +3064,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'to_int_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","to_int_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3078,7 +3072,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE11to_int_typeERKc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE11to_int_typeERKc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",2093).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3094,7 +3088,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'eq_int_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","eq_int_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3102,7 +3096,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE11eq_int_typeERKiS2_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE11eq_int_typeERKiS2_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3119,7 +3113,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:39").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_name","b'eof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_name","eof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_decl_file","DW_FORM_data1").
@@ -3127,7 +3121,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE3eofEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_linkage_name","_ZNSt11char_traitsIcE3eofEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_type",2093).
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_type","DW_FORM_ref4").
@@ -3137,7 +3131,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'not_eof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","not_eof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3145,7 +3139,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",3
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIcE7not_eofERKi'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIcE7not_eofERKi").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",2093).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3157,7 +3151,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",7888).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_CharT'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_CharT").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5016).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -3181,7 +3175,7 @@ has_child("/code/simple-example/math-client:35","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:35","/code/simple-example/math-client:39").
 has_child("/code/simple-example/math-client:35","/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:35","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:35","DW_AT_name","b'char_traits<wchar_t>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:35","DW_AT_name","char_traits<wchar_t>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:35","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:35","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:35","DW_AT_byte_size","DW_FORM_data1").
@@ -3198,7 +3192,7 @@ has_child("/code/simple-example/math-client:36","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:36","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_name","b'assign'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_name","assign").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_decl_file","DW_FORM_data1").
@@ -3206,7 +3200,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE6assignERwRKw'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_linkage_name","_ZNSt11char_traitsIwE6assignERwRKw").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:36","DW_AT_declaration","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:36","DW_AT_declaration","DW_FORM_flag_present").
@@ -3219,7 +3213,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",7900).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:24").
-DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","b'char_type'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","char_type").
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_decl_file",11).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_file","DW_FORM_data1").
@@ -3237,7 +3231,7 @@ has_child("/code/simple-example/math-client:37","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:37","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","b'eq'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","eq").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_file","DW_FORM_data1").
@@ -3245,7 +3239,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE2eqERKwS2_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","_ZNSt11char_traitsIwE2eqERKwS2_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_type","DW_FORM_ref4").
@@ -3264,7 +3258,7 @@ has_child("/code/simple-example/math-client:37","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:37","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","b'lt'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_name","lt").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_file","DW_FORM_data1").
@@ -3272,7 +3266,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE2ltERKwS2_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_linkage_name","_ZNSt11char_traitsIwE2ltERKwS2_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:37","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:37","DW_AT_type","DW_FORM_ref4").
@@ -3292,7 +3286,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'compare'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","compare").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3300,7 +3294,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE7compareEPKwS2_m'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE7compareEPKwS2_m").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3321,7 +3315,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'length'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","length").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3329,7 +3323,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE6lengthEPKw'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE6lengthEPKw").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",1506).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3346,7 +3340,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'find'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","find").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3354,7 +3348,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE4findEPKwmRS1_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE4findEPKwmRS1_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7906).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3377,7 +3371,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'move'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","move").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3385,7 +3379,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE4moveEPwPKwm'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE4moveEPwPKwm").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7912).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3408,7 +3402,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'copy'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","copy").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3416,7 +3410,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE4copyEPwPKwm'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE4copyEPwPKwm").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7912).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3439,7 +3433,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'assign'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","assign").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3447,7 +3441,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE6assignEPwmw'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE6assignEPwmw").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7912).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3468,7 +3462,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'to_char_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","to_char_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3476,7 +3470,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE12to_char_typeERKj'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE12to_char_typeERKj").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",2266).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3488,7 +3482,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",7918).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:24").
-DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","b'int_type'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","int_type").
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_decl_file",11).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_file","DW_FORM_data1").
@@ -3505,7 +3499,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'to_int_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","to_int_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3513,7 +3507,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE11to_int_typeERKw'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE11to_int_typeERKw").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",2585).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3529,7 +3523,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'eq_int_type'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","eq_int_type").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3537,7 +3531,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE11eq_int_typeERKjS2_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE11eq_int_typeERKjS2_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",7748).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3554,7 +3548,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:39").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_name","b'eof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_name","eof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_decl_file","DW_FORM_data1").
@@ -3562,7 +3556,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_decl_line",4
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE3eofEv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_linkage_name","_ZNSt11char_traitsIwE3eofEv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:39","DW_AT_type",2585).
 DW_TAG_subprogram_form("/code/simple-example/math-client:39","DW_AT_type","DW_FORM_ref4").
@@ -3572,7 +3566,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'not_eof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","not_eof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",11).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -3580,7 +3574,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",5
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'_ZNSt11char_traitsIwE7not_eofERKj'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","_ZNSt11char_traitsIwE7not_eofERKj").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",2585).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -3592,7 +3586,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",7918).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_CharT'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_CharT").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5593).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -3876,7 +3870,7 @@ DW_TAG_imported_declaration_form("/code/simple-example/math-client:5","DW_AT_dec
 DW_TAG_imported_declaration_attr("/code/simple-example/math-client:5","DW_AT_import",8858).
 DW_TAG_imported_declaration_form("/code/simple-example/math-client:5","DW_AT_import","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'ptrdiff_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","ptrdiff_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",7).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -4420,7 +4414,7 @@ DW_TAG_imported_declaration_form("/code/simple-example/math-client:5","DW_AT_imp
 DW_TAG_namespace("/code/simple-example/math-client:41").
 has_child("/code/simple-example/math-client:41","/code/simple-example/math-client:3").
 has_child("/code/simple-example/math-client:41","/code/simple-example/math-client:4").
-DW_TAG_namespace_attr("/code/simple-example/math-client:41","DW_AT_name","b'literals'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:41","DW_AT_name","literals").
 DW_TAG_namespace_form("/code/simple-example/math-client:41","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:41","DW_AT_decl_file",16).
 DW_TAG_namespace_form("/code/simple-example/math-client:41","DW_AT_decl_file","DW_FORM_data1").
@@ -4433,7 +4427,7 @@ DW_TAG_namespace_form("/code/simple-example/math-client:41","DW_AT_export_symbol
 DW_TAG_namespace_attr("/code/simple-example/math-client:41","DW_AT_sibling",3480).
 DW_TAG_namespace_form("/code/simple-example/math-client:41","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:3").
-DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_name","b'string_literals'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_name","string_literals").
 DW_TAG_namespace_form("/code/simple-example/math-client:3","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_decl_file",16).
 DW_TAG_namespace_form("/code/simple-example/math-client:3","DW_AT_decl_file","DW_FORM_data1").
@@ -4462,7 +4456,7 @@ DW_TAG_imported_module_form("/code/simple-example/math-client:4","DW_AT_decl_col
 DW_TAG_imported_module_attr("/code/simple-example/math-client:4","DW_AT_import",3448).
 DW_TAG_imported_module_form("/code/simple-example/math-client:4","DW_AT_import","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:42").
-DW_TAG_namespace_attr("/code/simple-example/math-client:42","DW_AT_name","b'_V2'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:42","DW_AT_name","_V2").
 DW_TAG_namespace_form("/code/simple-example/math-client:42","DW_AT_name","DW_FORM_string").
 DW_TAG_namespace_attr("/code/simple-example/math-client:42","DW_AT_decl_file",17).
 DW_TAG_namespace_form("/code/simple-example/math-client:42","DW_AT_decl_file","DW_FORM_data1").
@@ -4484,7 +4478,7 @@ DW_TAG_imported_module_form("/code/simple-example/math-client:43","DW_AT_import"
 DW_TAG_class_type("/code/simple-example/math-client:44").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:45").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:10").
-DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","b'ios_base'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","ios_base").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_declaration","True").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_declaration","DW_FORM_flag_present").
@@ -4497,7 +4491,7 @@ has_child("/code/simple-example/math-client:45","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:45","/code/simple-example/math-client:48").
 has_child("/code/simple-example/math-client:45","/code/simple-example/math-client:49").
 has_child("/code/simple-example/math-client:45","/code/simple-example/math-client:49").
-DW_TAG_class_type_attr("/code/simple-example/math-client:45","DW_AT_name","b'Init'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:45","DW_AT_name","Init").
 DW_TAG_class_type_form("/code/simple-example/math-client:45","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:45","DW_AT_byte_size",1).
 DW_TAG_class_type_form("/code/simple-example/math-client:45","DW_AT_byte_size","DW_FORM_data1").
@@ -4515,7 +4509,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:46").
 has_child("/code/simple-example/math-client:46","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_name","b'Init'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_name","Init").
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_decl_file",18).
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_decl_file","DW_FORM_data1").
@@ -4523,7 +4517,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_linkage_name","b'_ZNSt8ios_base4InitC4Ev'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_linkage_name","_ZNSt8ios_base4InitC4Ev").
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_accessibility","DW_FORM_data1").
@@ -4543,7 +4537,7 @@ has_child("/code/simple-example/math-client:46","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:46","/code/simple-example/math-client:9").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_name","b'~Init'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_name","~Init").
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_decl_file",18).
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_decl_file","DW_FORM_data1").
@@ -4551,7 +4545,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_linkage_name","b'_ZNSt8ios_base4InitD4Ev'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_linkage_name","_ZNSt8ios_base4InitD4Ev").
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:46","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:46","DW_AT_accessibility","DW_FORM_data1").
@@ -4576,7 +4570,7 @@ has_child("/code/simple-example/math-client:47","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:47","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_name","b'Init'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_name","Init").
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_decl_file",18).
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_decl_file","DW_FORM_data1").
@@ -4584,7 +4578,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_decl_column",7).
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_linkage_name","b'_ZNSt8ios_base4InitC4ERKS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_linkage_name","_ZNSt8ios_base4InitC4ERKS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:47","DW_AT_accessibility",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:47","DW_AT_accessibility","DW_FORM_data1").
@@ -4609,7 +4603,7 @@ has_child("/code/simple-example/math-client:48","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:48","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_name","b'operator='").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_name","operator=").
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_decl_file",18).
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_decl_file","DW_FORM_data1").
@@ -4617,7 +4611,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_decl_column",13).
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_linkage_name","b'_ZNSt8ios_base4InitaSERKS0_'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_linkage_name","_ZNSt8ios_base4InitaSERKS0_").
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:48","DW_AT_type",10888).
 DW_TAG_subprogram_form("/code/simple-example/math-client:48","DW_AT_type","DW_FORM_ref4").
@@ -4640,7 +4634,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",10882).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:49").
-DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_name","b'_S_refcount'").
+DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_name","_S_refcount").
 DW_TAG_member_form("/code/simple-example/math-client:49","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_decl_file",18).
 DW_TAG_member_form("/code/simple-example/math-client:49","DW_AT_decl_file","DW_FORM_data1").
@@ -4655,7 +4649,7 @@ DW_TAG_member_form("/code/simple-example/math-client:49","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:49","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:49").
-DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_name","b'_S_synced_with_stdio'").
+DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_name","_S_synced_with_stdio").
 DW_TAG_member_form("/code/simple-example/math-client:49","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:49","DW_AT_decl_file",18).
 DW_TAG_member_form("/code/simple-example/math-client:49","DW_AT_decl_file","DW_FORM_data1").
@@ -4738,19 +4732,19 @@ DW_TAG_imported_declaration_form("/code/simple-example/math-client:5","DW_AT_imp
 DW_TAG_class_type("/code/simple-example/math-client:44").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:40").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:50").
-DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","b'basic_ostream<char, std::char_traits<char> >'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","basic_ostream<char, std::char_traits<char> >").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_declaration","True").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_sibling",3779).
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_CharT'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_CharT").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5016).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:50").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","b'_Traits'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","_Traits").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_type",1732).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_type","DW_FORM_ref4").
@@ -4759,19 +4753,19 @@ DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_def
 DW_TAG_class_type("/code/simple-example/math-client:44").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:40").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:50").
-DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","b'basic_ostream<wchar_t, std::char_traits<wchar_t> >'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","basic_ostream<wchar_t, std::char_traits<wchar_t> >").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_declaration","True").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_sibling",3807).
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_CharT'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_CharT").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5593).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:50").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","b'_Traits'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","_Traits").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_type",2224).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_type","DW_FORM_ref4").
@@ -4780,19 +4774,19 @@ DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_def
 DW_TAG_class_type("/code/simple-example/math-client:44").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:40").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:50").
-DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","b'basic_istream<char, std::char_traits<char> >'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","basic_istream<char, std::char_traits<char> >").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_declaration","True").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_sibling",3835).
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_CharT'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_CharT").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5016).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:50").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","b'_Traits'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","_Traits").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_type",1732).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_type","DW_FORM_ref4").
@@ -4801,26 +4795,26 @@ DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_def
 DW_TAG_class_type("/code/simple-example/math-client:44").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:40").
 has_child("/code/simple-example/math-client:44","/code/simple-example/math-client:50").
-DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","b'basic_istream<wchar_t, std::char_traits<wchar_t> >'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_name","basic_istream<wchar_t, std::char_traits<wchar_t> >").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_declaration","True").
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_class_type_attr("/code/simple-example/math-client:44","DW_AT_sibling",3863).
 DW_TAG_class_type_form("/code/simple-example/math-client:44","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_CharT'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_CharT").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5593).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param("/code/simple-example/math-client:50").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","b'_Traits'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_name","_Traits").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_type",2224).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_type","DW_FORM_ref4").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:50","DW_AT_default_value","True").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:50","DW_AT_default_value","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'istream'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","istream").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",20).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -4831,7 +4825,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",3807).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:51").
-DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_name","b'cin'").
+DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_name","cin").
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_name","DW_FORM_string").
 DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_decl_file","DW_FORM_data1").
@@ -4839,7 +4833,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_decl_line",60)
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_decl_column",18).
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_linkage_name","b'_ZSt3cin'").
+DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_linkage_name","_ZSt3cin").
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_type",3863).
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_type","DW_FORM_ref4").
@@ -4848,7 +4842,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:51","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:51","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'ostream'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","ostream").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",20).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -4859,7 +4853,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",3751).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'cout'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","cout").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4867,7 +4861,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",61)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",18).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt4cout'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt4cout").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3891).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -4876,7 +4870,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'cerr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","cerr").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4884,7 +4878,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",62)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",18).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt4cerr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt4cerr").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3891).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -4893,7 +4887,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'clog'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","clog").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4901,7 +4895,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",63)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",18).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt4clog'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt4clog").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3891).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -4910,7 +4904,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'wistream'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","wistream").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",20).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -4921,7 +4915,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",3835).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'wcin'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","wcin").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4929,7 +4923,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",66)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",19).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt4wcin'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt4wcin").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3951).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -4938,7 +4932,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'wostream'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","wostream").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",20).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -4949,7 +4943,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",3779).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'wcout'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","wcout").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4957,7 +4951,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",67)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",19).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt5wcout'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt5wcout").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3979).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -4966,7 +4960,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'wcerr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","wcerr").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4974,7 +4968,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",68)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",19).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt5wcerr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt5wcerr").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3979).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -4983,7 +4977,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:11").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","b'wclog'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_name","wclog").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_file","DW_FORM_data1").
@@ -4991,7 +4985,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_line",69)
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_decl_column",19).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","b'_ZSt5wclog'").
+DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_linkage_name","_ZSt5wclog").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_type",3979).
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_type","DW_FORM_ref4").
@@ -5000,7 +4994,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:11","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:11","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:52").
-DW_TAG_variable_attr("/code/simple-example/math-client:52","DW_AT_name","b'__ioinit'").
+DW_TAG_variable_attr("/code/simple-example/math-client:52","DW_AT_name","__ioinit").
 DW_TAG_variable_form("/code/simple-example/math-client:52","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:52","DW_AT_decl_file",2).
 DW_TAG_variable_form("/code/simple-example/math-client:52","DW_AT_decl_file","DW_FORM_data1").
@@ -5037,7 +5031,7 @@ has_child("/code/simple-example/math-client:53","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:53","/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:53","/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:53","/code/simple-example/math-client:56").
-DW_TAG_namespace_attr("/code/simple-example/math-client:53","DW_AT_name","b'__gnu_cxx'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:53","DW_AT_name","__gnu_cxx").
 DW_TAG_namespace_form("/code/simple-example/math-client:53","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:53","DW_AT_decl_file",7).
 DW_TAG_namespace_form("/code/simple-example/math-client:53","DW_AT_decl_file","DW_FORM_data1").
@@ -5048,7 +5042,7 @@ DW_TAG_namespace_form("/code/simple-example/math-client:53","DW_AT_decl_column",
 DW_TAG_namespace_attr("/code/simple-example/math-client:53","DW_AT_sibling",4785).
 DW_TAG_namespace_form("/code/simple-example/math-client:53","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:3").
-DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_name","b'__cxx11'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_name","__cxx11").
 DW_TAG_namespace_form("/code/simple-example/math-client:3","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:3","DW_AT_decl_file",7).
 DW_TAG_namespace_form("/code/simple-example/math-client:3","DW_AT_decl_file","DW_FORM_data1").
@@ -5095,7 +5089,7 @@ DW_TAG_imported_declaration_form("/code/simple-example/math-client:6","DW_AT_dec
 DW_TAG_imported_declaration_attr("/code/simple-example/math-client:6","DW_AT_import",7667).
 DW_TAG_imported_declaration_form("/code/simple-example/math-client:6","DW_AT_import","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:34").
-DW_TAG_namespace_attr("/code/simple-example/math-client:34","DW_AT_name","b'__ops'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:34","DW_AT_name","__ops").
 DW_TAG_namespace_form("/code/simple-example/math-client:34","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:34","DW_AT_decl_file",21).
 DW_TAG_namespace_form("/code/simple-example/math-client:34","DW_AT_decl_file","DW_FORM_data1").
@@ -5127,7 +5121,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_integer<int>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_integer<int>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5140,7 +5134,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4204).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__min'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__min").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5155,7 +5149,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5170,7 +5164,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5185,7 +5179,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5200,7 +5194,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5028).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5272,7 +5266,7 @@ has_child("/code/simple-example/math-client:55","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:55","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_name","b'div'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_name","div").
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_decl_file",14).
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_decl_file","DW_FORM_data1").
@@ -5280,7 +5274,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_decl_line",2
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_decl_column",3).
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_linkage_name","b'_ZN9__gnu_cxx3divExx'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_linkage_name","_ZN9__gnu_cxx3divExx").
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:55","DW_AT_type",9140).
 DW_TAG_subprogram_form("/code/simple-example/math-client:55","DW_AT_type","DW_FORM_ref4").
@@ -5300,7 +5294,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_floating<float>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_floating<float>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5313,7 +5307,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4362).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max_digits10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max_digits10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5328,7 +5322,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5343,7 +5337,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5358,7 +5352,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max_exponent10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max_exponent10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5373,7 +5367,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",4799).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5383,7 +5377,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_floating<double>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_floating<double>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5396,7 +5390,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4433).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max_digits10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max_digits10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5411,7 +5405,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5426,7 +5420,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5441,7 +5435,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max_exponent10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max_exponent10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5456,7 +5450,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",4806).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5466,7 +5460,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_floating<long double>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_floating<long double>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5479,7 +5473,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4504).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max_digits10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max_digits10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5494,7 +5488,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5509,7 +5503,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5524,7 +5518,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max_exponent10'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max_exponent10").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5539,7 +5533,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",4813).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5549,7 +5543,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_integer<long unsigned int>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_integer<long unsigned int>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5562,7 +5556,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4575).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__min'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__min").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5577,7 +5571,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5592,7 +5586,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5607,7 +5601,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5622,7 +5616,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",4832).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5632,7 +5626,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_integer<char>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_integer<char>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5645,7 +5639,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4646).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__min'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__min").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5660,7 +5654,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5675,7 +5669,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5690,7 +5684,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5705,7 +5699,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",5016).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5715,7 +5709,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'__numeric_traits_integer<short int>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","__numeric_traits_integer<short int>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -5728,7 +5722,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",4717).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__min'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__min").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5743,7 +5737,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5758,7 +5752,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5773,7 +5767,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5788,7 +5782,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",7799).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5798,7 +5792,7 @@ has_child("/code/simple-example/math-client:56","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:56","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:56","/code/simple-example/math-client:54").
 has_child("/code/simple-example/math-client:56","/code/simple-example/math-client:40").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:56","DW_AT_name","b'__numeric_traits_integer<long int>'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:56","DW_AT_name","__numeric_traits_integer<long int>").
 DW_TAG_structure_type_form("/code/simple-example/math-client:56","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:56","DW_AT_byte_size",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:56","DW_AT_byte_size","DW_FORM_data1").
@@ -5809,7 +5803,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:56","DW_AT_decl_lin
 DW_TAG_structure_type_attr("/code/simple-example/math-client:56","DW_AT_decl_column",12).
 DW_TAG_structure_type_form("/code/simple-example/math-client:56","DW_AT_decl_column","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__min'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__min").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5824,7 +5818,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__max'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__max").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5839,7 +5833,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__is_signed'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__is_signed").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5854,7 +5848,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_member("/code/simple-example/math-client:54").
-DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","b'__digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_name","__digits").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_decl_file",23).
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_decl_file","DW_FORM_data1").
@@ -5869,7 +5863,7 @@ DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_external","DW_FO
 DW_TAG_member_attr("/code/simple-example/math-client:54","DW_AT_declaration","True").
 DW_TAG_member_form("/code/simple-example/math-client:54","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_template_type_param("/code/simple-example/math-client:40").
-DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","b'_Value'").
+DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_name","_Value").
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_name","DW_FORM_strp").
 DW_TAG_template_type_param_attr("/code/simple-example/math-client:40","DW_AT_type",6995).
 DW_TAG_template_type_param_form("/code/simple-example/math-client:40","DW_AT_type","DW_FORM_ref4").
@@ -5878,38 +5872,38 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",32
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",3).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'__unknown__'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","__unknown__").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",16).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",4).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'__float128'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","__float128").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",4).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",4).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'float'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","float").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",8).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",4).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'double'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","double").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",16).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",4).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'long double'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","long double").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'size_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","size_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",24).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -5924,7 +5918,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",8)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",7).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'long unsigned int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","long unsigned int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",4832).
@@ -5934,7 +5928,7 @@ has_child("/code/simple-example/math-client:58","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:58","/code/simple-example/math-client:59").
 has_child("/code/simple-example/math-client:58","/code/simple-example/math-client:59").
 has_child("/code/simple-example/math-client:58","/code/simple-example/math-client:59").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:58","DW_AT_name","b'typedef __va_list_tag __va_list_tag'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:58","DW_AT_name","typedef __va_list_tag __va_list_tag").
 DW_TAG_structure_type_form("/code/simple-example/math-client:58","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:58","DW_AT_byte_size",24).
 DW_TAG_structure_type_form("/code/simple-example/math-client:58","DW_AT_byte_size","DW_FORM_data1").
@@ -5945,7 +5939,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:58","DW_AT_decl_lin
 DW_TAG_structure_type_attr("/code/simple-example/math-client:58","DW_AT_sibling",4905).
 DW_TAG_structure_type_form("/code/simple-example/math-client:58","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:59").
-DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","b'gp_offset'").
+DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","gp_offset").
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_decl_file",25).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_decl_file","DW_FORM_data1").
@@ -5956,7 +5950,7 @@ DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:59").
-DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","b'fp_offset'").
+DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","fp_offset").
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_decl_file",25).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_decl_file","DW_FORM_data1").
@@ -5967,7 +5961,7 @@ DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_data_member_location",4).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:59").
-DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","b'overflow_arg_area'").
+DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","overflow_arg_area").
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_decl_file",25).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_decl_file","DW_FORM_data1").
@@ -5978,7 +5972,7 @@ DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:59").
-DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","b'reg_save_area'").
+DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_name","reg_save_area").
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:59","DW_AT_decl_file",25).
 DW_TAG_member_form("/code/simple-example/math-client:59","DW_AT_decl_file","DW_FORM_data1").
@@ -5993,13 +5987,13 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",4)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",7).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'unsigned int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","unsigned int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_pointer_type("/code/simple-example/math-client:60").
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:60","DW_AT_byte_size",8).
 DW_TAG_pointer_type_form("/code/simple-example/math-client:60","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'wint_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","wint_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",26).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -6021,7 +6015,7 @@ DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_lin
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_column",1).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","b'11__mbstate_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","11__mbstate_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_sibling",5000).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_sibling","DW_FORM_ref4").
@@ -6039,7 +6033,7 @@ DW_TAG_union_type_form("/code/simple-example/math-client:62","DW_AT_decl_column"
 DW_TAG_union_type_attr("/code/simple-example/math-client:62","DW_AT_sibling",4973).
 DW_TAG_union_type_form("/code/simple-example/math-client:62","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:63").
-DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_name","b'__wch'").
+DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_name","__wch").
 DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_decl_file",27).
 DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_decl_file","DW_FORM_data1").
@@ -6050,7 +6044,7 @@ DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_decl_column","DW
 DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_type",4905).
 DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_type","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:63").
-DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_name","b'__wchb'").
+DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_name","__wchb").
 DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_decl_file",27).
 DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_decl_file","DW_FORM_data1").
@@ -6061,7 +6055,7 @@ DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_decl_column","DW
 DW_TAG_member_attr("/code/simple-example/math-client:63","DW_AT_type",5000).
 DW_TAG_member_form("/code/simple-example/math-client:63","DW_AT_type","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'__count'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","__count").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",27).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6074,7 +6068,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'__value'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","__value").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",27).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6102,7 +6096,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",1)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",6).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'char'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","char").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",5016).
@@ -6112,13 +6106,13 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:66","DW_AT_byte_size",4)
 DW_TAG_base_type_form("/code/simple-example/math-client:66","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:66","DW_AT_encoding",5).
 DW_TAG_base_type_form("/code/simple-example/math-client:66","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:66","DW_AT_name","b'int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:66","DW_AT_name","int").
 DW_TAG_base_type_form("/code/simple-example/math-client:66","DW_AT_name","DW_FORM_string").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",5028).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__mbstate_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__mbstate_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",27).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -6129,7 +6123,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4926).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'mbstate_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","mbstate_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",28).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -6143,7 +6137,7 @@ DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",5052).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__FILE'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__FILE").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",29).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -6183,7 +6177,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'_IO_FILE'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","_IO_FILE").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",216).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -6196,7 +6190,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",5472).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_flags'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_flags").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6209,7 +6203,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_read_ptr'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_read_ptr").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6222,7 +6216,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_read_end'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_read_end").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6235,7 +6229,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",16).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_read_base'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_read_base").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6248,7 +6242,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",24).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_write_base'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_write_base").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6261,7 +6255,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",32).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_write_ptr'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_write_ptr").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6274,7 +6268,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",40).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_write_end'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_write_end").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6287,7 +6281,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",48).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_buf_base'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_buf_base").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6300,7 +6294,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",56).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_buf_end'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_buf_end").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6313,7 +6307,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",64).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_save_base'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_save_base").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6326,7 +6320,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",72).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_backup_base'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_backup_base").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6339,7 +6333,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",80).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_IO_save_end'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_IO_save_end").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6352,7 +6346,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",88).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_markers'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_markers").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6365,7 +6359,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",96).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_chain'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_chain").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6378,7 +6372,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",104).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_fileno'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_fileno").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6391,7 +6385,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",112).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_flags2'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_flags2").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6404,7 +6398,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",116).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_old_offset'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_old_offset").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6417,7 +6411,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",120).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_cur_column'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_cur_column").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6430,7 +6424,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",128).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_vtable_offset'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_vtable_offset").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6443,7 +6437,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",130).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_shortbuf'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_shortbuf").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6456,7 +6450,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",131).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_lock'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_lock").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6469,7 +6463,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",136).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_offset'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_offset").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6482,7 +6476,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",144).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_codecvt'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_codecvt").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6495,7 +6489,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",152).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_wide_data'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_wide_data").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6508,7 +6502,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",160).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_freeres_list'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_freeres_list").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6521,7 +6515,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",168).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_freeres_buf'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_freeres_buf").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6534,7 +6528,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",176).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'__pad5'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","__pad5").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6547,7 +6541,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",184).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_mode'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_mode").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6560,7 +6554,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",192).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'_unused2'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","_unused2").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",30).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -6573,7 +6567,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",196).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'FILE'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","FILE").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",31).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -6588,7 +6582,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",2)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",7).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'short unsigned int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","short unsigned int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_pointer_type("/code/simple-example/math-client:67").
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:67","DW_AT_byte_size",8).
@@ -6602,7 +6596,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'btowc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","btowc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6623,7 +6617,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fgetwc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fgetwc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6651,7 +6645,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fgetws'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fgetws").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6684,7 +6678,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",4)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",5).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'wchar_t'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","wchar_t").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",5593).
@@ -6694,7 +6688,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fputwc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fputwc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6719,7 +6713,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fputws'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fputws").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6749,7 +6743,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fwide'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fwide").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6775,7 +6769,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:69").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fwprintf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fwprintf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6802,7 +6796,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:69").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'fwscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","fwscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -6810,7 +6804,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'__isoc99_fwscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","__isoc99_fwscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -6829,7 +6823,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'getwc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","getwc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6849,7 +6843,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:70").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_name","b'getwchar'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_name","getwchar").
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_decl_file","DW_FORM_data1").
@@ -6867,7 +6861,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mbrlen'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mbrlen").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6902,7 +6896,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mbrtowc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mbrtowc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6932,7 +6926,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mbsinit'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mbsinit").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6961,7 +6955,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mbsrtowcs'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mbsrtowcs").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -6997,7 +6991,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'putwc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","putwc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7021,7 +7015,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'putwchar'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","putwchar").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7045,7 +7039,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:69").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'swprintf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","swprintf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7075,7 +7069,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:69").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'swscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","swscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -7083,7 +7077,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'__isoc99_swscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","__isoc99_swscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -7103,7 +7097,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'ungetwc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","ungetwc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7129,7 +7123,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'vfwprintf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","vfwprintf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7163,7 +7157,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'vfwscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","vfwscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -7171,7 +7165,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'__isoc99_vfwscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","__isoc99_vfwscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -7195,7 +7189,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'vswprintf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","vswprintf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7227,7 +7221,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'vswscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","vswscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -7235,7 +7229,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",7
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'__isoc99_vswscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","__isoc99_vswscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -7257,7 +7251,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'vwprintf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","vwprintf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7282,7 +7276,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'vwscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","vwscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -7290,7 +7284,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'__isoc99_vwscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","__isoc99_vwscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -7310,7 +7304,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcrtomb'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcrtomb").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7343,7 +7337,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcscat'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcscat").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7368,7 +7362,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcscmp'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcscmp").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7393,7 +7387,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcscoll'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcscoll").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7418,7 +7412,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcscpy'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcscpy").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7443,7 +7437,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcscspn'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcscspn").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7470,7 +7464,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcsftime'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcsftime").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7513,7 +7507,7 @@ has_child("/code/simple-example/math-client:72","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:72","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:72","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:72","/code/simple-example/math-client:14").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:72","DW_AT_name","b'tm'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:72","DW_AT_name","tm").
 DW_TAG_structure_type_form("/code/simple-example/math-client:72","DW_AT_name","DW_FORM_string").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:72","DW_AT_byte_size",56).
 DW_TAG_structure_type_form("/code/simple-example/math-client:72","DW_AT_byte_size","DW_FORM_data1").
@@ -7526,7 +7520,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:72","DW_AT_decl_col
 DW_TAG_structure_type_attr("/code/simple-example/math-client:72","DW_AT_sibling",6674).
 DW_TAG_structure_type_form("/code/simple-example/math-client:72","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_sec'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_sec").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7539,7 +7533,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_min'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_min").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7552,7 +7546,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",4).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_hour'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_hour").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7565,7 +7559,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_mday'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_mday").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7578,7 +7572,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",12).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_mon'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_mon").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7591,7 +7585,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",16).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_year'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_year").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7604,7 +7598,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",20).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_wday'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_wday").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7617,7 +7611,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",24).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_yday'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_yday").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7630,7 +7624,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",28).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_isdst'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_isdst").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7643,7 +7637,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",32).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_gmtoff'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_gmtoff").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7656,7 +7650,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",40).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'tm_zone'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","tm_zone").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",33).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -7675,7 +7669,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcslen'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcslen").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7698,7 +7692,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcsncat'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcsncat").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7727,7 +7721,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcsncmp'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcsncmp").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7756,7 +7750,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcsncpy'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcsncpy").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7786,7 +7780,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcsrtombs'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcsrtombs").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7822,7 +7816,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcsspn'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcsspn").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7847,7 +7841,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstod'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstod").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7877,7 +7871,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7903,7 +7897,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcstok'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcstok").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -7932,7 +7926,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstol'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstol").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -7960,7 +7954,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",8)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",5).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'long int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","long int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",6995).
@@ -7971,7 +7965,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstoul'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstoul").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8000,7 +7994,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wcsxfrm'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wcsxfrm").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -8027,7 +8021,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wctob'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wctob").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8050,7 +8044,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wmemcmp'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wmemcmp").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8079,7 +8073,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wmemcpy'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wmemcpy").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8108,7 +8102,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wmemmove'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wmemmove").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8137,7 +8131,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wmemset'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wmemset").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8165,7 +8159,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:69").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wprintf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wprintf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8188,7 +8182,7 @@ has_child("/code/simple-example/math-client:38","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:69").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'wscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","wscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -8196,7 +8190,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",12).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'__isoc99_wscanf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","__isoc99_wscanf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -8213,7 +8207,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcschr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcschr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8221,7 +8215,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",29).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcschr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcschr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5661).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8240,7 +8234,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcschr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcschr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8248,7 +8242,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcschr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcschr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5587).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8267,7 +8261,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcspbrk'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcspbrk").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8275,7 +8269,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",29).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcspbrk'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcspbrk").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5661).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8294,7 +8288,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcspbrk'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcspbrk").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8302,7 +8296,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcspbrk'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcspbrk").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5587).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8321,7 +8315,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcsrchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcsrchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8329,7 +8323,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",29).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcsrchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcsrchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5661).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8348,7 +8342,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcsrchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcsrchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8356,7 +8350,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcsrchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcsrchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5587).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8375,7 +8369,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcsstr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcsstr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8383,7 +8377,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",2
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",29).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcsstr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcsstr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5661).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8402,7 +8396,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wcsstr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wcsstr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8410,7 +8404,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",2
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wcsstr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wcsstr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5587).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8430,7 +8424,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wmemchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wmemchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8438,7 +8432,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",2
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",29).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wmemchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wmemchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5661).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8461,7 +8455,7 @@ has_child("/code/simple-example/math-client:73","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:73","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","b'wmemchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_name","wmemchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_file","DW_FORM_data1").
@@ -8469,7 +8463,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_line",2
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","b'wmemchr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_linkage_name","wmemchr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:73","DW_AT_type",5587).
 DW_TAG_subprogram_form("/code/simple-example/math-client:73","DW_AT_type","DW_FORM_ref4").
@@ -8491,7 +8485,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstold'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstold").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8517,7 +8511,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstoll'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstoll").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8545,7 +8539,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",8)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",5).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'long long int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","long long int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
@@ -8553,7 +8547,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstoull'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstoull").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",32).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -8581,10 +8575,10 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",8)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",7).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'long long unsigned int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","long long unsigned int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_unspecified_type("/code/simple-example/math-client:74").
-DW_TAG_unspecified_type_attr("/code/simple-example/math-client:74","DW_AT_name","b'decltype(nullptr)'").
+DW_TAG_unspecified_type_attr("/code/simple-example/math-client:74","DW_AT_name","decltype(nullptr)").
 DW_TAG_unspecified_type_form("/code/simple-example/math-client:74","DW_AT_name","DW_FORM_strp").
 DW_TAG_pointer_type("/code/simple-example/math-client:67").
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:67","DW_AT_byte_size",8).
@@ -8621,7 +8615,7 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",1)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",2).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'bool'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","bool").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",7748).
@@ -8646,28 +8640,28 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",1)
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",8).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'unsigned char'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","unsigned char").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",16).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",7).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'__int128 unsigned'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","__int128 unsigned").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",1).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",6).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'signed char'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","signed char").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",2).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",5).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'short int'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","short int").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",7799).
@@ -8677,21 +8671,21 @@ DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",16
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",5).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'__int128'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","__int128").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",2).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",16).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'char16_t'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","char16_t").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_base_type("/code/simple-example/math-client:57").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_byte_size",4).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_encoding",16).
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","b'char32_t'").
+DW_TAG_base_type_attr("/code/simple-example/math-client:57","DW_AT_name","char32_t").
 DW_TAG_base_type_form("/code/simple-example/math-client:57","DW_AT_name","DW_FORM_strp").
 DW_TAG_pointer_type("/code/simple-example/math-client:67").
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:67","DW_AT_byte_size",8).
@@ -8703,7 +8697,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:77","DW_AT_specification"
 DW_TAG_variable_form("/code/simple-example/math-client:77","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_namespace("/code/simple-example/math-client:12").
 has_child("/code/simple-example/math-client:12","/code/simple-example/math-client:43").
-DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_name","b'__gnu_debug'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_name","__gnu_debug").
 DW_TAG_namespace_form("/code/simple-example/math-client:12","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_decl_file",10).
 DW_TAG_namespace_form("/code/simple-example/math-client:12","DW_AT_decl_file","DW_FORM_data1").
@@ -8773,7 +8767,7 @@ DW_TAG_reference_type_form("/code/simple-example/math-client:75","DW_AT_byte_siz
 DW_TAG_reference_type_attr("/code/simple-example/math-client:75","DW_AT_type",2598).
 DW_TAG_reference_type_form("/code/simple-example/math-client:75","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8784,7 +8778,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7792).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8795,7 +8789,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7778).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8806,7 +8800,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7799).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8817,7 +8811,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",5484).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8831,7 +8825,7 @@ DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",7972).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8842,7 +8836,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4905).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8853,7 +8847,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8864,7 +8858,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int_least8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int_least8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8875,7 +8869,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7924).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint_least8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint_least8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8886,7 +8880,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7936).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int_least16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int_least16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8897,7 +8891,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7948).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint_least16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint_least16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8908,7 +8902,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7960).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int_least32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int_least32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8919,7 +8913,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7972).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint_least32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint_least32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8930,7 +8924,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7989).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__int_least64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__int_least64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8941,7 +8935,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8001).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uint_least64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uint_least64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8952,7 +8946,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8013).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__intmax_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__intmax_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8963,7 +8957,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__uintmax_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__uintmax_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8974,7 +8968,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__off_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__off_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8985,7 +8979,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__off64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__off64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",34).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -8996,7 +8990,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",35).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9007,7 +9001,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7924).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",35).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9018,7 +9012,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7948).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",35).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9029,7 +9023,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7972).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",35).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9040,7 +9034,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8001).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",36).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9051,7 +9045,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7936).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",36).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9062,7 +9056,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7960).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",36).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9073,7 +9067,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7989).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",36).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9084,7 +9078,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8013).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_least8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_least8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9095,7 +9089,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8025).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_least16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_least16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9106,7 +9100,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8049).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_least32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_least32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9117,7 +9111,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8073).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_least64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_least64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9128,7 +9122,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8097).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_least8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_least8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9139,7 +9133,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8037).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_least16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_least16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9150,7 +9144,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8061).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_least32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_least32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9161,7 +9155,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8085).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_least64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_least64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9172,7 +9166,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8109).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_fast8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_fast8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9183,7 +9177,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7792).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_fast16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_fast16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9194,7 +9188,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_fast32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_fast32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9205,7 +9199,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'int_fast64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","int_fast64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9216,7 +9210,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_fast8_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_fast8_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9227,7 +9221,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",7778).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_fast16_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_fast16_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9238,7 +9232,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_fast32_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_fast32_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9249,7 +9243,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uint_fast64_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uint_fast64_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9260,7 +9254,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'intptr_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","intptr_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9271,7 +9265,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",6995).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uintptr_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uintptr_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9282,7 +9276,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'intmax_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","intmax_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9293,7 +9287,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",8121).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'uintmax_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","uintmax_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",37).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9328,7 +9322,7 @@ has_child("/code/simple-example/math-client:7","/code/simple-example/math-client
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'lconv'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","lconv").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",96).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -9341,7 +9335,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",8831).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'decimal_point'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","decimal_point").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9354,7 +9348,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'thousands_sep'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","thousands_sep").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9367,7 +9361,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'grouping'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","grouping").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9380,7 +9374,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",16).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_curr_symbol'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_curr_symbol").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9393,7 +9387,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",24).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'currency_symbol'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","currency_symbol").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9406,7 +9400,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",32).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'mon_decimal_point'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","mon_decimal_point").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9419,7 +9413,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",40).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'mon_thousands_sep'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","mon_thousands_sep").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9432,7 +9426,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",48).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'mon_grouping'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","mon_grouping").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9445,7 +9439,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",56).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'positive_sign'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","positive_sign").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9458,7 +9452,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",64).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'negative_sign'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","negative_sign").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9471,7 +9465,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",72).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_frac_digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_frac_digits").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9484,7 +9478,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",80).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'frac_digits'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","frac_digits").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9497,7 +9491,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",81).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'p_cs_precedes'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","p_cs_precedes").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9510,7 +9504,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",82).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'p_sep_by_space'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","p_sep_by_space").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9523,7 +9517,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",83).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'n_cs_precedes'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","n_cs_precedes").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9536,7 +9530,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",84).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'n_sep_by_space'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","n_sep_by_space").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9549,7 +9543,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",85).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'p_sign_posn'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","p_sign_posn").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9562,7 +9556,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",86).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'n_sign_posn'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","n_sign_posn").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9575,7 +9569,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",87).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_p_cs_precedes'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_p_cs_precedes").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9588,7 +9582,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",88).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_p_sep_by_space'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_p_sep_by_space").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9601,7 +9595,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",89).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_n_cs_precedes'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_n_cs_precedes").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9614,7 +9608,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",90).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_n_sep_by_space'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_n_sep_by_space").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9627,7 +9621,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",91).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_p_sign_posn'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_p_sign_posn").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9640,7 +9634,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",92).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'int_n_sign_posn'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","int_n_sign_posn").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",38).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9657,7 +9651,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'setlocale'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","setlocale").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",38).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -9680,7 +9674,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:78").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:78","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_name","b'localeconv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_name","localeconv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:78","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_decl_file",38).
 DW_TAG_subprogram_form("/code/simple-example/math-client:78","DW_AT_decl_file","DW_FORM_data1").
@@ -9709,7 +9703,7 @@ DW_TAG_subrange_type_form("/code/simple-example/math-client:65","DW_AT_type","DW
 DW_TAG_subrange_type_attr("/code/simple-example/math-client:65","DW_AT_upper_bound",1).
 DW_TAG_subrange_type_form("/code/simple-example/math-client:65","DW_AT_upper_bound","DW_FORM_data1").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'__tzname'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","__tzname").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -9724,7 +9718,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'__daylight'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","__daylight").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -9739,7 +9733,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'__timezone'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","__timezone").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -9754,7 +9748,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'tzname'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","tzname").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -9769,7 +9763,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'daylight'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","daylight").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -9784,7 +9778,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'timezone'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","timezone").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -9799,7 +9793,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:80").
-DW_TAG_variable_attr("/code/simple-example/math-client:80","DW_AT_name","b'getdate_err'").
+DW_TAG_variable_attr("/code/simple-example/math-client:80","DW_AT_name","getdate_err").
 DW_TAG_variable_form("/code/simple-example/math-client:80","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:80","DW_AT_decl_file",39).
 DW_TAG_variable_form("/code/simple-example/math-client:80","DW_AT_decl_file","DW_FORM_data1").
@@ -9814,7 +9808,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:80","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:80","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:80","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'_Atomic_word'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","_Atomic_word").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",40).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9841,12 +9835,12 @@ DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_lin
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_column",3).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","b'5div_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","5div_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_sibling",9036).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'quot'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","quot").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",41).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9859,7 +9853,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:82").
-DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_name","b'rem'").
+DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_name","rem").
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_name","DW_FORM_string").
 DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_decl_file",41).
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_decl_file","DW_FORM_data1").
@@ -9872,7 +9866,7 @@ DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_data_member_location",4).
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'div_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","div_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",41).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9893,12 +9887,12 @@ DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_lin
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_column",3).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","b'6ldiv_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","6ldiv_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_sibling",9088).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'quot'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","quot").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",41).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9911,7 +9905,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:82").
-DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_name","b'rem'").
+DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_name","rem").
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_name","DW_FORM_string").
 DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_decl_file",41).
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_decl_file","DW_FORM_data1").
@@ -9924,7 +9918,7 @@ DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'ldiv_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","ldiv_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",41).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9945,12 +9939,12 @@ DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_lin
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_decl_column",3).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","b'7lldiv_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_linkage_name","7lldiv_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:61","DW_AT_sibling",9140).
 DW_TAG_structure_type_form("/code/simple-example/math-client:61","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'quot'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","quot").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",41).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -9963,7 +9957,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:82").
-DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_name","b'rem'").
+DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_name","rem").
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_name","DW_FORM_string").
 DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_decl_file",41).
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_decl_file","DW_FORM_data1").
@@ -9976,7 +9970,7 @@ DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:82","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:82","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'lldiv_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","lldiv_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",41).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -9987,7 +9981,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",9100).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:24").
-DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","b'__compar_fn_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_name","__compar_fn_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:24","DW_AT_decl_file",41).
 DW_TAG_typedef_form("/code/simple-example/math-client:24","DW_AT_decl_file","DW_FORM_data1").
@@ -10019,7 +10013,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'atexit'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","atexit").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10046,7 +10040,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:38").
 has_child("/code/simple-example/math-client:38","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","b'at_quick_exit'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_name","at_quick_exit").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_file","DW_FORM_data1").
@@ -10054,7 +10048,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_line",6
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_line","DW_FORM_data2").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_decl_column",18).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","b'at_quick_exit'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_linkage_name","at_quick_exit").
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:38","DW_AT_type",5028).
 DW_TAG_subprogram_form("/code/simple-example/math-client:38","DW_AT_type","DW_FORM_ref4").
@@ -10069,7 +10063,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'atof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","atof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10090,7 +10084,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'atoi'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","atoi").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10111,7 +10105,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'atol'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","atol").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10136,7 +10130,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'bsearch'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","bsearch").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10170,7 +10164,7 @@ has_child("/code/simple-example/math-client:85","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:85","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:85","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:85","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:85","DW_AT_name","b'div'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:85","DW_AT_name","div").
 DW_TAG_subprogram_form("/code/simple-example/math-client:85","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:85","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:85","DW_AT_decl_file","DW_FORM_data1").
@@ -10194,7 +10188,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'getenv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","getenv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10216,7 +10210,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'ldiv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","ldiv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10241,7 +10235,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mblen'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mblen").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10267,7 +10261,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mbstowcs'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mbstowcs").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10296,7 +10290,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'mbtowc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","mbtowc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10326,7 +10320,7 @@ has_child("/code/simple-example/math-client:86","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:86","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","b'qsort'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","qsort").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_decl_file","DW_FORM_data1").
@@ -10354,7 +10348,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:87").
 has_child("/code/simple-example/math-client:87","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:87","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:87","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:87","DW_AT_name","b'quick_exit'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:87","DW_AT_name","quick_exit").
 DW_TAG_subprogram_form("/code/simple-example/math-client:87","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:87","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:87","DW_AT_decl_file","DW_FORM_data1").
@@ -10374,7 +10368,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:70").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_name","b'rand'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_name","rand").
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_decl_file","DW_FORM_data1").
@@ -10390,7 +10384,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:86").
 has_child("/code/simple-example/math-client:86","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","b'srand'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","srand").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_decl_file","DW_FORM_data1").
@@ -10410,7 +10404,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtod'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtod").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10441,7 +10435,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtol'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtol").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10470,7 +10464,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtoul'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtoul").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10497,7 +10491,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'system'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","system").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10520,7 +10514,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wcstombs'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wcstombs").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10548,7 +10542,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'wctomb'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","wctomb").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10573,7 +10567,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'lldiv'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","lldiv").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -10597,7 +10591,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'atoll'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","atoll").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10620,7 +10614,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtoll'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtoll").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10649,7 +10643,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtoull'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtoull").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10677,7 +10671,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10702,7 +10696,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'strtold'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","strtold").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",41).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -10725,7 +10719,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_structure_type("/code/simple-example/math-client:7").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
 has_child("/code/simple-example/math-client:7","/code/simple-example/math-client:14").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","b'_G_fpos_t'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_name","_G_fpos_t").
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_byte_size",16).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_byte_size","DW_FORM_data1").
@@ -10738,7 +10732,7 @@ DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_decl_colu
 DW_TAG_structure_type_attr("/code/simple-example/math-client:7","DW_AT_sibling",10004).
 DW_TAG_structure_type_form("/code/simple-example/math-client:7","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'__pos'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","__pos").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",42).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -10751,7 +10745,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",0).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_member("/code/simple-example/math-client:14").
-DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","b'__state'").
+DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_name","__state").
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_name","DW_FORM_strp").
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_decl_file",42).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_decl_file","DW_FORM_data1").
@@ -10764,7 +10758,7 @@ DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_type","DW_FORM_r
 DW_TAG_member_attr("/code/simple-example/math-client:14","DW_AT_data_member_location",8).
 DW_TAG_member_form("/code/simple-example/math-client:14","DW_AT_data_member_location","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'__fpos_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","__fpos_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",42).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -10775,7 +10769,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",9964).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:88").
-DW_TAG_typedef_attr("/code/simple-example/math-client:88","DW_AT_name","b'_IO_lock_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:88","DW_AT_name","_IO_lock_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:88","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:88","DW_AT_decl_file",30).
 DW_TAG_typedef_form("/code/simple-example/math-client:88","DW_AT_decl_file","DW_FORM_data1").
@@ -10784,7 +10778,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:88","DW_AT_decl_line","DW_
 DW_TAG_typedef_attr("/code/simple-example/math-client:88","DW_AT_decl_column",14).
 DW_TAG_typedef_form("/code/simple-example/math-client:88","DW_AT_decl_column","DW_FORM_data1").
 DW_TAG_structure_type("/code/simple-example/math-client:89").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_name","b'_IO_marker'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_name","_IO_marker").
 DW_TAG_structure_type_form("/code/simple-example/math-client:89","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_declaration","True").
 DW_TAG_structure_type_form("/code/simple-example/math-client:89","DW_AT_declaration","DW_FORM_flag_present").
@@ -10815,7 +10809,7 @@ DW_TAG_pointer_type_form("/code/simple-example/math-client:67","DW_AT_byte_size"
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:67","DW_AT_type",10016).
 DW_TAG_pointer_type_form("/code/simple-example/math-client:67","DW_AT_type","DW_FORM_ref4").
 DW_TAG_structure_type("/code/simple-example/math-client:89").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_name","b'_IO_codecvt'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_name","_IO_codecvt").
 DW_TAG_structure_type_form("/code/simple-example/math-client:89","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_declaration","True").
 DW_TAG_structure_type_form("/code/simple-example/math-client:89","DW_AT_declaration","DW_FORM_flag_present").
@@ -10825,7 +10819,7 @@ DW_TAG_pointer_type_form("/code/simple-example/math-client:67","DW_AT_byte_size"
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:67","DW_AT_type",10063).
 DW_TAG_pointer_type_form("/code/simple-example/math-client:67","DW_AT_type","DW_FORM_ref4").
 DW_TAG_structure_type("/code/simple-example/math-client:89").
-DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_name","b'_IO_wide_data'").
+DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_name","_IO_wide_data").
 DW_TAG_structure_type_form("/code/simple-example/math-client:89","DW_AT_name","DW_FORM_strp").
 DW_TAG_structure_type_attr("/code/simple-example/math-client:89","DW_AT_declaration","True").
 DW_TAG_structure_type_form("/code/simple-example/math-client:89","DW_AT_declaration","DW_FORM_flag_present").
@@ -10846,7 +10840,7 @@ DW_TAG_subrange_type_form("/code/simple-example/math-client:65","DW_AT_type","DW
 DW_TAG_subrange_type_attr("/code/simple-example/math-client:65","DW_AT_upper_bound",19).
 DW_TAG_subrange_type_form("/code/simple-example/math-client:65","DW_AT_upper_bound","DW_FORM_data1").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'fpos_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","fpos_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",43).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -10860,7 +10854,7 @@ DW_TAG_const_type("/code/simple-example/math-client:10").
 DW_TAG_const_type_attr("/code/simple-example/math-client:10","DW_AT_type",10101).
 DW_TAG_const_type_form("/code/simple-example/math-client:10","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'stdin'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","stdin").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",43).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10880,7 +10874,7 @@ DW_TAG_pointer_type_form("/code/simple-example/math-client:67","DW_AT_byte_size"
 DW_TAG_pointer_type_attr("/code/simple-example/math-client:67","DW_AT_type",5472).
 DW_TAG_pointer_type_form("/code/simple-example/math-client:67","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'stdout'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","stdout").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",43).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10895,7 +10889,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'stderr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","stderr").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",43).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10910,7 +10904,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'sys_nerr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","sys_nerr").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",44).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10932,7 +10926,7 @@ DW_TAG_array_type_attr("/code/simple-example/math-client:64","DW_AT_sibling",101
 DW_TAG_array_type_form("/code/simple-example/math-client:64","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_subrange_type("/code/simple-example/math-client:90").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'sys_errlist'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","sys_errlist").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",44).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10947,7 +10941,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'_sys_nerr'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","_sys_nerr").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",44).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10962,7 +10956,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'_sys_errlist'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","_sys_errlist").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",44).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -10980,7 +10974,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:86").
 has_child("/code/simple-example/math-client:86","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","b'clearerr'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","clearerr").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_decl_file","DW_FORM_data1").
@@ -10999,7 +10993,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'fclose'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","fclose").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11020,7 +11014,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'feof'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","feof").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11041,7 +11035,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'ferror'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","ferror").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11062,7 +11056,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'fflush'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","fflush").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11083,7 +11077,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fgetc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fgetc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11105,7 +11099,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fgetpos'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fgetpos").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11136,7 +11130,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fgets'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fgets").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11164,7 +11158,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'fopen'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","fopen").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11191,7 +11185,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fread'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fread").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11223,7 +11217,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'freopen'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","freopen").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11252,7 +11246,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fseek'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fseek").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11280,7 +11274,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'fsetpos'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","fsetpos").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11309,7 +11303,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'ftell'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","ftell").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11330,7 +11324,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:68").
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'getc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","getc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11350,7 +11344,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:70").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_name","b'getchar'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_name","getchar").
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:70","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:70","DW_AT_decl_file","DW_FORM_data1").
@@ -11366,7 +11360,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:86").
 has_child("/code/simple-example/math-client:86","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","b'perror'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","perror").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_decl_file","DW_FORM_data1").
@@ -11385,7 +11379,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'remove'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","remove").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11407,7 +11401,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'rename'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","rename").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11431,7 +11425,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:86").
 has_child("/code/simple-example/math-client:86","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","b'rewind'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","rewind").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_decl_file","DW_FORM_data1").
@@ -11451,7 +11445,7 @@ has_child("/code/simple-example/math-client:86","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:86","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","b'setbuf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_name","setbuf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:86","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:86","DW_AT_decl_file","DW_FORM_data1").
@@ -11476,7 +11470,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'setvbuf'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","setvbuf").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11505,7 +11499,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type",
 DW_TAG_subprogram("/code/simple-example/math-client:78").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:78","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_name","b'tmpfile'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_name","tmpfile").
 DW_TAG_subprogram_form("/code/simple-example/math-client:78","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:78","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:78","DW_AT_decl_file","DW_FORM_data1").
@@ -11521,7 +11515,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'tmpnam'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","tmpnam").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11543,7 +11537,7 @@ has_child("/code/simple-example/math-client:68","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:68","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","b'ungetc'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_name","ungetc").
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:68","DW_AT_decl_file",43).
 DW_TAG_subprogram_form("/code/simple-example/math-client:68","DW_AT_decl_file","DW_FORM_data1").
@@ -11564,7 +11558,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",10130).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'program_invocation_name'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","program_invocation_name").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",45).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -11579,7 +11573,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_external","DW_
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:79").
-DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","b'program_invocation_short_name'").
+DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_name","program_invocation_short_name").
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:79","DW_AT_decl_file",45).
 DW_TAG_variable_form("/code/simple-example/math-client:79","DW_AT_decl_file","DW_FORM_data1").
@@ -11609,7 +11603,7 @@ DW_TAG_reference_type_form("/code/simple-example/math-client:75","DW_AT_byte_siz
 DW_TAG_reference_type_attr("/code/simple-example/math-client:75","DW_AT_type",3514).
 DW_TAG_reference_type_form("/code/simple-example/math-client:75","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'wctype_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","wctype_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",46).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -11620,7 +11614,7 @@ DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_column","D
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_type",4832).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_type","DW_FORM_ref4").
 DW_TAG_typedef("/code/simple-example/math-client:27").
-DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","b'wctrans_t'").
+DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_name","wctrans_t").
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_name","DW_FORM_strp").
 DW_TAG_typedef_attr("/code/simple-example/math-client:27","DW_AT_decl_file",47).
 DW_TAG_typedef_form("/code/simple-example/math-client:27","DW_AT_decl_file","DW_FORM_data1").
@@ -11640,7 +11634,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'iswctype'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","iswctype").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",46).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11665,7 +11659,7 @@ has_child("/code/simple-example/math-client:71","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'towctrans'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","towctrans").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",47).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11689,7 +11683,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wctrans'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wctrans").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",47).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11710,7 +11704,7 @@ DW_TAG_subprogram("/code/simple-example/math-client:71").
 has_child("/code/simple-example/math-client:71","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","b'wctype'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_name","wctype").
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:71","DW_AT_decl_file",46).
 DW_TAG_subprogram_form("/code/simple-example/math-client:71","DW_AT_decl_file","DW_FORM_data1").
@@ -11734,7 +11728,7 @@ DW_TAG_variable_attr("/code/simple-example/math-client:91","DW_AT_location","[3,
 DW_TAG_variable_form("/code/simple-example/math-client:91","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_namespace("/code/simple-example/math-client:12").
 has_child("/code/simple-example/math-client:12","/code/simple-example/math-client:92").
-DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_name","b'MathLibrary'").
+DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_name","MathLibrary").
 DW_TAG_namespace_form("/code/simple-example/math-client:12","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/math-client:12","DW_AT_decl_file",48).
 DW_TAG_namespace_form("/code/simple-example/math-client:12","DW_AT_decl_file","DW_FORM_data1").
@@ -11749,7 +11743,7 @@ has_child("/code/simple-example/math-client:92","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:92","/code/simple-example/math-client:94").
 has_child("/code/simple-example/math-client:92","/code/simple-example/math-client:94").
 has_child("/code/simple-example/math-client:92","/code/simple-example/math-client:95").
-DW_TAG_class_type_attr("/code/simple-example/math-client:92","DW_AT_name","b'Arithmetic'").
+DW_TAG_class_type_attr("/code/simple-example/math-client:92","DW_AT_name","Arithmetic").
 DW_TAG_class_type_form("/code/simple-example/math-client:92","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/math-client:92","DW_AT_byte_size",1).
 DW_TAG_class_type_form("/code/simple-example/math-client:92","DW_AT_byte_size","DW_FORM_data1").
@@ -11764,7 +11758,7 @@ has_child("/code/simple-example/math-client:93","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:93","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_name","b'Add'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_name","Add").
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_decl_file",48).
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_decl_file","DW_FORM_data1").
@@ -11772,7 +11766,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic3AddEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic3AddEdd").
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:93","DW_AT_type",4806).
 DW_TAG_subprogram_form("/code/simple-example/math-client:93","DW_AT_type","DW_FORM_ref4").
@@ -11793,7 +11787,7 @@ has_child("/code/simple-example/math-client:94","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:94","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_name","b'Subtract'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_name","Subtract").
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_decl_file",48).
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_decl_file","DW_FORM_data1").
@@ -11801,7 +11795,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic8SubtractEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8SubtractEdd").
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_type",4806).
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_type","DW_FORM_ref4").
@@ -11822,7 +11816,7 @@ has_child("/code/simple-example/math-client:94","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:94","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_name","b'Multiply'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_name","Multiply").
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_decl_file",48).
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_decl_file","DW_FORM_data1").
@@ -11830,7 +11824,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic8MultiplyEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8MultiplyEdd").
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_type",4806).
 DW_TAG_subprogram_form("/code/simple-example/math-client:94","DW_AT_type","DW_FORM_ref4").
@@ -11851,7 +11845,7 @@ has_child("/code/simple-example/math-client:95","/code/simple-example/math-clien
 has_child("/code/simple-example/math-client:95","/code/simple-example/math-client:16").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_name","b'Divide'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_name","Divide").
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_decl_file",48).
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_decl_file","DW_FORM_data1").
@@ -11859,7 +11853,7 @@ DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_decl_line",1
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic6DivideEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic6DivideEdd").
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:95","DW_AT_type",4806).
 DW_TAG_subprogram_form("/code/simple-example/math-client:95","DW_AT_type","DW_FORM_ref4").
@@ -11874,7 +11868,7 @@ DW_TAG_formal_parameter("/code/simple-example/math-client:16").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:16","DW_AT_type",4806).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:16","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable("/code/simple-example/math-client:96").
-DW_TAG_variable_attr("/code/simple-example/math-client:96","DW_AT_name","b'__dso_handle'").
+DW_TAG_variable_attr("/code/simple-example/math-client:96","DW_AT_name","__dso_handle").
 DW_TAG_variable_form("/code/simple-example/math-client:96","DW_AT_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:96","DW_AT_type",4912).
 DW_TAG_variable_form("/code/simple-example/math-client:96","DW_AT_type","DW_FORM_ref4").
@@ -11885,98 +11879,98 @@ DW_TAG_variable_form("/code/simple-example/math-client:96","DW_AT_artificial","D
 DW_TAG_variable_attr("/code/simple-example/math-client:96","DW_AT_declaration","True").
 DW_TAG_variable_form("/code/simple-example/math-client:96","DW_AT_declaration","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:97").
-DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","b'_ZNSt17integral_constantIbLb0EE5valueE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","_ZNSt17integral_constantIbLb0EE5valueE").
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_specification",1275).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_const_value",0).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_variable("/code/simple-example/math-client:97").
-DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","b'_ZNSt17integral_constantIbLb1EE5valueE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","_ZNSt17integral_constantIbLb1EE5valueE").
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_specification",1397).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_const_value",1).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_variable("/code/simple-example/math-client:98").
-DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE").
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_specification",4146).
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_const_value",-2147483648).
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_const_value","DW_FORM_sdata").
 DW_TAG_variable("/code/simple-example/math-client:99").
-DW_TAG_variable_attr("/code/simple-example/math-client:99","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIiE5__maxE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:99","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIiE5__maxE").
 DW_TAG_variable_form("/code/simple-example/math-client:99","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:99","DW_AT_specification",4158).
 DW_TAG_variable_form("/code/simple-example/math-client:99","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:99","DW_AT_const_value",2147483647).
 DW_TAG_variable_form("/code/simple-example/math-client:99","DW_AT_const_value","DW_FORM_data4").
 DW_TAG_variable("/code/simple-example/math-client:97").
-DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","b'_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E'").
+DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E").
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_specification",4340).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_const_value",38).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_variable("/code/simple-example/math-client:100").
-DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_linkage_name","b'_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E'").
+DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_linkage_name","_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E").
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_specification",4411).
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_const_value",308).
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_const_value","DW_FORM_data2").
 DW_TAG_variable("/code/simple-example/math-client:100").
-DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_linkage_name","b'_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E'").
+DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_linkage_name","_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E").
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_specification",4482).
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_const_value",4932).
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_const_value","DW_FORM_data2").
 DW_TAG_variable("/code/simple-example/math-client:97").
-DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerImE8__digitsE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerImE8__digitsE").
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_specification",4553).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_const_value",64).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_variable("/code/simple-example/math-client:97").
-DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIcE5__maxE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIcE5__maxE").
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_specification",4600).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:97","DW_AT_const_value",127).
 DW_TAG_variable_form("/code/simple-example/math-client:97","DW_AT_const_value","DW_FORM_data1").
 DW_TAG_variable("/code/simple-example/math-client:98").
-DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIsE5__minE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIsE5__minE").
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_specification",4659).
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_const_value",-32768).
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_const_value","DW_FORM_sdata").
 DW_TAG_variable("/code/simple-example/math-client:100").
-DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIsE5__maxE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIsE5__maxE").
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_specification",4671).
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:100","DW_AT_const_value",32767).
 DW_TAG_variable_form("/code/simple-example/math-client:100","DW_AT_const_value","DW_FORM_data2").
 DW_TAG_variable("/code/simple-example/math-client:98").
-DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIlE5__minE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIlE5__minE").
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_specification",4726).
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:98","DW_AT_const_value",0).
 DW_TAG_variable_form("/code/simple-example/math-client:98","DW_AT_const_value","DW_FORM_sdata").
 DW_TAG_variable("/code/simple-example/math-client:101").
-DW_TAG_variable_attr("/code/simple-example/math-client:101","DW_AT_linkage_name","b'_ZN9__gnu_cxx24__numeric_traits_integerIlE5__maxE'").
+DW_TAG_variable_attr("/code/simple-example/math-client:101","DW_AT_linkage_name","_ZN9__gnu_cxx24__numeric_traits_integerIlE5__maxE").
 DW_TAG_variable_form("/code/simple-example/math-client:101","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_variable_attr("/code/simple-example/math-client:101","DW_AT_specification",4738).
 DW_TAG_variable_form("/code/simple-example/math-client:101","DW_AT_specification","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:101","DW_AT_const_value",-1).
 DW_TAG_variable_form("/code/simple-example/math-client:101","DW_AT_const_value","DW_FORM_data8").
 DW_TAG_subprogram("/code/simple-example/math-client:102").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:102","DW_AT_name","b'_GLOBAL__sub_I_main'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:102","DW_AT_name","_GLOBAL__sub_I_main").
 DW_TAG_subprogram_form("/code/simple-example/math-client:102","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:102","DW_AT_artificial","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:102","DW_AT_artificial","DW_FORM_flag_present").
@@ -11991,7 +11985,7 @@ DW_TAG_subprogram_form("/code/simple-example/math-client:102","DW_AT_GNU_all_tai
 DW_TAG_subprogram("/code/simple-example/math-client:103").
 has_child("/code/simple-example/math-client:103","/code/simple-example/math-client:104").
 has_child("/code/simple-example/math-client:103","/code/simple-example/math-client:104").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:103","DW_AT_name","b'__static_initialization_and_destruction_0'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:103","DW_AT_name","__static_initialization_and_destruction_0").
 DW_TAG_subprogram_form("/code/simple-example/math-client:103","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:103","DW_AT_artificial","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:103","DW_AT_artificial","DW_FORM_flag_present").
@@ -12006,7 +12000,7 @@ DW_TAG_subprogram_form("/code/simple-example/math-client:103","DW_AT_GNU_all_tai
 DW_TAG_subprogram_attr("/code/simple-example/math-client:103","DW_AT_sibling",11432).
 DW_TAG_subprogram_form("/code/simple-example/math-client:103","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_formal_parameter("/code/simple-example/math-client:104").
-DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_name","b'__initialize_p'").
+DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_name","__initialize_p").
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:104","DW_AT_name","DW_FORM_strp").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:104","DW_AT_decl_file","DW_FORM_data1").
@@ -12019,7 +12013,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/math-client:104","DW_AT_type"
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_location","[145, 108]").
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:104","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_formal_parameter("/code/simple-example/math-client:104").
-DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_name","b'__priority'").
+DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_name","__priority").
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:104","DW_AT_name","DW_FORM_strp").
 DW_TAG_formal_parameter_attr("/code/simple-example/math-client:104","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/math-client:104","DW_AT_decl_file","DW_FORM_data1").
@@ -12036,7 +12030,7 @@ has_child("/code/simple-example/math-client:105","/code/simple-example/math-clie
 has_child("/code/simple-example/math-client:105","/code/simple-example/math-client:106").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:105","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:105","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/math-client:105","DW_AT_name","b'main'").
+DW_TAG_subprogram_attr("/code/simple-example/math-client:105","DW_AT_name","main").
 DW_TAG_subprogram_form("/code/simple-example/math-client:105","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/math-client:105","DW_AT_decl_file",1).
 DW_TAG_subprogram_form("/code/simple-example/math-client:105","DW_AT_decl_file","DW_FORM_data1").
@@ -12055,7 +12049,7 @@ DW_TAG_subprogram_form("/code/simple-example/math-client:105","DW_AT_frame_base"
 DW_TAG_subprogram_attr("/code/simple-example/math-client:105","DW_AT_GNU_all_tail_call_sites","True").
 DW_TAG_subprogram_form("/code/simple-example/math-client:105","DW_AT_GNU_all_tail_call_sites","DW_FORM_flag_present").
 DW_TAG_variable("/code/simple-example/math-client:106").
-DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_name","b'a'").
+DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_name","a").
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_name","DW_FORM_string").
 DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_decl_file",1).
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_decl_file","DW_FORM_data1").
@@ -12068,7 +12062,7 @@ DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_type","DW_FOR
 DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_location","[145, 88]").
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_variable("/code/simple-example/math-client:106").
-DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_name","b'b'").
+DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_name","b").
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_name","DW_FORM_string").
 DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_decl_file",1).
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_decl_file","DW_FORM_data1").
@@ -12080,6 +12074,10 @@ DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_type",5028).
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_type","DW_FORM_ref4").
 DW_TAG_variable_attr("/code/simple-example/math-client:106","DW_AT_location","[145, 84]").
 DW_TAG_variable_form("/code/simple-example/math-client:106","DW_AT_location","DW_FORM_exprloc").
+
+%----------------------------------------------------------------------------
+% Corpus DIE: /code/simple-example/libmath-v1.so
+%----------------------------------------------------------------------------
 DW_TAG_compile_unit("/code/simple-example/libmath-v1.so:1").
 has_child("/code/simple-example/libmath-v1.so:1","/code/simple-example/libmath-v1.so:2").
 has_child("/code/simple-example/libmath-v1.so:1","/code/simple-example/libmath-v1.so:8").
@@ -12087,13 +12085,13 @@ has_child("/code/simple-example/libmath-v1.so:1","/code/simple-example/libmath-v
 has_child("/code/simple-example/libmath-v1.so:1","/code/simple-example/libmath-v1.so:9").
 has_child("/code/simple-example/libmath-v1.so:1","/code/simple-example/libmath-v1.so:9").
 has_child("/code/simple-example/libmath-v1.so:1","/code/simple-example/libmath-v1.so:11").
-DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_producer","b'GNU C++14 9.3.0 -mtune=generic -march=x86-64 -g -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection'").
+DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_producer","GNU C++14 9.3.0 -mtune=generic -march=x86-64 -g -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection").
 DW_TAG_compile_unit_form("/code/simple-example/libmath-v1.so:1","DW_AT_producer","DW_FORM_strp").
 DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_language",4).
 DW_TAG_compile_unit_form("/code/simple-example/libmath-v1.so:1","DW_AT_language","DW_FORM_data1").
-DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_name","b'MathLibrary.cpp'").
+DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_name","MathLibrary.cpp").
 DW_TAG_compile_unit_form("/code/simple-example/libmath-v1.so:1","DW_AT_name","DW_FORM_strp").
-DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_comp_dir","b'/home/vanessa/Desktop/Code/lp/abi-python/simple-example'").
+DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_comp_dir","/home/vanessa/Desktop/Code/lp/abi-python/simple-example").
 DW_TAG_compile_unit_form("/code/simple-example/libmath-v1.so:1","DW_AT_comp_dir","DW_FORM_strp").
 DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_low_pc",4346).
 DW_TAG_compile_unit_form("/code/simple-example/libmath-v1.so:1","DW_AT_low_pc","DW_FORM_addr").
@@ -12103,7 +12101,7 @@ DW_TAG_compile_unit_attr("/code/simple-example/libmath-v1.so:1","DW_AT_stmt_list
 DW_TAG_compile_unit_form("/code/simple-example/libmath-v1.so:1","DW_AT_stmt_list","DW_FORM_sec_offset").
 DW_TAG_namespace("/code/simple-example/libmath-v1.so:2").
 has_child("/code/simple-example/libmath-v1.so:2","/code/simple-example/libmath-v1.so:3").
-DW_TAG_namespace_attr("/code/simple-example/libmath-v1.so:2","DW_AT_name","b'MathLibrary'").
+DW_TAG_namespace_attr("/code/simple-example/libmath-v1.so:2","DW_AT_name","MathLibrary").
 DW_TAG_namespace_form("/code/simple-example/libmath-v1.so:2","DW_AT_name","DW_FORM_strp").
 DW_TAG_namespace_attr("/code/simple-example/libmath-v1.so:2","DW_AT_decl_file",2).
 DW_TAG_namespace_form("/code/simple-example/libmath-v1.so:2","DW_AT_decl_file","DW_FORM_data1").
@@ -12118,7 +12116,7 @@ has_child("/code/simple-example/libmath-v1.so:3","/code/simple-example/libmath-v
 has_child("/code/simple-example/libmath-v1.so:3","/code/simple-example/libmath-v1.so:6").
 has_child("/code/simple-example/libmath-v1.so:3","/code/simple-example/libmath-v1.so:6").
 has_child("/code/simple-example/libmath-v1.so:3","/code/simple-example/libmath-v1.so:7").
-DW_TAG_class_type_attr("/code/simple-example/libmath-v1.so:3","DW_AT_name","b'Arithmetic'").
+DW_TAG_class_type_attr("/code/simple-example/libmath-v1.so:3","DW_AT_name","Arithmetic").
 DW_TAG_class_type_form("/code/simple-example/libmath-v1.so:3","DW_AT_name","DW_FORM_strp").
 DW_TAG_class_type_attr("/code/simple-example/libmath-v1.so:3","DW_AT_byte_size",1).
 DW_TAG_class_type_form("/code/simple-example/libmath-v1.so:3","DW_AT_byte_size","DW_FORM_data1").
@@ -12133,7 +12131,7 @@ has_child("/code/simple-example/libmath-v1.so:4","/code/simple-example/libmath-v
 has_child("/code/simple-example/libmath-v1.so:4","/code/simple-example/libmath-v1.so:5").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_name","b'Add'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_name","Add").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_name","DW_FORM_string").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_decl_file",2).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_decl_file","DW_FORM_data1").
@@ -12141,7 +12139,7 @@ DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_decl_line",
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic3AddEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic3AddEdd").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:4","DW_AT_type",192).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:4","DW_AT_type","DW_FORM_ref4").
@@ -12162,7 +12160,7 @@ has_child("/code/simple-example/libmath-v1.so:6","/code/simple-example/libmath-v
 has_child("/code/simple-example/libmath-v1.so:6","/code/simple-example/libmath-v1.so:5").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_name","b'Subtract'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_name","Subtract").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_decl_file",2).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_decl_file","DW_FORM_data1").
@@ -12170,7 +12168,7 @@ DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_decl_line",
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic8SubtractEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8SubtractEdd").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_type",192).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_type","DW_FORM_ref4").
@@ -12191,7 +12189,7 @@ has_child("/code/simple-example/libmath-v1.so:6","/code/simple-example/libmath-v
 has_child("/code/simple-example/libmath-v1.so:6","/code/simple-example/libmath-v1.so:5").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_name","b'Multiply'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_name","Multiply").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_decl_file",2).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_decl_file","DW_FORM_data1").
@@ -12199,7 +12197,7 @@ DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_decl_line",
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic8MultiplyEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8MultiplyEdd").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_type",192).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:6","DW_AT_type","DW_FORM_ref4").
@@ -12220,7 +12218,7 @@ has_child("/code/simple-example/libmath-v1.so:7","/code/simple-example/libmath-v
 has_child("/code/simple-example/libmath-v1.so:7","/code/simple-example/libmath-v1.so:5").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_external","True").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_external","DW_FORM_flag_present").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_name","b'Divide'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_name","Divide").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_decl_file",2).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_decl_file","DW_FORM_data1").
@@ -12228,7 +12226,7 @@ DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_decl_line",
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_decl_line","DW_FORM_data1").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_decl_column",23).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_decl_column","DW_FORM_data1").
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_linkage_name","b'_ZN11MathLibrary10Arithmetic6DivideEdd'").
+DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic6DivideEdd").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_linkage_name","DW_FORM_strp").
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:7","DW_AT_type",192).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:7","DW_AT_type","DW_FORM_ref4").
@@ -12247,7 +12245,7 @@ DW_TAG_base_type_attr("/code/simple-example/libmath-v1.so:8","DW_AT_byte_size",8
 DW_TAG_base_type_form("/code/simple-example/libmath-v1.so:8","DW_AT_byte_size","DW_FORM_data1").
 DW_TAG_base_type_attr("/code/simple-example/libmath-v1.so:8","DW_AT_encoding",4).
 DW_TAG_base_type_form("/code/simple-example/libmath-v1.so:8","DW_AT_encoding","DW_FORM_data1").
-DW_TAG_base_type_attr("/code/simple-example/libmath-v1.so:8","DW_AT_name","b'double'").
+DW_TAG_base_type_attr("/code/simple-example/libmath-v1.so:8","DW_AT_name","double").
 DW_TAG_base_type_form("/code/simple-example/libmath-v1.so:8","DW_AT_name","DW_FORM_strp").
 DW_TAG_subprogram("/code/simple-example/libmath-v1.so:9").
 has_child("/code/simple-example/libmath-v1.so:9","/code/simple-example/libmath-v1.so:10").
@@ -12271,7 +12269,7 @@ DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:9","DW_AT_GNU_all_cal
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:9","DW_AT_sibling",256).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:9","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'a'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","a").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12284,7 +12282,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_type
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_location","[145, 104]").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'b'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12318,7 +12316,7 @@ DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:9","DW_AT_GNU_all_cal
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:9","DW_AT_sibling",313).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:9","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'a'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","a").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12331,7 +12329,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_type
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_location","[145, 104]").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'b'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12365,7 +12363,7 @@ DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:9","DW_AT_GNU_all_cal
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:9","DW_AT_sibling",370).
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:9","DW_AT_sibling","DW_FORM_ref4").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'a'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","a").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12378,7 +12376,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_type
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_location","[145, 104]").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'b'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12410,7 +12408,7 @@ DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:11","DW_AT_frame_base
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:11","DW_AT_GNU_all_call_sites","True").
 DW_TAG_subprogram_form("/code/simple-example/libmath-v1.so:11","DW_AT_GNU_all_call_sites","DW_FORM_flag_present").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'a'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","a").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
@@ -12423,7 +12421,7 @@ DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_type
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_location","[145, 104]").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_location","DW_FORM_exprloc").
 DW_TAG_formal_parameter("/code/simple-example/libmath-v1.so:10").
-DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b'b'").
+DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_name","b").
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_name","DW_FORM_string").
 DW_TAG_formal_parameter_attr("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file",1).
 DW_TAG_formal_parameter_form("/code/simple-example/libmath-v1.so:10","DW_AT_decl_file","DW_FORM_data1").
