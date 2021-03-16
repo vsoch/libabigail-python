@@ -649,7 +649,6 @@ def is_compatible(
 
     # Create the parser, and generate the corpus
     parser = ABIParser()
-    print("preparing corpora...")
     corpusA = parser.get_corpus_from_elf(binary)
     corpusB = parser.get_corpus_from_elf(library)
     setup = ABICompatSolverSetup()
