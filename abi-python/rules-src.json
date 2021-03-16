@@ -1,0 +1,698 @@
+{
+    "Renamed_Field": {
+        "id": "Renamed_Field",
+        "severity": "High",
+        "kind": "Fields",
+        "change": "Field @target has been renamed to @new_value.",
+        "effect": "Recompilation of a client program may be broken with the error message: @type_name has no member named @target."
+    },
+    "Used_Reserved_Field": {
+        "id": "Used_Reserved_Field",
+        "severity": "Safe",
+        "kind": "Fields",
+        "change": "Reserved field @target has been replaced by @new_value.",
+        "effect": "No effect."
+    },
+    "Field_Type": {
+        "id": "Field_Type",
+        "severity": "Low",
+        "kind": "Fields",
+        "change": "Type of field @target has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Pure_Virtual_Method": {
+        "id": "Added_Pure_Virtual_Method",
+        "severity": "High",
+        "kind": "V-table",
+        "change": "Pure virtual method @target has been added to this class.",
+        "effect": "Recompilation of a client program may be broken with the error message: cannot allocate an object of abstract type @type_name because the following virtual functions are pure within @type_name: virtual @target."
+    },
+    "Removed_Pure_Virtual_Method": {
+        "id": "Removed_Pure_Virtual_Method",
+        "severity": "High",
+        "kind": "V-table",
+        "change": "Pure virtual method @target has been removed from this class.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Overridden_Virtual_Method": {
+        "id": "Overridden_Virtual_Method",
+        "severity": "Low",
+        "kind": "V-table",
+        "change": "Virtual method @old_value has been overridden by @new_value.",
+        "effect": "Method @new_value will be called after recompilation instead of @old_value."
+    },
+    "Overridden_Virtual_Method_B": {
+        "id": "Overridden_Virtual_Method_B",
+        "severity": "Low",
+        "kind": "V-table",
+        "change": "Virtual method @old_value has been overridden by @new_value.",
+        "effect": "Method @new_value will be called after recompilation instead of @old_value."
+    },
+    "Added_Base_Class": {
+        "id": "Added_Base_Class",
+        "severity": "Low",
+        "kind": "Classes",
+        "change": "Base class @target has been added.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Removed_Base_Class": {
+        "id": "Removed_Base_Class",
+        "severity": "Low",
+        "kind": "Classes",
+        "change": "Base class @target has been removed.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "DataType_Type": {
+        "id": "DataType_Type",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "Type of this type has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Moved_Field": {
+        "id": "Moved_Field",
+        "severity": "Safe",
+        "kind": "Fields",
+        "change": "The relative position of field @target has been changed from @old_value to @new_value.",
+        "effect": "No effect."
+    },
+    "Added_Field": {
+        "id": "Added_Field",
+        "severity": "Low",
+        "kind": "Fields",
+        "change": "Field @target has been added to this type.",
+        "effect": "This field will not be initialized or used by old client applications."
+    },
+    "Added_Union_Field": {
+        "id": "Added_Union_Field",
+        "severity": "Safe",
+        "kind": "Fields",
+        "change": "Field @target has been added to this type.",
+        "effect": "No effect."
+    },
+    "Removed_Field": {
+        "id": "Removed_Field",
+        "severity": "High",
+        "kind": "Fields",
+        "change": "Field @target has been removed from this type.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@type_name' has no member named '@target'."
+    },
+    "Removed_Union_Field": {
+        "id": "Removed_Union_Field",
+        "severity": "High",
+        "kind": "Fields",
+        "change": "Field @target has been removed from this union.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Enum_Member_Value": {
+        "id": "Enum_Member_Value",
+        "severity": "Safe",
+        "kind": "Constants",
+        "change": "Value of member @target has been changed from @old_value to @new_value.",
+        "effect": "No effect."
+    },
+    "Enum_Last_Member_Value": {
+        "id": "Enum_Last_Member_Value",
+        "severity": "Safe",
+        "kind": "Constants",
+        "change": "Value of member @target has been changed from @old_value to @new_value.",
+        "effect": "No effect."
+    },
+    "Enum_Private_Member_Value": {
+        "id": "Enum_Private_Member_Value",
+        "severity": "Safe",
+        "kind": "Constants",
+        "change": "Value of private member @target has been changed from @old_value to @new_value.",
+        "effect": "No effect."
+    },
+    "Enum_Member_Removed": {
+        "id": "Enum_Member_Removed",
+        "severity": "High",
+        "kind": "Constants",
+        "change": "The member @target has been removed.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Enum_Member_Name": {
+        "id": "Enum_Member_Name",
+        "severity": "High",
+        "kind": "Constants",
+        "change": "Name of member with value @target has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@old_value' was not declared in this scope."
+    },
+    "Field_BaseType": {
+        "id": "Field_BaseType",
+        "severity": "Low",
+        "kind": "Fields",
+        "change": "Base type of field @target has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Field_PointerLevel": {
+        "id": "Field_PointerLevel",
+        "severity": "Medium",
+        "kind": "Fields",
+        "change": "The pointer level of field @target has been increased from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Typedef_BaseType": {
+        "id": "Typedef_BaseType",
+        "severity": "Low",
+        "kind": "Types",
+        "change": "Base type has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Typedef_BaseType_Format": {
+        "id": "Typedef_BaseType_Format",
+        "severity": "Low",
+        "kind": "Types",
+        "change": "Base type has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Symbol": {
+        "id": "Added_Symbol",
+        "severity": "Safe",
+        "kind": "Symbols"
+    },
+    "Removed_Symbol": {
+        "id": "Removed_Symbol",
+        "severity": "High",
+        "kind": "Symbols"
+    },
+    "Method_Became_Static": {
+        "id": "Method_Became_Static",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Method became static.",
+        "effect": "No effect."
+    },
+    "Method_Became_Non_Static": {
+        "id": "Method_Became_Non_Static",
+        "severity": "High",
+        "kind": "Symbols",
+        "change": "Method became non-static.",
+        "effect": "Recompilation of a client program may be broken with the error message: cannot call member function @target without object."
+    },
+    "Parameter_Default_Value_Changed": {
+        "id": "Parameter_Default_Value_Changed",
+        "severity": "Safe",
+        "kind": "Parameters",
+        "change": "The default argument of @param_pos parameter @target has been changed from @old_value to @new_value.",
+        "effect": "No effect."
+    },
+    "Parameter_Default_Value_Removed": {
+        "id": "Parameter_Default_Value_Removed",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "The default argument @old_value of @param_pos parameter @target has been removed.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_Default_Value_Added": {
+        "id": "Parameter_Default_Value_Added",
+        "severity": "Safe",
+        "kind": "Parameters",
+        "change": "The default argument @new_value of @param_pos parameter @target has been added.",
+        "effect": "No effect."
+    },
+    "Parameter_Type": {
+        "id": "Parameter_Type",
+        "severity": "Low",
+        "kind": "Parameters",
+        "change": "Type of @param_pos parameter @target has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_Type_Format": {
+        "id": "Parameter_Type_Format",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Type of parameter @target has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_BaseType_Format": {
+        "id": "Parameter_BaseType_Format",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Base type of parameter @target has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_BaseType": {
+        "id": "Parameter_BaseType",
+        "severity": "Low",
+        "kind": "Parameters",
+        "change": "Base type of @param_pos parameter @target has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_Became_Non_Const": {
+        "id": "Parameter_Became_Non_Const",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Type of @param_pos parameter @target has been changed from @old_value to @new_value (became non-const).",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_Removed_Const": {
+        "id": "Parameter_Removed_Const",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Type of @param_pos parameter @target has been changed from @old_value to @new_value (removed const qualifier).",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_Type_Became_Const": {
+        "id": "Return_Type_Became_Const",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Type of return value became const (has been changed from @old_value to @new_value).",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_Type_Added_Const": {
+        "id": "Return_Type_Added_Const",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Added **const** qualifier to return value (has been changed from @old_value to @new_value).",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_PointerLevel": {
+        "id": "Parameter_PointerLevel",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "The pointer level of @param_pos parameter @target has been increased from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_Type": {
+        "id": "Return_Type",
+        "severity": "Low",
+        "kind": "Symbols",
+        "change": "Type of return value has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_Type_From_Void": {
+        "id": "Return_Type_From_Void",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Type of return value has been changed from void to @new_value.",
+        "effect": "No effect."
+    },
+    "Global_Data_Type": {
+        "id": "Global_Data_Type",
+        "severity": "Low",
+        "kind": "Symbols",
+        "change": "Type of this global data has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Global_Data_Type_Format": {
+        "id": "Global_Data_Type_Format",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Type of this global data has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_Type_Became_Void": {
+        "id": "Return_Type_Became_Void",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Type of return value has been changed from @old_value (@old_size) to void.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Global_Data_Became_Non_Const": {
+        "id": "Global_Data_Became_Non_Const",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "This global data became non-const.",
+        "effect": "No effect."
+    },
+    "Global_Data_Removed_Const": {
+        "id": "Global_Data_Removed_Const",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Removed **const** qualifier from the type of this global data.",
+        "effect": "No effect."
+    },
+    "Global_Data_Became_Const": {
+        "id": "Global_Data_Became_Const",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "This global data became const.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Global_Data_Added_Const": {
+        "id": "Global_Data_Added_Const",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Added **const** qualifier to the type of this global data.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_BaseType": {
+        "id": "Return_BaseType",
+        "severity": "Low",
+        "kind": "Symbols",
+        "change": "Base type of return value has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_PointerLevel": {
+        "id": "Return_PointerLevel",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "The pointer level of return value has been increased from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Removed_Parameter": {
+        "id": "Removed_Parameter",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "@param_pos parameter @target has been removed from the calling stack.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Removed_Unnamed_Parameter": {
+        "id": "Removed_Unnamed_Parameter",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Parameter @target of type @param_type has been removed from the calling stack.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Parameter": {
+        "id": "Added_Parameter",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Parameter @target of type @param_type has been added to the calling stack.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Unnamed_Parameter": {
+        "id": "Added_Unnamed_Parameter",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "@param_pos parameter @target has been added to the calling stack.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Removed_Middle_Parameter": {
+        "id": "Removed_Middle_Parameter",
+        "severity": "High",
+        "kind": "Parameters",
+        "change": "@param_pos middle parameter @target has been removed from the calling stack.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Removed_Middle_Unnamed_Parameter": {
+        "id": "Removed_Middle_Unnamed_Parameter",
+        "severity": "High",
+        "kind": "Parameters",
+        "change": "Middle parameter @target of type @param_type has been removed from the calling stack.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Middle_Parameter": {
+        "id": "Added_Middle_Parameter",
+        "severity": "High",
+        "kind": "Parameters",
+        "change": "Parameter @target of type @param_type has been added to the calling stack at the middle position.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Middle_Unnamed_Parameter": {
+        "id": "Added_Middle_Unnamed_Parameter",
+        "severity": "High",
+        "kind": "Parameters",
+        "change": "@param_pos parameter @target has been added to the calling stack at the middle position.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Renamed_Parameter": {
+        "id": "Renamed_Parameter",
+        "severity": "Safe",
+        "kind": "Parameters",
+        "change": "@param_pos parameter @target has been renamed to @new_value.",
+        "effect": "No effect."
+    },
+    "Changed_Constant": {
+        "id": "Changed_Constant",
+        "severity": "Low",
+        "kind": "Constants",
+        "change": "The value of constant @target has been changed from @old_value to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Added_Constant": {
+        "id": "Added_Constant",
+        "severity": "Safe",
+        "kind": "Constants",
+        "change": "The constant @target with value @new_value has been added.",
+        "effect": "No effect."
+    },
+    "Removed_Constant": {
+        "id": "Removed_Constant",
+        "severity": "Low",
+        "kind": "Constants",
+        "change": "The constant @target with value @old_value has been removed.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Field_Type_Format": {
+        "id": "Field_Type_Format",
+        "severity": "Medium",
+        "kind": "Fields",
+        "change": "Type of field @target has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Field_BaseType_Format": {
+        "id": "Field_BaseType_Format",
+        "severity": "Medium",
+        "kind": "Fields",
+        "change": "Base type of field @target has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_Type_Format": {
+        "id": "Return_Type_Format",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Type of return value has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Return_BaseType_Format": {
+        "id": "Return_BaseType_Format",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Base type of return value has been changed from @old_value to @new_value of different format.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_Became_Non_VaList": {
+        "id": "Parameter_Became_Non_VaList",
+        "severity": "Medium",
+        "kind": "Parameters",
+        "change": "Type of @param_pos parameter has been changed from ... (va_list) to @new_value.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Parameter_Became_VaList": {
+        "id": "Parameter_Became_VaList",
+        "severity": "Safe",
+        "kind": "Parameters",
+        "change": "Type of @param_pos parameter @target has been changed from @old_value to ... (va_list).",
+        "effect": "No effect."
+    },
+    "Added_Enum_Member": {
+        "id": "Added_Enum_Member",
+        "severity": "Safe",
+        "kind": "Constants",
+        "change": "The member @target with value @new_value has been added.",
+        "effect": "No effect."
+    },
+    "Symbol_Changed_Parameters": {
+        "id": "Symbol_Changed_Parameters",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Parameters list has been changed.",
+        "effect": "Recompilation of a client program may be broken."
+    },
+    "Method_Became_Non_Const": {
+        "id": "Method_Became_Non_Const",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "Method became non-const.",
+        "effect": "Recompilation of a client program may be broken with the error message: passing 'const @type_name' as 'this' argument of '@target' discards qualifiers."
+    },
+    "Method_Became_Const": {
+        "id": "Method_Became_Const",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Method became const.",
+        "effect": "No effect."
+    },
+    "Method_Became_Volatile": {
+        "id": "Method_Became_Volatile",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Method became volatile.",
+        "effect": "No effect."
+    },
+    "Method_Became_Non_Volatile": {
+        "id": "Method_Became_Non_Volatile",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Method became non-volatile.",
+        "effect": "No effect."
+    },
+    "Parameter_Became_Restrict": {
+        "id": "Parameter_Became_Restrict",
+        "severity": "Safe",
+        "kind": "Parameters",
+        "change": "Parameter @target became restrict.",
+        "effect": "No effect."
+    },
+    "Parameter_Became_Non_Restrict": {
+        "id": "Parameter_Became_Non_Restrict",
+        "severity": "Safe",
+        "kind": "Parameters",
+        "change": "Parameter @target became non-restrict.",
+        "effect": "No effect."
+    },
+    "Field_Became_Volatile": {
+        "id": "Field_Became_Volatile",
+        "severity": "Safe",
+        "kind": "Fields",
+        "change": "Field @target became volatile.",
+        "effect": "No effect."
+    },
+    "Field_Became_Non_Volatile": {
+        "id": "Field_Became_Non_Volatile",
+        "severity": "Safe",
+        "kind": "Fields",
+        "change": "Field @target became non-volatile.",
+        "effect": "No effect."
+    },
+    "Return_Value_Became_Volatile": {
+        "id": "Return_Value_Became_Volatile",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Return value became volatile.",
+        "effect": "No effect."
+    },
+    "Parameter_Became_Non_Volatile": {
+        "id": "Parameter_Became_Non_Volatile",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "Parameter @target became non-volatile.",
+        "effect": "No effect."
+    },
+    "Global_Data_Value_Changed": {
+        "id": "Global_Data_Value_Changed",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "The initial value of this global data has been changed from @old_value to @new_value.",
+        "effect": "No effect."
+    },
+    "Field_Became_Mutable": {
+        "id": "Field_Became_Mutable",
+        "severity": "Safe",
+        "kind": "Fields",
+        "change": "Field @target became **mutable**.",
+        "effect": "No effect."
+    },
+    "Field_Became_Non_Mutable": {
+        "id": "Field_Became_Non_Mutable",
+        "severity": "Medium",
+        "kind": "Fields",
+        "change": "Field @target became **non-mutable**.",
+        "effect": "Recompilation of a client program may be broken with the error message: assignment of member '@type_name::@target' in read-only object."
+    },
+    "Removed_Const_Overload": {
+        "id": "Removed_Const_Overload",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "The **const** overload of the method @target has been removed from this class.",
+        "effect": "Recompilation of a client program may be broken with the error message: passing 'const @type_name' as 'this' argument of '@target' discards qualifiers."
+    },
+    "Method_Became_Private": {
+        "id": "Method_Became_Private",
+        "severity": "High",
+        "kind": "Symbols",
+        "change": "This method became **private**.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@target' is private."
+    },
+    "Method_Became_Protected": {
+        "id": "Method_Became_Protected",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "This method became **protected**.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@target' is protected."
+    },
+    "Method_Became_Public": {
+        "id": "Method_Became_Public",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "This method became **public**.",
+        "effect": "No effect."
+    },
+    "Global_Data_Became_Private": {
+        "id": "Global_Data_Became_Private",
+        "severity": "High",
+        "kind": "Symbols",
+        "change": "This global data became **private**.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@target' is private."
+    },
+    "Global_Data_Became_Protected": {
+        "id": "Global_Data_Became_Protected",
+        "severity": "Medium",
+        "kind": "Symbols",
+        "change": "This global data became **protected**.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@target' is protected."
+    },
+    "Global_Data_Became_Public": {
+        "id": "Global_Data_Became_Public",
+        "severity": "Safe",
+        "kind": "Symbols",
+        "change": "This global data became **public**.",
+        "effect": "No effect."
+    },
+    "Field_Became_Const": {
+        "id": "Field_Became_Const",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "Field @target became **const**.",
+        "effect": "Recompilation of a client program may be broken with the error message: assignment of read-only member/location '@type_name::@target'."
+    },
+    "Field_Became_Non_Const": {
+        "id": "Field_Became_Non_Const",
+        "severity": "Safe",
+        "kind": "Types",
+        "change": "Field @target became **non-const**.",
+        "effect": "No effect."
+    },
+    "Field_Added_Const": {
+        "id": "Field_Added_Const",
+        "severity": "Low",
+        "kind": "Types",
+        "change": "Added **const** qualifier to field @target.",
+        "effect": "Recompilation of a client program may be broken with the error message: assignment of read-only member/location '@type_name::@target'."
+    },
+    "Field_Removed_Const": {
+        "id": "Field_Removed_Const",
+        "severity": "Safe",
+        "kind": "Types",
+        "change": "Removed **const** qualifier from field @target.",
+        "effect": "No effect."
+    },
+    "Field_Became_Private": {
+        "id": "Field_Became_Private",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "Field @target became **private**.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@type_name::@target' is private."
+    },
+    "Field_Became_Protected": {
+        "id": "Field_Became_Protected",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "Field @target became **protected**.",
+        "effect": "Recompilation of a client program may be broken with the error message: '@type_name::@target' is protected."
+    },
+    "Virtual_Method_Became_Pure": {
+        "id": "Virtual_Method_Became_Pure",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "Virtual method @target became **pure**.",
+        "effect": "Recompilation of a client program may be broken with the error message: cannot allocate an object of abstract type '@type_name' because the following virtual functions are pure within '@type_name': virtual @target."
+    },
+    "Virtual_Method_Became_Non_Pure": {
+        "id": "Virtual_Method_Became_Non_Pure",
+        "severity": "Safe",
+        "kind": "Types",
+        "change": "Virtual method @target became **non-pure**.",
+        "effect": "No effect."
+    },
+    "Type_Became_Opaque": {
+        "id": "Type_Became_Opaque",
+        "severity": "Medium",
+        "kind": "Types",
+        "change": "This type became **opaque**.",
+        "effect": "The internal structure of this type is hidden in the new library version and recompilation of a client program may be broken."
+    }
+}

@@ -108,6 +108,12 @@ from asp import is_compatible
 result = is_compatible("simple-example/math-client", "simple-example/libmath-v1.so")
 ```
 
+Here is how I'm dumping a bunch of facts to look at:
+
+```python
+$ python dump.py > facts.lp
+```
+
 **under development**
 
 ## 4. Rules
