@@ -15,6 +15,8 @@ a simple math program. This is in the folder [simple-example](simple-example)
 and can be compiled with g++ as follows:
 
 ```bash
+# you can also choose the c folder for a different use case
+cd simple/example/cpp
 make
 ```
 
