@@ -447,7 +447,7 @@ class ABICompatSolverSetup(object):
                     # Ensure we don't write bytes
                     value = attribute.value
                     if isinstance(value, bytes):
-                        value = value.decode('utf-8')
+                        value = value.decode("utf-8")
 
                     # DW_TAG_compiler_unit_attr
                     self.gen.fact(
@@ -485,8 +485,10 @@ class ABICompatSolverSetup(object):
 
                 self.gen.fact(fn.symbol(symbol))
                 self.gen.fact(fn.symbol_type(symbol, meta["type"]))
+                self.gen.fact(fn.symbol_version(symbol, meta["version_info"]))
                 self.gen.fact(fn.symbol_binding(symbol, meta["binding"]))
                 self.gen.fact(fn.symbol_visibility(symbol, meta["visibility"]))
+                self.gen.fact(fn.symbol_definition(symbol, meta["defined"]))
                 self.gen.fact(fn.has_symbol(corpus.path, symbol))
 
     def generate_needed(self, corpora):
@@ -524,7 +526,7 @@ class ABICompatSolverSetup(object):
             # Note that we could update these to just be corpus_attr, but I'm
             # starting with testing a more detailed approach for now.
 
-            # File class
+            # File class (also at elffile.elfclass or corpus.elfclass
             self.gen.fact(fn.corpus_elf_class(corpus.path, hdr["e_ident"]["EI_CLASS"]))
 
             # Data encoding

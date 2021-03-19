@@ -13,6 +13,28 @@ import sys
 import enum
 import os
 
+from elftools.elf.sections import (
+    NoteSection,
+    SymbolTableSection,
+    SymbolTableIndexSection,
+)
+from elftools.elf.gnuversions import (
+    GNUVerSymSection,
+    GNUVerDefSection,
+    GNUVerNeedSection,
+)
+
+from elftools.elf.constants import SHN_INDICES
+from elftools.elf.relocation import RelocationSection
+
+from elftools.elf.descriptions import (
+    describe_symbol_type,
+    describe_symbol_bind,
+    describe_symbol_visibility,
+    describe_symbol_shndx,
+)
+
+
 __version__ = "1.0"
 
 # Base types enumerator
@@ -79,6 +101,8 @@ class CorpusReader(ELFFile):
         # Cannot continue without dwarf info
         if not self.elffile.has_dwarf_info():
             sys.exit("%s is missing DWARF info." % self.filename)
+        self.get_version_lookup()
+        self.get_shndx_sections()
 
     def __str__(self):
         return "[CorpusReader:%s]" % self.filename
@@ -97,20 +121,169 @@ class CorpusReader(ELFFile):
     def get_architecture(self):
         return self.elffile.header.get("e_machine")
 
-    def get_symbols(self):
-        """Return a set of symbols from the dwarf."""
-        symbols = {}
-        section = self.elffile.get_section_by_name(".symtab")
+    def get_elf_class(self):
+        return self.elffile.elfclass
 
-        # If we wanted, we could separate function and variable symbols
-        for symbol in section.iter_symbols():
-            symbols[symbol.name] = {
-                "type": symbol.entry["st_info"]["type"],
-                "binding": symbol.entry["st_info"]["bind"],
-                "visibility": symbol.entry["st_other"]["visibility"],
-            }
-            # TODO: how do we get value yes/no for is-defined?
+    def get_version_lookup(self):
+        """Get versioning used (GNU or Solaris)
+        https://github.com/eliben/pyelftools/blob/master/scripts/readelf.py#L915
+        """
+        lookup = dict()
+        types = {
+            GNUVerSymSection: "versym",
+            GNUVerDefSection: "verdef",
+            GNUVerNeedSection: "verneed",
+            DynamicSection: "type",
+        }
+
+        for section in self.elffile.iter_sections():
+            if type(section) in types:
+                identifier = types[type(section)]
+                if identifier == "type":
+                    for tag in section.iter_tags():
+                        if tag["d_tag"] == "DT_VERSYM":
+                            lookup["type"] = "GNU"
+                else:
+                    lookup[identifier] = section
+
+        # If we don't have a type but we have verneed or verdef, it's solaris
+        if not lookup.get("type") and (lookup.get("verneed") or lookup.get("verdef")):
+            lookup["type"] = "Solaris"
+        self._versions = lookup
+
+    def get_shndx_sections(self):
+        """I think this referes to section index/indices. We want a mapping
+        from a symbol table index to a corresponding section object.
+        """
+        self._shndx_sections = {
+            x.symboltable: x
+            for x in self.elffile.iter_sections()
+            if isinstance(x, SymbolTableIndexSection)
+        }
+
+    def get_symbols(self):
+        """Return a set of symbols from the dwarf symbol tables"""
+        symbols = {}
+
+        # We want .symtab and .dynsym
+        tables = [
+            (idx, s)
+            for idx, s in enumerate(self.elffile.iter_sections())
+            if isinstance(s, SymbolTableSection)
+        ]
+
+        for idx, section in tables:
+            # Symbol table has no entries if this is zero
+            # section.num_symbols() shows count, section.name is name
+            if section["sh_entsize"] == 0:
+                continue
+
+            # We need the index of the symbol to look up versions
+            for sym_idx, symbol in enumerate(section.iter_symbols()):
+
+                # Version info is from the versym / verneed / verdef sections.
+                version_info = self._get_symbol_version(section, sym_idx, symbol)
+
+                # We aren't considering st_value, which could be many things
+                # https://docs.oracle.com/cd/E19683-01/816-1386/6m7qcoblj/index.html#chapter6-35166
+                symbols[symbol.name] = {
+                    "version_info": version_info,
+                    "type": describe_symbol_type(symbol["st_info"]["type"]),
+                    "binding": describe_symbol_bind(symbol["st_info"]["bind"]),
+                    "visibility": describe_symbol_visibility(
+                        symbol["st_other"]["visibility"]
+                    ),
+                    "defined": describe_symbol_shndx(
+                        self._get_symbol_shndx(symbol, sym_idx, idx)
+                    ).strip(),
+                }
+
         return symbols
+
+    def _get_symbol_version(self, section, sym_idx, symbol):
+        """Given a section, symbol index, and symbol, return version info
+        https://github.com/eliben/pyelftools/blob/master/scripts/readelf.py#L400
+        """
+        version_info = ""
+
+        # I'm not sure why this would be empty
+        if not self._versions:
+            return version_info
+
+        # readelf doesn't display version info for Solaris versioning
+        if section["sh_type"] == "SHT_DYNSYM" and self._versions["type"] == "GNU":
+            version = self._symbol_version(sym_idx)
+            if version["name"] != symbol.name and version["index"] not in (
+                "VER_NDX_LOCAL",
+                "VER_NDX_GLOBAL",
+            ):
+
+                # This is an external symbol
+                if version["filename"]:
+                    version_info = "@%(name)s (%(index)i)" % version
+
+                # This is an internal symbol
+                elif version["hidden"]:
+                    version_info = "@%(name)s" % version
+                else:
+                    version_info = "@@%(name)s" % version
+        return version_info
+
+    def _symbol_version(self, idx):
+        """We can get version information for a symbol based on it's index
+        https://github.com/eliben/pyelftools/blob/master/scripts/readelf.py#L942
+        """
+        symbol_version = dict.fromkeys(("index", "name", "filename", "hidden"))
+
+        # No version information available
+        if (
+            not self._versions.get("versym")
+            or idx >= self._versions.get("versym").num_symbols()
+        ):
+            return None
+
+        symbol = self._versions["versym"].get_symbol(idx)
+        index = symbol.entry["ndx"]
+        if not index in ("VER_NDX_LOCAL", "VER_NDX_GLOBAL"):
+            index = int(index)
+
+            # GNU versioning means highest bit is used to store symbol visibility
+            if self._versions["type"] == "GNU":
+                if index & 0x8000:
+                    index &= ~0x8000
+                    symbol_version["hidden"] = True
+
+            if (
+                self._versions.get("verdef")
+                and index <= self._versions["verdef"].num_versions()
+            ):
+                _, verdaux_iter = self._versions["verdef"].get_version(index)
+                symbol_version["name"] = next(verdaux_iter).name
+            else:
+                verneed, vernaux = self._versions["verneed"].get_version(index)
+                symbol_version["name"] = vernaux.name
+                symbol_version["filename"] = verneed.name
+
+        symbol_version["index"] = index
+        return symbol_version
+
+    def _get_symbol_shndx(self, symbol, symbol_index, symtab_index):
+        """Every symbol table entry is defined in relation to some section.
+        The st_shndx of a symbol holds the relevant section header table index.
+        https://github.com/eliben/pyelftools/blob/master/scripts/readelf.py#L994
+        """
+        if symbol["st_shndx"] != SHN_INDICES.SHN_XINDEX:
+            return symbol["st_shndx"]
+
+        # Check for or lazily construct index section mapping (symbol table
+        # index -> corresponding symbol table index section object)
+        if self._shndx_sections is None:
+            self._shndx_sections = {
+                sec.symboltable: sec
+                for sec in self.elffile.iter_sections()
+                if isinstance(sec, SymbolTableIndexSection)
+            }
+        return self._shndx_sections[symtab_index].get_section_index(symbol_index)
 
     def get_dynamic_tags(self):
         """Get the dyamic tags in the ELF file."""
@@ -219,6 +392,7 @@ class Corpus:
         # Read in dynamic tags, and symbols
         self.dynamic_tags = reader.get_dynamic_tags()
         self.architecture = reader.get_architecture()
+        self.elfclass = reader.get_elf_class()
         self.elfsymbols = reader.get_symbols()
 
         # Labeled as abi-instr in libabigail
