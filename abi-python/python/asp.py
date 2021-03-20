@@ -252,10 +252,16 @@ class PyclingoDriver(object):
         timers=False,
         stats=False,
         tests=False,
+        logic_programs=None,
     ):
         """Given two corpora, determine if they are compatible by way of
         flattening header information into facts, and handing to a solver.
         """
+        # logic programs to give to the solver
+        logic_programs = logic_programs or []
+        if not isinstance(logic_programs, list):
+            logic_programs = [logic_programs]
+        
         timer = Timer()
 
         # Initialize the control object for the solver
@@ -277,8 +283,8 @@ class PyclingoDriver(object):
         # read in the main ASP program and display logic -- these are
         # handwritten, not generated, so we load them as resources
         parent_dir = os.path.dirname(__file__)
-        # self.control.load(os.path.join(parent_dir, 'compatible.lp'))
-        # self.control.load(os.path.join(parent_dir, "display.lp"))
+        for logic_program in logic_programs:
+            self.control.load(os.path.join(parent_dir, logic_program))
         timer.phase("load")
 
         # Grounding is the first step in the solve -- it turns our facts
@@ -294,17 +300,19 @@ class PyclingoDriver(object):
         def on_model(model):
             models.append((model.cost, model.symbols(shown=True, terms=True)))
 
-        solve_kwargs = {}
         # Won't work after this, need to write files
-        # solve_kwargs = {
+        solve_kwargs = {
         #    "assumptions": self.assumptions,
-        #    "on_model": on_model,
-        #    "on_core": cores.append,
-        # }
+             "on_model": on_model,
+        #     "on_core": cores.append,
+        }
         # if clingo_cffi:
         #    solve_kwargs["on_unsat"] = cores.append
-        # solve_result = self.control.solve(**solve_kwargs)
-        # timer.phase("solve")
+        solve_result = self.control.solve(**solve_kwargs)
+        timer.phase("solve")
+
+        import IPython
+        IPython.embed()
 
         # once done, construct the solve result
         # result.satisfiable = solve_result.satisfiable
@@ -626,8 +634,10 @@ class ABICompatSolverSetup(object):
         self.generate_dwarf_info_entries([corpusA, corpusB])
 
 
+
 def is_compatible(
-    binary, library, dump=(), models=0, timers=False, stats=False, tests=False
+    binary, library, dump=(), models=0, timers=False, stats=False, tests=False,
+    logic_programs=None
 ):
     """Given two libraries (we call one a main binary and the other a library
     that we want to link with it), determine if the two are compatible. This
@@ -654,4 +664,4 @@ def is_compatible(
     corpusA = parser.get_corpus_from_elf(binary)
     corpusB = parser.get_corpus_from_elf(library)
     setup = ABICompatSolverSetup()
-    return driver.solve(setup, corpusA, corpusB, dump, models, timers, stats, tests)
+    return driver.solve(setup, corpusA, corpusB, dump, models, timers, stats, tests, logic_programs)

@@ -1,0 +1,45 @@
+<abi-corpus path='/code/simple-example/cpp/libmath-v1.so' architecture='elf-amd-x86_64'>
+  <elf-function-symbols>
+    <elf-symbol name='_ZN11MathLibrary10Arithmetic3AddEdd' type='func-type' binding='global-binding' visibility='default-visibility' is-defined='yes'/>
+    <elf-symbol name='_ZN11MathLibrary10Arithmetic6DivideEdd' type='func-type' binding='global-binding' visibility='default-visibility' is-defined='yes'/>
+    <elf-symbol name='_ZN11MathLibrary10Arithmetic8MultiplyEdd' type='func-type' binding='global-binding' visibility='default-visibility' is-defined='yes'/>
+    <elf-symbol name='_ZN11MathLibrary10Arithmetic8SubtractEdd' type='func-type' binding='global-binding' visibility='default-visibility' is-defined='yes'/>
+    <elf-symbol name='_fini' type='func-type' binding='global-binding' visibility='default-visibility' is-defined='yes'/>
+    <elf-symbol name='_init' type='func-type' binding='global-binding' visibility='default-visibility' is-defined='yes'/>
+  </elf-function-symbols>
+  <abi-instr version='1.0' address-size='64' path='MathLibrary.cpp' comp-dir-path='/code/simple-example/cpp' language='LANG_C_plus_plus'>
+    <type-decl name='double' size-in-bits='64' id='type-id-1'/>
+    <namespace-decl name='MathLibrary'>
+      <class-decl name='Arithmetic' size-in-bits='8' visibility='default' filepath='/code/simple-example/cpp/MathLibrary.h' line='6' column='1' id='type-id-2'>
+        <member-function access='public' static='yes'>
+          <function-decl name='Add' mangled-name='_ZN11MathLibrary10Arithmetic3AddEdd' filepath='/code/simple-example/cpp/MathLibrary.h' line='10' column='1' visibility='default' binding='global' size-in-bits='64' elf-symbol-id='_ZN11MathLibrary10Arithmetic3AddEdd'>
+            <parameter type-id='type-id-1'/>
+            <parameter type-id='type-id-1'/>
+            <return type-id='type-id-1'/>
+          </function-decl>
+        </member-function>
+        <member-function access='public' static='yes'>
+          <function-decl name='Subtract' mangled-name='_ZN11MathLibrary10Arithmetic8SubtractEdd' filepath='/code/simple-example/cpp/MathLibrary.h' line='13' column='1' visibility='default' binding='global' size-in-bits='64' elf-symbol-id='_ZN11MathLibrary10Arithmetic8SubtractEdd'>
+            <parameter type-id='type-id-1'/>
+            <parameter type-id='type-id-1'/>
+            <return type-id='type-id-1'/>
+          </function-decl>
+        </member-function>
+        <member-function access='public' static='yes'>
+          <function-decl name='Multiply' mangled-name='_ZN11MathLibrary10Arithmetic8MultiplyEdd' filepath='/code/simple-example/cpp/MathLibrary.h' line='16' column='1' visibility='default' binding='global' size-in-bits='64' elf-symbol-id='_ZN11MathLibrary10Arithmetic8MultiplyEdd'>
+            <parameter type-id='type-id-1'/>
+            <parameter type-id='type-id-1'/>
+            <return type-id='type-id-1'/>
+          </function-decl>
+        </member-function>
+        <member-function access='public' static='yes'>
+          <function-decl name='Divide' mangled-name='_ZN11MathLibrary10Arithmetic6DivideEdd' filepath='/code/simple-example/cpp/MathLibrary.h' line='19' column='1' visibility='default' binding='global' size-in-bits='64' elf-symbol-id='_ZN11MathLibrary10Arithmetic6DivideEdd'>
+            <parameter type-id='type-id-1'/>
+            <parameter type-id='type-id-1'/>
+            <return type-id='type-id-1'/>
+          </function-decl>
+        </member-function>
+      </class-decl>
+    </namespace-decl>
+  </abi-instr>
+</abi-corpus>
