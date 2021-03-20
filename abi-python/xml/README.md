@@ -47,7 +47,7 @@ We are going to use a a modified [libabigail_asp.py](https://github.com/spack/sp
 
 ```python
 # /code/xml is our present working directory
-from asp import is_compatible
+from libabigail_asp import is_compatible
 result = is_compatible("../simple-example/cpp/math-client.xml", "../simple-example/cpp/libmath-v1.xml")
 ```
 
@@ -55,6 +55,15 @@ Here is how I'm dumping a bunch of facts to look at:
 
 ```python
 $ python dump.py > facts.lp
+```
+
+The above function `is_compatible` will eventually perform a solve, so I added
+a function just to dump facts (it exits before the solve).
+
+```python
+# /code/xml is our present working directory
+from libabigail_asp import generate_facts
+generate_facts(["../simple-example/cpp/math-client.xml", "../simple-example/cpp/libmath-v1.xml"])
 ```
 
 ## 4. Figuring out Rules
