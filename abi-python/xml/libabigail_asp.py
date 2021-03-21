@@ -828,15 +828,30 @@ class ABICompatSolverSetup(object):
                 symbols = [symbols]
 
             for symbol in symbols:
+
                 self.gen.fact(fn.symbol(symbol["@name"]))
-                self.gen.fact(fn.symbol_type(symbol["@name"], symbol["@type"]))
-                self.gen.fact(fn.symbol_binding(symbol["@name"], symbol["@binding"]))
+
+                # A symbol might be defined across two corpora with
+                # different attributes, so we include the corpora here
                 self.gen.fact(
-                    fn.symbol_visibility(symbol["@name"], symbol["@visibility"])
+                    fn.symbol_type(corpus["@path"], symbol["@name"], symbol["@type"])
                 )
                 self.gen.fact(
-                    fn.symbol_is_defined(symbol["@name"], symbol["@is-defined"])
+                    fn.symbol_binding(
+                        corpus["@path"], symbol["@name"], symbol["@binding"]
+                    )
                 )
+                self.gen.fact(
+                    fn.symbol_visibility(
+                        corpus["@path"], symbol["@name"], symbol["@visibility"]
+                    )
+                )
+                self.gen.fact(
+                    fn.symbol_is_defined(
+                        corpus["@path"], symbol["@name"], symbol["@is-defined"]
+                    )
+                )
+                # This might be redundant since the corpora is included in the above
                 self.gen.fact(fn.has_symbol(corpus["@path"], symbol["@name"]))
 
             # Elf variable symbols (has added size)
@@ -869,11 +884,17 @@ class ABICompatSolverSetup(object):
 
             self.gen.h2("Corpus facts: %s" % corpus["@path"])
             self.gen.fact(fn.corpus(corpus["@path"]))
+
+            # The needed libraries don't have full paths
+            self.gen.fact(
+                fn.corpus_basename(corpus["@path"], os.path.basename(corpus["@path"]))
+            )
             self.gen.fact(
                 fn.corpus_architecture(corpus["@path"], corpus["@architecture"])
             )
 
             for needed in corpus.get("elf-needed", {}).get("dependency", []):
+                self.gen.fact(fn.corpus_needs_library(corpus["@path"], needed["@name"]))
                 self.gen.fact(fn.corpus_needs_library(corpus["@path"], needed["@name"]))
 
     def setup(self, driver, xml_files, tests=False):
