@@ -51,39 +51,6 @@ class BaseTypes(enum.Enum):
     WCHAR_T_BASE_TYPE = 8
 
 
-class Language(enum.Enum):
-    """Language type of a unit"""
-
-    LANG_UNKNOWN = 0
-    LANG_Cobol74 = 1
-    LANG_Cobol85 = 2
-    LANG_C89 = 3
-    LANG_C99 = 4
-    LANG_C11 = 5
-    LANG_C = 6
-    LANG_C_plus_plus_03 = 7
-    LANG_C_plus_plus_11 = 8
-    LANG_C_plus_plus_14 = 9
-    LANG_C_plus_plus = 10
-    LANG_ObjC = 11
-    LANG_ObjC_plus_plus = 12
-    LANG_Fortran77 = 13
-    LANG_Fortran90 = 14
-    LANG_Fortran95 = 15
-    LANG_Ada83 = 16
-    LANG_Ada95 = 17
-    LANG_Pascal83 = 18
-    LANG_Modula2 = 19
-    LANG_Java = 20
-    LANG_PL1 = 21
-    LANG_UPC = 22
-    LANG_D = 23
-    LANG_Python = 24
-    LANG_Go = 25
-    LANG_Rust = 26
-    LANG_Mips_Assembler = 27
-
-
 class CorpusReader(ELFFile):
     """A CorpusReader wraps an elffile, allowing us to easily open/close
     and keep the stream open while we are interacting with content. We close
@@ -464,8 +431,7 @@ def parse_compile_unit(die):
                path='../../src/abg-regex.cc' comp-dir-path='/libabigail-1.8/build/src'
                language='LANG_C_plus_plus'>
 
-    TODO: there is disagreement about the language in libabigail vs. here. I wonder
-    if there is an enum that we use in the data structure to look up languages?
+    TODO: we can map numbers to languages here.
     """
     dmeta = {
         "_type": "abi-instr",
@@ -473,7 +439,7 @@ def parse_compile_unit(die):
         # Multiply by 8 to go from bytes to bits
         "address-size": die.cu.header["address_size"] * 8,
         "path": bytes2str(die.attributes["DW_AT_name"].value),
-        "language": Language(die.attributes["DW_AT_language"].value).name,
+        "language": die.attributes["DW_AT_language"].value,
         "comp-dir-path": bytes2str(die.attributes["DW_AT_comp_dir"].value),
     }
     if die.has_children:

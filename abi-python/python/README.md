@@ -8,7 +8,7 @@ python wrapper to interact with it, so we will again use a container. We need to
 the Python bindings for clingo, along with ipython (for easier development):
 
 ```bash
-$ docker build -f Dockerfile.clingo -t clingo .
+$ docker build -f Dockerfile.clingo -t clingo-docker .
 ```
 
 We are going to use a combination of spack's solver [asp.py](https://github.com/spack/spack/blob/develop/lib/spack/spack/solver/asp.py)
@@ -16,18 +16,21 @@ and [corpus.py](corpus.py) to try and accomplish the same.
 
 ```bash
 $ cd ..
-$ docker run -it --rm -v $PWD/:/code clingo bash
+$ docker run -it --rm -v $PWD/:/code clingo-docker bash
 ```
 
-We can then use the `is_compatible` function in [asp.py](asp.py) to develop.
+We can then use the `is_compatible` function in [asp.py](asp.py) to run the solver
+with a file, and `generate_facts` to generate facts.
 Note that I installed ipython in the container too because it's nice to work with.
-We can then develop by way of asking if our second library is compatible with the
-first application (it should be).
 
 ```python
 # /code/python is our present working directory
-from asp import is_compatible
-result = is_compatible("../simple-example/cpp/math-client", "../simple-example/cpp/libmath-v1.so")
+from asp import generate_facts
+
+generate_facts([
+    "../simple-example/cpp/math-client",
+    "../simple-example/cpp/libmath-v1.so"
+])
 ```
 
 Here is how I'm dumping a bunch of facts to look at:
@@ -35,6 +38,7 @@ Here is how I'm dumping a bunch of facts to look at:
 ```python
 $ python dump.py > facts.lp
 ```
+
 ## 4. Figuring out Rules
 
 Okay, the first thing I want to do is figure out what symbols the client needs,
@@ -74,18 +78,27 @@ and for the library itself:
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8SubtractEdd").
 ```
 
-I need to figure out how to know that the math client doesn't have it defined (and needs it). It must not be entirely based on this mangled name because
-both look identical.
+**Update**: I added symbol_definition to say if a symbol is defined/undefined, and
+we can use that to try and write a program. I'm stuck at a point of running
+clingo and having it tell me:
 
-**under development**
+```bash
+(clingo-env) root@b32e9108f711:/code/python# clingo facts.lp is_compatible.lp 
+clingo version 5.4.0
+Reading from facts.lp ...
+is_compatible.lp:33:1-29: info: no atoms over signature occur in program:
+  symbol_is_undefined/0
 
-We stopped at the point where @tgamblin suggested we start with libabigail xml
-first instead of trying to re-create it. When I stopped I had run [dump.py](dump.py) to
-generate [facts.lp](facts.lp) and I next was going to modify the script to accept
-another logic program with something to solve.
+Solving...
+Answer: 1
 
-## 4. Rules
+SATISFIABLE
 
-I'm going to start out by writing out a list of rules that determine ABI compatibility,
-and we will want to have these represented in actual rules for the solver.
-See [rules.md](rules.md) for this development.
+Models       : 1
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
+```
+
+@tgamblin suggested using libabigail xml, but it doesn't have whether a symbol is
+defined or not. 

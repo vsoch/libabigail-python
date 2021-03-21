@@ -12,23 +12,22 @@
 % We can maybe use a basename
 % corpus_basename("/code/simple-example/cpp/libmath-v1.so","libmath-v1.so").
 
-% A symbol is undefined/defined if is-defined is no/yes
-symbol_is_undefined(Corpus, Symbol) :- symbol_is_defined(Corpus, Symbol, "no").
-symbol_is_defined(Corpus, Symbol) :- symbol_is_defined(Corpus, Symbol, "yes").
+% A symbol is undefined in this case.
+symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
 
 % Two corpora share a symbol if they both have it
-shared_symbol(CorporaA, CorporaB) :- has_symbol(CorporaA, Symbol), has_symbol(CorporaB, Symbol).
+shared_symbol(CorpusA, CorpusB) :- has_symbol(CorpusA, Symbol), has_symbol(CorpusB, Symbol).
 
 % TODO: a symbol needs to be defined in context of a corpus
 % Two corpora have a compatible symbol if it's shared, and at least one is defined
 % This would ideally be an OR instead of two statements.
-compatible_symbols(CorporaA, CorporaB, Symbol)
-  :- shared_symbol(CorporaA, CorporaB),
-  symbol_is_defined(CorpusA, Symbol).
+% compatible_symbols(CorpusA, CorpusB, Symbol)
+%   :- shared_symbol(CorpusA, CorpusB),
+%   not symbol_is_undefined(CorpusA, Symbol).
 
-compatible_symbols(CorporaA, CorporaB, Symbol)
-  :- shared_symbol(CorporaA, CorporaB),
-  symbol_is_defined(CorpusB, Symbol).
+% compatible_symbols(CorpusA, CorpusB, Symbol)
+%  :- shared_symbol(CorpusA, CorpusB),
+%  not symbol_is_undefined(CorpusB, Symbol).
 
 % TODO how do I represent or?
-#show symbol_is_undefined/10.
+#show symbol_is_undefined/0.

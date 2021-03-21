@@ -284,6 +284,9 @@ class PyclingoDriver(object):
         # read in the main ASP program and display logic -- these are
         # handwritten, not generated, so we load them as resources
         parent_dir = os.path.dirname(__file__)
+
+        import IPython
+        IPython.embed()
         # self.control.load(os.path.join(parent_dir, 'compatible.lp'))
         # self.control.load(os.path.join(parent_dir, "display.lp"))
         timer.phase("load")

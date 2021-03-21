@@ -245,14 +245,14 @@ class PyclingoDriver(object):
     def solve(
         self,
         solver_setup,
-        corpusA,
-        corpusB,
+        corpora,
         dump=None,
         nmodels=0,
         timers=False,
         stats=False,
         tests=False,
         logic_programs=None,
+        facts_only=False
     ):
         """Given two corpora, determine if they are compatible by way of
         flattening header information into facts, and handing to a solver.
@@ -277,8 +277,12 @@ class PyclingoDriver(object):
         self.assumptions = []
         with self.control.backend() as backend:
             self.backend = backend
-            solver_setup.setup(self, corpusA, corpusB, tests=tests)
+            solver_setup.setup(self, corpora, tests=tests)
         timer.phase("setup")
+
+        # If we only want to generate facts, cut out early
+        if facts_only:
+            return
 
         # read in the main ASP program and display logic -- these are
         # handwritten, not generated, so we load them as resources
@@ -492,11 +496,13 @@ class ABICompatSolverSetup(object):
                     continue
 
                 self.gen.fact(fn.symbol(symbol))
-                self.gen.fact(fn.symbol_type(symbol, meta["type"]))
-                self.gen.fact(fn.symbol_version(symbol, meta["version_info"]))
-                self.gen.fact(fn.symbol_binding(symbol, meta["binding"]))
-                self.gen.fact(fn.symbol_visibility(symbol, meta["visibility"]))
-                self.gen.fact(fn.symbol_definition(symbol, meta["defined"]))
+                self.gen.fact(fn.symbol_type(corpus.path, symbol, meta["type"]))
+                self.gen.fact(fn.symbol_version(corpus.path, symbol, meta["version_info"]))
+                self.gen.fact(fn.symbol_binding(corpus.path, symbol, meta["binding"]))
+                self.gen.fact(fn.symbol_visibility(corpus.path, symbol, meta["visibility"]))
+                self.gen.fact(fn.symbol_definition(corpus.path, symbol, meta["defined"]))
+
+                # Might be redundant
                 self.gen.fact(fn.has_symbol(corpus.path, symbol))
 
     def generate_needed(self, corpora):
@@ -595,7 +601,7 @@ class ABICompatSolverSetup(object):
             # section header table index of entry associated with section name string table
             # 'e_shstrndx': 29
 
-    def setup(self, driver, corpusA, corpusB, tests=False):
+    def setup(self, driver, corpora, tests=False):
         """Generate an ASP program with relevant constraints for a binary
         and a library, for which we have been provided their corpora.
 
@@ -612,9 +618,9 @@ class ABICompatSolverSetup(object):
         self._condition_id_counter = itertools.count()
 
         # preliminary checks
-        assert corpusA.exists()
-        assert corpusB.exists()
-
+        for corpus in corpora:
+            assert corpus.exists()
+    
         # driver is used by all the functions below to add facts and
         # rules to generate an ASP program.
         self.gen = driver
@@ -622,17 +628,30 @@ class ABICompatSolverSetup(object):
         self.gen.h1("Corpus Facts")
 
         # Generate high level corpus metadata facts (e.g., header)
-        self.generate_corpus_metadata([corpusA, corpusB])
+        self.generate_corpus_metadata(corpora)
 
         # Dynamic libraries that are needed
-        self.generate_needed([corpusA, corpusB])
+        self.generate_needed(corpora)
 
         # generate all elf symbols (might be able to make this smaller set)
-        self.generate_elf_symbols([corpusA, corpusB])
+        self.generate_elf_symbols(corpora)
 
-        # Generate dwarf information entries
-        self.generate_dwarf_info_entries([corpusA, corpusB])
+        # Generate dwarf information entries (for now, don't generate)
+        # self.generate_dwarf_info_entries(corpora)
 
+
+def generate_facts(libs):
+    """A single function to print facts for one or more corpora."""
+    if not isinstance(libs, list):
+        libs = [libs]
+
+    parser = ABIParser()
+    setup = ABICompatSolverSetup()
+    driver = PyclingoDriver()
+    corpora = []
+    for lib in libs:
+        corpora.append(parser.get_corpus_from_elf(lib))
+    return driver.solve(setup, corpora, facts_only=True)
 
 
 def is_compatible(
@@ -664,4 +683,4 @@ def is_compatible(
     corpusA = parser.get_corpus_from_elf(binary)
     corpusB = parser.get_corpus_from_elf(library)
     setup = ABICompatSolverSetup()
-    return driver.solve(setup, corpusA, corpusB, dump, models, timers, stats, tests, logic_programs)
+    return driver.solve(setup, [corpusA, corpusB], dump, models, timers, stats, tests, logic_programs)
