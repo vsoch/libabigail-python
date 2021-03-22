@@ -31,19 +31,36 @@ shared_symbol(CorpusA, CorpusB, Symbol)
      CorpusA != CorpusB.
 
 % Two corpora have a compatible symbol if it's shared, and at least one is defined
-% This would ideally be an OR instead of two statements.
-% compatible_symbols(CorpusA, CorpusB, Symbol)
-%   :- shared_symbol(CorpusA, CorpusB, Symbol),
-%      one_symbol_undefined(CorpusA, CorpusB, Symbol).
+% This is my attempt to capture an OR
+compatible_symbols(CorpusA, CorpusB, Symbol)
+   :- shared_symbol(CorpusA, CorpusB, Symbol),
+      symbol_is_undefined(CorpusA, Symbol).
 
+compatible_symbols(CorpusA, CorpusB, Symbol)
+   :- shared_symbol(CorpusA, CorpusB, Symbol),
+      symbol_is_undefined(CorpusB, Symbol).
+      
+% a missing symbol is not defined in either (indicating we are missing libs)
 missing_symbols(CorpusA, CorpusB, Symbol)
    :- shared_symbol(CorpusA, CorpusB, Symbol),
       both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
-% compatible_symbols(CorpusA, CorpusB, Symbol)
-%  :- shared_symbol(CorpusA, CorpusB, Symbol).
-%  not symbol_is_undefined(CorpusA, Symbol).
+% Try to create a count of shared symbols and compatible symbols
+get_shared_symbols(S) :- shared_symbol(_, _, S).
+get_compatible_symbols(S) :- compatible_symbols(_, _, S).
 
-% TODO how do I represent or?
+%type(P) :- addEmployee(_, _, _, P, _, _).
+
+total_shared(N) :- #count{X:get_shared_symbols(X)} = K, K=N.
+total_compatible(N) :- #count{X:get_compatible_symbols(X)} = K, K=N.
+
+% count of compatible symbols == count of all shared symbols?
+% Answer: 1
+% total_compatible(8) total_shared(27)
+% TODO: we need to be able to distinguish symbols that are defined with
+% elf needed libraries - the set of shared probably includes some of those.
+
 % This is showing the other needed libraries that aren't being parsed - both missing
-#show missing_symbols/3.
+%#show compatible_symbols/3.
+#show total_shared/1.
+#show total_compatible/1.
