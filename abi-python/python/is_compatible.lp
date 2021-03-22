@@ -14,7 +14,10 @@
 
 % A symbol is undefined in this case.
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
-
+both_symbols_undefined(CorpusA, CorpusB, Symbol)
+  :- symbol_definition(CorpusA, Symbol, "UND"),
+     symbol_definition(CorpusB, Symbol, "UND").
+  
 % Two different corpora share a symbol if they both have it
 shared_symbol(CorpusA, CorpusB, Symbol) 
   :- has_symbol(CorpusA, Symbol),
@@ -25,11 +28,11 @@ shared_symbol(CorpusA, CorpusB, Symbol)
 % This would ideally be an OR instead of two statements.
 %compatible_symbols(CorpusA, CorpusB, Symbol)
 %   :- shared_symbol(CorpusA, CorpusB, Symbol).
-%   not symbol_is_undefined(CorpusA, Symbol).
+%      both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
 % compatible_symbols(CorpusA, CorpusB, Symbol)
 %  :- shared_symbol(CorpusA, CorpusB, Symbol).
 %  not symbol_is_undefined(CorpusA, Symbol).
 
 % TODO how do I represent or?
-#show shared_symbol/3.
+#show both_symbols_undefined/3.
