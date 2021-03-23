@@ -14,14 +14,15 @@
 
 % A symbol is undefined in this case.
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
+
+% we can ignore a "needed symbol" if it is undefined, because we already know
+% the library with needed symbols works. An undefined symbol in this case must
+% come from somewhere else.
+needed_symbol_is_undefined(Symbol) :- needed_symbol_definition(Symbol, "UND").
+
 both_symbols_undefined(CorpusA, CorpusB, Symbol)
   :- symbol_is_undefined(CorpusA, Symbol),
      symbol_is_undefined(CorpusB, Symbol).
-
-% this is unsafe
-% one_symbol_undefined(CorpusA, CorpusB, Symbol)
-%  :- symbol_is_undefined(CorpusA, Symbol),
-%     not symbol_is_undefined(CorpusB, Symbol).
 
 
 % Two different corpora share a symbol if they both have it
@@ -30,37 +31,57 @@ shared_symbol(CorpusA, CorpusB, Symbol)
      has_symbol(CorpusB, Symbol),
      CorpusA != CorpusB.
 
-% Two corpora have a compatible symbol if it's shared, and at least one is defined
-% This is my attempt to capture an OR
-compatible_symbols(CorpusA, CorpusB, Symbol)
-   :- shared_symbol(CorpusA, CorpusB, Symbol),
-      symbol_is_undefined(CorpusA, Symbol).
 
-compatible_symbols(CorpusA, CorpusB, Symbol)
-   :- shared_symbol(CorpusA, CorpusB, Symbol),
-      symbol_is_undefined(CorpusB, Symbol).
-      
-% a missing symbol is not defined in either (indicating we are missing libs)
+% Symbols are needed if they are: and in the needed set
+symbol_is_needed(CorpusA, CorpusB, Symbol)
+
+  % shared between the corpora
+  :- shared_symbol(CorpusA, CorpusB, Symbol),
+
+    % a needed symbol,
+    needed_symbol(Symbol),
+    
+    % not undefined in the compatible library
+    not needed_symbol_is_undefined(Symbol).
+
+% If any needed symbol is undefined for both, they are not compatible
+% TODO: this is still missing symbols from other needed libraries, or perhaps
+% symbols that are always undefined.
 missing_symbols(CorpusA, CorpusB, Symbol)
-   :- shared_symbol(CorpusA, CorpusB, Symbol),
+   :- symbol_is_needed(CorpusA, CorpusB, Symbol),
       both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
-% Try to create a count of shared symbols and compatible symbols
-get_shared_symbols(S) :- shared_symbol(_, _, S).
-get_compatible_symbols(S) :- compatible_symbols(_, _, S).
+% Two corpora have a compatible symbol if it's shared, and at least one is defined
+% This is my attempt to capture an OR
+%compatible_symbols(CorpusA, CorpusB, Symbol)
+%   :- shared_symbol(CorpusA, CorpusB, Symbol),
+%      symbol_is_undefined(CorpusA, Symbol).
 
-%type(P) :- addEmployee(_, _, _, P, _, _).
+%compatible_symbols(CorpusA, CorpusB, Symbol)
+%   :- shared_symbol(CorpusA, CorpusB, Symbol),
+%      symbol_is_undefined(CorpusB, Symbol).
+      
+% a missing symbol is not defined in either (indicating we are missing libs)
+%missing_symbols(CorpusA, CorpusB, Symbol)
+%   :- shared_symbol(CorpusA, CorpusB, Symbol),
+%      both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
-total_shared(N) :- #count{X:get_shared_symbols(X)} = K, K=N.
-total_compatible(N) :- #count{X:get_compatible_symbols(X)} = K, K=N.
+% Try to create a count of missing symbols
+get_missing_symbols(S) :- missing_symbols(_, _, S).
+total_missing(N) :- #count{X:get_missing_symbols(X)} = K, K=N.
 
-% count of compatible symbols == count of all shared symbols?
-% Answer: 1
-% total_compatible(8) total_shared(27)
-% TODO: we need to be able to distinguish symbols that are defined with
-% elf needed libraries - the set of shared probably includes some of those.
+%total_compatible(N) :- #count{X:get_compatible_symbols(X)} = K, K=N.
 
-% This is showing the other needed libraries that aren't being parsed - both missing
+
+% Two corpora are compatible if:
+are_compatible()
+
+  % there are no missing symbols
+  :- total_missing(N) = 0.
+
+% TODO I will want to print this out more clearly, probably the is_compatible
+% function could use arguments for Corpora.
 %#show compatible_symbols/3.
-#show total_shared/1.
-#show total_compatible/1.
+%#show total_shared/1.
+%#show total_compatible/1.
+#show are_compatible/0.

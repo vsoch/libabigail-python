@@ -20,16 +20,29 @@ $ docker run -it --rm -v $PWD/:/code clingo-docker bash
 ```
 
 We can then use the `is_compatible` function in [asp.py](asp.py) to run the solver
-with a file, and `generate_facts` to generate facts.
+with a file, and `generate_facts` to generate facts (what I'm doing for development).
 Note that I installed ipython in the container too because it's nice to work with.
+We are taking an approach similar to `abicompat` for libabigail, namely starting
+with:
+
+ - a binary
+ - a library linked (known to work) with the binary
+ - a second library in question (we want to know if it works)
+
+The first library provides us with the set of symbols that we would need to 
+match in the second library. Another strategy might be to read in the symbols
+from the other libs in the elf needed section, but we are starting with an
+approach to match libabigail for now. The function call with the libraries
+looks like this:
 
 ```python
 # /code/python is our present working directory
 from asp import generate_facts
 
 generate_facts([
-    "../simple-example/cpp/math-client",
-    "../simple-example/cpp/libmath-v1.so"
+    "../simple-example/cpp/math-client",  # the main binary
+    "../simple-example/cpp/libmath-v1.so", # the library we know to work
+    "../simple-example/cpp/libmath-v2.so" # the library we are curious about
 ])
 ```
 
@@ -37,6 +50,23 @@ Here is how I'm dumping a bunch of facts to look at:
 
 ```python
 $ python dump.py > facts.lp
+```
+
+The facts have headers, and for the most part it's fairly straight forward.
+The symbols in the "known to work" library that we need to match in the
+library of question look like the following:
+
+```lp
+%----------------------------------------------------------------------------
+% Known needed symbols: /code/simple-example/cpp/libmath-v1.so
+%----------------------------------------------------------------------------
+symbol("__cxa_finalize").
+needed_symbol("__cxa_finalize").
+needed_symbol_type("__cxa_finalize","NOTYPE").
+needed_symbol_version("__cxa_finalize","").
+needed_symbol_binding("__cxa_finalize","WEAK").
+needed_symbol_visibility("__cxa_finalize","DEFAULT").
+needed_symbol_definition("__cxa_finalize","UND").
 ```
 
 ## 4. Figuring out Rules
@@ -78,27 +108,10 @@ and for the library itself:
 DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8SubtractEdd").
 ```
 
-**Update**: I added symbol_definition to say if a symbol is defined/undefined, and
-we can use that to try and write a program. I'm stuck at a point of running
-clingo and having it tell me:
-
-```bash
-(clingo-env) root@b32e9108f711:/code/python# clingo facts.lp is_compatible.lp 
-clingo version 5.4.0
-Reading from facts.lp ...
-is_compatible.lp:33:1-29: info: no atoms over signature occur in program:
-  symbol_is_undefined/0
-
-Solving...
-Answer: 1
-
-SATISFIABLE
-
-Models       : 1
-Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
-```
-
-@tgamblin suggested using libabigail xml, but it doesn't have whether a symbol is
-defined or not. 
+**Update**: @tgamblin suggested using libabigail xml for this task, but we cannot
+at this point because it does not include undefined symbols. For the time being,
+I added symbol_definition to say if a symbol is defined/undefined, and
+we can use that to try and write a logic program. I also added in the third library
+because it became clear that we could never know the set of symbols that are supposed
+to be provided, and these are the `needed_symbol` groups. Now I'm working on writing logic in [is_compatible.lp](is_compatible.lp)
+to first derive this set of needed symbols. After that, I'll look at [compute_diff](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L11031) in libabigail to derive more rules after that.

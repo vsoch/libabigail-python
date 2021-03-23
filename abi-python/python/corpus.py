@@ -37,19 +37,6 @@ from elftools.elf.descriptions import (
 
 __version__ = "1.0"
 
-# Base types enumerator
-
-
-class BaseTypes(enum.Enum):
-    INT_BASE_TYPE = 1
-    CHAR_BASE_TYPE = 2
-    BOOL_BASE_TYPE = 3
-    DOUBLE_BASE_TYPE = 4
-    FLOAT_BASE_TYPE = 5
-    CHAR16_T_BASE_TYPE = 6
-    CHAR32_T_BASE_TYPE = 7
-    WCHAR_T_BASE_TYPE = 8
-
 
 class CorpusReader(ELFFile):
     """A CorpusReader wraps an elffile, allowing us to easily open/close
@@ -305,7 +292,7 @@ class Corpus:
     variables, and nested Dwarf Information Entries
     """
 
-    def __init__(self, filename, include_dwarf_entries=False):
+    def __init__(self, filename, include_dwarf_entries=False, load_needed_libs=True):
         self.elfheader = {}
 
         # This could be split into variables / symbols
@@ -315,6 +302,10 @@ class Corpus:
         self.architecture = None
         self._soname = None
         self.read_elf_corpus(include_dwarf_entries)
+
+        # If we want a full set of symbols, we need elf needed loaded
+        if load_needed_libs:
+            self.load_elf_needed()
 
     def __str__(self):
         return "[Corpus:%s]" % self.path
@@ -326,19 +317,19 @@ class Corpus:
         return self.path is not None and os.path.exists(self.path)
 
     @property
-    def soname():
+    def soname(self):
         return self.dynamic_tags.get("soname")
 
     @property
-    def needed():
+    def needed(self):
         return self.dynamic_tags.get("needed", [])
 
     @property
-    def runpath():
+    def runpath(self):
         return self.dynamic_tags.get("runpath")
 
     @property
-    def rpath():
+    def rpath(self):
         return self.dynamic_tags.get("rpath")
 
     def iter_dwarf_information_entries(self):
@@ -346,6 +337,13 @@ class Corpus:
         reader = CorpusReader(self.path)
         for entry in reader.iter_dwarf_information_entries():
             yield entry
+
+    def load_elf_needed(self):
+        """In order to find other undefined symbols, we might also need to
+        load these other libraries that are used.
+        """
+        # TODO: if we don't want to provide a third binary, we could do this
+        pass
 
     def read_elf_corpus(self, include_dwarf_entries=False):
         """Read the entire elf corpus, including dynamic and other sections
@@ -382,16 +380,24 @@ class ABIParser:
     def __repr__(self):
         return str(self)
 
-    def get_corpus_from_elf(self, filename, include_dwarf_entries=False):
-        """Given an elf binary, read it in with elfutils ELFFile and then
+    def get_corpus_from_elf(
+        self, filename, include_dwarf_entries=False, load_needed_libs=True
+    ):
+        """
+        Given an elf binary, read it in with elfutils ELFFile and then
         iterate through dwarf info to generate a tree.
+
+        Arguments:
+            filename (path): path to filename to get corpus for
+            include_dwarf_entries (bool): parse dwarf entries (DIEs)
+            load_needed_libs(bool): try to find and load needed libraries
         """
         filename = os.path.abspath(filename)
         if not os.path.exists(filename):
             sys.exit("%s does not exist." % filename)
 
         # Create a new corpus to interact with
-        return Corpus(filename, include_dwarf_entries)
+        return Corpus(filename, include_dwarf_entries, load_needed_libs)
 
 
 def get_die_filepath(die):

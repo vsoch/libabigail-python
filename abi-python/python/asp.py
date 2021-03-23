@@ -252,16 +252,28 @@ class PyclingoDriver(object):
         stats=False,
         tests=False,
         logic_programs=None,
-        facts_only=False
+        facts_only=False,
     ):
-        """Given two corpora, determine if they are compatible by way of
-        flattening header information into facts, and handing to a solver.
+        """Given three corpora, generate facts for a solver.
+
+        The order is important:
+
+         [binary, libraryA, libraryB]:
+           binary: should be a binary that uses libraryA
+           libraryA: should be a known library to work with the binary
+           libraryB: should be a second library to test if it will work.
+
+        In the future ideally we would not want to require this working library,
+        but for now we are trying to emulate what libabigail does. The first
+        working binary serves as a base to subset the symbols to a known set
+        that are needed. We could possibly remove it if we can load all symbols
+        provided by other needed files, and then eliminate them from the set.
         """
         # logic programs to give to the solver
         logic_programs = logic_programs or []
         if not isinstance(logic_programs, list):
             logic_programs = [logic_programs]
-        
+
         timer = Timer()
 
         # Initialize the control object for the solver
@@ -306,9 +318,9 @@ class PyclingoDriver(object):
 
         # Won't work after this, need to write files
         solve_kwargs = {
-        #    "assumptions": self.assumptions,
-             "on_model": on_model,
-        #     "on_core": cores.append,
+            #    "assumptions": self.assumptions,
+            "on_model": on_model,
+            #     "on_core": cores.append,
         }
         # if clingo_cffi:
         #    solve_kwargs["on_unsat"] = cores.append
@@ -316,6 +328,7 @@ class PyclingoDriver(object):
         timer.phase("solve")
 
         import IPython
+
         IPython.embed()
 
         # once done, construct the solve result
@@ -497,13 +510,47 @@ class ABICompatSolverSetup(object):
 
                 self.gen.fact(fn.symbol(symbol))
                 self.gen.fact(fn.symbol_type(corpus.path, symbol, meta["type"]))
-                self.gen.fact(fn.symbol_version(corpus.path, symbol, meta["version_info"]))
+                self.gen.fact(
+                    fn.symbol_version(corpus.path, symbol, meta["version_info"])
+                )
                 self.gen.fact(fn.symbol_binding(corpus.path, symbol, meta["binding"]))
-                self.gen.fact(fn.symbol_visibility(corpus.path, symbol, meta["visibility"]))
-                self.gen.fact(fn.symbol_definition(corpus.path, symbol, meta["defined"]))
+                self.gen.fact(
+                    fn.symbol_visibility(corpus.path, symbol, meta["visibility"])
+                )
+                self.gen.fact(
+                    fn.symbol_definition(corpus.path, symbol, meta["defined"])
+                )
 
                 # Might be redundant
                 self.gen.fact(fn.has_symbol(corpus.path, symbol))
+
+    def generate_needed_symbols(self, corpora):
+        """
+        For the library (or possibly more than one) that we know works,
+        generate symbols for the solver.
+
+        needed_symbol_type("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STT_FUNC").
+        needed_symbol_binding("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STB_FUNC").
+        needed_symbol_attr("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STV_default").
+
+        """
+        for corpus in corpora:
+
+            # Don't include corpora here, not relevant
+            self.gen.h2("Known needed symbols: %s" % corpus.path)
+            for symbol, meta in corpus.elfsymbols.items():
+
+                # It begins with a NULL symbol, not sure it's useful
+                if not symbol:
+                    continue
+
+                self.gen.fact(fn.symbol(symbol))
+                self.gen.fact(fn.needed_symbol(symbol))
+                self.gen.fact(fn.needed_symbol_type(symbol, meta["type"]))
+                self.gen.fact(fn.needed_symbol_version(symbol, meta["version_info"]))
+                self.gen.fact(fn.needed_symbol_binding(symbol, meta["binding"]))
+                self.gen.fact(fn.needed_symbol_visibility(symbol, meta["visibility"]))
+                self.gen.fact(fn.needed_symbol_definition(symbol, meta["defined"]))
 
     def generate_needed(self, corpora):
         """Given a list of corpora, add needed libraries from dynamic tags."""
@@ -602,7 +649,8 @@ class ABICompatSolverSetup(object):
             # 'e_shstrndx': 29
 
     def setup(self, driver, corpora, tests=False):
-        """Generate an ASP program with relevant constraints for a binary
+        """
+        Generate an ASP program with relevant constraints for a binary
         and a library, for which we have been provided their corpora.
 
         This calls methods on the solve driver to set up the problem with
@@ -610,17 +658,25 @@ class ABICompatSolverSetup(object):
         compatibility.
 
         Arguments:
-            corpusA (corpus.Corpus): the first corpus
-            corpusB (corpus.Corpus): the second corpus
+            corpora: [corpusA, corpusB, corpusC]
+            corpusA (corpus.Corpus): the first corpus for the binary
+            corpusB (corpus.Corpus): the corpus for the library that works
+            corpusB (corpus.Corpus): the corpus for the library that we test
 
         """
+        # Pull out corpus groups. This is the library known to work
+        library = corpora[1]
+
+        # This is the binary and library in question
+        corpora = [corpora[0], corpora[2]]
+
         # Every fact, entity that we make needs a unique id
         self._condition_id_counter = itertools.count()
 
         # preliminary checks
         for corpus in corpora:
             assert corpus.exists()
-    
+
         # driver is used by all the functions below to add facts and
         # rules to generate an ASP program.
         self.gen = driver
@@ -635,6 +691,9 @@ class ABICompatSolverSetup(object):
 
         # generate all elf symbols (might be able to make this smaller set)
         self.generate_elf_symbols(corpora)
+
+        # Generate known symbols given library that works
+        self.generate_needed_symbols([library])
 
         # Generate dwarf information entries (for now, don't generate)
         # self.generate_dwarf_info_entries(corpora)
@@ -655,18 +714,29 @@ def generate_facts(libs):
 
 
 def is_compatible(
-    binary, library, dump=(), models=0, timers=False, stats=False, tests=False,
-    logic_programs=None
+    binary,
+    libraryA,
+    libraryB,
+    dump=(),
+    models=0,
+    timers=False,
+    stats=False,
+    tests=False,
+    logic_programs=None,
 ):
-    """Given two libraries (we call one a main binary and the other a library
-    that we want to link with it), determine if the two are compatible. This
-    is currently written to support binaries, and ultimately we'd want to take
-    two specs, and then to lookup the information we need in a database. We don't
-    know what we need yet so we cannot do that.
+    """
+    Given three libraries (we call one a main binary and the other a library
+    that works, and the second one that we want to link with it), determine
+    if the second library is compatible with the binary. This wrapper function,
+    in requiring the three named arguments for binary, libraryA and libraryB,
+    enforces that all three are provided (and in the correct order).
+    If the functions for the solver are used outside this context, make sure
+    that you provide them in the correct order.
 
     Arguments:
         binary (str): path to a binary to assess for compataibility
-        library (str): path to a library to assess for compatability
+        libraryA (str): path to a library that is known to work
+        libraryB (str): a second library to assess for compatability.
         dump (tuple): what to dump
         models (int): number of models to search (default: 0)
     """
@@ -678,9 +748,21 @@ def is_compatible(
         if not os.path.exists(path):
             sys.exit("%s does not exist." % path)
 
-    # Create the parser, and generate the corpus
+    # Create the parser, and generate the corpora
     parser = ABIParser()
     corpusA = parser.get_corpus_from_elf(binary)
-    corpusB = parser.get_corpus_from_elf(library)
+    corpusB = parser.get_corpus_from_elf(libraryA)
+    corpusC = parser.get_corpus_from_elf(libraryB)
     setup = ABICompatSolverSetup()
-    return driver.solve(setup, [corpusA, corpusB], dump, models, timers, stats, tests, logic_programs)
+
+    # The order should be binary | working library | library
+    return driver.solve(
+        setup,
+        [corpusA, corpusB, corpusC],
+        dump,
+        models,
+        timers,
+        stats,
+        tests,
+        logic_programs,
+    )
