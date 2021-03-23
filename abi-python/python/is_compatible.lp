@@ -11,6 +11,16 @@
 % corpus("/code/simple-example/cpp/libmath-v1.so").
 % We can maybe use a basename
 % corpus_basename("/code/simple-example/cpp/libmath-v1.so","libmath-v1.so").
+% If we are deriving from spack, I also don't see why we can't include 
+% other libraries (we are sure about) that are needed to find extra symbols,
+% although libabigail doesn't do that.
+
+%=============================================================================
+% Matching function and variable symbols
+% symbols are missing if they are needed (present in the working library),
+% not undefined in the working library (indicating they come from elsewhere)
+% and undefined in both the potential library and binary.
+%=============================================================================
 
 % A symbol is undefined in this case.
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
@@ -48,37 +58,41 @@ missing_symbols(CorpusA, CorpusB, Symbol)
    :- symbol_is_needed(Symbol),
       both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
-% Two corpora have a compatible symbol if it's shared, and at least one is defined
-% This is my attempt to capture an OR
-%compatible_symbols(CorpusA, CorpusB, Symbol)
-%   :- shared_symbol(CorpusA, CorpusB, Symbol),
-%      symbol_is_undefined(CorpusA, Symbol).
-
-%compatible_symbols(CorpusA, CorpusB, Symbol)
-%   :- shared_symbol(CorpusA, CorpusB, Symbol),
-%      symbol_is_undefined(CorpusB, Symbol).
-      
-% a missing symbol is not defined in either (indicating we are missing libs)
-%missing_symbols(CorpusA, CorpusB, Symbol)
-%   :- shared_symbol(CorpusA, CorpusB, Symbol),
-%      both_symbols_undefined(CorpusA, CorpusB, Symbol).
-
 % Try to create a count of missing symbols
+% TODO: this will be double if we count CorpusA, CorpusB and CorpusB, CorpusA (twice)
 get_missing_symbols(S) :- missing_symbols(_, _, S).
 total_missing(N) :- #count{X:get_missing_symbols(X)} = K, K=N.
 
 %total_compatible(N) :- #count{X:get_compatible_symbols(X)} = K, K=N.
 
 
+%=============================================================================
+% Matching soname and architecture
+% libraries must have matching soname and architecture
+%=============================================================================
+
+% libabigail just compares the libs, but why not compare to the binary too?
+%shared_architecture(CorpusA, CorpusB)
+%  :- corpus_elf_machine(CorpusA, _, A)
+get_architecture(A) :- corpus_elf_machine(_, A).
+architecture_count(N) :- #count{X:get_architecture(X)} = K, K=N.
+
+% todo: I don't think my data has sonames, need to add or figure out why not in
+% dynamic tags
+% get_soname(A) :- corpus_elf_soname(_, A).
+% soname_count(N) :- #count{X:get_soname(X)} = K, K=N.
+
+% TODO I will want to print this out more clearly, probably the is_compatible
+% function could use arguments for Corpora.
 % Two corpora are compatible if:
 are_compatible()
 
   % there are no missing symbols
-  :- total_missing(N) = 0.
+  :- total_missing(N) == 0.
 
-% TODO I will want to print this out more clearly, probably the is_compatible
-% function could use arguments for Corpora.
-%#show compatible_symbols/3.
-%#show total_shared/1.
-%#show total_compatible/1.
-#show missing_symbols/3.
+  % there is only one architecture
+  :- architecture_count(N) == 1.
+
+#show total_missing/1.
+#show architecture_count/1.
+%#show soname_count/1.

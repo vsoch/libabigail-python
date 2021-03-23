@@ -587,6 +587,10 @@ class ABICompatSolverSetup(object):
             # Note that we could update these to just be corpus_attr, but I'm
             # starting with testing a more detailed approach for now.
 
+            # If the corpus has a soname:
+            if corpus.soname:
+                self.gen.fact(fn.corpus_soname(corpus.path, corpus.soname))
+
             # File class (also at elffile.elfclass or corpus.elfclass
             self.gen.fact(fn.corpus_elf_class(corpus.path, hdr["e_ident"]["EI_CLASS"]))
 

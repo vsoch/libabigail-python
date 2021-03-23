@@ -115,3 +115,24 @@ we can use that to try and write a logic program. I also added in the third libr
 because it became clear that we could never know the set of symbols that are supposed
 to be provided, and these are the `needed_symbol` groups. Now I'm working on writing logic in [is_compatible.lp](is_compatible.lp)
 to first derive this set of needed symbols. After that, I'll look at [compute_diff](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L11031) in libabigail to derive more rules after that.
+
+See [rules.md](rules.md) for breaking down this function in libabigail. In the facts,
+I'm currently at having a check over symbols and for just one architecture. It's pretty
+limited but it's a start!
+
+```bash
+(clingo-env) root@b32e9108f711:/code/python# clingo facts.lp is_compatible.lp 
+clingo version 5.4.0
+Reading from facts.lp ...
+Solving...
+Answer: 1
+architecture_count(1) total_missing(4)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.006s
+```
+Note that since we don't take unique orders of things, the missing is likely doubled.
+But for now we don't care because it's > 0.
