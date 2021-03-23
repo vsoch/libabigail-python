@@ -32,23 +32,20 @@ shared_symbol(CorpusA, CorpusB, Symbol)
      CorpusA != CorpusB.
 
 
-% Symbols are needed if they are: and in the needed set
-symbol_is_needed(CorpusA, CorpusB, Symbol)
-
-  % shared between the corpora
-  :- shared_symbol(CorpusA, CorpusB, Symbol),
+% Symbols are needed if they are needed, and defined in the needed set
+symbol_is_needed(Symbol)
 
     % a needed symbol,
-    needed_symbol(Symbol),
+    :- needed_symbol(Symbol),
     
-    % not undefined in the compatible library
-    not needed_symbol_is_undefined(Symbol).
+      % not undefined in the compatible library
+      not needed_symbol_is_undefined(Symbol).
 
 % If any needed symbol is undefined for both, they are not compatible
 % TODO: this is still missing symbols from other needed libraries, or perhaps
 % symbols that are always undefined.
 missing_symbols(CorpusA, CorpusB, Symbol)
-   :- symbol_is_needed(CorpusA, CorpusB, Symbol),
+   :- symbol_is_needed(Symbol),
       both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
 % Two corpora have a compatible symbol if it's shared, and at least one is defined
@@ -84,4 +81,4 @@ are_compatible()
 %#show compatible_symbols/3.
 %#show total_shared/1.
 %#show total_compatible/1.
-#show are_compatible/0.
+#show missing_symbols/3.
