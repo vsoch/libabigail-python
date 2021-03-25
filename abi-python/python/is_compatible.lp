@@ -25,10 +25,11 @@
 % A symbol is undefined in this case.
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
 
-% we can ignore a "needed symbol" if it is undefined, because we already know
-% the library with needed symbols works. An undefined symbol in this case must
-% come from somewhere else.
-needed_symbol_is_undefined(Symbol) :- needed_symbol_definition(Symbol, "UND").
+% we can ignore a symbol in the library that is known to work (the subset of 
+% "needed symbols" if it is undefined. The logic here is that if the main app
+% linking with this library works, even if both are undefined, then the symbol
+% must be provided by another librarys
+not_needed_symbol(Symbol) :- needed_symbol_definition(Symbol, "UND").
 
 both_symbols_undefined(CorpusA, CorpusB, Symbol)
   :- symbol_is_undefined(CorpusA, Symbol),
@@ -48,8 +49,8 @@ symbol_is_needed(Symbol)
     % a needed symbol,
     :- needed_symbol(Symbol),
     
-      % not undefined in the compatible library
-      not needed_symbol_is_undefined(Symbol).
+      % the symbol is not UND in the library known to work
+      not not_needed_symbol(Symbol).
 
 % If any needed symbol is undefined for both, they are not compatible
 % TODO: this is still missing symbols from other needed libraries, or perhaps

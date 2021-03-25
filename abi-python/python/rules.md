@@ -1,12 +1,158 @@
 # Rules
 
-These rules are derived from tracing [corpus_diff](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L11031). I will include questions along the way. [Current issues](#issues) with links are provided at the end.
+These rules are derived from:
 
-## The Input
+1. tracing [corpus_diff](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L11031). 
+2. [dl-lookup](https://github.com/lattera/glibc/blob/master/elf/dl-lookup.c#L334) in glibc
+
+We don't know how we want to model ABI compatability, but these libraries can give us insight to rules we might want. 
+I will include questions along the way. [Current issues](#issues) with links are provided at the end.
+
+## glibc
+
+This is for the function `do_lookup_x`, which notably is just looking up one symbol.
+
+### The Input
+
+ - undef_name: the symbol name to lookup
+ - undef_map: the symbol lookup
+ - old_hash/new_hash: I suspect this is referring to the [hash function](https://docs.oracle.com/cd/E23824_01/html/819-0690/chapter6-48031.html) that accepts a symbol name and returns an index. If we are using pyelftools, it looks like [this is handled for us](https://github.com/eliben/pyelftools/blob/master/elftools/elf/elffile.py#L584). In this library, the new hash is calculated [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L792).
+ - `*ref`: looks like a reference to the ELF
+ - `*result`:
+ - i: is a size_to so it's returned from the sizeof operator, and must be the size in bytes of the symbol
+ - version: is the found version
+ - flags: integer flags
+ - `*skip`: a link map
+ - type_class: integer that represents type.
+ 
+For the function in question, it looks like it is called by [_dl_lookup_symbol_x](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L786), and within this function we are
+[looping through loaded libraries](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L807)
+and looking for a definition for undefined symbols. We call the function [do_lookup_x here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L814).
+ 
+> /* Search loaded objects' symbol tables for a definition of the symbol UNDEF_NAME, perhaps with a requested version for the symbol.
+
+ 
+### Returns
+
+The function returns:
+
+ - > 0 if the symbol is found
+ - 0 if nothing is found
+ - < 0 if something bad happened
+ 
+
+### Rules
+
+We start on [this line](https://github.com/lattera/glibc/blob/master/elf/dl-lookup.c#L348) iterating through each library, and checking if the symbol exists.
+
+#### Rule 1: Skip the symbol if in skipped, or copy relocation
+
+We are looping through each entry in the scope, which looks to be all the globally loaded objects (libraries?)
+which I'd guess each have their own set of symbols. This first rule looks to see if an entry is
+in a "skip" lookup, or has type `ELF_RTYPE_CLASS_COPY` and we keep going if yes. 
+
+```cpp
+/* Don't search the executable when resolving a copy reloc.  */
+if ((type_class & ELF_RTYPE_CLASS_COPY) && map->l_type == lt_executable)
+    continue;
+```
+
+> A COPY relocation is a special kind of dynamic relocation that instructs the loader to copy a symbol to a particular location. It is used to enable what in a world of PIE binaries looks like a half measure: position-dependent main executables that use a shared library.
+
+### Rule 2: If no symbols, nothing to do
+
+The code states:
+
+>  /* If the hash table is empty there is nothing to do here.  */
+  
+And in pyelftools (or an exported abixml that has all symbols) I suspect empty hash table == no symbols.
+That seems accurate, if we don't have symbols then we can't say anything about the library.
+
+
+### Rule 3: Don't look at libraries marked for removal
+
+I'm not sure how we would know a library is marked for removal. It looks like it's an
+[integer](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/include/link.h#L193) that
+has value 1 if it's marked for removal.
+
+```cpp
+/* Do not look into objects which are going to be removed.  */
+if (map->l_removed)
+    continue;
+```
+
+### Rules for Symbol Comparison
+
+When we get [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L407)
+we call [the function check_match](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L64)
+
+> /* Utility function for do_lookup_x. The caller is called with undef_name, ref, version, flags and type_class, and those are passed as the first five arguments. The caller then computes sym, symidx, strtab, and map and passes them as the next four arguments. Lastly the caller passes in versioned_sym and num_versions which are modified by check_match during the checking process.  */
+
+
+#### Rule 4. Symbol is still undefined
+
+It looks like if st_value for a symbol is 0, that equals no value. The function
+returns `NULL`. Also, `SHN_ABS` means that:
+
+> Absolute values for the corresponding reference. For example, symbols defined relative to section number SHN_ABS have absolute values and are not affected by relocation. 
+
+and `STT_TLS` means:
+
+> TLS symbols have the symbol type STT_TLS. These symbols are assigned offsets relative to the beginning of the TLS template. The actual virtual address associated with these symbols is irrelevant. The address refers only to the template, and not to the per-thread copy of each data item.
+
+and `ELF_MACHINE_SYM_NO_MATCH` means that the symbol fails to match [due to some machine-specific reason](https://sourceware.org/pipermail/glibc-cvs/2020q2/069443.html). And `SHN_UNDEF` means:
+
+> An undefined, missing, irrelevant, or otherwise meaningless section reference. For example, a symbol defined relative to section number SHN_UNDEF is an undefined symbol.
+
+```c
+if (__glibc_unlikely ((sym->st_value == 0 /* No value.  */
+			 && sym->st_shndx != SHN_ABS
+			 && stt != STT_TLS)
+			|| ELF_MACHINE_SYM_NO_MATCH (sym)
+			|| (type_class & (sym->st_shndx == SHN_UNDEF))))
+    return NULL;
+```
+
+#### Rule 5. Ignore certain symbol types
+
+The next part of the code is fairly well stated - we ignore a subset of types that
+don't have code or data definitions.
+
+```c
+/* Ignore all but STT_NOTYPE, STT_OBJECT, STT_FUNC,
+   STT_COMMON, STT_TLS, and STT_GNU_IFUNC since these are no
+   code/data definitions.  */
+```
+
+#### Rule 6. Match the name
+
+This is probably obvious, but if the symbol names don't match, this isn't the symbol
+we are looking for ([here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L94)).
+
+#### Rule 8: Versioned symbol
+
+If the symbol we are looking for has a version, the one we are matching
+needs to have a version too, stated [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L103).
+
+I'm not sure the cases that a symbol would not have a version, but I've definitely
+seen this in practice in [facts.lp](facts.lp).
+
+```lp
+symbol_version("/code/simple-example/cpp/math-client","_ZStL8__ioinit","").
+```
+Whether that's accurate or a bug on my part, we can look into.
+
+If I remember, the first symbol in the table usually has no value.
+
+**stopped here in progress!**
+
+## libabigail
+
+### The Input
 
 Let's start with the input. We have:
 
-### a diff context
+#### a diff context
 
 A [diff context](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/tools/abicompat.cc#L261)
 holds booleans that tell the `corpus_diff` function in libabigail what is important to look at. This is nice because it gives us some
@@ -48,7 +194,7 @@ create_diff_context(const options& opts)
 }
 ```
 
-### corpus readers
+#### corpus readers
 
 You can see in [abicompat](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/tools/abicompat.cc#L781)
 described in [this exercise](../../abicompat) that we read in two corpora and a binary. Specifically, the "normal" mode means that
@@ -72,7 +218,7 @@ The ctxt refers to the diff context described above. We then jump up to
 [this function](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/tools/abicompat.cc#L314)
 in the same file, and we can start deriving rules from this point.
 
-## Rules
+### Rules
 
 The following sections will
 have to kinds of headings:
@@ -82,7 +228,7 @@ have to kinds of headings:
 
 
 
-### Rule 1: We must have corpora
+#### Rule 1: We must have corpora
 
 This is obvious, but both libraries and the corpora for the main binary [must be defined](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/tools/abicompat.cc#L320):
 
@@ -101,7 +247,7 @@ I think if one of these assertions fails, we raise an error. [Specifically](http
 We will derive
 the following rules by walking through the function entry point [here](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L11031).
 
-### Step after Rule 1: Filter Symbols
+#### Step after Rule 1: Filter Symbols
 
 Given we have lib1, a library that is known to work, and lib2, a library that we are testing,
 and an app, the binary being linked to, we want to:
@@ -130,7 +276,7 @@ and then show this overlap with each library, but for now we can just assume som
 and (possibly) defined in the libraries.
 
 
-### Rule 2: Consider dependencies too
+#### Rule 2: Consider dependencies too
 
 Libabigail doesn't currently do this, but there are other library dependencies "elf needed" listed in the binary.
 [This bug](https://sourceware.org/bugzilla/show_bug.cgi?id=27514) points this out. If we (in spack) can totally
@@ -139,7 +285,7 @@ absolutely sure that everything matches (as opposed to just looking at undefined
 what libabigail does). [This bug](https://sourceware.org/bugzilla/show_bug.cgi?id=27208) is in the same thread.
 
 
-### Rule 2: Corpora must be derived in the same environment
+#### Rule 2: Corpora must be derived in the same environment
 
 The libabigail library has a concept of an [environment](https://github.com/woodard/libabigail/commit/b2e5366d3f0819507006b4369f1fcc0aa93ca283), and [they must be equal](https://github.com/woodard/libabigail/blob/master/src/abg-comparison.cc#L11046) to do a comparison. The description of the linked commit doesn't really clarify what an environment is beyond resoures and:
 
@@ -157,7 +303,7 @@ comparisons of ABI. This will need to be a rule, but I'm not sure how it is repr
 At this point we create a [corpus diff](https://github.com/woodard/libabigail/blob/1d29610d51280011a5830166026151b1a9a95bba/include/abg-comparison.h#L492) [here](https://github.com/woodard/libabigail/blob/master/src/abg-comparison.cc#L11051) with the two 
 corpora (the 
 
-### Rule 3. Sonames and architecutres must be equal.
+#### Rule 3. Sonames and architecutres must be equal.
 
 We can see these two lines [here](https://github.com/woodard/libabigail/blob/master/src/abg-comparison.cc#L11055). Each
 library corpus has a function to get the soname and architecture, and we save to variables:
@@ -178,9 +324,9 @@ and [later on](https://github.com/woodard/libabigail/blob/master/src/abg-compari
     out << indent << "ELF architecture changed\n";
 ```
 
-### Steps to prepare for Calculate Diff
+#### Steps to prepare for Calculate Diff
 
-#### 1. populating diff context
+##### 1. populating diff context
 
 At this point, we jump into a sequence of calls [here](https://github.com/woodard/libabigail/blob/master/src/abg-comparison.cc#L11060)
 to use the function `calculate_diff` with several different kinds of inputs. We can use [ctags](https://ctags.io/) to easily jump around
@@ -243,7 +389,7 @@ to this overloaded `compute_diff` function, and that is going to:
 
 > **Question**: where do [these functions](https://github.com/woodard/libabigail/blob/1d29610d51280011a5830166026151b1a9a95bba/include/abg-diff-utils.h#L1806) get called and what is the context to describe a deletion/insertion?
 
-#### 2. fill lookup tables
+##### 2. fill lookup tables
 
 In [this function](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L8848)
 we are looping through deletions and insertions and:
@@ -299,7 +445,7 @@ it directly states what we might consider rules. Even if I don't understand how 
 And these same kind of checks are defined in [the reporter file](https://github.com/woodard/libabigail/blob/1d29610d51280011a5830166026151b1a9a95bba/src/abg-leaf-reporter.cc#L42).
 We already discussed soname or architecture changing. We can derive rules for the rest!
 
-### Rule 5. Net number of functions removed
+#### Rule 5. Net number of functions removed
 
 If this number is not zero, the ABI is not compatible. If we remove a function,
 I suspect it needs to be filtered out. If it's not filtered out, then it's still needed.
@@ -319,12 +465,12 @@ corpus_diff::diff_stats::net_num_func_removed() const
 }
 ```
 
-### Rule 6. Functions with virtual offset changes
+#### Rule 6. Functions with virtual offset changes
 
 If the number of functions with virtual offset changes is != 0, it's not ABI compatible.
 
 
-### Rule 7. Functions with sub-type changes
+#### Rule 7. Functions with sub-type changes
 
 Note the comment from above:
 
@@ -355,7 +501,7 @@ We probably need to trace each of these types in the diff context to see where t
 are populated. My goal now is just to write out the checks and maybe we can fill in
 the details after if it's not intuitive.
 
-### Rule 8. Variables and functions that are removed
+#### Rule 8. Variables and functions that are removed
 
 The net number of variables and functions removed must be 0 for abi compatibility.
 
@@ -382,7 +528,7 @@ rules.
 || stats.net_num_removed_var_syms() != 0
 ```
 
-### Rule 9. Removed and changed unreachable types
+#### Rule 9. Removed and changed unreachable types
 
 I'm curious why unreachable types would matter? If we can't reach them, why would
 an external library care?

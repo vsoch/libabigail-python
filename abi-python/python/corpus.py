@@ -27,6 +27,7 @@ from elftools.elf.gnuversions import (
 from elftools.elf.constants import SHN_INDICES
 from elftools.elf.relocation import RelocationSection
 
+from elftools.dwarf.descriptions import describe_attr_value
 from elftools.elf.descriptions import (
     describe_symbol_type,
     describe_symbol_bind,
@@ -381,7 +382,7 @@ class ABIParser:
         return str(self)
 
     def get_corpus_from_elf(
-        self, filename, include_dwarf_entries=False, load_needed_libs=True
+        self, filename, include_dwarf_entries=True, load_needed_libs=True
     ):
         """
         Given an elf binary, read it in with elfutils ELFFile and then
@@ -439,13 +440,14 @@ def parse_compile_unit(die):
 
     TODO: we can map numbers to languages here.
     """
+    language = describe_attr_value(die.attributes["DW_AT_language"], die, die.offset)
     dmeta = {
         "_type": "abi-instr",
         "version": __version__,
         # Multiply by 8 to go from bytes to bits
         "address-size": die.cu.header["address_size"] * 8,
         "path": bytes2str(die.attributes["DW_AT_name"].value),
-        "language": die.attributes["DW_AT_language"].value,
+        "language": language,
         "comp-dir-path": bytes2str(die.attributes["DW_AT_comp_dir"].value),
     }
     if die.has_children:
@@ -535,14 +537,17 @@ def parse_typedef(die):
     """
     index = die.attributes["DW_AT_decl_file"].value
     filepath = get_cu_filename(die.cu, index)
-    return {
+
+    dmeta = {
         "_type": "typedef-decl",
         "name": bytes2str(die.attributes["DW_AT_name"].value),
         "line": die.attributes["DW_AT_decl_line"].value,
-        "column": die.attributes["DW_AT_decl_column"].value,
         "filepath": filepath,
     }
 
+    if "DW_AT_decl_column" in die.attributes:
+        dmeta["column"] = die.attributes["DW_AT_decl_column"].value
+    return dmeta
 
 def parse_union_type(die):
     """parse a union type
@@ -557,7 +562,6 @@ def parse_union_type(die):
     dmeta = {
         "_type": "union-decl",
         "line": die.attributes["DW_AT_decl_line"].value,
-        "column": die.attributes["DW_AT_decl_column"].value,
         "filepath": filepath,
         "size-in-bits": die.attributes["DW_AT_byte_size"].value * 8,
         "is-anonymous": "",  # TODO: how do I know if it's anonymous?
@@ -566,6 +570,8 @@ def parse_union_type(die):
     }
     if "DW_AT_name" in die.attributes:
         dmeta["name"] = bytes2str(die.attributes["DW_AT_name"].value)
+    if "DW_AT_decl_column" in die.attributes:
+        dmeta["column"] = die.attributes["DW_AT_decl_column"].value
 
     if die.has_children:
         dmeta["children"] = []
@@ -716,11 +722,12 @@ def parse_enumeration_type(die):
         "_type": "enum-decl",
         "filepath": filepath,
         "line": die.attributes["DW_AT_decl_line"].value,
-        "column": die.attributes["DW_AT_decl_column"].value,
     }
 
     if "DW_AT_name" in die.attributes:
         dmeta["name"] = bytes2str(die.attributes["DW_AT_name"].value)
+    if "DW_AT_decl_column" in die.attributes:
+        dmeta["column"] = die.attributes["DW_AT_decl_column"].value
 
     if die.has_children:
         dmeta["children"] = []
