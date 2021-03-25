@@ -66,6 +66,11 @@ total_missing(N) :- #count{X:get_missing_symbols(X)} = K, K=N.
 
 %total_compatible(N) :- #count{X:get_compatible_symbols(X)} = K, K=N.
 
+% TODOS
+% parameter types
+% parameter sizes
+% parameter counts
+% structures part of a parameter, look at layout of structures?
 
 %=============================================================================
 % Matching soname and architecture

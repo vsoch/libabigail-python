@@ -88,6 +88,7 @@ we call [the function check_match](https://github.com/lattera/glibc/blob/895ef79
 
 > /* Utility function for do_lookup_x. The caller is called with undef_name, ref, version, flags and type_class, and those are passed as the first five arguments. The caller then computes sym, symidx, strtab, and map and passes them as the next four arguments. Lastly the caller passes in versioned_sym and num_versions which are modified by check_match during the checking process.  */
 
+Note that it looks like there is an [older method](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L422) to look up symbols, a "SysV-style hash table."
 
 #### Rule 4. Symbol is still undefined
 
@@ -134,17 +135,90 @@ we are looking for ([here](https://github.com/lattera/glibc/blob/895ef79e04a953c
 If the symbol we are looking for has a version, the one we are matching
 needs to have a version too, stated [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L103).
 
-I'm not sure the cases that a symbol would not have a version, but I've definitely
+It looks like there are a few cases.
+
+**1. We need a version, but the table doesn't have it**
+
+This is noted to probably be a bug in the library.
+
+**2. We need a verison, the table might have it**
+
+If we have the version table, then look for it
+ [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L120).
+
+**3. We don't have a version**
+
+There are a few cases here, noted in the docs for the code. There are two subcases.
+
+ - "a binary which does not include versioning information is loaded"
+ 
+I think I've seen this in practice, with `MathClient.cpp`
+
+```lp
+symbol_type("/code/simple-example/cpp/math-client","MathClient.cpp","FILE").
+
+# note this is empty
+symbol_version("/code/simple-example/cpp/math-client","MathClient.cpp","").
+```
+ 
+or 
+
+ - dlsym() instead of dlvsym() is used to get a symbol which might exist in more than one form
+
+So it seems like if the library doesn't have version information, that's not an issue.
+I've definitely
 seen this in practice in [facts.lp](facts.lp).
 
 ```lp
 symbol_version("/code/simple-example/cpp/math-client","_ZStL8__ioinit","").
 ```
-Whether that's accurate or a bug on my part, we can look into.
 
-If I remember, the first symbol in the table usually has no value.
+Also note that [hidden symbols](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L154)
+are not accepted. If I remember, the first symbol in the table usually has no value.
 
-**stopped here in progress!**
+
+#### Rule 9: Accept versioned symbol when looking for unversioned
+
+After the logic above for rule 8, if we have seen exactly one versioned
+symbol while looking for an unversioned one, and the version
+is not the default version, the symbol is accepted since there
+are no possible ambiguities (this is stated directly [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L441)).
+
+
+#### Rule 10: If relocation on protected data, skip data definition
+
+See [this statement](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L450).
+
+given undefined name, loop that iterates over every library (line 348) and checks if symbol exists, selects as target if does
+the target function and function going to call should have similar
+sizes of parameters.
+
+#### Rule 11: If ELF_MACHINE_NO_RELA is defined...?
+
+If you look [here](https://patchwork.ozlabs.org/project/glibc/patch/20140626094725.GW4477@spoyarek.pnq.redhat.com/).
+there is some logic [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L461) and I'm not sure what it's doing. The same thing happens [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L481) but for `ELF_MACHINE_NO_REL`. I think these are cases for skipping.
+
+#### Rule 12: Ignore hidden and internal symbols
+
+The code [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L503)
+states that hidden and internal symbols are local and we should ignore them.
+
+#### Rule 13: Look at symbol type
+
+It looks like if it's a weak symbol, we use the definition unless another is found.
+If it's a global symbol, that's what we are looking for and we return 1 (found).
+See [this switch statement](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L509).
+There is a special case of a [STB_GNU_UNIQUE](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L527) symbol, and we also return 1. The default (a local symbol) we ignore and break from
+the statement.
+
+At the bottom, if we hit any of the `goto skip` [here](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L538) we return a -1 in the case that:
+
+> this current map is the one mentioned in the verneed entry and we have not found a weak entry
+
+which means "something bad happened," or we found a bug.
+
+The function defaults to return 0 (nothing found).
+
 
 ## libabigail
 
