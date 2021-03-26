@@ -524,10 +524,11 @@ class ABICompatSolverSetup(object):
                 # Might be redundant
                 self.gen.fact(fn.has_symbol(corpus.path, symbol))
 
-    def generate_needed_symbols(self, corpora):
+    def generate_known_working_symbols(self, corpora):
         """
         For the library (or possibly more than one) that we know works,
-        generate symbols for the solver.
+        generate symbols for the solver. A known working symbol is from a library
+        that is linked with the main binary and we know works.
 
         needed_symbol_type("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STT_FUNC").
         needed_symbol_binding("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STB_FUNC").
@@ -700,7 +701,7 @@ class ABICompatSolverSetup(object):
         self.generate_elf_symbols(corpora)
 
         # Generate known symbols given library that works
-        self.generate_needed_symbols([library])
+        self.generate_known_working_symbols([library])
 
         # Generate dwarf information entries (for now, don't generate)
         # self.generate_dwarf_info_entries(corpora)

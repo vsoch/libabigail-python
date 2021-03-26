@@ -122,41 +122,25 @@ I'm currently at having a check over symbols and for just one architecture. It's
 limited but it's a start!
 
 ```bash
-clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n   facts.lp is_compatible.lp 
+(clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n   facts.lp is_compatible.lp 
 clingo version 5.4.0
 Reading from facts.lp ...
+is_compatible.lp:99:18-41: info: atom does not occur in any rule head:
+  corpus_elf_soname(#Anon0,A)
+
 Solving...
 Answer: 1
 architecture_count(1)
 get_missing_symbols("_ZN11MathLibrary10Arithmetic3AddEdd")
-get_missing_symbols("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_")
-get_missing_symbols("__cxa_atexit")
-get_missing_symbols("_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc")
-get_missing_symbols("_ZNSolsEPFRSoS_E")
-get_missing_symbols("_ZNSt8ios_base4InitC1Ev")
-get_missing_symbols("__libc_start_main")
-get_missing_symbols("_ZNSolsEd")
-get_missing_symbols("_ZNSt8ios_base4InitD1Ev")
-get_missing_symbols("__cxa_finalize@@GLIBC_2.2.5")
-get_missing_symbols("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@@GLIBCXX_3.4")
-get_missing_symbols("__cxa_atexit@@GLIBC_2.2.5")
-get_missing_symbols("_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@@GLIBCXX_3.4")
-get_missing_symbols("_ZNSolsEPFRSoS_E@@GLIBCXX_3.4")
-get_missing_symbols("_ZNSt8ios_base4InitC1Ev@@GLIBCXX_3.4")
-get_missing_symbols("__libc_start_main@@GLIBC_2.2.5")
-get_missing_symbols("_ZNSolsEd@@GLIBCXX_3.4")
-get_missing_symbols("_ZNSt8ios_base4InitD1Ev@@GLIBCXX_3.4")
-total_missing(18)
+soname_count(0)
+total_missing(1)
 SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.006s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.006s
+Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.005s
 ```
 
-I know for sure that the first one (the AddEdd) is the "right answer" for
-the missing symbol. Some of the others seem like [types](https://stackoverflow.com/questions/23286062/undefined-reference-to-symbol-znst8ios-base4initd1evglibcxx-3-4-building-op).
-Some of the other ones with GLIBX and _start/exit I'm
-not sure should be there (we would need to find where they are / otherwise
-filter them out).
+Based on writing this test case, that symbol is the one I expected to be not
+compatible. We changed the input arguments from float to int.

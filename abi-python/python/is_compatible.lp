@@ -19,11 +19,23 @@ is_library(Corpus) :- corpus_name(Corpus, "libmath-v2.so").
 % A symbol is undefined in this case.
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
 
+% A symbol is hidden in this case (is this useful?)
+symbol_is_hidden(Corpus, Symbol) :- symbol_visibility(Corpus, Symbol, "HIDDEN").
+
 % we can ignore a symbol in the library that is known to work (the subset of 
 % "needed symbols" if it is undefined). The logic here is that if the main app
 % linking with this library works, even if both are undefined, then the symbol
 % must be provided by another library
-not_needed_symbol(Symbol) :- needed_symbol_definition(Symbol, "UND").
+
+% a symbol is known to be needed if
+known_needed_symbol(Symbol)
+
+    % it's present in a linked library that we know towork
+    :- needed_symbol(Symbol),
+
+    % and it's not undefined. If a symbol is undefined and still works,
+    % we arguably don't care.
+    not needed_symbol_definition(Symbol, "UND").
 
 
 % A symbol is considered missing for main if: 
@@ -34,12 +46,12 @@ missing_symbols(CorpusA, CorpusB, Symbol)
       is_library(CorpusB),
 
       % it's not considered not needed, aka it is defined in the working lib
-      not not_needed_symbol(Symbol),
+      known_needed_symbol(Symbol),
 
       % it is undefined in the main binary
       symbol_is_undefined(CorpusA, Symbol),
 
-      % it is undefined or missing in the second lib we want to link
+      % it is undefined in the second lib we want to link
       symbol_is_undefined(CorpusB, Symbol).
 
 % OR
@@ -52,7 +64,7 @@ missing_symbols(CorpusA, CorpusB, Symbol)
       is_library(CorpusB),
 
       % it's not considered not needed, aka it is defined in the working lib
-      not not_needed_symbol(Symbol),
+      known_needed_symbol(Symbol),
 
       % it is undefined in the main binary
       symbol_is_undefined(CorpusA, Symbol),
@@ -84,8 +96,8 @@ architecture_count(N) :- #count{X:get_architecture(X)} = K, K=N.
 
 % todo: I don't think my data has sonames, need to add or figure out why not in
 % dynamic tags
-% get_soname(A) :- corpus_elf_soname(_, A).
-% soname_count(N) :- #count{X:get_soname(X)} = K, K=N.
+get_soname(A) :- corpus_elf_soname(_, A).
+soname_count(N) :- #count{X:get_soname(X)} = K, K=N.
 
 % TODO I will want to print this out more clearly, probably the is_compatible
 % function could use arguments for Corpora.
@@ -106,7 +118,7 @@ are_compatible()
 #show architecture_count/1.
 #show get_missing_symbols/1.
 #show total_missing/1.
-
+#show soname_count/1.
 %#show is_main/1.
 %#show shared_symbol/3.
 %#show soname_count/1.

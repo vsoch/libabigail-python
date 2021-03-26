@@ -174,7 +174,7 @@ symbol_version("/code/simple-example/cpp/math-client","_ZStL8__ioinit","").
 ```
 
 Also note that [hidden symbols](https://github.com/lattera/glibc/blob/895ef79e04a953cac1493863bcae29ad85657ee1/elf/dl-lookup.c#L154)
-are not accepted. If I remember, the first symbol in the table usually has no value.
+are not accepted.
 
 
 #### Rule 9: Accept versioned symbol when looking for unversioned
