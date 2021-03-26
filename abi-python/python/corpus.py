@@ -382,7 +382,7 @@ class ABIParser:
         return str(self)
 
     def get_corpus_from_elf(
-        self, filename, include_dwarf_entries=True, load_needed_libs=True
+        self, filename, include_dwarf_entries=False, load_needed_libs=True
     ):
         """
         Given an elf binary, read it in with elfutils ELFFile and then

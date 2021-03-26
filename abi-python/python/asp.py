@@ -553,16 +553,18 @@ class ABICompatSolverSetup(object):
                 self.gen.fact(fn.needed_symbol_definition(symbol, meta["defined"]))
 
     def generate_needed(self, corpora):
-        """Given a list of corpora, add needed libraries from dynamic tags."""
+        """
+        Given a list of corpora, add needed libraries from dynamic tags.
+        """
+        # Keep a lookup of needed basenames
         for corpus in corpora:
             for needed in corpus.dynamic_tags.get("needed", []):
                 self.gen.fact(fn.corpus_needs_library(corpus.path, needed))
-
+        
+        
     def generate_dwarf_information_entries(self, corpora):
         """Given a list of corpora, add needed libraries from dynamic tags."""
-        for corpus in corpora:
-            for entry in corpus.iter_dwarf_information_entries():
-                self.gen.fact(fn.corpus_needs_library(corpus.path, needed))
+        pass
 
     # TODO: what would a condition be here for ABI?
     #            condition_id = self.condition(cond, dep.spec, pkg.name)
@@ -581,6 +583,7 @@ class ABICompatSolverSetup(object):
 
             self.gen.h2("Corpus facts: %s" % corpus.path)
             self.gen.fact(fn.corpus(corpus.path))
+            self.gen.fact(fn.corpus_name(corpus.path, os.path.basename(corpus.path)))
 
             # e_ident is ELF identification
             # https://docs.oracle.com/cd/E19683-01/816-1386/chapter6-35342/index.html

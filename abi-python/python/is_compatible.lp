@@ -4,16 +4,11 @@
 % basic syntx.
 %=============================================================================
 
-
-% we probably want a rule about a library needing another one - the issue here
-% is that one is a full path, the other is a basename, e.g.
-% corpus_needs_library("/code/simple-example/cpp/math-client","libmath-v1.so").
-% corpus("/code/simple-example/cpp/libmath-v1.so").
-% We can maybe use a basename
-% corpus_basename("/code/simple-example/cpp/libmath-v1.so","libmath-v1.so").
-% If we are deriving from spack, I also don't see why we can't include 
-% other libraries (we are sure about) that are needed to find extra symbols,
-% although libabigail doesn't do that.
+% Let's try to "set" a corpus A and B (we can eventually do this dynamically)
+% main is the binary we are assessing for compatibility against lib
+is_main(Corpus) :- corpus_name(Corpus, "math-client").
+is_library(Corpus) :- corpus_name(Corpus, "libmath-v2.so").
+is_working(Corpus) :- corpus_name(Corpus, "libmath-v1.so").
 
 %=============================================================================
 % Matching function and variable symbols
@@ -31,40 +26,45 @@ symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
 % must be provided by another librarys
 not_needed_symbol(Symbol) :- needed_symbol_definition(Symbol, "UND").
 
-both_symbols_undefined(CorpusA, CorpusB, Symbol)
-  :- symbol_is_undefined(CorpusA, Symbol),
-     symbol_is_undefined(CorpusB, Symbol).
 
-
-% Two different corpora share a symbol if they both have it
-shared_symbol(CorpusA, CorpusB, Symbol) 
-  :- has_symbol(CorpusA, Symbol),
-     has_symbol(CorpusB, Symbol),
-     CorpusA != CorpusB.
-
-
-% Symbols are needed if they are needed, and defined in the needed set
-symbol_is_needed(Symbol)
-
-    % a needed symbol,
-    :- needed_symbol(Symbol),
-    
-      % the symbol is not UND in the library known to work
-      not not_needed_symbol(Symbol).
-
-% If any needed symbol is undefined for both, they are not compatible
-% TODO: this is still missing symbols from other needed libraries, or perhaps
-% symbols that are always undefined.
+% A symbol is considered missing for main if: 
 missing_symbols(CorpusA, CorpusB, Symbol)
-   :- symbol_is_needed(Symbol),
-      both_symbols_undefined(CorpusA, CorpusB, Symbol).
 
-% Try to create a count of missing symbols
-% TODO: this will be double if we count CorpusA, CorpusB and CorpusB, CorpusA (twice)
+   % set CorpusA to be main, CorpusB to be linked library
+   :- is_main(CorpusA),
+      is_library(CorpusB),
+
+      % it's not considered not needed, aka it is defined in the working lib
+      not not_needed_symbol(Symbol),
+
+      % it is undefined in the main binary
+      symbol_is_undefined(CorpusA, Symbol),
+
+      % it is undefined or missing in the second lib we want to link
+      symbol_is_undefined(CorpusB, Symbol).
+
+% OR
+
+% A symbol is considered missing for main if: 
+missing_symbols(CorpusA, CorpusB, Symbol)
+
+   % set CorpusA to be main, CorpusB to be linked library
+   :- is_main(CorpusA),
+      is_library(CorpusB),
+
+      % it's not considered not needed, aka it is defined in the working lib
+      not not_needed_symbol(Symbol),
+
+      % it is undefined in the main binary
+      symbol_is_undefined(CorpusA, Symbol),
+
+      % it is not present in the second library
+      not has_symbol(CorpusB, Symbol).
+
+
+% TODO how to enforce unique?
 get_missing_symbols(S) :- missing_symbols(_, _, S).
 total_missing(N) :- #count{X:get_missing_symbols(X)} = K, K=N.
-
-%total_compatible(N) :- #count{X:get_compatible_symbols(X)} = K, K=N.
 
 % TODOS
 % parameter types
@@ -99,6 +99,15 @@ are_compatible()
   % there is only one architecture
   :- architecture_count(N) == 1.
 
-#show total_missing/1.
+%#show shared_symbol/3.
+%#show both_symbols_undefined/3.
+%#show total_missing/1.
+%#show corpus_needs_symbol/2.
+%#show corpus_needs_library/2.
 #show architecture_count/1.
+#show get_missing_symbols/1.
+#show total_missing/1.
+
+%#show is_main/1.
+%#show shared_symbol/3.
 %#show soname_count/1.

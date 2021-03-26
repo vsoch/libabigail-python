@@ -7,6 +7,7 @@
 % Corpus facts: /code/simple-example/cpp/math-client
 %----------------------------------------------------------------------------
 corpus("/code/simple-example/cpp/math-client").
+corpus_name("/code/simple-example/cpp/math-client","math-client").
 corpus_elf_class("/code/simple-example/cpp/math-client","ELFCLASS64").
 corpus_elf_data_encoding("/code/simple-example/cpp/math-client","ELFDATA2LSB").
 corpus_elf_file_version("/code/simple-example/cpp/math-client","EV_CURRENT").
@@ -20,6 +21,7 @@ corpus_elf_version("/code/simple-example/cpp/math-client","EV_CURRENT").
 % Corpus facts: /code/simple-example/cpp/libmath-v2.so
 %----------------------------------------------------------------------------
 corpus("/code/simple-example/cpp/libmath-v2.so").
+corpus_name("/code/simple-example/cpp/libmath-v2.so","libmath-v2.so").
 corpus_elf_class("/code/simple-example/cpp/libmath-v2.so","ELFCLASS64").
 corpus_elf_data_encoding("/code/simple-example/cpp/libmath-v2.so","ELFDATA2LSB").
 corpus_elf_file_version("/code/simple-example/cpp/libmath-v2.so","EV_CURRENT").
