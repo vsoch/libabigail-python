@@ -143,4 +143,42 @@ CPU Time     : 0.005s
 ```
 
 Based on writing this test case, that symbol is the one I expected to be not
-compatible. We changed the input arguments from float to int.
+compatible. We changed the input arguments from float to int. But now let's try the
+C example, where we know the mangled strings don't include the variable
+types (e.g., it would just be `Add`):
+
+```bash
+$ python dump-c.py > facts-c.lp
+clingo --out-ifs=\\n   facts-c.lp is_compatible.lp 
+
+is_compatible.lp:99:18-41: info: atom does not occur in any rule head:
+  corpus_elf_soname(#Anon0,A)
+
+Solving...
+Answer: 1
+architecture_count(1)
+soname_count(0)
+total_missing(0)
+SATISFIABLE
+
+Models       : 1
+Calls        : 1
+Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.004s
+```
+
+Just as we expected! The libraries look compatible because the function
+in question (the symbol) looks like this:
+
+```
+symbol("Add").
+symbol_type("/code/simple-example/c/math-client-c","Add","FUNC").
+symbol_version("/code/simple-example/c/math-client-c","Add","").
+symbol_binding("/code/simple-example/c/math-client-c","Add","GLOBAL").
+symbol_visibility("/code/simple-example/c/math-client-c","Add","DEFAULT").
+symbol_definition("/code/simple-example/c/math-client-c","Add","UND").
+has_symbol("/code/simple-example/c/math-client-c","Add").
+```
+
+I think that we will need to dig into variable types and sizes (which we can derive
+from the DIEs) next to address this.
