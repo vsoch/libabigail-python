@@ -8,7 +8,6 @@
 % main is the binary we are assessing for compatibility against lib
 is_main(Corpus) :- corpus_name(Corpus, "math-client").
 is_library(Corpus) :- corpus_name(Corpus, "libmath-v2.so").
-is_working(Corpus) :- corpus_name(Corpus, "libmath-v1.so").
 
 %=============================================================================
 % Matching function and variable symbols
@@ -21,9 +20,9 @@ is_working(Corpus) :- corpus_name(Corpus, "libmath-v1.so").
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
 
 % we can ignore a symbol in the library that is known to work (the subset of 
-% "needed symbols" if it is undefined. The logic here is that if the main app
+% "needed symbols" if it is undefined). The logic here is that if the main app
 % linking with this library works, even if both are undefined, then the symbol
-% must be provided by another librarys
+% must be provided by another library
 not_needed_symbol(Symbol) :- needed_symbol_definition(Symbol, "UND").
 
 
