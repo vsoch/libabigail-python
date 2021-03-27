@@ -549,6 +549,7 @@ def parse_typedef(die):
         dmeta["column"] = die.attributes["DW_AT_decl_column"].value
     return dmeta
 
+
 def parse_union_type(die):
     """parse a union type
     <union-decl name='__anonymous_union__' size-in-bits='64'

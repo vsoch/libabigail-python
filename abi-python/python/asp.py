@@ -10,7 +10,21 @@ import pprint
 import sys
 import time
 import types
+
+# Since we parse the die's directly, we use these pyelftools supporting functions.
+from elftools.common.py3compat import bytes2str
+from elftools.dwarf.descriptions import describe_attr_value
+from elftools.elf.descriptions import (
+    describe_symbol_type,
+    describe_symbol_bind,
+    describe_symbol_visibility,
+    describe_symbol_shndx,
+)
+
 from six import string_types
+
+# An arbitrary version for this asp.py (libabigail has one, so we are copying)
+__version__ = "1.0.0"
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -327,6 +341,7 @@ class PyclingoDriver(object):
         solve_result = self.control.solve(**solve_kwargs)
         timer.phase("solve")
 
+        # This part isn't developed yet
         import IPython
 
         IPython.embed()
@@ -381,6 +396,7 @@ class ABICompatSolverSetup(object):
         # A lookup of DIEs based on corpus path (first key) and id
         # (second key) DIE == Dwarf Information Entry
         self.die_lookup = {}
+        self.language = None
 
     def condition(self, required_spec, imposed_spec=None, name=None):
         """Generate facts for a dependency or virtual provider condition.
@@ -427,34 +443,28 @@ class ABICompatSolverSetup(object):
 
     def generate_dwarf_info_entries(self, corpora):
         """Iterate over the Dwarf Information Entires (DIEs) for each corpus,
-        and add them as facts
+        and add them as facts. This function is currently not used - it does
+        no special parsing for different DIEs, or any subset of attributes.
         """
         # A helper function to generate a unique id for a DIE
         # corpus path + abbrev_code for the DIE
         def uid(corpus, die):
-            return "%s:%s" % (corpus.path, die.abbrev_code)
+            return "%s_%s" % (corpus.path, die.abbrev_code)
 
         for corpus in corpora:
 
             self.gen.h2("Corpus DIE: %s" % corpus.path)
-            if corpus.path not in self.die_lookup:
-                self.die_lookup[corpus.path] = {}
-
             for entry in corpus.iter_dwarf_information_entries():
 
                 # Skip entries without tags
                 if not entry.tag:
                     continue
 
-                if entry.abbrev_code not in self.die_lookup[corpus.path]:
-                    pass
-                    # TODO: not sure how to structure the relationship
-
-                # Flatten attributes into dictionary
-
                 # Try creating flattened entries for now
                 unique_id = uid(corpus, entry)
-                self.gen.fact(AspFunction(entry.tag, args=[unique_id]))
+                self.gen.fact(
+                    AspFunction(entry.tag.lower(), args=[corpus.path, unique_id])
+                )
 
                 # Do we need these relationships as facts?
                 [
@@ -462,11 +472,6 @@ class ABICompatSolverSetup(object):
                     for child in entry.iter_children()
                 ]
 
-                # Add all attributes
-                # We could add others too:
-                # AttributeValue(name='DW_AT_stmt_list',
-                #                form='DW_FORM_sec_offset',
-                #                value=0, raw_value=0, offset=41)
                 for attr_name, attribute in entry.attributes.items():
 
                     # Ensure we don't write bytes
@@ -477,15 +482,15 @@ class ABICompatSolverSetup(object):
                     # DW_TAG_compiler_unit_attr
                     self.gen.fact(
                         AspFunction(
-                            entry.tag + "_attr",
-                            args=[unique_id, attr_name, value],
+                            entry.tag.lower() + "_attr",
+                            args=[corpus.path, unique_id, attr_name, value],
                         )
                     )
                     # DW_TAG_compiler_unit_form
                     self.gen.fact(
                         AspFunction(
-                            entry.tag + "_form",
-                            args=[unique_id, attr_name, attribute.form],
+                            entry.tag.lower() + "_form",
+                            args=[corpus.path, unique_id, attr_name, attribute.form],
                         )
                     )
 
@@ -561,17 +566,778 @@ class ABICompatSolverSetup(object):
         for corpus in corpora:
             for needed in corpus.dynamic_tags.get("needed", []):
                 self.gen.fact(fn.corpus_needs_library(corpus.path, needed))
-        
-        
+
     def generate_dwarf_information_entries(self, corpora):
         """Given a list of corpora, add needed libraries from dynamic tags."""
+
+        # We will keep a lookup of die
+        for corpus in corpora:
+            self.gen.h2("Corpus DIE: %s" % corpus.path)
+
+            if corpus.path not in self.die_lookup:
+                self.die_lookup[corpus.path] = {}
+
+            for entry in corpus.iter_dwarf_information_entries():
+
+                # Skip entries without tags
+                if not entry.tag:
+                    continue
+
+                # Keep a lookup based on the abbreviated code and corpus
+                # I'm not sure if we need this yet
+                if entry.abbrev_code not in self.die_lookup[corpus.path]:
+                    self.die_lookup[corpus.path][entry.abbrev_code] = entry
+
+                # Parse the die entry!
+                self._parse_die_children(corpus, entry)
+
+    def _parse_die_children(self, corpus, die, parent=None):
+        """
+        Parse die children, writing facts for attributions and relationships.
+
+        Parse die children will loop recursively through dwarf information
+        entries, and based on the type, generate facts for it, ensuring that
+        we also create facts that represent relationships. For each, we generate:
+
+        - atoms about the die id itself, in lowercase for clingo
+        - atoms about having children (die_has_child)
+        - atoms about attributes, in the form <tag>_language(corpus, id, value)
+
+        Each die has a unique id scoped within the corpus, so we provide the
+        corpus along with the id and the value of the attribute. I've provided
+        separate functions less so for good structure, but moreso so that I
+        can write notes alongside each. Some functions have notes and just pass.
+        """
+
+        def uid(corpus, die):
+            return "%s_%s" % (corpus.path, die.abbrev_code)
+
+        # Keep track of unique id for relationships
+        die.unique_id = uid(corpus, die)
+
+        # Create a top level entry for the die based on it's tag type
+        self.gen.fact(AspFunction(die.tag.lower(), args=[corpus.path, die.unique_id]))
+
+        # Children are represented as facts
+        [
+            self.gen.fact(fn.die_has_child(die.unique_id, uid(corpus, child)))
+            for child in die.iter_children()
+        ]
+
+        # Parse common attributes
+        self._parse_common_attributes(corpus, die)
+
+        if die.tag == "DW_TAG_compile_unit":
+            self._parse_compile_unit(corpus, die)
+
+        elif die.tag == "DW_TAG_namespace":
+            self._parse_namespace(corpus, die)
+
+        elif die.tag == "DW_TAG_subprogram":
+            self._parse_subprogram(corpus, die)
+
+        elif die.tag == "DW_TAG_variable":
+            self._parse_variable(corpus, die)
+
+        elif die.tag == "DW_TAG_typedef":
+            self._parse_typedef(corpus, die)
+
+        elif die.tag == "DW_TAG_union_type":
+            self._parse_union_type(corpus, die)
+
+        elif die.tag == "DW_TAG_pointer_type":
+            self._parse_pointer_type(corpus, die)
+
+        elif die.tag == "DW_TAG_const_type":
+            self._parse_const_type(corpus, die)
+
+        elif die.tag == "DW_TAG_base_type":
+            self._parse_base_type(corpus, die)
+
+        elif die.tag == "DW_TAG_class_type":
+            self._parse_class_type(corpus, die)
+
+        elif die.tag == "DW_TAG_structure_type":
+            self._parse_structure_type(corpus, die)
+
+        elif die.tag == "DW_TAG_formal_parameter":
+            self._parse_parameter(corpus, die)
+
+        elif die.tag == "DW_TAG_member":
+            self._parse_member(corpus, die)
+
+        elif die.tag == "DW_TAG_inheritance":
+            self._parse_inheritance(corpus, die)
+
+        elif die.tag == "DW_TAG_template_type_param":
+            self._parse_template_type_param(corpus, die)
+
+        elif die.tag == "DW_TAG_template_value_param":
+            self._parse_template_value_param(corpus, die)
+
+        elif die.tag == "DW_TAG_imported_module":
+            self._parse_imported_module(corpus, die)
+
+        elif die.tag == "DW_TAG_imported_declaration":
+            self._parse_imported_declaration(corpus, die)
+
+        elif die.tag == "DW_TAG_enumeration_type":
+            self._parse_enumeration_type(corpus, die)
+
+        elif die.tag == "DW_TAG_array_type":
+            self._parse_array_type(corpus, die)
+
+        elif die.tag == "DW_TAG_subrange_type":
+            self._parse_subrange_type(corpus, die)
+
+        elif die.tag == "DW_TAG_subroutine_type":
+            self._parse_subroutine_type(corpus, die)
+
+        elif die.tag == "DW_TAG_inlined_subroutine":
+            self._parse_inlined_subroutine(corpus, die)
+
+        elif die.tag == "DW_TAG_enumerator":
+            self._parse_enumerator(corpus, die)
+
+        elif die.tag == "DW_TAG_unspecified_type":
+            self._parse_unspecified_type(corpus, die)
+
+        elif die.tag == "DW_TAG_reference_type":
+            self._parse_reference_type(corpus, die)
+
+        elif die.tag == "DW_TAG_rvalue_reference_type":
+            self._parse_rvalue_reference_type(corpus, die)
+
+        elif die.tag == "DW_TAG_GNU_call_site":
+            self._parse_gnu_call_site(corpus, die)
+
+        elif die.tag == "DW_TAG_GNU_call_site_parameter":
+            self._parse_gnu_call_site_parameter(corpus, die)
+
+        # I don't see any attributes here
+        elif die.tag == "DW_TAG_unspecified_parameters":
+            pass
+
+        elif die.tag == "DW_TAG_GNU_template_parameter_pack":
+            self._parse_template_parameter_pack(corpus, die)
+
+        elif die.tag == "DW_TAG_volatile_type":
+            self._parse_volatile_type(corpus, die)
+
+        elif die.tag == None:
+            pass
+
+        elif die.tag == "DW_TAG_lexical_block":
+            self._parse_lexical_block(corpus, die)
+
+        else:
+            print("%s not parsed." % die.tag)
+
+        # We keep a handle on the root to return
+        if not parent:
+            parent = die.unique_id
+
+        if die.has_children:
+            for child in die.iter_children():
+                self._parse_die_children(corpus, child, parent)
+
+    def _parse_common_attributes(self, corpus, die):
+        """
+        Many share these attributes, so we have a common function to parse.
+        It's actually easier to just check for an attribute, and parse it
+        if it's present, and be sure that we don't miss any.
+        """
+        # Atoms need to be lowercase
+        tag = die.tag.lower()
+
+        if "DW_AT_name" in die.attributes:
+            name = bytes2str(die.attributes["DW_AT_name"].value)
+            self.gen.fact(
+                AspFunction(tag + "_name", args=[corpus.path, die.unique_id, name])
+            )
+
+        # Not to be confused with "bite size" :)
+        if "DW_AT_byte_size" in die.attributes:
+            size_in_bits = die.attributes["DW_AT_byte_size"].value * 8
+            self.gen.fact(
+                AspFunction(
+                    tag + "_size_in_bits",
+                    args=[corpus.path, die.unique_id, size_in_bits],
+                )
+            )
+
+        # Declaration line
+        if "DW_AT_decl_line" in die.attributes:
+            line = die.attributes["DW_AT_decl_line"].value
+            self.gen.fact(
+                AspFunction(tag + "_line", args=[corpus.path, die.unique_id, line])
+            )
+
+        # Declaration column
+        if "DW_AT_decl_column" in die.attributes:
+            column = die.attributes["DW_AT_decl_column"].value
+            self.gen.fact(
+                AspFunction(tag + "_column", args=[corpus.path, die.unique_id, column])
+            )
+
+        # The size this DIE occupies in the section (not sure about units)
+        if hasattr(die, "size"):
+            self.gen.fact(
+                AspFunction(
+                    tag + "_die_size", args=[corpus.path, die.unique_id, die.size]
+                )
+            )
+
+        # Some attributes have a filepath
+        filepath = _get_die_filepath(die)
+        if filepath:
+            self.gen.fact(
+                AspFunction(
+                    tag + "_filepath", args=[corpus.path, die.unique_id, filepath]
+                )
+            )
+
+        # DW_AT_external: "If the name of the subroutine described by an entry with the tag
+        # DW_TAG_subprogram is visible outside of its containing compilation unit, that
+        # entry has a DW_AT_external attribute, which is a flag."
+        # I think this is visibility? But let's call it external in case not.
+        if (
+            "DW_AT_external" in die.attributes
+            and die.attributes["DW_AT_external"].value == True
+        ):
+            self.gen.fact(
+                AspFunction(tag + "_external", args=[corpus.path, die.unique_id, name])
+            )
+
+        # This looks like the "mangled string" for a subprogram. Doesn't hurt to check here
+        if "DW_AT_linkage_name" in die.attributes:
+            name = bytes2str(die.attributes["DW_AT_linkage_name"].value)
+            self.gen.fact(
+                AspFunction(
+                    tag + "_mangled_name", args=[corpus.path, die.unique_id, name]
+                )
+            )
+        if (
+            "DW_AT_explicit" in die.attributes
+            and die.attributes["DW_AT_explicit"].value == True
+        ):
+            self.gen.fact(
+                AspFunction(tag + "_explicit", args=[corpus.path, die.unique_id, "yes"])
+            )
+        if (
+            "DW_AT_defaulted" in die.attributes
+            and die.attributes["DW_AT_defaulted"].value == True
+        ):
+            self.gen.fact(
+                AspFunction(
+                    tag + "_defaulted", args=[corpus.path, die.unique_id, "yes"]
+                )
+            )
+
+        if "DW_AT_const_value" in die.attributes:
+            # This might not easily map to clingo (e.g., [0],) so we make a string
+            const_value = str(die.attributes["DW_AT_const_value"].value)
+            self.gen.fact(
+                AspFunction(
+                    tag + "_const_value", args=[corpus.path, die.unique_id, const_value]
+                )
+            )
+
+        if "DW_AT_const_expr" in die.attributes:
+            self.gen.fact(
+                AspFunction(
+                    tag + "_const_expr", args=[corpus.path, die.unique_id, "yes"]
+                )
+            )
+
+        # E.g., 7	(unsigned)
+        if "DW_AT_encoding" in die.attributes:
+            encoding = describe_attr_value(
+                die.attributes["DW_AT_encoding"], die, die.offset
+            )
+            self.gen.fact(
+                AspFunction(
+                    tag + "_encoding", args=[corpus.path, die.unique_id, encoding]
+                )
+            )
+
+    def _parse_compile_unit(self, corpus, die):
+        """
+        Parse a compile unit (usually at the top).
+
+        A compile unit (in xml) looks like the following:
+
+        <abi-instr version='1.0' address-size='64'
+                   path='../../src/abg-regex.cc' comp-dir-path='/libabigail-1.8/build/src'
+                   language='LANG_C_plus_plus'>
+
+        Note that "path" is called "name" for this parser since it's a common attribute.
+        Not included:
+          AttributeValue(name='DW_AT_producer', form='DW_FORM_strp', value=b'GNU C++14 9.3.0 -mtune=generic -march=x86-64 -g -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection', raw_value=3526, offset=12)
+          AttributeValue(name='DW_AT_low_pc', form='DW_FORM_addr', value=4681, raw_value=4681, offset=25)
+          AttributeValue(name='DW_AT_high_pc', form='DW_FORM_data8', value=443, raw_value=443, offset=33)
+          AttributeValue(name='DW_AT_stmt_list', form='DW_FORM_sec_offset', value=0, raw_value=0, offset=41)
+        """
+        tag = die.tag.lower()
+
+        # Prepare attributes for facts - keep language
+        language = describe_attr_value(
+            die.attributes["DW_AT_language"], die, die.offset
+        )
+        comp_dir_path = bytes2str(die.attributes["DW_AT_comp_dir"].value)
+        self.language = language
+
+        # Multiply by 8 to go from bytes to bits
+        address_size = die.cu.header["address_size"] * 8
+
+        # The version of this software
+        self.gen.fact(
+            AspFunction(
+                tag + "_asp_version", args=[corpus.path, die.unique_id, __version__]
+            )
+        )
+
+        # Attributes we expect to see in libabigail
+        self.gen.fact(
+            AspFunction(
+                tag + "_comp_dir_path", args=[corpus.path, die.unique_id, comp_dir_path]
+            )
+        )
+        self.gen.fact(
+            AspFunction(
+                tag + "_address_size_bits",
+                args=[corpus.path, die.unique_id, address_size],
+            )
+        )
+        self.gen.fact(
+            AspFunction(tag + "_language", args=[corpus.path, die.unique_id, language])
+        )
+
+    def _parse_namespace(self, corpus, die):
+        """
+        Parse a DW_TAG_namespace.
+
+        DW_AT_export_symbols indicates that the symbols defined within the
+        current scope are to be exported into the enclosing scope.
+
+        Not currently included:
+        |DW_AT_sibling     :  AttributeValue(name='DW_AT_sibling', form='DW_FORM_ref4', value=4052, raw_value=4052, offset=52)
+        This attribute looks like it's used to find the next CU offset.
+        https://github.com/eliben/pyelftools/blob/46187f45f6085c8e28b7878c4058283d3ba5b812/elftools/dwarf/compileunit.py#L156
+        """
         pass
 
-    # TODO: what would a condition be here for ABI?
-    #            condition_id = self.condition(cond, dep.spec, pkg.name)
-    #                self.gen.fact(fn.dependency_condition(
-    #                    condition_id, pkg.name, dep.spec.name
-    #                ))
+    def _parse_subprogram(self, corpus, die):
+        """
+        <function-decl name='move&lt;abigail::regex::regex_t_deleter&amp;&gt;'
+           mangled-name='_ZSt4moveIRN7abigail5regex15regex_t_deleterEEONSt16remove_referenceIT_E4typeEOS5_'
+           filepath='/usr/include/c++/9/bits/move.h' line='99' column='1'
+           visibility='default' binding='global' size-in-bits='64'>
+
+        Notable attributes:
+            DW_AT_external (parsed in common) is a flag present if the variable
+              is visible outside of its compilation unit.
+            DW_AT_explicit: "The member function will have a DW_AT_explicit attribute with
+              the value true if that member function was marked with the
+              explicit keyword in the source."
+            DW_AT_defaulted: Whether a member function has been declared as default
+            DW_AT_declaration: "A data object entry representing a non-defining
+              declaration of the object will not have allocation attribute,
+              and will have this attribute.
+            DW_AT_pointer: For member functions which are not static, this
+              attribute is used on the DW_TAG_subprogram to specify the "this"
+              pointer (for C++) or the "self" pointer (in Objective C/C++).
+
+        Not included:
+           |DW_AT_declaration :  AttributeValue(name='DW_AT_declaration', form='DW_FORM_flag_present', value=True, raw_value=b'', offset=693)
+           |DW_AT_object_pointer:  AttributeValue(name='DW_AT_object_pointer', form='DW_FORM_ref4', value=698, raw_value=698, offset=694)
+        """
+        pass
+
+    def _parse_variable(self, corpus, die):
+        """
+        Parse a variable.
+
+        This also has DW_AT_type, which likely is used to determine
+        it's a variable. Note usage: https://github.com/eliben/pyelftools/issues/27
+
+        Not included:
+           DW_AT_type: (probably already parsed to know it's a variable?)
+           DW_AT_declaration: "A data object entry representing a non-defining
+              declaration of the object will not have allocation attribute,
+              and will have this attribute.
+
+        """
+        pass
+
+    def _parse_typedef(self, corpus, die):
+        """parse a DW_TAG_typedef.
+
+        An example xml is the following:
+        <typedef-decl name='value_type' type-id='type-id-5'
+                      filepath='/usr/include/c++/9/type_traits'
+                      line='60' column='1' id='type-id-4987'/>
+        We use the DW_AT_file number to look up the filename in the CompileUnit
+        lineprogram for the CU. Most attributes here are included in common.
+        """
+        pass
+
+    def _parse_union_type(self, corpus, die):
+        """parse a union type
+        <union-decl name='__anonymous_union__' size-in-bits='64'
+          is-anonymous='yes' visibility='default'
+          filepath='/libabigail-1.8/build/../include/abg-ir.h'
+          line='2316' column='1' id='type-id-2748'>
+
+        DW_AT_sibling is not used. I'm not sure how to derive:
+         - is-anonymoys
+         - visibility
+        """
+        pass
+
+    def _parse_base_type(self, corpus, die):
+        """parse a DW_TAG_base_type. Here is the xml equivalent"
+
+        # <type-decl name='__float128' size-in-bits='128' id='type-id-32691'/>
+        """
+        pass
+
+    def _parse_class_type(self, corpus, die):
+        """
+        Parse a DW_TAG_class type.
+
+        Assumption: a being called a class and not a struct indicates struct is false
+        DW_AT_sibling is not included.
+        TODO: It's not clear how to get visibility "default" here as shown above
+        """
+        tag = die.tag.lower()
+        self.gen.fact(
+            AspFunction(tag + "_is_struct", args=[corpus.path, die.unique_id, "no"])
+        )
+
+    def _parse_structure_type(self, corpus, die):
+        """DW_TAG_structure, example xml:
+
+        <class-decl name='filter_base' size-in-bits='192' is-struct='yes'
+                    visibility='default'
+                    filepath='/libabigail-1.8/build/../include/abg-comp-filter.h'
+                    line='120' column='1' id='type-id-1'>
+
+        Since a struct is akin to a class, we automatically add "is_struct" to
+        incidate this. We also don't use the "DW_AT_sibling" attribute:
+
+        |DW_AT_sibling     :  AttributeValue(name='DW_AT_sibling', form='DW_FORM_ref4', value=705, raw_value=705, offset=677)
+
+        This attribute looks like it's used to find the next CU offset.
+        https://github.com/eliben/pyelftools/blob/46187f45f6085c8e28b7878c4058283d3ba5b812/elftools/dwarf/compileunit.py#L156
+        TODO: also not sure how libabigail derives visibility here.
+        """
+        tag = die.tag.lower()
+        self.gen.fact(
+            AspFunction(tag + "_is_struct", args=[corpus.path, die.unique_id, "yes"])
+        )
+
+    def _parse_member(self, corpus, die):
+        """DW_TAG_member seems to be nested as follows:
+
+        <data-member access='private' layout-offset-in-bits='0'>
+        <var-decl name='_M_ptr' type-id='type-id-202' visibility='default'
+            filepath='/usr/include/c++/9/bits/shared_ptr_base.h' line='1404' column='1'/>
+        </data-member>
+
+        Most attributes are represented in common except for:
+          DW_AT_data_member_location. It looks like for this attribute, if
+          form is in "DW_FORM_data4" or "DW_FORM_data8" there is a location list
+          I am mostly seeing DW_FORM_data1, which looks like it means just
+          grabbing the entire value:
+          https://github.com/eliben/pyelftools/blob/46187f45f6085c8e28b7878c4058283d3ba5b812/elftools/dwarf/descriptions.py#L244
+          https://github.com/eliben/pyelftools/blob/46187f45f6085c8e28b7878c4058283d3ba5b812/elftools/dwarf/descriptions.py#L172
+        TODO: where is visibility? Private?
+        """
+        pass
+
+    def _parse_parameter(self, corpus, die):
+        """
+        Parse a DW_TAG_parameter.
+
+         example xml is: <parameter type-id='type-id-28' is-artificial='yes'/>
+        """
+        artificial = False
+        if hasattr(die.attributes, "DW_AT_artificial"):
+            artificial = die.attributes["DW_AT_artificial"].value
+
+        # Note that we aren't adding the negation, e.g., artificial == "no"
+        # This is a strategy to generate fewer facts, but if we need it we can add.
+        if artificial:
+            tag = die.tag.lower()
+            self.gen.fact(
+                AspFunction(
+                    tag + "_is_artificial", args=[corpus.path, die.unique_id, "yes"]
+                )
+            )
+
+    def _parse_inheritance(self, corpus, die):
+        # Not sure what this gets parsed into
+        # OrderedDict([('DW_AT_type',
+        # AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=8855, raw_value=8855, offset=774)),
+        # ('DW_AT_data_member_location',
+        # AttributeValue(name='DW_AT_data_member_location', form='DW_FORM_data1', value=0, raw_value=0, offset=778))])
+        print("PARSE INHERITANCE")
+        import IPython
+
+        IPython.embed()
+        sys.exit(0)
+
+        return {}
+
+    def _parse_enumeration_type(self, corpus, die):
+        """parse an enumeration type.
+
+        The xml looks like this. This is just the outside wrapper of this:
+        <enum-decl name='_Rb_tree_color' filepath='/usr/include/c++/9/bits/stl_tree.h'
+          line='99' column='1' id='type-id-21300'>
+          <underlying-type type-id='type-id-297'/>
+          <enumerator name='_S_red' value='0'/>
+          <enumerator name='_S_black' value='1'/>
+        </enum-decl>
+
+        DW_AT_sibling is not parsed.
+        """
+        pass
+
+    def _parse_array_type(self, corpus, die):
+        """parse an array type. Example XML is:
+
+        <array-type-def dimensions='1' type-id='type-id-444' size-in-bits='64' id='type-id-16411'>
+          <subrange length='2' type-id='type-id-1073' id='type-id-20406'/>
+        </array-type-def>
+
+        DW_AT_sibling is not used
+        """
+        pass
+
+    def _parse_enumerator(self, corpus, die):
+        """parse an enumerator, cild of an enum-dec. L
+
+        ooks like:
+        <enumerator name='_S_red' value='0'/>
+        <enumerator name='_S_black' value='1'/>
+        """
+        pass
+
+    def _parse_template_type_param(self, corpus, die):
+        """parse a template type param.
+
+        I don't think this is represented in libabigail.
+
+        DIE DW_TAG_template_type_param, size=9, has_children=False
+        |DW_AT_name        :  AttributeValue(name='DW_AT_name', form='DW_FORM_strp', value=b'_CharT', raw_value=2788, offset=7425)
+        |DW_AT_type        :  AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=375, raw_value=375, offset=7429)
+        """
+        pass
+
+    def _parse_template_value_param(self, corpus, die):
+        """parse a template value param.
+
+        This also doesn't seem to be represented in libabigail.
+
+        DIE DW_TAG_template_value_param, size=10, has_children=False
+        |DW_AT_name        :  AttributeValue(name='DW_AT_name', form='DW_FORM_string', value=b'__v', raw_value=b'__v', offset=7884)
+        |DW_AT_type        :  AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=19248, raw_value=19248, offset=7888)
+        |DW_AT_const_value :  AttributeValue(name='DW_AT_const_value', form='DW_FORM_data1', value=0, raw_value=0, offset=7892)
+        """
+        pass
+
+    def _parse_subrange_type(self, corpus, die):
+        """I'm not sure if we need to do additional parsing of the upper bound?
+
+        <subrange length='2' type-id='type-id-1073' id='type-id-20406'/>
+
+        It looks like if DW_AT_lower bound is missing, it defaults to something
+        language specific (0 or 1): http://dwarfstd.org/ShowIssue.php?issue=080516.1
+        We probably need a more solid way to do this, for now I'm just doing 0/1
+        """
+        tag = die.tag.lower()
+
+        # Fortran defaults to 1
+        lower_bound = 0 if "fortran" not in self.language else 1
+        if "DW_AT_lower_bound" in die.attributes:
+            lower_bound = die.attributes["DW_AT_lower_bound"]
+
+        # We can only parse a length with an upper and lower bound
+        # There are some entries that are just empty, not sure why
+        if "DW_AT_upper_bound" in die.attributes:
+            upper_bound = die.attributes["DW_AT_upper_bound"].value
+
+            # TODO need to check this, I remember reading it and can't find it again!
+            length = upper_bound - lower_bound + 1
+            self.gen.fact(
+                AspFunction(tag + "_length", args=[corpus.path, die.unique_id, length])
+            )
+
+    def _parse_imported_module(self, corpus, die):
+        """Parsed imported module information.
+
+        I don't see that this is mapped into libabigail. Most of the attributes
+        are covered in common, but there is one extra we
+        don't include:
+
+        |DW_AT_import      :  AttributeValue(name='DW_AT_import', form='DW_FORM_ref4', value=734, raw_value=734, offset=7463)
+
+        This can be used as follows (and I don't think it derives anything of
+        value):
+
+        from elftools.dwarf.descriptions import _import_extra
+        _import_extra(die.attributes['DW_AT_import'], die, die.offset)
+        '[Abbrev Number: 3 (DW_TAG_namespace)]'
+        """
+        pass
+
+    def _parse_imported_declaration(self, corpus, die):
+        """Parse an imported declaration.
+
+        The same is true as for _parse_imported_module. The value of the
+        DW_AT_import is '[Abbrev Number: 27 (DW_TAG_typedef)]'. I suspect
+        this means (for the first) we are importing a namespace, and for
+        the second we are importing a typedef. This matches logically to
+        "module" and "declaration" and we aren't includin as atoms for now.
+        """
+        pass
+
+    def _parse_inlined_subroutine(self, corpus, die):
+        """Not sure what this goes into, maybe a function?
+        DIE DW_TAG_inlined_subroutine, size=34, has_children=True
+        |DW_AT_abstract_origin:  AttributeValue(name='DW_AT_abstract_origin', form='DW_FORM_ref4', value=25014, raw_value=25014, offset=24772)
+        |DW_AT_entry_pc    :  AttributeValue(name='DW_AT_entry_pc', form='DW_FORM_addr', value=1111092, raw_value=1111092, offset=24776)
+        |8504              :  AttributeValue(name=8504, form='DW_FORM_data1', value=0, raw_value=0, offset=24784)
+        |DW_AT_low_pc      :  AttributeValue(name='DW_AT_low_pc', form='DW_FORM_addr', value=1111092, raw_value=1111092, offset=24785)
+        |DW_AT_high_pc     :  AttributeValue(name='DW_AT_high_pc', form='DW_FORM_data8', value=10, raw_value=10, offset=24793)
+        |DW_AT_call_file   :  AttributeValue(name='DW_AT_call_file', form='DW_FORM_data1', value=1, raw_value=1, offset=24801v)
+        |DW_AT_call_line   :  AttributeValue(name='DW_AT_call_line', form='DW_FORM_data2', value=381, raw_value=381, offset=24802)
+        |DW_AT_call_column :  AttributeValue(name='DW_AT_call_column', form='DW_FORM_data1', value=9, raw_value=9, offset=24804)
+        """
+        print("PARSE INLINED SUBROUTINE")
+        print("This attribute has not been seen (and thus not developed yet)")
+        import IPython
+
+        IPython.embed()
+        sys.exit(0)
+
+    def _parse_subroutine_type(self, corpus, die):
+        """Not sure what a subroutine type is
+
+        We don't use DW_AT_sibling.
+        DIE DW_TAG_subroutine_type, size=9, has_children=True
+        |DW_AT_type        :  AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=153, raw_value=153, offset=18354)
+        |DW_AT_sibling     :  AttributeValue(name='DW_AT_sibling', form='DW_FORM_ref4', value=18373, raw_value=18373, offset=18358)
+        """
+        pass
+
+    def _parse_unspecified_type(self, corpus, die):
+        """Also not sure what this gets parsed into
+        DIE DW_TAG_unspecified_type, size=6, has_children=False
+        |DW_AT_name        :  AttributeValue(name='DW_AT_name', form='DW_FORM_strp', value=b'decltype(nullptr)', raw_value=12681, offset=19244)
+        """
+        pass
+
+    def _parse_reference_type(self, corpus, die):
+        """
+        Parse a reference type.
+
+        The xml looks like:
+        <reference-type-def kind='lvalue' type-id='type-id-20945' size-in-bits='64' id='type-id-20052'/>
+
+        # TODO: Is this an lvalue?
+        """
+        tag = die.tag.lower()
+        self.gen.fact(
+            AspFunction(tag + "_type", args=[corpus.path, die.unique_id, "lvalue"])
+        )
+
+    def _parse_rvalue_reference_type(self, corpus, die):
+        tag = die.tag.lower()
+        self.gen.fact(
+            AspFunction(tag + "_type", args=[corpus.path, die.unique_id, "rvalue"])
+        )
+
+    def _parse_volatile_type(self, corpus, die):
+        """Not sure what this gets parsed into
+        DIE DW_TAG_volatile_type, size=6, has_children=False
+        |DW_AT_type        :  AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=22671, raw_value=22671, offset=22685)
+        """
+        pass
+
+    def _parse_template_parameter_pack(self, corpus, die):
+        """
+
+        not sure what this goes into - I don't think libabigail uses it.
+        DIE DW_TAG_GNU_template_parameter_pack, size=9, has_children=True
+        |DW_AT_name        :  AttributeValue(name='DW_AT_name', form='DW_FORM_strp', value=b'_Args', raw_value=1841328, offset=39845)
+        |DW_AT_sibling     :  AttributeValue(name='DW_AT_sibling', form='DW_FORM_ref4', value=11585, raw_value=11585, offset=39849)
+        """
+        print("PARSE TEMPLATE PARAMETER")
+        print("This attribute has not been seen (and thus not developed yet)")
+        import IPython
+
+        IPython.embed()
+        sys.exit(0)
+
+    def _parse_gnu_call_site(self, corpus, die):
+        """Not sure what this is
+        DIE DW_TAG_GNU_call_site, size=13, has_children=True
+        |DW_AT_low_pc      :  AttributeValue(name='DW_AT_low_pc', form='DW_FORM_addr', value=1111102, raw_value=1111102, offset=24919)
+        |DW_AT_GNU_tail_call:  AttributeValue(name='DW_AT_GNU_tail_call', form='DW_FORM_flag_present', value=True, raw_value=b'', offset=24927)
+        |DW_AT_abstract_origin:  AttributeValue(name='DW_AT_abstract_origin', form='DW_FORM_ref4', value=28213, raw_value=28213, offset=24927)
+        """
+        print("PARSE GNU CALL SITE")
+        import IPython
+
+        IPython.embed()
+        sys.exit(0)
+
+        dmeta = {"_type": "gnu-call-site"}
+        if die.has_children:
+            dmeta["children"] = []
+        return dmeta
+
+    def _parse_lexical_block(self, corpus, die):
+        """Not sure where this goes!"""
+
+        print("PARSE LEXICAL BLOCK")
+        print("This attribute has not been seen (and thus not developed yet)")
+        import IPython
+
+        IPython.embed()
+        sys.exit(0)
+
+    def _parse_gnu_call_site_parameter(self, corpus, die):
+        """
+        DIE DW_TAG_GNU_call_site_parameter, size=7, has_children=False
+        |DW_AT_location    :  AttributeValue(name='DW_AT_location', form='DW_FORM_exprloc', value=[85], raw_value=[85], offset=24932)
+        |DW_AT_GNU_call_site_value:  AttributeValue(name='DW_AT_GNU_call_site_value', form='DW_FORM_exprloc', value=[243, 1, 85], raw_value=[243, 1, 85], offset=24934)
+        """
+        print("PARSE GNU CALL")
+        print("This attribute has not been seen (and thus not developed yet)")
+        import IPython
+
+        IPython.embed()
+        sys.exit(0)
+
+    def _parse_const_type(self, corpus, die):
+        """Parse a constant type.
+
+        Note that this has DW_AT_type, which possibly has issues for pyelftools
+        (but I'm not sure we use it?)
+        https://github.com/eliben/pyelftools/issues/27
+        """
+        tag = die.tag.lower()
+        self.gen.fact(
+            AspFunction(tag + "_const", args=[corpus.path, die.unique_id, "yes"])
+        )
+
+    def _parse_pointer_type(self, corpus, die):
+        """parse a pointer type"""
+        pass
 
     def generate_corpus_metadata(self, corpora):
         """Given a list of corpora, create a fact for each one. If we need them,
@@ -679,6 +1445,7 @@ class ABICompatSolverSetup(object):
         corpora = [corpora[0], corpora[2]]
 
         # Every fact, entity that we make needs a unique id
+        # Note that this isn't actually in use yet!
         self._condition_id_counter = itertools.count()
 
         # preliminary checks
@@ -703,8 +1470,48 @@ class ABICompatSolverSetup(object):
         # Generate known symbols given library that works
         self.generate_known_working_symbols([library])
 
-        # Generate dwarf information entries (for now, don't generate)
-        # self.generate_dwarf_info_entries(corpora)
+        # Generate dwarf information entries
+        self.generate_dwarf_information_entries(corpora)
+
+
+# Internal helper functions
+
+
+def _get_die_filepath(die):
+    """
+    If we find DW_AT_decl_file in the attributes, we need to get the
+    associated filename.
+    """
+    filepath = None
+    if "DW_AT_decl_file" in die.attributes:
+        index = die.attributes["DW_AT_decl_file"].value
+
+        # TODO: need to debug why this fails sometimes
+        try:
+            filepath = get_cu_filename(die.cu, index)
+        except:
+            pass
+    return filepath
+
+
+def _get_cu_filename(cu, idx=0):
+    """
+    A DW_AT_decl_file I think can be looked up, by index, from the CU
+    file entry and directory index.
+    """
+    lineprogram = cu.dwarfinfo.line_program_for_CU(cu)
+    cu_filename = bytes2str(lineprogram["file_entry"][idx - 1].name)
+    if len(lineprogram["include_directory"]) > 0:
+        dir_index = lineprogram["file_entry"][idx - 1].dir_index
+        if dir_index > 0:
+            dir_name = bytes2str(lineprogram["include_directory"][dir_index - 1])
+        else:
+            dir_name = "."
+        cu_filename = "%s/%s" % (dir_name, cu_filename)
+    return cu_filename
+
+
+# Functions intended to be called by external clients
 
 
 def generate_facts(libs):

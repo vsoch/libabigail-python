@@ -1,7 +1,6 @@
 %=============================================================================
-% This logic program shows what symbols are compatible. I just started
-% writing it and haven't tested anything yet, just trying to figure out
-% basic syntx.
+% This logic program shows what symbols are compatible. Eventually we
+% can move different rules into different files (symbols, variables, etc.)
 %=============================================================================
 
 % Let's try to "set" a corpus A and B (we can eventually do this dynamically)
@@ -20,7 +19,8 @@ is_library(Corpus) :- corpus_name(Corpus, "libmath-v2.so").
 symbol_is_undefined(Corpus, Symbol) :- symbol_definition(Corpus, Symbol, "UND").
 
 % A symbol is hidden in this case (is this useful?)
-symbol_is_hidden(Corpus, Symbol) :- symbol_visibility(Corpus, Symbol, "HIDDEN").
+% This rule is not in use yet
+% symbol_is_hidden(Corpus, Symbol) :- symbol_visibility(Corpus, Symbol, "HIDDEN").
 
 % we can ignore a symbol in the library that is known to work (the subset of 
 % "needed symbols" if it is undefined). The logic here is that if the main app
@@ -37,19 +37,25 @@ known_needed_symbol(Symbol)
     % we arguably don't care.
     not needed_symbol_definition(Symbol, "UND").
 
-
-% A symbol is considered missing for main if: 
-missing_symbols(CorpusA, CorpusB, Symbol)
+% Shared rule for both cases of missing symbol. We have two to express an OR
+known_needed_symbol_undefined(CorpusA, CorpusB, Symbol)
 
    % set CorpusA to be main, CorpusB to be linked library
    :- is_main(CorpusA),
       is_library(CorpusB),
 
-      % it's not considered not needed, aka it is defined in the working lib
+      % it's a known needed symbol
       known_needed_symbol(Symbol),
 
       % it is undefined in the main binary
-      symbol_is_undefined(CorpusA, Symbol),
+      symbol_is_undefined(CorpusA, Symbol).
+
+
+% A symbol is considered missing for main if: 
+missing_symbols(CorpusA, CorpusB, Symbol)
+
+      % a known needed symbol is undefined
+      :- known_needed_symbol_undefined(CorpusA, CorpusB, Symbol),
 
       % it is undefined in the second lib we want to link
       symbol_is_undefined(CorpusB, Symbol).
@@ -59,15 +65,8 @@ missing_symbols(CorpusA, CorpusB, Symbol)
 % A symbol is considered missing for main if: 
 missing_symbols(CorpusA, CorpusB, Symbol)
 
-   % set CorpusA to be main, CorpusB to be linked library
-   :- is_main(CorpusA),
-      is_library(CorpusB),
-
-      % it's not considered not needed, aka it is defined in the working lib
-      known_needed_symbol(Symbol),
-
-      % it is undefined in the main binary
-      symbol_is_undefined(CorpusA, Symbol),
+   % a known needed symbol is undefined
+   :- known_needed_symbol_undefined(CorpusA, CorpusB, Symbol),
 
       % it is not present in the second library
       not has_symbol(CorpusB, Symbol).
@@ -99,6 +98,7 @@ architecture_count(N) :- #count{X:get_architecture(X)} = K, K=N.
 get_soname(A) :- corpus_elf_soname(_, A).
 soname_count(N) :- #count{X:get_soname(X)} = K, K=N.
 
+
 % TODO I will want to print this out more clearly, probably the is_compatible
 % function could use arguments for Corpora.
 % Two corpora are compatible if:
@@ -115,10 +115,14 @@ are_compatible()
 %#show total_missing/1.
 %#show corpus_needs_symbol/2.
 %#show corpus_needs_library/2.
+#show get_architecture/1.
 #show architecture_count/1.
 #show get_missing_symbols/1.
 #show total_missing/1.
 #show soname_count/1.
+%#show binary_symbol_has_subprogram/3.
+%#show library_symbol_has_subprogram/3.
+%#show shared_subprogram_for_needed_symbol/4.
 %#show is_main/1.
 %#show shared_symbol/3.
 %#show soname_count/1.
