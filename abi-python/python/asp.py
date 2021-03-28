@@ -847,19 +847,27 @@ class ABICompatSolverSetup(object):
 
             else:
                 type_size = type_die.attributes["DW_AT_byte_size"].value * 8
-                type_name = bytes2str(type_die.attributes["DW_AT_name"].value)
                 self.gen.fact(
                     AspFunction(
                         tag + "_size_in_bits",
                         args=[corpus.path, die.unique_id, type_size],
                     )
                 )
-                self.gen.fact(
-                    AspFunction(
-                        tag + "_type_name",
-                        args=[corpus.path, die.unique_id, type_name],
+                type_name = None
+                if "DW_AT_linkage_name" in type_die.attributes:
+                    type_name = bytes2str(
+                        type_die.attributes["DW_AT_linkage_name"].value
                     )
-                )
+                elif "DW_AT_name" in type_die.attributes:
+                    type_name = bytes2str(type_die.attributes["DW_AT_name"].value)
+
+                if type_name:
+                    self.gen.fact(
+                        AspFunction(
+                            tag + "_type_name",
+                            args=[corpus.path, die.unique_id, type_name],
+                        )
+                    )
 
     def _parse_compile_unit(self, corpus, die, tag):
         """
