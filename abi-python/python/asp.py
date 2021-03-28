@@ -4,6 +4,7 @@
 
 import collections
 import copy
+import hashlib
 import itertools
 import os
 import pprint
@@ -134,33 +135,6 @@ class AspFunctionBuilder(object):
 fn = AspFunctionBuilder()
 
 
-def all_compilers_in_config():
-    return spack.compilers.all_compilers()
-
-
-def extend_flag_list(flag_list, new_flags):
-    """Extend a list of flags, preserving order and precedence.
-
-    Add new_flags at the end of flag_list.  If any flags in new_flags are
-    already in flag_list, they are moved to the end so that they take
-    higher precedence on the compile line.
-
-    """
-    for flag in new_flags:
-        if flag in flag_list:
-            flag_list.remove(flag)
-        flag_list.append(flag)
-
-
-def check_same_flags(flag_dict_1, flag_dict_2):
-    """Return True if flag dicts contain the same flags regardless of order."""
-    types = set(flag_dict_1.keys()).union(set(flag_dict_2.keys()))
-    for t in types:
-        values1 = set(flag_dict_1.get(t, []))
-        values2 = set(flag_dict_2.get(t, []))
-        assert values1 == values2
-
-
 class Result(object):
     """Result of an ASP solve."""
 
@@ -181,30 +155,6 @@ class Result(object):
                 "The following constraints are unsatisfiable:",
                 *sorted(str(symbol) for symbol in core)
             )
-
-
-def _normalize_packages_yaml(packages_yaml):
-    normalized_yaml = copy.copy(packages_yaml)
-    for pkg_name in packages_yaml:
-        is_virtual = spack.repo.path.is_virtual(pkg_name)
-        if pkg_name == "all" or not is_virtual:
-            continue
-
-        # Remove the virtual entry from the normalized configuration
-        data = normalized_yaml.pop(pkg_name)
-        is_buildable = data.get("buildable", True)
-        if not is_buildable:
-            for provider in spack.repo.path.providers_for(pkg_name):
-                entry = normalized_yaml.setdefault(provider.name, {})
-                entry["buildable"] = False
-
-        externals = data.get("externals", [])
-        keyfn = lambda x: spack.spec.Spec(x["spec"]).name
-        for provider, specs in itertools.groupby(externals, key=keyfn):
-            entry = normalized_yaml.setdefault(provider, {})
-            entry.setdefault("externals", []).extend(specs)
-
-    return normalized_yaml
 
 
 class PyclingoDriver(object):
@@ -396,105 +346,12 @@ class ABICompatSolverSetup(object):
         # A lookup of DIEs based on corpus path (first key) and id
         # (second key) DIE == Dwarf Information Entry
         self.die_lookup = {}
+
+        # A lookup of DIE children ids
+        self.child_lookup = {}
         self.language = None
 
-    def condition(self, required_spec, imposed_spec=None, name=None):
-        """Generate facts for a dependency or virtual provider condition.
-        TODO: this should be updated to be a condition for ABI (not
-        sure what that looks like yet).
-
-        Arguments:
-            required_spec (Spec): the spec that triggers this condition
-            imposed_spec (optional, Spec): the sepc with constraints that
-                are imposed when this condition is triggered
-            name (optional, str): name for `required_spec` (required if
-                required_spec is anonymous, ignored if not)
-
-        Returns:
-            (int): id of the condition created by this function
-        """
-        named_cond = required_spec.copy()
-        named_cond.name = named_cond.name or name
-        assert named_cond.name, "must provide name for anonymous condtions!"
-
-        condition_id = next(self._condition_id_counter)
-        self.gen.fact(fn.condition(condition_id))
-
-        # requirements trigger the condition
-        requirements = self.checked_spec_clauses(
-            named_cond, body=True, required_from=name
-        )
-        for pred in requirements:
-            self.gen.fact(fn.condition_requirement(condition_id, pred.name, *pred.args))
-
-        if imposed_spec:
-            imposed_constraints = self.checked_spec_clauses(
-                imposed_spec, body=False, required_from=name
-            )
-            for pred in imposed_constraints:
-                # imposed "node"-like conditions are no-ops
-                if pred.name in ("node", "virtual_node"):
-                    continue
-                self.gen.fact(
-                    fn.imposed_constraint(condition_id, pred.name, *pred.args)
-                )
-
-        return condition_id
-
-    def generate_dwarf_info_entries(self, corpora):
-        """Iterate over the Dwarf Information Entires (DIEs) for each corpus,
-        and add them as facts. This function is currently not used - it does
-        no special parsing for different DIEs, or any subset of attributes.
-        """
-        # A helper function to generate a unique id for a DIE
-        # corpus path + abbrev_code for the DIE
-        def uid(corpus, die):
-            return "%s_%s" % (corpus.path, die.abbrev_code)
-
-        for corpus in corpora:
-
-            self.gen.h2("Corpus DIE: %s" % corpus.path)
-            for entry in corpus.iter_dwarf_information_entries():
-
-                # Skip entries without tags
-                if not entry.tag:
-                    continue
-
-                # Try creating flattened entries for now
-                unique_id = uid(corpus, entry)
-                self.gen.fact(
-                    AspFunction(entry.tag.lower(), args=[corpus.path, unique_id])
-                )
-
-                # Do we need these relationships as facts?
-                [
-                    self.gen.fact(fn.has_child(unique_id, uid(corpus, child)))
-                    for child in entry.iter_children()
-                ]
-
-                for attr_name, attribute in entry.attributes.items():
-
-                    # Ensure we don't write bytes
-                    value = attribute.value
-                    if isinstance(value, bytes):
-                        value = value.decode("utf-8")
-
-                    # DW_TAG_compiler_unit_attr
-                    self.gen.fact(
-                        AspFunction(
-                            entry.tag.lower() + "_attr",
-                            args=[corpus.path, unique_id, attr_name, value],
-                        )
-                    )
-                    # DW_TAG_compiler_unit_form
-                    self.gen.fact(
-                        AspFunction(
-                            entry.tag.lower() + "_form",
-                            args=[corpus.path, unique_id, attr_name, attribute.form],
-                        )
-                    )
-
-    def generate_elf_symbols(self, corpora):
+    def generate_elf_symbols(self, corpora, prefix=""):
         """For each corpus, write out elf symbols as facts. Note that we are
         trying a more detailed approach with facts/atoms being named (e.g.,
         symbol_type instead of symbol_attr). We could also try a simpler
@@ -505,93 +362,122 @@ class ABICompatSolverSetup(object):
         symbol_attr("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STV_default").
 
         """
+        # If we have a prefix, add a spacer
+        prefix = "%s_" % prefix if prefix else ""
+
         for corpus in corpora:
             self.gen.h2("Corpus symbols: %s" % corpus.path)
+
             for symbol, meta in corpus.elfsymbols.items():
 
                 # It begins with a NULL symbol, not sure it's useful
                 if not symbol:
                     continue
 
-                self.gen.fact(fn.symbol(symbol))
-                self.gen.fact(fn.symbol_type(corpus.path, symbol, meta["type"]))
+                self.gen.fact(AspFunction(prefix + "symbol", args=[symbol]))
                 self.gen.fact(
-                    fn.symbol_version(corpus.path, symbol, meta["version_info"])
-                )
-                self.gen.fact(fn.symbol_binding(corpus.path, symbol, meta["binding"]))
-                self.gen.fact(
-                    fn.symbol_visibility(corpus.path, symbol, meta["visibility"])
+                    AspFunction(
+                        prefix + "symbol_type", args=[corpus.path, symbol, meta["type"]]
+                    )
                 )
                 self.gen.fact(
-                    fn.symbol_definition(corpus.path, symbol, meta["defined"])
+                    AspFunction(
+                        prefix + "symbol_version",
+                        args=[corpus.path, symbol, meta["version_info"]],
+                    )
+                )
+                self.gen.fact(
+                    AspFunction(
+                        prefix + "symbol_binding",
+                        args=[corpus.path, symbol, meta["binding"]],
+                    )
+                )
+                self.gen.fact(
+                    AspFunction(
+                        prefix + "symbol_visibility",
+                        args=[corpus.path, symbol, meta["visibility"]],
+                    )
+                )
+                self.gen.fact(
+                    AspFunction(
+                        prefix + "symbol_definition",
+                        args=[corpus.path, symbol, meta["defined"]],
+                    )
                 )
 
                 # Might be redundant
+                has = "has_%s" % prefix if prefix else "has_"
+                self.gen.fact(AspFunction(has + "symbol", args=[corpus.path, symbol]))
                 self.gen.fact(fn.has_symbol(corpus.path, symbol))
 
-    def generate_known_working_symbols(self, corpora):
+    def _die_hash(self, die, corpus, parent):
         """
-        For the library (or possibly more than one) that we know works,
-        generate symbols for the solver. A known working symbol is from a library
-        that is linked with the main binary and we know works.
-
-        needed_symbol_type("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STT_FUNC").
-        needed_symbol_binding("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STB_FUNC").
-        needed_symbol_attr("_ZN11MathLibrary10Arithmetic8MultiplyEdd", "STV_default").
-
+        We need a unique id for a die entry based on it's corpus and content
         """
-        for corpus in corpora:
-
-            # Don't include corpora here, not relevant
-            self.gen.h2("Known needed symbols: %s" % corpus.path)
-            for symbol, meta in corpus.elfsymbols.items():
-
-                # It begins with a NULL symbol, not sure it's useful
-                if not symbol:
-                    continue
-
-                self.gen.fact(fn.symbol(symbol))
-                self.gen.fact(fn.needed_symbol(symbol))
-                self.gen.fact(fn.needed_symbol_type(symbol, meta["type"]))
-                self.gen.fact(fn.needed_symbol_version(symbol, meta["version_info"]))
-                self.gen.fact(fn.needed_symbol_binding(symbol, meta["binding"]))
-                self.gen.fact(fn.needed_symbol_visibility(symbol, meta["visibility"]))
-                self.gen.fact(fn.needed_symbol_definition(symbol, meta["defined"]))
+        hasher = hashlib.md5()
+        hasher.update(str(die).encode("utf-8"))
+        hasher.update(corpus.path.encode("utf-8"))
+        if parent:
+            hasher.update(parent.encode("utf-8"))
+        return hasher.hexdigest()
 
     def generate_needed(self, corpora):
         """
         Given a list of corpora, add needed libraries from dynamic tags.
         """
-        # Keep a lookup of needed basenames
         for corpus in corpora:
             for needed in corpus.dynamic_tags.get("needed", []):
                 self.gen.fact(fn.corpus_needs_library(corpus.path, needed))
 
-    def generate_dwarf_information_entries(self, corpora):
-        """Given a list of corpora, add needed libraries from dynamic tags."""
+    def generate_dwarf_information_entries(self, corpora, prefix=""):
+        """
+        Given a list of corpora, add needed libraries from dynamic tags.
+
+        For needed corpus attributes, we add a prefix.
+        """
 
         # We will keep a lookup of die
         for corpus in corpora:
             self.gen.h2("Corpus DIE: %s" % corpus.path)
 
+            # Add to child and die lookup, for redundancy check
             if corpus.path not in self.die_lookup:
                 self.die_lookup[corpus.path] = {}
+            if corpus.path not in self.child_lookup:
+                self.child_lookup[corpus.path] = {}
 
-            for entry in corpus.iter_dwarf_information_entries():
+            for die in corpus.iter_dwarf_information_entries():
 
                 # Skip entries without tags
-                if not entry.tag:
+                if not die.tag:
                     continue
 
-                # Keep a lookup based on the abbreviated code and corpus
-                # I'm not sure if we need this yet
-                if entry.abbrev_code not in self.die_lookup[corpus.path]:
-                    self.die_lookup[corpus.path][entry.abbrev_code] = entry
-
                 # Parse the die entry!
-                self._parse_die_children(corpus, entry)
+                self._parse_die_children(corpus, die, prefix=prefix)
 
-    def _parse_die_children(self, corpus, die, parent=None):
+    def _add_children(self, corpus, die):
+        """
+        Add children ids to the lookup, ensuring we print the relationship
+        only once.
+        """
+
+        def uid(corpus, die):
+            return "%s_%s" % (corpus.path, die.abbrev_code)
+
+        lookup = self.child_lookup[corpus.path]
+
+        # Add the child lookup
+        if die.unique_id not in lookup:
+            lookup[die.unique_id] = set()
+
+        for child in die.iter_children():
+            child_id = self._die_hash(child, corpus, die.unique_id)
+            if child_id in lookup[die.unique_id]:
+                continue
+            lookup[die.unique_id].add(child_id)
+            self.gen.fact(fn.die_has_child(die.unique_id, child_id))
+
+    def _parse_die_children(self, corpus, die, parent=None, prefix=""):
         """
         Parse die children, writing facts for attributions and relationships.
 
@@ -607,131 +493,164 @@ class ABICompatSolverSetup(object):
         corpus along with the id and the value of the attribute. I've provided
         separate functions less so for good structure, but moreso so that I
         can write notes alongside each. Some functions have notes and just pass.
+
+        TODO: read through http://dwarfstd.org/doc/dwarf_1_1_0.pdf for each type
+        and make sure not missing anything. Tags are on page 28.
         """
+        tag = die.tag.lower()
+        if prefix:
+            tag = "%s_%s" % (prefix.lower(), tag)
 
-        def uid(corpus, die):
-            return "%s_%s" % (corpus.path, die.abbrev_code)
+        # Keep track of unique id for relationships (hash of attributes, parent, and corpus)
+        die.unique_id = self._die_hash(die, corpus, parent)
 
-        # Keep track of unique id for relationships
-        die.unique_id = uid(corpus, die)
+        # Don't parse an entry twice
+        # if die.abbrev_code in self.die_lookup[corpus.path]:
+        #    return
 
         # Create a top level entry for the die based on it's tag type
-        self.gen.fact(AspFunction(die.tag.lower(), args=[corpus.path, die.unique_id]))
+        self.gen.fact(AspFunction(tag, args=[corpus.path, die.unique_id]))
 
         # Children are represented as facts
-        [
-            self.gen.fact(fn.die_has_child(die.unique_id, uid(corpus, child)))
-            for child in die.iter_children()
-        ]
+        self._add_children(corpus, die)
+
+        # Add to the lookup
+        self.die_lookup[corpus.path][die.abbrev_code] = die
 
         # Parse common attributes
-        self._parse_common_attributes(corpus, die)
+        self._parse_common_attributes(corpus, die, tag)
 
         if die.tag == "DW_TAG_compile_unit":
-            self._parse_compile_unit(corpus, die)
+            self._parse_compile_unit(corpus, die, tag)
 
         elif die.tag == "DW_TAG_namespace":
-            self._parse_namespace(corpus, die)
+            self._parse_namespace(corpus, die, tag)
 
         elif die.tag == "DW_TAG_subprogram":
-            self._parse_subprogram(corpus, die)
+            self._parse_subprogram(corpus, die, tag)
 
         elif die.tag == "DW_TAG_variable":
-            self._parse_variable(corpus, die)
+            self._parse_variable(corpus, die, tag)
 
         elif die.tag == "DW_TAG_typedef":
-            self._parse_typedef(corpus, die)
+            self._parse_typedef(corpus, die, tag)
 
         elif die.tag == "DW_TAG_union_type":
-            self._parse_union_type(corpus, die)
+            self._parse_union_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_pointer_type":
-            self._parse_pointer_type(corpus, die)
+            self._parse_pointer_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_const_type":
-            self._parse_const_type(corpus, die)
+            self._parse_const_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_base_type":
-            self._parse_base_type(corpus, die)
+            self._parse_base_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_class_type":
-            self._parse_class_type(corpus, die)
+            self._parse_class_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_structure_type":
-            self._parse_structure_type(corpus, die)
+            self._parse_structure_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_formal_parameter":
-            self._parse_parameter(corpus, die)
+            self._parse_parameter(corpus, die, tag)
 
         elif die.tag == "DW_TAG_member":
-            self._parse_member(corpus, die)
+            self._parse_member(corpus, die, tag)
 
         elif die.tag == "DW_TAG_inheritance":
-            self._parse_inheritance(corpus, die)
+            self._parse_inheritance(corpus, die, tag)
 
         elif die.tag == "DW_TAG_template_type_param":
-            self._parse_template_type_param(corpus, die)
+            self._parse_template_type_param(corpus, die, tag)
 
         elif die.tag == "DW_TAG_template_value_param":
-            self._parse_template_value_param(corpus, die)
+            self._parse_template_value_param(corpus, die, tag)
 
         elif die.tag == "DW_TAG_imported_module":
-            self._parse_imported_module(corpus, die)
+            self._parse_imported_module(corpus, die, tag)
 
         elif die.tag == "DW_TAG_imported_declaration":
-            self._parse_imported_declaration(corpus, die)
+            self._parse_imported_declaration(corpus, die, tag)
 
         elif die.tag == "DW_TAG_enumeration_type":
-            self._parse_enumeration_type(corpus, die)
+            self._parse_enumeration_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_array_type":
-            self._parse_array_type(corpus, die)
+            self._parse_array_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_subrange_type":
-            self._parse_subrange_type(corpus, die)
+            self._parse_subrange_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_subroutine_type":
-            self._parse_subroutine_type(corpus, die)
+            self._parse_subroutine_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_inlined_subroutine":
-            self._parse_inlined_subroutine(corpus, die)
+            self._parse_inlined_subroutine(corpus, die, tag)
 
         elif die.tag == "DW_TAG_enumerator":
-            self._parse_enumerator(corpus, die)
+            self._parse_enumerator(corpus, die, tag)
 
         elif die.tag == "DW_TAG_unspecified_type":
-            self._parse_unspecified_type(corpus, die)
+            self._parse_unspecified_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_reference_type":
-            self._parse_reference_type(corpus, die)
+            self._parse_reference_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_rvalue_reference_type":
-            self._parse_rvalue_reference_type(corpus, die)
+            self._parse_rvalue_reference_type(corpus, die, tag)
 
         elif die.tag == "DW_TAG_GNU_call_site":
-            self._parse_gnu_call_site(corpus, die)
+            self._parse_gnu_call_site(corpus, die, tag)
 
         elif die.tag == "DW_TAG_GNU_call_site_parameter":
-            self._parse_gnu_call_site_parameter(corpus, die)
+            self._parse_gnu_call_site_parameter(corpus, die, tag)
 
         # I don't see any attributes here
         elif die.tag == "DW_TAG_unspecified_parameters":
             pass
 
         elif die.tag == "DW_TAG_GNU_template_parameter_pack":
-            self._parse_template_parameter_pack(corpus, die)
+            self._parse_template_parameter_pack(corpus, die, tag)
 
         elif die.tag == "DW_TAG_volatile_type":
-            self._parse_volatile_type(corpus, die)
+            self._parse_volatile_type(corpus, die, tag)
 
         elif die.tag == None:
             pass
 
+        # Haven't seen these yet
+        elif die.tag in [
+            "DW_TAG_padding",
+            "DW_TAG_entry_point",
+            "DW_TAG_global_parameter",
+            "DW_TAG_global_subroutine",
+            "DW_AT_global_variable",
+            "DW_TAG_label",
+            "DW_TAG_local_variable",
+            "DW_TAG_source_file",
+            "DW_TAG_string_type",
+            "DW_TAG_subroutine",
+            "DW_tag_variant",
+            "DW_TAG_common_block",
+            "DW_TAG_common_inclusion",
+            "DW_TAG_ptr_to_member_type",
+            "DW_TAG_set_type",
+            "DW_TAG_with_stmt",
+            "DW_TAG_lo_user",
+            "DW_TAG_hi_user",
+        ]:
+            print("Found tag not yet seen yet, %s" % die.tag)
+            import IPython
+
+            IPython.embed()
+
         elif die.tag == "DW_TAG_lexical_block":
-            self._parse_lexical_block(corpus, die)
+            self._parse_lexical_block(corpus, die, tag)
 
         else:
-            print("%s not parsed." % die.tag)
+            print("%s not parsed." % tag)
 
         # We keep a handle on the root to return
         if not parent:
@@ -739,22 +658,23 @@ class ABICompatSolverSetup(object):
 
         if die.has_children:
             for child in die.iter_children():
-                self._parse_die_children(corpus, child, parent)
+                self._parse_die_children(corpus, child, parent, prefix)
 
-    def _parse_common_attributes(self, corpus, die):
+    def _parse_common_attributes(self, corpus, die, tag):
         """
         Many share these attributes, so we have a common function to parse.
         It's actually easier to just check for an attribute, and parse it
         if it's present, and be sure that we don't miss any.
         """
-        # Atoms need to be lowercase
-        tag = die.tag.lower()
-
         if "DW_AT_name" in die.attributes:
             name = bytes2str(die.attributes["DW_AT_name"].value)
             self.gen.fact(
                 AspFunction(tag + "_name", args=[corpus.path, die.unique_id, name])
             )
+
+        # DW_AT_type is a reference to another die (the type)
+        if "DW_AT_type" in die.attributes:
+            self._parse_die_type(corpus, die, tag)
 
         # Not to be confused with "bite size" :)
         if "DW_AT_byte_size" in die.attributes:
@@ -861,7 +781,87 @@ class ABICompatSolverSetup(object):
                 )
             )
 
-    def _parse_compile_unit(self, corpus, die):
+    def _parse_die_type(self, corpus, die, tag, lookup_die=None):
+        """
+        Parse the die type, typically getting the size in bytes or
+        looking it up. If lookup die is provided, it means we are digging into
+        layers and are looking for a type for "die"
+
+        Might be useful:
+        https://www.gitmemory.com/issue/eliben/pyelftools/353/784166976
+
+        """
+        type_die = None
+
+        # The die we query for the type is either the die itself, or one we've
+        # already found
+        query_die = lookup_die or die
+
+        # CU relative offset
+        if query_die.attributes["DW_AT_type"].form.startswith("DW_FORM_ref"):
+            type_die = query_die.cu.get_DIE_from_refaddr(
+                query_die.attributes["DW_AT_type"].value
+            )
+
+        # Absolute offset
+        elif query_die.attributes["DW_AT_type"].startswith("DW_FORM_ref_addr"):
+            print("ABSOLUTE OFFSET")
+            import IPython
+
+            IPython.embed()
+
+        # If we grabbed the type, just explicitly write the size/type
+        # In the future we could reference another die, but don't
+        # have it's parent here at the moment
+        if type_die:
+
+            # If we have another type def, call function again until we find it
+            if "DW_AT_type" in type_die.attributes:
+                return self._parse_die_type(corpus, die, tag, type_die)
+
+            # If it's a pointer, we have the byte size (no name)
+            if type_die.tag == "DW_TAG_pointer_type":
+                size_in_bits = type_die.attributes["DW_AT_byte_size"].value * 8
+                self.gen.fact(
+                    AspFunction(
+                        tag + "_size_in_bits",
+                        args=[corpus.path, die.unique_id, size_in_bits],
+                    )
+                )
+
+            # Not sure how to parse non complete types
+            # https://stackoverflow.com/questions/38225269/dwarf-reading-not-complete-types
+            elif "DW_AT_declaration" in type_die.attributes:
+                self.gen.fact(
+                    AspFunction(
+                        tag + "_non_complete_type",
+                        args=[corpus.path, die.unique_id, "yes"],
+                    )
+                )
+
+            # Here we are supposed to walk member types and calc size with offsets
+            # For now let's assume we can just compare all child sizes
+            # https://github.com/eliben/pyelftools/issues/306#issuecomment-606677552
+            elif "DW_AT_byte_size" not in type_die.attributes:
+                return
+
+            else:
+                type_size = type_die.attributes["DW_AT_byte_size"].value * 8
+                type_name = bytes2str(type_die.attributes["DW_AT_name"].value)
+                self.gen.fact(
+                    AspFunction(
+                        tag + "_size_in_bits",
+                        args=[corpus.path, die.unique_id, type_size],
+                    )
+                )
+                self.gen.fact(
+                    AspFunction(
+                        tag + "_type_name",
+                        args=[corpus.path, die.unique_id, type_name],
+                    )
+                )
+
+    def _parse_compile_unit(self, corpus, die, tag):
         """
         Parse a compile unit (usually at the top).
 
@@ -913,7 +913,7 @@ class ABICompatSolverSetup(object):
             AspFunction(tag + "_language", args=[corpus.path, die.unique_id, language])
         )
 
-    def _parse_namespace(self, corpus, die):
+    def _parse_namespace(self, corpus, die, tag):
         """
         Parse a DW_TAG_namespace.
 
@@ -927,7 +927,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_subprogram(self, corpus, die):
+    def _parse_subprogram(self, corpus, die, tag):
         """
         <function-decl name='move&lt;abigail::regex::regex_t_deleter&amp;&gt;'
            mangled-name='_ZSt4moveIRN7abigail5regex15regex_t_deleterEEONSt16remove_referenceIT_E4typeEOS5_'
@@ -954,7 +954,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_variable(self, corpus, die):
+    def _parse_variable(self, corpus, die, tag):
         """
         Parse a variable.
 
@@ -970,7 +970,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_typedef(self, corpus, die):
+    def _parse_typedef(self, corpus, die, tag):
         """parse a DW_TAG_typedef.
 
         An example xml is the following:
@@ -982,7 +982,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_union_type(self, corpus, die):
+    def _parse_union_type(self, corpus, die, tag):
         """parse a union type
         <union-decl name='__anonymous_union__' size-in-bits='64'
           is-anonymous='yes' visibility='default'
@@ -995,14 +995,14 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_base_type(self, corpus, die):
+    def _parse_base_type(self, corpus, die, tag):
         """parse a DW_TAG_base_type. Here is the xml equivalent"
 
         # <type-decl name='__float128' size-in-bits='128' id='type-id-32691'/>
         """
         pass
 
-    def _parse_class_type(self, corpus, die):
+    def _parse_class_type(self, corpus, die, tag):
         """
         Parse a DW_TAG_class type.
 
@@ -1015,7 +1015,7 @@ class ABICompatSolverSetup(object):
             AspFunction(tag + "_is_struct", args=[corpus.path, die.unique_id, "no"])
         )
 
-    def _parse_structure_type(self, corpus, die):
+    def _parse_structure_type(self, corpus, die, tag):
         """DW_TAG_structure, example xml:
 
         <class-decl name='filter_base' size-in-bits='192' is-struct='yes'
@@ -1037,7 +1037,7 @@ class ABICompatSolverSetup(object):
             AspFunction(tag + "_is_struct", args=[corpus.path, die.unique_id, "yes"])
         )
 
-    def _parse_member(self, corpus, die):
+    def _parse_member(self, corpus, die, tag):
         """DW_TAG_member seems to be nested as follows:
 
         <data-member access='private' layout-offset-in-bits='0'>
@@ -1056,7 +1056,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_parameter(self, corpus, die):
+    def _parse_parameter(self, corpus, die, tag):
         """
         Parse a DW_TAG_parameter.
 
@@ -1065,6 +1065,13 @@ class ABICompatSolverSetup(object):
         artificial = False
         if hasattr(die.attributes, "DW_AT_artificial"):
             artificial = die.attributes["DW_AT_artificial"].value
+
+        # TODO default value
+        if "DW_AT_default_value" in die.attributes:
+            print("Found default value!")
+            import IPython
+
+            IPython.embed()
 
         # Note that we aren't adding the negation, e.g., artificial == "no"
         # This is a strategy to generate fewer facts, but if we need it we can add.
@@ -1076,7 +1083,7 @@ class ABICompatSolverSetup(object):
                 )
             )
 
-    def _parse_inheritance(self, corpus, die):
+    def _parse_inheritance(self, corpus, die, tag):
         # Not sure what this gets parsed into
         # OrderedDict([('DW_AT_type',
         # AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=8855, raw_value=8855, offset=774)),
@@ -1090,7 +1097,7 @@ class ABICompatSolverSetup(object):
 
         return {}
 
-    def _parse_enumeration_type(self, corpus, die):
+    def _parse_enumeration_type(self, corpus, die, tag):
         """parse an enumeration type.
 
         The xml looks like this. This is just the outside wrapper of this:
@@ -1105,7 +1112,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_array_type(self, corpus, die):
+    def _parse_array_type(self, corpus, die, tag):
         """parse an array type. Example XML is:
 
         <array-type-def dimensions='1' type-id='type-id-444' size-in-bits='64' id='type-id-16411'>
@@ -1116,7 +1123,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_enumerator(self, corpus, die):
+    def _parse_enumerator(self, corpus, die, tag):
         """parse an enumerator, cild of an enum-dec. L
 
         ooks like:
@@ -1125,7 +1132,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_template_type_param(self, corpus, die):
+    def _parse_template_type_param(self, corpus, die, tag):
         """parse a template type param.
 
         I don't think this is represented in libabigail.
@@ -1136,7 +1143,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_template_value_param(self, corpus, die):
+    def _parse_template_value_param(self, corpus, die, tag):
         """parse a template value param.
 
         This also doesn't seem to be represented in libabigail.
@@ -1148,7 +1155,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_subrange_type(self, corpus, die):
+    def _parse_subrange_type(self, corpus, die, tag):
         """I'm not sure if we need to do additional parsing of the upper bound?
 
         <subrange length='2' type-id='type-id-1073' id='type-id-20406'/>
@@ -1175,7 +1182,7 @@ class ABICompatSolverSetup(object):
                 AspFunction(tag + "_length", args=[corpus.path, die.unique_id, length])
             )
 
-    def _parse_imported_module(self, corpus, die):
+    def _parse_imported_module(self, corpus, die, tag):
         """Parsed imported module information.
 
         I don't see that this is mapped into libabigail. Most of the attributes
@@ -1193,7 +1200,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_imported_declaration(self, corpus, die):
+    def _parse_imported_declaration(self, corpus, die, tag):
         """Parse an imported declaration.
 
         The same is true as for _parse_imported_module. The value of the
@@ -1204,7 +1211,7 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_inlined_subroutine(self, corpus, die):
+    def _parse_inlined_subroutine(self, corpus, die, tag):
         """Not sure what this goes into, maybe a function?
         DIE DW_TAG_inlined_subroutine, size=34, has_children=True
         |DW_AT_abstract_origin:  AttributeValue(name='DW_AT_abstract_origin', form='DW_FORM_ref4', value=25014, raw_value=25014, offset=24772)
@@ -1223,7 +1230,7 @@ class ABICompatSolverSetup(object):
         IPython.embed()
         sys.exit(0)
 
-    def _parse_subroutine_type(self, corpus, die):
+    def _parse_subroutine_type(self, corpus, die, tag):
         """Not sure what a subroutine type is
 
         We don't use DW_AT_sibling.
@@ -1233,14 +1240,14 @@ class ABICompatSolverSetup(object):
         """
         pass
 
-    def _parse_unspecified_type(self, corpus, die):
+    def _parse_unspecified_type(self, corpus, die, tag):
         """Also not sure what this gets parsed into
         DIE DW_TAG_unspecified_type, size=6, has_children=False
         |DW_AT_name        :  AttributeValue(name='DW_AT_name', form='DW_FORM_strp', value=b'decltype(nullptr)', raw_value=12681, offset=19244)
         """
         pass
 
-    def _parse_reference_type(self, corpus, die):
+    def _parse_reference_type(self, corpus, die, tag):
         """
         Parse a reference type.
 
@@ -1254,20 +1261,20 @@ class ABICompatSolverSetup(object):
             AspFunction(tag + "_type", args=[corpus.path, die.unique_id, "lvalue"])
         )
 
-    def _parse_rvalue_reference_type(self, corpus, die):
+    def _parse_rvalue_reference_type(self, corpus, die, tag):
         tag = die.tag.lower()
         self.gen.fact(
             AspFunction(tag + "_type", args=[corpus.path, die.unique_id, "rvalue"])
         )
 
-    def _parse_volatile_type(self, corpus, die):
+    def _parse_volatile_type(self, corpus, die, tag):
         """Not sure what this gets parsed into
         DIE DW_TAG_volatile_type, size=6, has_children=False
         |DW_AT_type        :  AttributeValue(name='DW_AT_type', form='DW_FORM_ref4', value=22671, raw_value=22671, offset=22685)
         """
         pass
 
-    def _parse_template_parameter_pack(self, corpus, die):
+    def _parse_template_parameter_pack(self, corpus, die, tag):
         """
 
         not sure what this goes into - I don't think libabigail uses it.
@@ -1282,7 +1289,7 @@ class ABICompatSolverSetup(object):
         IPython.embed()
         sys.exit(0)
 
-    def _parse_gnu_call_site(self, corpus, die):
+    def _parse_gnu_call_site(self, corpus, die, tag):
         """Not sure what this is
         DIE DW_TAG_GNU_call_site, size=13, has_children=True
         |DW_AT_low_pc      :  AttributeValue(name='DW_AT_low_pc', form='DW_FORM_addr', value=1111102, raw_value=1111102, offset=24919)
@@ -1300,7 +1307,7 @@ class ABICompatSolverSetup(object):
             dmeta["children"] = []
         return dmeta
 
-    def _parse_lexical_block(self, corpus, die):
+    def _parse_lexical_block(self, corpus, die, tag):
         """Not sure where this goes!"""
 
         print("PARSE LEXICAL BLOCK")
@@ -1310,7 +1317,7 @@ class ABICompatSolverSetup(object):
         IPython.embed()
         sys.exit(0)
 
-    def _parse_gnu_call_site_parameter(self, corpus, die):
+    def _parse_gnu_call_site_parameter(self, corpus, die, tag):
         """
         DIE DW_TAG_GNU_call_site_parameter, size=7, has_children=False
         |DW_AT_location    :  AttributeValue(name='DW_AT_location', form='DW_FORM_exprloc', value=[85], raw_value=[85], offset=24932)
@@ -1323,7 +1330,7 @@ class ABICompatSolverSetup(object):
         IPython.embed()
         sys.exit(0)
 
-    def _parse_const_type(self, corpus, die):
+    def _parse_const_type(self, corpus, die, tag):
         """Parse a constant type.
 
         Note that this has DW_AT_type, which possibly has issues for pyelftools
@@ -1335,22 +1342,31 @@ class ABICompatSolverSetup(object):
             AspFunction(tag + "_const", args=[corpus.path, die.unique_id, "yes"])
         )
 
-    def _parse_pointer_type(self, corpus, die):
+    def _parse_pointer_type(self, corpus, die, tag):
         """parse a pointer type"""
         pass
 
-    def generate_corpus_metadata(self, corpora):
+    def generate_corpus_metadata(self, corpora, prefix=""):
         """Given a list of corpora, create a fact for each one. If we need them,
         we can add elfheaders here.
         """
+        prefix = "%s_" % prefix if prefix else ""
+
         # Use the corpus path as a unique id (ok if binaries exist)
         # This would need to be changed if we don't have the binary handy
         for corpus in corpora:
             hdr = corpus.elfheader
 
             self.gen.h2("Corpus facts: %s" % corpus.path)
+
             self.gen.fact(fn.corpus(corpus.path))
-            self.gen.fact(fn.corpus_name(corpus.path, os.path.basename(corpus.path)))
+            self.gen.fact(AspFunction(prefix + "corpus", args=[corpus.path]))
+            self.gen.fact(
+                AspFunction(
+                    prefix + "corpus_name",
+                    args=[corpus.path, os.path.basename(corpus.path)],
+                )
+            )
 
             # e_ident is ELF identification
             # https://docs.oracle.com/cd/E19683-01/816-1386/chapter6-35342/index.html
@@ -1359,37 +1375,72 @@ class ABICompatSolverSetup(object):
 
             # If the corpus has a soname:
             if corpus.soname:
-                self.gen.fact(fn.corpus_soname(corpus.path, corpus.soname))
+                self.gen.fact(
+                    AspFunction(
+                        prefix + "corpus_soname", args=[corpus.path, corpus.soname]
+                    )
+                )
 
             # File class (also at elffile.elfclass or corpus.elfclass
-            self.gen.fact(fn.corpus_elf_class(corpus.path, hdr["e_ident"]["EI_CLASS"]))
+            self.gen.fact(
+                AspFunction(
+                    prefix + "corpus_elf_class",
+                    args=[corpus.path, hdr["e_ident"]["EI_CLASS"]],
+                )
+            )
 
             # Data encoding
             self.gen.fact(
-                fn.corpus_elf_data_encoding(corpus.path, hdr["e_ident"]["EI_DATA"])
+                AspFunction(
+                    prefix + "corpus_data_encoding",
+                    args=[corpus.path, hdr["e_ident"]["EI_DATA"]],
+                )
             )
 
             # File version
             self.gen.fact(
-                fn.corpus_elf_file_version(corpus.path, hdr["e_ident"]["EI_VERSION"])
+                AspFunction(
+                    prefix + "corpus_file_version",
+                    args=[corpus.path, hdr["e_ident"]["EI_VERSION"]],
+                )
             )
 
             # Operating system / ABI Information
-            self.gen.fact(fn.corpus_elf_osabi(corpus.path, hdr["e_ident"]["EI_OSABI"]))
+            self.gen.fact(
+                AspFunction(
+                    prefix + "corpus_elf_osabi",
+                    args=[corpus.path, hdr["e_ident"]["EI_OSABI"]],
+                )
+            )
 
             # Abi Version
             self.gen.fact(
-                fn.corpus_elf_abiversion(corpus.path, hdr["e_ident"]["EI_ABIVERSION"])
+                AspFunction(
+                    prefix + "corpus_abiversion",
+                    args=[corpus.path, hdr["e_ident"]["EI_ABIVERSION"]],
+                )
             )
 
             # e_type is the object file type
-            self.gen.fact(fn.corpus_elf_type(corpus.path, hdr["e_type"]))
+            self.gen.fact(
+                AspFunction(
+                    prefix + "corpus_elf_type", args=[corpus.path, hdr["e_type"]]
+                )
+            )
 
             # e_machine is the required architecture for the file
-            self.gen.fact(fn.corpus_elf_machine(corpus.path, hdr["e_machine"]))
+            self.gen.fact(
+                AspFunction(
+                    prefix + "corpus_elf_machine", args=[corpus.path, hdr["e_machine"]]
+                )
+            )
 
             # object file version
-            self.gen.fact(fn.corpus_elf_version(corpus.path, hdr["e_version"]))
+            self.gen.fact(
+                AspFunction(
+                    prefix + "corpus_elf_version", args=[corpus.path, hdr["e_version"]]
+                )
+            )
 
             # Not included (and we could add?)
             # virtual address where system transfers control, if no entry, will find 0
@@ -1460,6 +1511,7 @@ class ABICompatSolverSetup(object):
 
         # Generate high level corpus metadata facts (e.g., header)
         self.generate_corpus_metadata(corpora)
+        self.generate_corpus_metadata([library], prefix="needed")
 
         # Dynamic libraries that are needed
         self.generate_needed(corpora)
@@ -1467,11 +1519,14 @@ class ABICompatSolverSetup(object):
         # generate all elf symbols (might be able to make this smaller set)
         self.generate_elf_symbols(corpora)
 
-        # Generate known symbols given library that works
-        self.generate_known_working_symbols([library])
+        # Generate the same for the known working library, but with a prefix
+        self.generate_elf_symbols([library], prefix="needed")
 
         # Generate dwarf information entries
         self.generate_dwarf_information_entries(corpora)
+
+        # Generate dwarf information entries for needed
+        self.generate_dwarf_information_entries([library], prefix="needed")
 
 
 # Internal helper functions
