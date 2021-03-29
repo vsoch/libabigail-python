@@ -118,67 +118,68 @@ to first derive this set of needed symbols. After that, I'll look at [compute_di
 
 See [rules.md](rules.md) for breaking down this function in libabigail, and also
 the logic in glibc. In the facts,
-I'm currently at having a check over symbols and for just one architecture. It's pretty
-limited but it's a start!
+We can see the current output below (for the C++) is able to:
+
+1. Identify the missing symbol, and say there is 1 missing symbol
+2. Count one architecture (correct)
+3. No size or type mismatches
+4. Clarify the main program (math-client), the working library (libmath-v1.so) and the one we are testing (libmath-v2.so).
 
 ```bash
-(clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n   facts.lp is_compatible.lp 
+(clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n facts.lp is_compatible.lp 
 clingo version 5.4.0
 Reading from facts.lp ...
-is_compatible.lp:99:18-41: info: atom does not occur in any rule head:
-  corpus_elf_soname(#Anon0,A)
-
+...
 Solving...
 Answer: 1
 architecture_count(1)
+count_missing_symbols(1)
+count_subprogram_parameters_size_mismatch(0)
+count_subprogram_parameters_type_mismatch(0)
+get_architecture("EM_X86_64")
 get_missing_symbols("_ZN11MathLibrary10Arithmetic3AddEdd")
-soname_count(0)
-total_missing(1)
+is_library("/code/simple-example/cpp/libmath-v2.so")
+is_main("/code/simple-example/cpp/math-client")
+is_needed("/code/simple-example/cpp/libmath-v1.so")
 SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.005s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.005s
+Time         : 0.175s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.175s
 ```
 
 Based on writing this test case, that symbol is the one I expected to be not
 compatible. We changed the input arguments from float to int. But now let's try the
 C example, where we know the mangled strings don't include the variable
-types (e.g., it would just be `Add`):
+types (e.g., it would just be `Add`). Before checking for types and sizes,
+we would not identify any missing symbols because both are named "Add" despite
+having different parameters. But now since we added types and sizes we can
+see there is aboth a size and type mismatch:
 
 ```bash
 $ python dump-c.py > facts-c.lp
-clingo --out-ifs=\\n   facts-c.lp is_compatible.lp 
-
-is_compatible.lp:99:18-41: info: atom does not occur in any rule head:
-  corpus_elf_soname(#Anon0,A)
-
+# clingo --out-ifs=\\n facts-c.lp is_compatible.lp 
+clingo version 5.4.0
+Reading from facts-c.lp ...
+...
 Solving...
 Answer: 1
 architecture_count(1)
-soname_count(0)
-total_missing(0)
+count_missing_symbols(0)
+count_subprogram_parameters_size_mismatch(1)
+count_subprogram_parameters_type_mismatch(1)
+get_architecture("EM_X86_64")
+is_library("/code/simple-example/c/libmath-v2.so")
+is_main("/code/simple-example/c/math-client")
+is_needed("/code/simple-example/c/libmath-v1.so")
 SATISFIABLE
 
 Models       : 1
 Calls        : 1
-Time         : 0.004s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.004s
+Time         : 0.019s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.019s
 ```
 
-Just as we expected! The libraries look compatible because the function
-in question (the symbol) looks like this:
-
-```
-symbol("Add").
-symbol_type("/code/simple-example/c/math-client-c","Add","FUNC").
-symbol_version("/code/simple-example/c/math-client-c","Add","").
-symbol_binding("/code/simple-example/c/math-client-c","Add","GLOBAL").
-symbol_visibility("/code/simple-example/c/math-client-c","Add","DEFAULT").
-symbol_definition("/code/simple-example/c/math-client-c","Add","UND").
-has_symbol("/code/simple-example/c/math-client-c","Add").
-```
-
-I think that we will need to dig into variable types and sizes (which we can derive
-from the DIEs) next to address this.
+Next I think we want to count the number of parameters between the main corpus
+and library in question corpus to make sure they are the same.

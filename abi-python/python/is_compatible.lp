@@ -189,7 +189,41 @@ subprogram_parameters_type_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, 
 get_subprogram_parameters_type_mismatch(A) :- subprogram_parameters_type_mismatch(_,_,_,_,_,_,_,_,_,A).
 count_subprogram_parameters_type_mismatch(N) :- #count{X:get_subprogram_parameters_type_mismatch(X)} = K, K=N.
 
-% TODO: check for the number of parameters the same
+% Check for the number of parameters the same 
+% First write a general rule to find formal parameter
+% The Child is the formal parameter ID, we add so we can count
+entity_formal_parameters(Corpus, Id, Symbol, Child)
+
+    % Find all subprograms for the library or main
+    :- library_has_subprogram(Corpus, Id, Symbol),
+            
+       % Find parameter as a child of the subprogram die
+       die_has_child(Id, Child),
+
+       % subset to children that are formal parameters (this is for library)
+       dw_tag_formal_parameter(Corpus, Child). 
+
+
+% now we want to check the library vs. main program
+library_formal_parameters(Corpus, Id, Symbol, Child)
+
+    % Find all subprograms for the library or main
+    :- entity_formal_parameters(Corpus, Id, Symbol, Child),
+     
+       % We want to check the library
+       is_library(Corpus).
+
+main_formal_parameters(Corpus, Id, Symbol, Child)
+
+    % Find all subprograms for the library or main
+    :- entity_formal_parameters(Corpus, Id, Symbol, Child),
+     
+       % We want to check the library
+       is_main(Corpus).
+
+% Now compare counts (each child is a parameter, and grouped by Symbol)
+% TODO: for all functions in main, make sure library has same number
+% of parameters
 
 
 % TODO I will want to print this out more clearly, probably the is_compatible
@@ -216,6 +250,8 @@ are_compatible()
 #show architecture_count/1.
 #show get_soname_count/1.
 
+%#show library_formal_parameters/4.
+%#show main_formal_parameters/4.
 #show get_missing_symbols/1.
 #show count_missing_symbols/1.
 %#show subprogram_symbols_match/5.
