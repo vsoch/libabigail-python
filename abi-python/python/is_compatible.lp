@@ -190,13 +190,32 @@ get_subprogram_parameters_type_mismatch(A) :- subprogram_parameters_type_mismatc
 count_subprogram_parameters_type_mismatch(N) :- #count{X:get_subprogram_parameters_type_mismatch(X)} = K, K=N.
 
 % Check for the number of parameters the same 
-% First write a general rule to find formal parameter
-% The Child is the formal parameter ID, we add so we can count
+% First write a general rule to find formal parameters
+% We want to find shared parameters (via symbols) between main and library
+% the library can have extra symbols main doesn't use, and we don't care.
+shared_symbols(CorpusA, CorpusB, Symbol)
+
+    % set main and the library
+    :- is_main(CorpusA),
+       is_library(CorpusB),
+       
+       % ensure the symbol is present in both
+       has_symbol(CorpusA, Symbol),    
+       has_symbol(CorpusB, Symbol).
+
+% Now that we have the shared symbols, just reduce to the names
+is_shared_symbol(Symbol) :- shared_symbols(_,_,Symbol).
+
+
+% A general rule to get formal parameters, but only for shared symbols
 entity_formal_parameters(Corpus, Id, Symbol, Child)
 
     % Find all subprograms for the library or main
     :- library_has_subprogram(Corpus, Id, Symbol),
-            
+
+       % the symbol must be shared
+       is_shared_symbol(Symbol), 
+                  
        % Find parameter as a child of the subprogram die
        die_has_child(Id, Child),
 
@@ -221,10 +240,19 @@ main_formal_parameters(Corpus, Id, Symbol, Child)
        % We want to check the library
        is_main(Corpus).
 
-% Now compare counts (each child is a parameter, and grouped by Symbol)
-% TODO: for all functions in main, make sure library has same number
-% of parameters
 
+% Now get counts for each of library and main, and they need to be ==
+get_formal_parameter_count_main(Count) :-
+    Count = #count { Symbol : main_formal_parameters(_, _, Symbol, _) }.
+
+get_formal_parameter_count_library(Count) :-
+    Count = #count { Symbol : library_formal_parameters(_, _, Symbol, _) }.
+
+formal_parameter_counts_equal(CountMain, CountLibrary) :-
+    get_formal_parameter_count_library(CountLibrary),
+    get_formal_parameter_count_main(CountMain),
+    CountLibrary == CountMain.
+    
 
 % TODO I will want to print this out more clearly, probably the is_compatible
 % can we just add up things that should be zero and determine if it's !=0?
@@ -237,8 +265,7 @@ are_compatible()
 
   % there is only one architecture
   :- architecture_count(N) == 1.
-
-%#show shared_symbol/3.
+  
 %#show both_symbols_undefined/3.
 %#show corpus_needs_symbol/2.
 %#show corpus_needs_library/2.
@@ -250,10 +277,13 @@ are_compatible()
 #show architecture_count/1.
 #show get_soname_count/1.
 
-%#show library_formal_parameters/4.
-%#show main_formal_parameters/4.
+#show library_formal_parameters/4.
+#show main_formal_parameters/4.
 #show get_missing_symbols/1.
 #show count_missing_symbols/1.
+#show get_formal_parameter_count_main/1.
+#show get_formal_parameter_count_library/1.
+#show formal_parameter_counts_equal/2.
 %#show subprogram_symbols_match/5.
 %#show subprogram_parameters_match/8.
 %#show subprogram_parameters_size_mismatch/10.

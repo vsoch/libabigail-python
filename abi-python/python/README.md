@@ -124,6 +124,7 @@ We can see the current output below (for the C++) is able to:
 2. Count one architecture (correct)
 3. No size or type mismatches
 4. Clarify the main program (math-client), the working library (libmath-v1.so) and the one we are testing (libmath-v2.so).
+5. See the rule that the parameter counts (between main and the library, for shared symbols) are equal.
 
 ```bash
 (clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n facts.lp is_compatible.lp 
@@ -137,10 +138,13 @@ count_missing_symbols(1)
 count_subprogram_parameters_size_mismatch(0)
 count_subprogram_parameters_type_mismatch(0)
 get_architecture("EM_X86_64")
+get_formal_parameter_count_library(3)
+get_formal_parameter_count_main(3)
 get_missing_symbols("_ZN11MathLibrary10Arithmetic3AddEdd")
 is_library("/code/simple-example/cpp/libmath-v2.so")
 is_main("/code/simple-example/cpp/math-client")
 is_needed("/code/simple-example/cpp/libmath-v1.so")
+formal_parameter_counts_equal(3,3)
 SATISFIABLE
 
 Models       : 1
@@ -163,6 +167,7 @@ $ python dump-c.py > facts-c.lp
 clingo version 5.4.0
 Reading from facts-c.lp ...
 ...
+
 Solving...
 Answer: 1
 architecture_count(1)
@@ -170,10 +175,13 @@ count_missing_symbols(0)
 count_subprogram_parameters_size_mismatch(1)
 count_subprogram_parameters_type_mismatch(1)
 get_architecture("EM_X86_64")
+get_formal_parameter_count_library(1)
+get_formal_parameter_count_main(0)
 is_library("/code/simple-example/c/libmath-v2.so")
 is_main("/code/simple-example/c/math-client")
 is_needed("/code/simple-example/c/libmath-v1.so")
-SATISFIABLE
+library_formal_parameters("/code/simple-example/c/libmath-v2.so","0d4da1237a945ffc1d5e421ffd5752e3","Add","9382a504b9272595542486c61a7affb0")
+library_formal_parameters("/code/simple-example/c/libmath-v2.so","0d4da1237a945ffc1d5e421ffd5752e3","Add","c83a9eccfcf01fe36ff19e1edacb0c91")
 
 Models       : 1
 Calls        : 1
@@ -181,5 +189,6 @@ Time         : 0.019s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.019s
 ```
 
-Next I think we want to count the number of parameters between the main corpus
-and library in question corpus to make sure they are the same.
+**Question**: for the c version, the main-client doesn't seem to have the subprogram entries, so in the
+above we only see entries for the library. The fix to this is to instead compare the two librares, but
+I want to ask why we don't see them (but we do for the C++).
