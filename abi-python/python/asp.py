@@ -457,7 +457,7 @@ class ABICompatSolverSetup(object):
                 # Parse the die entry!
                 self._parse_die_children(corpus, die, prefix=prefix)
 
-    def _add_children(self, corpus, die):
+    def _add_children(self, corpus, die, prefix=None):
         """
         Add children ids to the lookup, ensuring we print the relationship
         only once.
@@ -472,11 +472,26 @@ class ABICompatSolverSetup(object):
         if die.unique_id not in lookup:
             lookup[die.unique_id] = set()
 
+        # If we have a prefix, add a _
+        if prefix and not prefix.endswith('_'):
+            prefix = "%s_" % prefix
+
+        # If it's a DW_TAG_subprogram, keep track of child parameter order
+        # We add one each time, so count starts at 0 after that
+        parameter_count = -1
         for child in die.iter_children():
             child_id = self._die_hash(child, corpus, die.unique_id)
             if child_id in lookup[die.unique_id]:
                 continue
             lookup[die.unique_id].add(child_id)
+
+            # If it's a subprogram, we care about order of parameters
+            if die.tag == "DW_TAG_subprogram" and child.tag == "DW_TAG_formal_parameter":
+                parameter_count +=1 
+                self.gen.fact(
+                    AspFunction(prefix + "dw_tag_formal_parameter_order", args=[corpus.path, child_id, parameter_count])
+                )
+
             self.gen.fact(fn.die_has_child(die.unique_id, child_id))
 
     def _get_tag(self, die, prefix):
@@ -531,7 +546,7 @@ class ABICompatSolverSetup(object):
         self.gen.fact(AspFunction(tag, args=[corpus.path, die.unique_id]))
 
         # Children are represented as facts
-        self._add_children(corpus, die)
+        self._add_children(corpus, die, prefix)
 
         # Add to the lookup
         self.die_lookup[corpus.path][die.abbrev_code] = die

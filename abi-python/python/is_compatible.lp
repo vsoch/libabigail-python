@@ -145,9 +145,9 @@ function_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB)
        needed_dw_tag_function_name(CorpusA, IdA , Symbol),
        dw_tag_function_name(CorpusB, IdB , Symbol).
 
-% First we find matching parameters based on function, formal param, and name
-% This assumes we have the same names
-function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param)
+% First we find matching parameters based on function, formal param, and order
+% We can't really assume we have the same names. But order should be the same
+function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order)
 
     % Subset to those that have matching symbols
     :- function_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB),
@@ -162,12 +162,12 @@ function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Pa
 
        % The formal parameters must have matching name (can we assume with
        % clingo if we use two different variable names, they must be different?
-       needed_dw_tag_formal_parameter_name(CorpusA, ChildA, Param),
-       dw_tag_formal_parameter_name(CorpusB, ChildB, Param).
+       needed_dw_tag_formal_parameter_order(CorpusA, ChildA, Order),
+       dw_tag_formal_parameter_order(CorpusB, ChildB, Order).
 
 % function params are not equal in size
-function_parameters_size_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param, SizeA, SizeB)
-    :- function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param),
+function_parameters_size_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order, SizeA, SizeB)
+    :- function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order),
 
     % The sizes are not equal (this returns all pairs of sizes, equal and not)
     needed_dw_tag_formal_parameter_size_in_bits(CorpusA, ChildA, SizeA),
@@ -178,8 +178,8 @@ get_function_parameters_size_mismatch(A) :- function_parameters_size_mismatch(_,
 count_function_parameters_size_mismatch(N) :- #count{X:get_function_parameters_size_mismatch(X)} = K, K=N.
 
 % function params are not equal in type
-function_parameters_type_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param, TypeA, TypeB)
-    :- function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param),
+function_parameters_type_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order, TypeA, TypeB)
+    :- function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order),
 
     % The type names are not equal
     needed_dw_tag_formal_parameter_type_name(CorpusA, ChildA, TypeA),

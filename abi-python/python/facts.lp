@@ -1818,6 +1818,7 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","8ea2ba12ed3
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","8ea2ba12ed314490e71fc2c8e79112d2",13).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","8ea2ba12ed314490e71fc2c8e79112d2","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","a4aa457580708141ae5ceff9a0122084").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","868c625c5ee38c717f9e5ba7d991a3d0",0).
 die_has_child("a4aa457580708141ae5ceff9a0122084","868c625c5ee38c717f9e5ba7d991a3d0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a4aa457580708141ae5ceff9a0122084","nothrow_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","a4aa457580708141ae5ceff9a0122084",94).
@@ -1882,7 +1883,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","ea31d586fbef51d7b9f38
 dw_tag_member_column("/code/simple-example/cpp/math-client","ea31d586fbef51d7b9f387439b420419",13).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","ea31d586fbef51d7b9f387439b420419",13).
 dw_tag_function("/code/simple-example/cpp/math-client","d3559a572760d499d5abc6e7882b4948").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2ab8aa6f3e3619e1073a11a5bc5257b5",0).
 die_has_child("d3559a572760d499d5abc6e7882b4948","2ab8aa6f3e3619e1073a11a5bc5257b5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","62bd4e30e9dd4c792c8ce71f1bfb4a82",1).
 die_has_child("d3559a572760d499d5abc6e7882b4948","62bd4e30e9dd4c792c8ce71f1bfb4a82").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d3559a572760d499d5abc6e7882b4948","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","d3559a572760d499d5abc6e7882b4948",83).
@@ -1899,6 +1902,7 @@ dw_tag_formal_parameter("/code/simple-example/cpp/math-client","bfe613fba4588b52
 dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bfe613fba4588b52b97811d4364522f7",64).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bfe613fba4588b52b97811d4364522f7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","841b45468f3b27a972e2dcdc9838c1a1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","824e3a51f3e35fa35ebd9b2c2e78178b",0).
 die_has_child("841b45468f3b27a972e2dcdc9838c1a1","824e3a51f3e35fa35ebd9b2c2e78178b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","841b45468f3b27a972e2dcdc9838c1a1","_M_addref").
 dw_tag_function_line("/code/simple-example/cpp/math-client","841b45468f3b27a972e2dcdc9838c1a1",85).
@@ -1911,6 +1915,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ee2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ee25bd55e083a8033537908feab5e129","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ee25bd55e083a8033537908feab5e129",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3463609a3bf79ded8a53e46fa4be0d35").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bed802dbfa04d93551ef340266e7f91c",0).
 die_has_child("3463609a3bf79ded8a53e46fa4be0d35","bed802dbfa04d93551ef340266e7f91c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3463609a3bf79ded8a53e46fa4be0d35","_M_release").
 dw_tag_function_line("/code/simple-example/cpp/math-client","3463609a3bf79ded8a53e46fa4be0d35",86).
@@ -1923,6 +1928,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4e5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4e57fe61486f7ceeac83af969aa14627","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4e57fe61486f7ceeac83af969aa14627",5).
 dw_tag_function("/code/simple-example/cpp/math-client","324c2abe4b6e66253cebf92d2e7895b7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c211903923be848c64a629b3015a11fb",0).
 die_has_child("324c2abe4b6e66253cebf92d2e7895b7","c211903923be848c64a629b3015a11fb").
 dw_tag_function_name("/code/simple-example/cpp/math-client","324c2abe4b6e66253cebf92d2e7895b7","_M_get").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","324c2abe4b6e66253cebf92d2e7895b7",64).
@@ -1936,6 +1942,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","084
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","08474249bb4a2391c1e85a9b598d3925","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","08474249bb4a2391c1e85a9b598d3925",5).
 dw_tag_function("/code/simple-example/cpp/math-client","893344560d2f756fdb12513d8abdce65").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","59be6684ce5283c30a8079b20029a229",0).
 die_has_child("893344560d2f756fdb12513d8abdce65","59be6684ce5283c30a8079b20029a229").
 dw_tag_function_name("/code/simple-example/cpp/math-client","893344560d2f756fdb12513d8abdce65","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","893344560d2f756fdb12513d8abdce65",96).
@@ -1948,7 +1955,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","768
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7686b7f427320f7193e6bb561a8c5489","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7686b7f427320f7193e6bb561a8c5489",5).
 dw_tag_function("/code/simple-example/cpp/math-client","357f6b9f57e17900eca3216c3485c586").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1bfdcf4a5d0db6768504b19456da43bb",0).
 die_has_child("357f6b9f57e17900eca3216c3485c586","1bfdcf4a5d0db6768504b19456da43bb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2a213311bd427947ca98e70b26f45ea6",1).
 die_has_child("357f6b9f57e17900eca3216c3485c586","2a213311bd427947ca98e70b26f45ea6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","357f6b9f57e17900eca3216c3485c586","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","357f6b9f57e17900eca3216c3485c586",98).
@@ -1965,7 +1974,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f0d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f0d5fb6488d454369ffa277fdeee5c63","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f0d5fb6488d454369ffa277fdeee5c63",5).
 dw_tag_function("/code/simple-example/cpp/math-client","76aa4badb81086ae30f152407c0aa87f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d376b39ee2f36dd5dd56b1eb93bcaf00",0).
 die_has_child("76aa4badb81086ae30f152407c0aa87f","d376b39ee2f36dd5dd56b1eb93bcaf00").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bc0f110208a4e67432df435e573d89d0",1).
 die_has_child("76aa4badb81086ae30f152407c0aa87f","bc0f110208a4e67432df435e573d89d0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","76aa4badb81086ae30f152407c0aa87f","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","76aa4badb81086ae30f152407c0aa87f",101).
@@ -1980,7 +1991,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2ea97c7
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","7584fa3fc5bb4a874defd631ee7f1976").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7584fa3fc5bb4a874defd631ee7f1976",5).
 dw_tag_function("/code/simple-example/cpp/math-client","bd3182967f742dec9146e342ffea6cbc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ed7d76ccf5fa6b81d9c9fb0e77ef798b",0).
 die_has_child("bd3182967f742dec9146e342ffea6cbc","ed7d76ccf5fa6b81d9c9fb0e77ef798b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee5821994fc9f6aafe030348f9aa4ae3",1).
 die_has_child("bd3182967f742dec9146e342ffea6cbc","ee5821994fc9f6aafe030348f9aa4ae3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bd3182967f742dec9146e342ffea6cbc","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","bd3182967f742dec9146e342ffea6cbc",105).
@@ -1997,7 +2010,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","551
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","551dd69f1d67b714348f4389e2da5270","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","551dd69f1d67b714348f4389e2da5270",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6f134ae27e24b22b4e7bea3828b57811").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","de42a82603e696fc6275f11cfbea65c1",0).
 die_has_child("6f134ae27e24b22b4e7bea3828b57811","de42a82603e696fc6275f11cfbea65c1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7a46ccc39858784114b3ec95812bf717",1).
 die_has_child("6f134ae27e24b22b4e7bea3828b57811","7a46ccc39858784114b3ec95812bf717").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6f134ae27e24b22b4e7bea3828b57811","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6f134ae27e24b22b4e7bea3828b57811",64).
@@ -2016,7 +2031,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e51
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e5136fed6d5f426b2b5d2203480f766c","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e5136fed6d5f426b2b5d2203480f766c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ed4a7c5e842851e0b11931212c73a3fb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1ce0a28f0fec791bba6d5732c9a89454",0).
 die_has_child("ed4a7c5e842851e0b11931212c73a3fb","1ce0a28f0fec791bba6d5732c9a89454").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5d513a3d7d627855767df03f1885b808",1).
 die_has_child("ed4a7c5e842851e0b11931212c73a3fb","5d513a3d7d627855767df03f1885b808").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ed4a7c5e842851e0b11931212c73a3fb","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ed4a7c5e842851e0b11931212c73a3fb",64).
@@ -2035,7 +2052,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","30b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","30b501ebd7b331c242da314462ec25ef","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","30b501ebd7b331c242da314462ec25ef",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2b345a4a76b66e0856ad9e22158bbc60").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2845aed3a65f16da3d444dd27eec25a4",0).
 die_has_child("2b345a4a76b66e0856ad9e22158bbc60","2845aed3a65f16da3d444dd27eec25a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","840aae151bc6acb713311bb477effe32",1).
 die_has_child("2b345a4a76b66e0856ad9e22158bbc60","840aae151bc6acb713311bb477effe32").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2b345a4a76b66e0856ad9e22158bbc60","~exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","2b345a4a76b66e0856ad9e22158bbc60",129).
@@ -2052,7 +2071,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","54b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","54b2be0fec5a064672d51a898c2a467f","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","54b2be0fec5a064672d51a898c2a467f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2461a287ad4ed0b8a4c68a0981534884").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","174f67024ccf3d5727b0dc1d1931a2f3",0).
 die_has_child("2461a287ad4ed0b8a4c68a0981534884","174f67024ccf3d5727b0dc1d1931a2f3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","662f0b6b0a00e00a20635fce303c276a",1).
 die_has_child("2461a287ad4ed0b8a4c68a0981534884","662f0b6b0a00e00a20635fce303c276a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2461a287ad4ed0b8a4c68a0981534884","swap").
 dw_tag_function_line("/code/simple-example/cpp/math-client","2461a287ad4ed0b8a4c68a0981534884",132).
@@ -2069,6 +2090,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","24c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","24c7b69d430b0782e92495349a8e533d","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","24c7b69d430b0782e92495349a8e533d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7bcb582d3c56572269e73a73a44b456e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c7825c1f0e6cefd24ae1aa085ea788c2",0).
 die_has_child("7bcb582d3c56572269e73a73a44b456e","c7825c1f0e6cefd24ae1aa085ea788c2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7bcb582d3c56572269e73a73a44b456e","operator bool").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7bcb582d3c56572269e73a73a44b456e",8).
@@ -2084,6 +2106,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","70e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","70e31b2f2b1fd5a1edc057a544b0c847","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","70e31b2f2b1fd5a1edc057a544b0c847",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3337775dcd56f3ba391825d53384928c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6945d0a9654d10b276617c3539a25a86",0).
 die_has_child("3337775dcd56f3ba391825d53384928c","6945d0a9654d10b276617c3539a25a86").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3337775dcd56f3ba391825d53384928c","__cxa_exception_type").
 dw_tag_function_non_complete_type("/code/simple-example/cpp/math-client","3337775dcd56f3ba391825d53384928c","yes").
@@ -2110,6 +2133,7 @@ dw_tag_imported_declaration_line("/code/simple-example/cpp/math-client","c9d7b7a
 dw_tag_imported_declaration_column("/code/simple-example/cpp/math-client","c9d7b7a1ce27eb55a180ece6bbfa7f80",26).
 dw_tag_imported_declaration_die_size("/code/simple-example/cpp/math-client","c9d7b7a1ce27eb55a180ece6bbfa7f80",8).
 dw_tag_function("/code/simple-example/cpp/math-client","c80575b939def45f09da6c648a2f5495").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fe302914d71dcc70a692c55504e3ac20",0).
 die_has_child("c80575b939def45f09da6c648a2f5495","fe302914d71dcc70a692c55504e3ac20").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c80575b939def45f09da6c648a2f5495","rethrow_exception").
 dw_tag_function_line("/code/simple-example/cpp/math-client","c80575b939def45f09da6c648a2f5495",69).
@@ -2164,6 +2188,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","0c4075ae7ed076b2fee8
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","0c4075ae7ed076b2fee809a6d60d9061",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","0c4075ae7ed076b2fee809a6d60d9061",12).
 dw_tag_function("/code/simple-example/cpp/math-client","46489ed0c8163202fc3a4339a9d8079b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bc78de70c7163b1c6b5507076cba18e0",0).
 die_has_child("46489ed0c8163202fc3a4339a9d8079b","bc78de70c7163b1c6b5507076cba18e0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","46489ed0c8163202fc3a4339a9d8079b","operator std::integral_constant<bool, false>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","46489ed0c8163202fc3a4339a9d8079b",8).
@@ -2178,6 +2203,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","783
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7831d0d9b0d24e4039adc289e15af8f5","integral_constant<bool, false>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7831d0d9b0d24e4039adc289e15af8f5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","da6d6cf04db08fb8e98c461de251db62").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","57716334ec670506e3ec4fd13872b6b9",0).
 die_has_child("da6d6cf04db08fb8e98c461de251db62","57716334ec670506e3ec4fd13872b6b9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","da6d6cf04db08fb8e98c461de251db62","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","da6d6cf04db08fb8e98c461de251db62",8).
@@ -2237,6 +2263,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","518573a00e1786e151ee
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","518573a00e1786e151eef61cdd487db1",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","518573a00e1786e151eef61cdd487db1",12).
 dw_tag_function("/code/simple-example/cpp/math-client","ec7624acda62e6abd298bb96d497a849").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5b509e08e8e04ac66d1a9d5396e48b2e",0).
 die_has_child("ec7624acda62e6abd298bb96d497a849","5b509e08e8e04ac66d1a9d5396e48b2e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ec7624acda62e6abd298bb96d497a849","operator std::integral_constant<bool, true>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ec7624acda62e6abd298bb96d497a849",8).
@@ -2251,6 +2278,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c96
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c9688d1bcd2e2197234994c6d2774eb8","integral_constant<bool, true>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c9688d1bcd2e2197234994c6d2774eb8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","13474d9f9b85af1643d9117cb69eb3d1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","033ee7079761eb29bcecac31781cdad8",0).
 die_has_child("13474d9f9b85af1643d9117cb69eb3d1","033ee7079761eb29bcecac31781cdad8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","13474d9f9b85af1643d9117cb69eb3d1","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","13474d9f9b85af1643d9117cb69eb3d1",8).
@@ -2387,6 +2415,7 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","db2578be321
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","db2578be321c67b6eb18b49e01c49a93",13).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","db2578be321c67b6eb18b49e01c49a93","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","2217e82e860108e00e1996df75b9af61").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","af30f3d3581e5ae1a032c02728a242dd",0).
 die_has_child("2217e82e860108e00e1996df75b9af61","af30f3d3581e5ae1a032c02728a242dd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2217e82e860108e00e1996df75b9af61","piecewise_construct_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","2217e82e860108e00e1996df75b9af61",76).
@@ -2446,7 +2475,9 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","395bdad3d30
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","395bdad3d30589750b86626e17ff221f",14).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","395bdad3d30589750b86626e17ff221f","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","48a459bc4e03134d444ada90a5de53f5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4e666da7c46732c7b79c1e0724138a97",0).
 die_has_child("48a459bc4e03134d444ada90a5de53f5","4e666da7c46732c7b79c1e0724138a97").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2676c3cc77ece84bcc31f94d26c0717a",1).
 die_has_child("48a459bc4e03134d444ada90a5de53f5","2676c3cc77ece84bcc31f94d26c0717a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","48a459bc4e03134d444ada90a5de53f5","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","48a459bc4e03134d444ada90a5de53f5",299).
@@ -2475,7 +2506,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","c22d82eb0bdf
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","c22d82eb0bdfc8cc691995054900c9b8",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","c22d82eb0bdfc8cc691995054900c9b8","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","d4c7cf3182017480947aa14fcced70ec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9f56a5e8548180058cc96dcaa264cfc0",0).
 die_has_child("d4c7cf3182017480947aa14fcced70ec","9f56a5e8548180058cc96dcaa264cfc0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cda393e4a3487c0fa3244a4d6d8368f8",1).
 die_has_child("d4c7cf3182017480947aa14fcced70ec","cda393e4a3487c0fa3244a4d6d8368f8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d4c7cf3182017480947aa14fcced70ec","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d4c7cf3182017480947aa14fcced70ec",8).
@@ -2494,7 +2527,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5d0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5d08c9fb76694fc380c7a6487f8c6033","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5d08c9fb76694fc380c7a6487f8c6033",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9d94018b29f0680f1264c3ae7ff2337c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2b38c70361c822f0062bd729b41dedc2",0).
 die_has_child("9d94018b29f0680f1264c3ae7ff2337c","2b38c70361c822f0062bd729b41dedc2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e6ea1c9185c91b5bdc00be13a37edf3e",1).
 die_has_child("9d94018b29f0680f1264c3ae7ff2337c","e6ea1c9185c91b5bdc00be13a37edf3e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9d94018b29f0680f1264c3ae7ff2337c","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9d94018b29f0680f1264c3ae7ff2337c",8).
@@ -2513,8 +2548,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b80
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b8049c2f1b93bed2d2bc61ebd237a818","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b8049c2f1b93bed2d2bc61ebd237a818",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f3739dec4e9075c2e3167db5450bfbbe").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bdd2975af1e82d1594941bae2bbe73dd",0).
 die_has_child("f3739dec4e9075c2e3167db5450bfbbe","bdd2975af1e82d1594941bae2bbe73dd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","563fdcf5c92c8c5ff8dc281ec1c4e200",1).
 die_has_child("f3739dec4e9075c2e3167db5450bfbbe","563fdcf5c92c8c5ff8dc281ec1c4e200").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","58237822440d75a266c921d6bb6b5522",2).
 die_has_child("f3739dec4e9075c2e3167db5450bfbbe","58237822440d75a266c921d6bb6b5522").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f3739dec4e9075c2e3167db5450bfbbe","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f3739dec4e9075c2e3167db5450bfbbe",32).
@@ -2537,6 +2575,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","002
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0026c548d13de0edc44d70342f5fb130","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0026c548d13de0edc44d70342f5fb130",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3d34c20c1caaba11a4235c8a5101788a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d133e19d89e9baef679e91492d8e10c0",0).
 die_has_child("3d34c20c1caaba11a4235c8a5101788a","d133e19d89e9baef679e91492d8e10c0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3d34c20c1caaba11a4235c8a5101788a","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3d34c20c1caaba11a4235c8a5101788a",64).
@@ -2551,8 +2590,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","da5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","da537c97ca1cde75f33379c5ee332f4d","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","da537c97ca1cde75f33379c5ee332f4d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e1ae96da630a87f60694ed28e9c945be").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","29bd66bdbc4a5506d89ed1447372286e",0).
 die_has_child("e1ae96da630a87f60694ed28e9c945be","29bd66bdbc4a5506d89ed1447372286e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","62c01bd5e28cffc47432a0b77e93f6d3",1).
 die_has_child("e1ae96da630a87f60694ed28e9c945be","62c01bd5e28cffc47432a0b77e93f6d3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","47d16151dcbdf12792d7b83c02507d62",2).
 die_has_child("e1ae96da630a87f60694ed28e9c945be","47d16151dcbdf12792d7b83c02507d62").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e1ae96da630a87f60694ed28e9c945be","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e1ae96da630a87f60694ed28e9c945be",8).
@@ -2575,8 +2617,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9a0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9a002f12688e020422c3f1c8c301a300","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9a002f12688e020422c3f1c8c301a300",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9525e1e9ac30a27f45eb86655088cd6b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a731bda26ac626e1c79eee7cdafa01b0",0).
 die_has_child("9525e1e9ac30a27f45eb86655088cd6b","a731bda26ac626e1c79eee7cdafa01b0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6f0702e1b7768926d5a6427beb78b242",1).
 die_has_child("9525e1e9ac30a27f45eb86655088cd6b","6f0702e1b7768926d5a6427beb78b242").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6d7be35a2c7da19264efdda1c7efaec2",2).
 die_has_child("9525e1e9ac30a27f45eb86655088cd6b","6d7be35a2c7da19264efdda1c7efaec2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9525e1e9ac30a27f45eb86655088cd6b","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9525e1e9ac30a27f45eb86655088cd6b",8).
@@ -2599,8 +2644,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","60b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","60bee72a5b30c668af54f9de0a10bb04","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","60bee72a5b30c668af54f9de0a10bb04",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ad30512fa56a1e775a66de9ff0ba3b47").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c681179b903fc0dd8fe8d4265f9fd7ef",0).
 die_has_child("ad30512fa56a1e775a66de9ff0ba3b47","c681179b903fc0dd8fe8d4265f9fd7ef").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","19b5d079ee3ea9b67642a5d922fa3b6f",1).
 die_has_child("ad30512fa56a1e775a66de9ff0ba3b47","19b5d079ee3ea9b67642a5d922fa3b6f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","68a2b5d44f39f323ce5980c2c9fe3ad1",2).
 die_has_child("ad30512fa56a1e775a66de9ff0ba3b47","68a2b5d44f39f323ce5980c2c9fe3ad1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ad30512fa56a1e775a66de9ff0ba3b47","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ad30512fa56a1e775a66de9ff0ba3b47",8).
@@ -2623,8 +2671,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","471
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","47143c495b2046e70a4c770046ace885","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","47143c495b2046e70a4c770046ace885",5).
 dw_tag_function("/code/simple-example/cpp/math-client","141fb43206da37ed0481a234c32463e2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","399b8bf4df7c8780bac6fa8e4d1d27f8",0).
 die_has_child("141fb43206da37ed0481a234c32463e2","399b8bf4df7c8780bac6fa8e4d1d27f8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","19f48461d771d76b954f935c1caa9831",1).
 die_has_child("141fb43206da37ed0481a234c32463e2","19f48461d771d76b954f935c1caa9831").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9d5a99746f87df4333a9d386008f1e8b",2).
 die_has_child("141fb43206da37ed0481a234c32463e2","9d5a99746f87df4333a9d386008f1e8b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","141fb43206da37ed0481a234c32463e2","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","141fb43206da37ed0481a234c32463e2",8).
@@ -2647,6 +2698,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1cf
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1cfea27580e721f5a327e2d671df9ca1","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1cfea27580e721f5a327e2d671df9ca1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e8363035dcb3383322c04d0196fb7d4f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2a48cdf5a43633ca69b5564ed0b3e1b2",0).
 die_has_child("e8363035dcb3383322c04d0196fb7d4f","2a48cdf5a43633ca69b5564ed0b3e1b2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e8363035dcb3383322c04d0196fb7d4f","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e8363035dcb3383322c04d0196fb7d4f",8).
@@ -2673,6 +2725,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","883a01961519
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","883a01961519b8d1997031bb7cc38902",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","883a01961519b8d1997031bb7cc38902","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","10cb5c64bacbd684d01d8924af975a40").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","df9e94504dd184ce9a16e0c164231f8c",0).
 die_has_child("10cb5c64bacbd684d01d8924af975a40","df9e94504dd184ce9a16e0c164231f8c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","10cb5c64bacbd684d01d8924af975a40","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","10cb5c64bacbd684d01d8924af975a40",32).
@@ -2687,7 +2740,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","60d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","60d7b777c0e69346f7075af427c3c159","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","60d7b777c0e69346f7075af427c3c159",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2d9fcac7c38756239f0804d58bd4adf2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b0dc9c23056bedde2de077fd56c48229",0).
 die_has_child("2d9fcac7c38756239f0804d58bd4adf2","b0dc9c23056bedde2de077fd56c48229").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0fbac70321ff703dad33f738353fcc90",1).
 die_has_child("2d9fcac7c38756239f0804d58bd4adf2","0fbac70321ff703dad33f738353fcc90").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2d9fcac7c38756239f0804d58bd4adf2","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2d9fcac7c38756239f0804d58bd4adf2",8).
@@ -2715,6 +2770,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","301972484fc7c89
 dw_tag_function_external("/code/simple-example/cpp/math-client","301972484fc7c896556f98cd40bb55ef","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","301972484fc7c896556f98cd40bb55ef","_ZNSt11char_traitsIcE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","0d5deae0522cb6f434fd4a8b9e682722").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a56c73f83876f2ad0095ef6f9dd5604d",0).
 die_has_child("0d5deae0522cb6f434fd4a8b9e682722","a56c73f83876f2ad0095ef6f9dd5604d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0d5deae0522cb6f434fd4a8b9e682722","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0d5deae0522cb6f434fd4a8b9e682722",32).
@@ -2760,7 +2816,9 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","80e4e9c3f66
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","80e4e9c3f66608c45731587cda312d55",14).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","80e4e9c3f66608c45731587cda312d55","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","df084f19e65e5932016c8018c5df912f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f85e223bb9335f5a5411de2c22300378",0).
 die_has_child("df084f19e65e5932016c8018c5df912f","f85e223bb9335f5a5411de2c22300378").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a64258d22a40efb66fc4d9ca360a5266",1).
 die_has_child("df084f19e65e5932016c8018c5df912f","a64258d22a40efb66fc4d9ca360a5266").
 dw_tag_function_name("/code/simple-example/cpp/math-client","df084f19e65e5932016c8018c5df912f","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","df084f19e65e5932016c8018c5df912f",412).
@@ -2789,7 +2847,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","9f410751a9c3
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","9f410751a9c3fa838456bd0d04efba9f",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","9f410751a9c3fa838456bd0d04efba9f","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","457d0813f602fbde3e5ff87dbb7250d4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2ef45a9a2118081401a1368c043c64eb",0).
 die_has_child("457d0813f602fbde3e5ff87dbb7250d4","2ef45a9a2118081401a1368c043c64eb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ffd86ee0bcc64bda04b2d7a9f0296b85",1).
 die_has_child("457d0813f602fbde3e5ff87dbb7250d4","ffd86ee0bcc64bda04b2d7a9f0296b85").
 dw_tag_function_name("/code/simple-example/cpp/math-client","457d0813f602fbde3e5ff87dbb7250d4","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","457d0813f602fbde3e5ff87dbb7250d4",8).
@@ -2808,7 +2868,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","247
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","247270c83482993d327966e536f5cfe4","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","247270c83482993d327966e536f5cfe4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","31829d8ac26052c6bbbe603410ec47bd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","247d9873a467d2a7556c4318c09a211e",0).
 die_has_child("31829d8ac26052c6bbbe603410ec47bd","247d9873a467d2a7556c4318c09a211e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e75a9461af6e0d1d836f9b013d79550a",1).
 die_has_child("31829d8ac26052c6bbbe603410ec47bd","e75a9461af6e0d1d836f9b013d79550a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","31829d8ac26052c6bbbe603410ec47bd","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","31829d8ac26052c6bbbe603410ec47bd",8).
@@ -2827,8 +2889,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a6b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a6bbeb5bc4d9d2b8a57ce70c42625186","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a6bbeb5bc4d9d2b8a57ce70c42625186",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e225b985a86111ef61c6643861b4d556").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f9bdc4081b9017791d3569aeb4dd69c4",0).
 die_has_child("e225b985a86111ef61c6643861b4d556","f9bdc4081b9017791d3569aeb4dd69c4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","abdacaccaaf2236d58bb4a0b73f655c8",1).
 die_has_child("e225b985a86111ef61c6643861b4d556","abdacaccaaf2236d58bb4a0b73f655c8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","70fa7c0a074756213f38968618c719ad",2).
 die_has_child("e225b985a86111ef61c6643861b4d556","70fa7c0a074756213f38968618c719ad").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e225b985a86111ef61c6643861b4d556","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e225b985a86111ef61c6643861b4d556",32).
@@ -2851,6 +2916,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","82f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","82f542426b67a161d8780debf7af089c","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","82f542426b67a161d8780debf7af089c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0ff3dd855bb2c2dd87da7bd9ceff6577").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6c26fbae1121f164e907a6837e3db39c",0).
 die_has_child("0ff3dd855bb2c2dd87da7bd9ceff6577","6c26fbae1121f164e907a6837e3db39c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0ff3dd855bb2c2dd87da7bd9ceff6577","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0ff3dd855bb2c2dd87da7bd9ceff6577",64).
@@ -2865,8 +2931,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","237
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","237c2c8f929006f3f57669e7dcc047fc","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","237c2c8f929006f3f57669e7dcc047fc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d8925d8eddcc9f84dd3b6c1f754c1248").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ec2de4cecf28862b5f373532362fe835",0).
 die_has_child("d8925d8eddcc9f84dd3b6c1f754c1248","ec2de4cecf28862b5f373532362fe835").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5e06174931a94ec02f8b68f9e4a9aceb",1).
 die_has_child("d8925d8eddcc9f84dd3b6c1f754c1248","5e06174931a94ec02f8b68f9e4a9aceb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","168fa97085921595182a8fb2efd8e6a7",2).
 die_has_child("d8925d8eddcc9f84dd3b6c1f754c1248","168fa97085921595182a8fb2efd8e6a7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d8925d8eddcc9f84dd3b6c1f754c1248","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d8925d8eddcc9f84dd3b6c1f754c1248",32).
@@ -2889,8 +2958,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9bd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9bd79fc6d26a75c7eeb7f3695650d69d","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9bd79fc6d26a75c7eeb7f3695650d69d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","46436a389f0bc0a39112eea2831dd391").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2bab5b72d7f61577ee1f16bbf41339a5",0).
 die_has_child("46436a389f0bc0a39112eea2831dd391","2bab5b72d7f61577ee1f16bbf41339a5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","87c5a7c00952a0500682a1ed196ae34e",1).
 die_has_child("46436a389f0bc0a39112eea2831dd391","87c5a7c00952a0500682a1ed196ae34e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4cee0e14d03ee12980012c0aeeea8431",2).
 die_has_child("46436a389f0bc0a39112eea2831dd391","4cee0e14d03ee12980012c0aeeea8431").
 dw_tag_function_name("/code/simple-example/cpp/math-client","46436a389f0bc0a39112eea2831dd391","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","46436a389f0bc0a39112eea2831dd391",32).
@@ -2913,8 +2985,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5ba
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5ba45dbd20731e5bd8fd0d04774d9040","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5ba45dbd20731e5bd8fd0d04774d9040",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2d9db7eda3e66c42465e62c6e3e6e8f0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2e4ef15d2a38672f683425f0d00568dd",0).
 die_has_child("2d9db7eda3e66c42465e62c6e3e6e8f0","2e4ef15d2a38672f683425f0d00568dd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","65bc1f289ec91d7d35ec19846f9ed4dc",1).
 die_has_child("2d9db7eda3e66c42465e62c6e3e6e8f0","65bc1f289ec91d7d35ec19846f9ed4dc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","686c72bdd00c68ae069d32c2e13e8b07",2).
 die_has_child("2d9db7eda3e66c42465e62c6e3e6e8f0","686c72bdd00c68ae069d32c2e13e8b07").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2d9db7eda3e66c42465e62c6e3e6e8f0","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2d9db7eda3e66c42465e62c6e3e6e8f0",32).
@@ -2937,8 +3012,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c71
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c71db16761f2acaca250513dd2743036","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c71db16761f2acaca250513dd2743036",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ab568ddb17a909217da2214e44c5d25d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8d065121bb5df17565a3e583e177f18d",0).
 die_has_child("ab568ddb17a909217da2214e44c5d25d","8d065121bb5df17565a3e583e177f18d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cecc923950424fc5a3d25faa626e3428",1).
 die_has_child("ab568ddb17a909217da2214e44c5d25d","cecc923950424fc5a3d25faa626e3428").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9b411ae978e35a5630dbde606a73c3c4",2).
 die_has_child("ab568ddb17a909217da2214e44c5d25d","9b411ae978e35a5630dbde606a73c3c4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ab568ddb17a909217da2214e44c5d25d","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ab568ddb17a909217da2214e44c5d25d",32).
@@ -2961,6 +3039,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","766
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","766395d8556947a854473d06fca67816","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","766395d8556947a854473d06fca67816",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6a54e8173e27477b12bb0f21022b5145").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5bd8cb6035b179368cdc2e5f77a58648",0).
 die_has_child("6a54e8173e27477b12bb0f21022b5145","5bd8cb6035b179368cdc2e5f77a58648").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6a54e8173e27477b12bb0f21022b5145","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6a54e8173e27477b12bb0f21022b5145",32).
@@ -2987,6 +3066,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","44f87de4dcd3
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","44f87de4dcd3b630051033aa3c01bc9a",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","44f87de4dcd3b630051033aa3c01bc9a","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","beb818cba9763208a69bb15e407c52c3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2f1fa08310c406cdf420ed130fa58890",0).
 die_has_child("beb818cba9763208a69bb15e407c52c3","2f1fa08310c406cdf420ed130fa58890").
 dw_tag_function_name("/code/simple-example/cpp/math-client","beb818cba9763208a69bb15e407c52c3","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","beb818cba9763208a69bb15e407c52c3",32).
@@ -3001,7 +3081,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","de3
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","de3a5e32469732456e44574f779e8966","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","de3a5e32469732456e44574f779e8966",5).
 dw_tag_function("/code/simple-example/cpp/math-client","354099c554163ad38dc3d9078e8df34f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cffec68359700dafd293336d09a214de",0).
 die_has_child("354099c554163ad38dc3d9078e8df34f","cffec68359700dafd293336d09a214de").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2de2de060d48f445dc75be6682890e0d",1).
 die_has_child("354099c554163ad38dc3d9078e8df34f","2de2de060d48f445dc75be6682890e0d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","354099c554163ad38dc3d9078e8df34f","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","354099c554163ad38dc3d9078e8df34f",8).
@@ -3029,6 +3111,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","ac5b5a287b16382
 dw_tag_function_external("/code/simple-example/cpp/math-client","ac5b5a287b1638249ee58d395a904aa9","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","ac5b5a287b1638249ee58d395a904aa9","_ZNSt11char_traitsIwE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","728d87ddf11d58093b7e31ecc261a437").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","592121286c0bc3f963eade5940252015",0).
 die_has_child("728d87ddf11d58093b7e31ecc261a437","592121286c0bc3f963eade5940252015").
 dw_tag_function_name("/code/simple-example/cpp/math-client","728d87ddf11d58093b7e31ecc261a437","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","728d87ddf11d58093b7e31ecc261a437",32).
@@ -3463,6 +3546,7 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","65b348e95d6bc9c
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","65b348e95d6bc9c88cacfda4adb12fb3",15).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","65b348e95d6bc9c88cacfda4adb12fb3","no").
 dw_tag_function("/code/simple-example/cpp/math-client","f79b7faced4b8d83c2a4a157e291a340").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d4ab372810a13758a1817e0cb76dd4c6",0).
 die_has_child("f79b7faced4b8d83c2a4a157e291a340","d4ab372810a13758a1817e0cb76dd4c6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f79b7faced4b8d83c2a4a157e291a340","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","f79b7faced4b8d83c2a4a157e291a340",607).
@@ -3475,7 +3559,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","921
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9215512b53f7a29bee19f55bdf534f86","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9215512b53f7a29bee19f55bdf534f86",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9e4fb520270378e2b88974c8aa7b72ae").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2f18936d615938483d4b49be2f8f236d",0).
 die_has_child("9e4fb520270378e2b88974c8aa7b72ae","2f18936d615938483d4b49be2f8f236d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","01cfcd047d2691017080133a739bcbad",1).
 die_has_child("9e4fb520270378e2b88974c8aa7b72ae","01cfcd047d2691017080133a739bcbad").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9e4fb520270378e2b88974c8aa7b72ae","~Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","9e4fb520270378e2b88974c8aa7b72ae",608).
@@ -3492,7 +3578,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a57
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a57fab562502e7344e66c6c42ff62345","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a57fab562502e7344e66c6c42ff62345",5).
 dw_tag_function("/code/simple-example/cpp/math-client","23f3548b6720120ff34500731f4d750d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2a846a1fc8cb7702fcc0b78f54d16d88",0).
 die_has_child("23f3548b6720120ff34500731f4d750d","2a846a1fc8cb7702fcc0b78f54d16d88").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","928c130a30164ecdff51fe10ca78a278",1).
 die_has_child("23f3548b6720120ff34500731f4d750d","928c130a30164ecdff51fe10ca78a278").
 dw_tag_function_name("/code/simple-example/cpp/math-client","23f3548b6720120ff34500731f4d750d","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","23f3548b6720120ff34500731f4d750d",611).
@@ -3510,7 +3598,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c22
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c22338a8e61331ed201a4ef543660cd7","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c22338a8e61331ed201a4ef543660cd7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b5dc3b66d935d56180961b7f62a3733c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7c3356b5eba6ed0f5ef74b39563fca48",0).
 die_has_child("b5dc3b66d935d56180961b7f62a3733c","7c3356b5eba6ed0f5ef74b39563fca48").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2ecff713ff21fa308eec66a5961bbe65",1).
 die_has_child("b5dc3b66d935d56180961b7f62a3733c","2ecff713ff21fa308eec66a5961bbe65").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b5dc3b66d935d56180961b7f62a3733c","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b5dc3b66d935d56180961b7f62a3733c",8).
@@ -3878,7 +3968,9 @@ dw_tag_imported_declaration_line("/code/simple-example/cpp/math-client","386c148
 dw_tag_imported_declaration_column("/code/simple-example/cpp/math-client","386c1486017e78013b9f28595c8adabe",11).
 dw_tag_imported_declaration_die_size("/code/simple-example/cpp/math-client","386c1486017e78013b9f28595c8adabe",8).
 dw_tag_function("/code/simple-example/cpp/math-client","231e9f035a619a76f995f0675d2cee9a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2eaf4fcc3cd4a9e535cdabef036605c4",0).
 die_has_child("231e9f035a619a76f995f0675d2cee9a","2eaf4fcc3cd4a9e535cdabef036605c4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","00e709b191c33475be3bb0323a5f8f0f",1).
 die_has_child("231e9f035a619a76f995f0675d2cee9a","00e709b191c33475be3bb0323a5f8f0f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","231e9f035a619a76f995f0675d2cee9a","div").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","231e9f035a619a76f995f0675d2cee9a",128).
@@ -4684,6 +4776,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","cfb34ee6cea6
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","cfb34ee6cea620bec39cb2d6c728919c",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","cfb34ee6cea620bec39cb2d6c728919c","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","0a6d668168991ef64d5cdc1c2802a71b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ca91b24ed13f1b3cc712e1c84f1373fa",0).
 die_has_child("0a6d668168991ef64d5cdc1c2802a71b","ca91b24ed13f1b3cc712e1c84f1373fa").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0a6d668168991ef64d5cdc1c2802a71b","btowc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0a6d668168991ef64d5cdc1c2802a71b",32).
@@ -4697,6 +4790,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","da0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","da080b645f2bcc7d9cdede9389e840fb","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","da080b645f2bcc7d9cdede9389e840fb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ad7d7fb14fcb142d767bff024dc76420").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8029479c4660b3547bfbc2a7ae8de62c",0).
 die_has_child("ad7d7fb14fcb142d767bff024dc76420","8029479c4660b3547bfbc2a7ae8de62c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ad7d7fb14fcb142d767bff024dc76420","fgetwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ad7d7fb14fcb142d767bff024dc76420",32).
@@ -4715,8 +4809,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","d401ca6470
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","d401ca64706237c82bb12cc0bbd01d50",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","d401ca64706237c82bb12cc0bbd01d50",6).
 dw_tag_function("/code/simple-example/cpp/math-client","c7ac63c8933ed9f8996284a3f6809c83").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d6f9d848f5bc8ea221893e47a99b5a82",0).
 die_has_child("c7ac63c8933ed9f8996284a3f6809c83","d6f9d848f5bc8ea221893e47a99b5a82").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e4678ef2df2b09b6cee92b95e89f5600",1).
 die_has_child("c7ac63c8933ed9f8996284a3f6809c83","e4678ef2df2b09b6cee92b95e89f5600").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","658ba937a97fa411256ce80e80e82cd5",2).
 die_has_child("c7ac63c8933ed9f8996284a3f6809c83","658ba937a97fa411256ce80e80e82cd5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c7ac63c8933ed9f8996284a3f6809c83","fgetws").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c7ac63c8933ed9f8996284a3f6809c83",32).
@@ -4753,7 +4850,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","429dc7811653
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","429dc78116535a550aabdb6f2355b092",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","429dc78116535a550aabdb6f2355b092","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","ffa4eea542f3d75a05cace412f2dccc4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ab62c1720451cd3a71879edb56ddf0a3",0).
 die_has_child("ffa4eea542f3d75a05cace412f2dccc4","ab62c1720451cd3a71879edb56ddf0a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4f552bf1209a3b93f3da4f003caf079b",1).
 die_has_child("ffa4eea542f3d75a05cace412f2dccc4","4f552bf1209a3b93f3da4f003caf079b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ffa4eea542f3d75a05cace412f2dccc4","fputwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ffa4eea542f3d75a05cace412f2dccc4",32).
@@ -4771,7 +4870,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c1f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c1fd91244f2e823312df2e9f0fdf6399","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c1fd91244f2e823312df2e9f0fdf6399",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e33ae1752682926ea328b0f0aa5865dd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d977412a69198e76ac6fbf73502b59d0",0).
 die_has_child("e33ae1752682926ea328b0f0aa5865dd","d977412a69198e76ac6fbf73502b59d0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4c99789361ba3d90d8e8681655864ad7",1).
 die_has_child("e33ae1752682926ea328b0f0aa5865dd","4c99789361ba3d90d8e8681655864ad7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e33ae1752682926ea328b0f0aa5865dd","fputws").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e33ae1752682926ea328b0f0aa5865dd",32).
@@ -4794,7 +4895,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","fc8887fbc8
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","fc8887fbc89b7407d49835fc5ca16615",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","fc8887fbc89b7407d49835fc5ca16615",6).
 dw_tag_function("/code/simple-example/cpp/math-client","20704676e0f49416be529cf6ddb651e9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2c4bb3b25547e2ba6958dd6c4060bb2c",0).
 die_has_child("20704676e0f49416be529cf6ddb651e9","2c4bb3b25547e2ba6958dd6c4060bb2c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1d906442b1af149e7be573f8488b6ac3",1).
 die_has_child("20704676e0f49416be529cf6ddb651e9","1d906442b1af149e7be573f8488b6ac3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","20704676e0f49416be529cf6ddb651e9","fwide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","20704676e0f49416be529cf6ddb651e9",32).
@@ -4812,7 +4915,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f77
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f77da7ba60bb0a104924e7e6769bcfdb","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f77da7ba60bb0a104924e7e6769bcfdb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9617df2c1edd82376a539dd9046068d8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","80ac94b0ead9e094e49036820e0d0d5a",0).
 die_has_child("9617df2c1edd82376a539dd9046068d8","80ac94b0ead9e094e49036820e0d0d5a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6d330db2843e8f7add4eecfa376bc7c1",1).
 die_has_child("9617df2c1edd82376a539dd9046068d8","6d330db2843e8f7add4eecfa376bc7c1").
 die_has_child("9617df2c1edd82376a539dd9046068d8","02371a385149ad256accc5726f82d6d7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9617df2c1edd82376a539dd9046068d8","fwprintf").
@@ -4833,7 +4938,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","aed06b0
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb",1).
 dw_tag_function("/code/simple-example/cpp/math-client","55cfbc636b559e2da6ff9b0b31f05d9b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f7c5a3ffc79728baff8c8ade072b702e",0).
 die_has_child("55cfbc636b559e2da6ff9b0b31f05d9b","f7c5a3ffc79728baff8c8ade072b702e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8b7c9231606d21985e6303468de0abd9",1).
 die_has_child("55cfbc636b559e2da6ff9b0b31f05d9b","8b7c9231606d21985e6303468de0abd9").
 die_has_child("55cfbc636b559e2da6ff9b0b31f05d9b","6eed248204a5edb451ea0fd140284deb").
 dw_tag_function_name("/code/simple-example/cpp/math-client","55cfbc636b559e2da6ff9b0b31f05d9b","fwscanf").
@@ -4855,6 +4962,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1e0c65b
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb",1).
 dw_tag_function("/code/simple-example/cpp/math-client","ea60ea3907e2aca26fa8cc0b6cc944f7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","61771091734c6c4dabcb552e208c3b42",0).
 die_has_child("ea60ea3907e2aca26fa8cc0b6cc944f7","61771091734c6c4dabcb552e208c3b42").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ea60ea3907e2aca26fa8cc0b6cc944f7","getwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ea60ea3907e2aca26fa8cc0b6cc944f7",32).
@@ -4876,8 +4984,11 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","af624683247f5134b
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","af624683247f5134b8e9e5f2c85cef12",13).
 dw_tag_function_external("/code/simple-example/cpp/math-client","af624683247f5134b8e9e5f2c85cef12","getwchar").
 dw_tag_function("/code/simple-example/cpp/math-client","3d6f2edb75e51df0b84cac803ce55931").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8452eab4a72a6f788ab6ef1eb33812fb",0).
 die_has_child("3d6f2edb75e51df0b84cac803ce55931","8452eab4a72a6f788ab6ef1eb33812fb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","935e31c475a4230f0aaa13b86c49988c",1).
 die_has_child("3d6f2edb75e51df0b84cac803ce55931","935e31c475a4230f0aaa13b86c49988c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1cf831edecbd38fdbe85bbe0e4084cc3",2).
 die_has_child("3d6f2edb75e51df0b84cac803ce55931","1cf831edecbd38fdbe85bbe0e4084cc3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3d6f2edb75e51df0b84cac803ce55931","mbrlen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3d6f2edb75e51df0b84cac803ce55931",64).
@@ -4904,9 +5015,13 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","013c439b7a
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","013c439b7a2c3b489e7f2dd73b92a115",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","013c439b7a2c3b489e7f2dd73b92a115",6).
 dw_tag_function("/code/simple-example/cpp/math-client","87aaedf05734d3df6271243121b6e5ec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bac27cfeadc9ec564a8ccdaca4aedfd0",0).
 die_has_child("87aaedf05734d3df6271243121b6e5ec","bac27cfeadc9ec564a8ccdaca4aedfd0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c2887ce27a35d203e62ca02f20369f9c",1).
 die_has_child("87aaedf05734d3df6271243121b6e5ec","c2887ce27a35d203e62ca02f20369f9c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5416c98569de8042db6da5763ad265f9",2).
 die_has_child("87aaedf05734d3df6271243121b6e5ec","5416c98569de8042db6da5763ad265f9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a91a22aac6d30db2da6f1f54e07558e2",3).
 die_has_child("87aaedf05734d3df6271243121b6e5ec","a91a22aac6d30db2da6f1f54e07558e2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","87aaedf05734d3df6271243121b6e5ec","mbrtowc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","87aaedf05734d3df6271243121b6e5ec",64).
@@ -4932,6 +5047,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","af4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","af4e83691a029072abc462ea6466ec5a","11__mbstate_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","af4e83691a029072abc462ea6466ec5a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c2e7c25070cbd3a26883c773e138df1d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","53ef6c870b8aaee631cf3f66dd326070",0).
 die_has_child("c2e7c25070cbd3a26883c773e138df1d","53ef6c870b8aaee631cf3f66dd326070").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c2e7c25070cbd3a26883c773e138df1d","mbsinit").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c2e7c25070cbd3a26883c773e138df1d",32).
@@ -4950,9 +5066,13 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","3c96107d7d
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","3c96107d7db5da71dbe9b277cd698a9d",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","3c96107d7db5da71dbe9b277cd698a9d",6).
 dw_tag_function("/code/simple-example/cpp/math-client","cd873950cecc0fa7a5609fd84e97b216").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","903105280b543a34f4088df3765b2a25",0).
 die_has_child("cd873950cecc0fa7a5609fd84e97b216","903105280b543a34f4088df3765b2a25").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c0bbd4682381d2c5fb174e64bbad99e8",1).
 die_has_child("cd873950cecc0fa7a5609fd84e97b216","c0bbd4682381d2c5fb174e64bbad99e8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","22519c2074ed2cb28e6019623da98dd6",2).
 die_has_child("cd873950cecc0fa7a5609fd84e97b216","22519c2074ed2cb28e6019623da98dd6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","85ac28f76ecab6afc724317a87accae0",3).
 die_has_child("cd873950cecc0fa7a5609fd84e97b216","85ac28f76ecab6afc724317a87accae0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","cd873950cecc0fa7a5609fd84e97b216","mbsrtowcs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","cd873950cecc0fa7a5609fd84e97b216",64).
@@ -4983,7 +5103,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","317e1df90b
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","317e1df90bb45916fbb86a1607060b08",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","317e1df90bb45916fbb86a1607060b08",6).
 dw_tag_function("/code/simple-example/cpp/math-client","bd0e064e070de8a3cf37e22dc812281e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8c4377e297ce2ef4bc6e3319a3f6fb42",0).
 die_has_child("bd0e064e070de8a3cf37e22dc812281e","8c4377e297ce2ef4bc6e3319a3f6fb42").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8a7fd4339c5dd98ff28c019697e3ce22",1).
 die_has_child("bd0e064e070de8a3cf37e22dc812281e","8a7fd4339c5dd98ff28c019697e3ce22").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bd0e064e070de8a3cf37e22dc812281e","putwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","bd0e064e070de8a3cf37e22dc812281e",32).
@@ -5001,6 +5123,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","663
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","663f1ffc1699a0f85cd45ed57d79aacb","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","663f1ffc1699a0f85cd45ed57d79aacb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1efe808cd043875714fccadfedec91cc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","37f00188e9f9aa6e0b69d58b2242aebb",0).
 die_has_child("1efe808cd043875714fccadfedec91cc","37f00188e9f9aa6e0b69d58b2242aebb").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1efe808cd043875714fccadfedec91cc","putwchar").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1efe808cd043875714fccadfedec91cc",32).
@@ -5014,8 +5137,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","56d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","56d1df312964861177e65b3befa1af02","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","56d1df312964861177e65b3befa1af02",5).
 dw_tag_function("/code/simple-example/cpp/math-client","262eb19e507a7e4a25b927ad2b68e387").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cf1de69475db71921ccd6371e67ba8d1",0).
 die_has_child("262eb19e507a7e4a25b927ad2b68e387","cf1de69475db71921ccd6371e67ba8d1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4764d645d67c4855b44b6daa2ce233aa",1).
 die_has_child("262eb19e507a7e4a25b927ad2b68e387","4764d645d67c4855b44b6daa2ce233aa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","29bd1e6c55ea5683ce37720dc2b5cb24",2).
 die_has_child("262eb19e507a7e4a25b927ad2b68e387","29bd1e6c55ea5683ce37720dc2b5cb24").
 die_has_child("262eb19e507a7e4a25b927ad2b68e387","e6131438e24978a066803e87b56ccfe0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","262eb19e507a7e4a25b927ad2b68e387","swprintf").
@@ -5040,7 +5166,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7350559
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb",1).
 dw_tag_function("/code/simple-example/cpp/math-client","468b3ff7547018ba06dd499a7cf9b7a6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a1ff8c836750ea59b9f1cba3c8fb9d49",0).
 die_has_child("468b3ff7547018ba06dd499a7cf9b7a6","a1ff8c836750ea59b9f1cba3c8fb9d49").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b94e1743d69173b73b1618858d611f77",1).
 die_has_child("468b3ff7547018ba06dd499a7cf9b7a6","b94e1743d69173b73b1618858d611f77").
 die_has_child("468b3ff7547018ba06dd499a7cf9b7a6","6535f63bc0353c5959c59f4075197de9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","468b3ff7547018ba06dd499a7cf9b7a6","swscanf").
@@ -5062,7 +5190,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","20b8e95
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb",1).
 dw_tag_function("/code/simple-example/cpp/math-client","4fb5a38016005ff349d9ae4f0911a105").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","adb5a384f7eb338533cfe965394a6641",0).
 die_has_child("4fb5a38016005ff349d9ae4f0911a105","adb5a384f7eb338533cfe965394a6641").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","aa0bdb215e87c21527fb4788e64153e9",1).
 die_has_child("4fb5a38016005ff349d9ae4f0911a105","aa0bdb215e87c21527fb4788e64153e9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4fb5a38016005ff349d9ae4f0911a105","ungetwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4fb5a38016005ff349d9ae4f0911a105",32).
@@ -5080,8 +5210,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","926
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","926646415ede048a42aa624f0a712e0d","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","926646415ede048a42aa624f0a712e0d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5a49a247fde3b3bd9099ca9ba42fac89").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3ce5c9256df1bc742b9aaba082e9589d",0).
 die_has_child("5a49a247fde3b3bd9099ca9ba42fac89","3ce5c9256df1bc742b9aaba082e9589d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c1c303eebd77be714a72879de6711cc5",1).
 die_has_child("5a49a247fde3b3bd9099ca9ba42fac89","c1c303eebd77be714a72879de6711cc5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","67e4ce0e6417ad8b2f3ca7111711197b",2).
 die_has_child("5a49a247fde3b3bd9099ca9ba42fac89","67e4ce0e6417ad8b2f3ca7111711197b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5a49a247fde3b3bd9099ca9ba42fac89","vfwprintf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5a49a247fde3b3bd9099ca9ba42fac89",32).
@@ -5108,8 +5241,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","698e2d0ff0
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","698e2d0ff0a0a8aa4c2e6c06fbf09c99",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","698e2d0ff0a0a8aa4c2e6c06fbf09c99",6).
 dw_tag_function("/code/simple-example/cpp/math-client","651a8c2a1da364d60baa5fbb8d8fb669").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f8694875e86db0f8baf8f0390391f197",0).
 die_has_child("651a8c2a1da364d60baa5fbb8d8fb669","f8694875e86db0f8baf8f0390391f197").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9db6f945f530f8d2b218a67e0b6b8292",1).
 die_has_child("651a8c2a1da364d60baa5fbb8d8fb669","9db6f945f530f8d2b218a67e0b6b8292").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","63396efd7175c5a3e52468a6b09dc01c",2).
 die_has_child("651a8c2a1da364d60baa5fbb8d8fb669","63396efd7175c5a3e52468a6b09dc01c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","651a8c2a1da364d60baa5fbb8d8fb669","vfwscanf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","651a8c2a1da364d60baa5fbb8d8fb669",32).
@@ -5132,9 +5268,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9f9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9f9c63079ca614522d53993b86c13501","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9f9c63079ca614522d53993b86c13501",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1632814e0e36e93973eca9f3f96f4034").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","02d0ab8f2bd20ef5c80b60b00a8004f7",0).
 die_has_child("1632814e0e36e93973eca9f3f96f4034","02d0ab8f2bd20ef5c80b60b00a8004f7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","558bdb89c0a2ad6e526749f2017d2d2e",1).
 die_has_child("1632814e0e36e93973eca9f3f96f4034","558bdb89c0a2ad6e526749f2017d2d2e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","259a960671c886cd174059b4b73564b8",2).
 die_has_child("1632814e0e36e93973eca9f3f96f4034","259a960671c886cd174059b4b73564b8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7c6b83487e6c0de600ff6b201daa7087",3).
 die_has_child("1632814e0e36e93973eca9f3f96f4034","7c6b83487e6c0de600ff6b201daa7087").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1632814e0e36e93973eca9f3f96f4034","vswprintf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1632814e0e36e93973eca9f3f96f4034",32).
@@ -5160,8 +5300,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2cc
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2ccdd3654e1990707d851b34c21bbbf8","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2ccdd3654e1990707d851b34c21bbbf8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","190e139dec67e1ed6aaa9462b65048bf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","89011579a434d48979361ad5aba9dfd2",0).
 die_has_child("190e139dec67e1ed6aaa9462b65048bf","89011579a434d48979361ad5aba9dfd2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","39b208d54b3870a5502b14cf24876a1d",1).
 die_has_child("190e139dec67e1ed6aaa9462b65048bf","39b208d54b3870a5502b14cf24876a1d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","530fb98dc366913f4ad264074f31fd69",2).
 die_has_child("190e139dec67e1ed6aaa9462b65048bf","530fb98dc366913f4ad264074f31fd69").
 dw_tag_function_name("/code/simple-example/cpp/math-client","190e139dec67e1ed6aaa9462b65048bf","vswscanf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","190e139dec67e1ed6aaa9462b65048bf",32).
@@ -5184,7 +5327,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","08a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","08a1c64523650713eacbd515cfa43381","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","08a1c64523650713eacbd515cfa43381",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b1fd513b7f72b9fc56a9b551ca1649b6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a89b4ad15f1887dfbd1d8e209847e60f",0).
 die_has_child("b1fd513b7f72b9fc56a9b551ca1649b6","a89b4ad15f1887dfbd1d8e209847e60f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9872989dec280cbf7916393c5439b486",1).
 die_has_child("b1fd513b7f72b9fc56a9b551ca1649b6","9872989dec280cbf7916393c5439b486").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b1fd513b7f72b9fc56a9b551ca1649b6","vwprintf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b1fd513b7f72b9fc56a9b551ca1649b6",32).
@@ -5202,7 +5347,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f03
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f037984ddcac160870ca679e4e40db82","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f037984ddcac160870ca679e4e40db82",5).
 dw_tag_function("/code/simple-example/cpp/math-client","54e5a4f26ded67aa1b36bc4fbfa0f2e2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6cff186ba4e29984e013b389c7030ba2",0).
 die_has_child("54e5a4f26ded67aa1b36bc4fbfa0f2e2","6cff186ba4e29984e013b389c7030ba2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cad68ee6739dcc27eb65f8a46a01517d",1).
 die_has_child("54e5a4f26ded67aa1b36bc4fbfa0f2e2","cad68ee6739dcc27eb65f8a46a01517d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","54e5a4f26ded67aa1b36bc4fbfa0f2e2","vwscanf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","54e5a4f26ded67aa1b36bc4fbfa0f2e2",32).
@@ -5221,8 +5368,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","104
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1049e945ae44fc586af46cb18a37e4cc","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1049e945ae44fc586af46cb18a37e4cc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","146fbb3a94f5507fe8484d8f086a5dff").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","142d6dc26f11485c42b53747b19ef35f",0).
 die_has_child("146fbb3a94f5507fe8484d8f086a5dff","142d6dc26f11485c42b53747b19ef35f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ce0b07bed3ae70241e081b524e6c3597",1).
 die_has_child("146fbb3a94f5507fe8484d8f086a5dff","ce0b07bed3ae70241e081b524e6c3597").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","860abda1c43cfcbde9a1d52d765e5482",2).
 die_has_child("146fbb3a94f5507fe8484d8f086a5dff","860abda1c43cfcbde9a1d52d765e5482").
 dw_tag_function_name("/code/simple-example/cpp/math-client","146fbb3a94f5507fe8484d8f086a5dff","wcrtomb").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","146fbb3a94f5507fe8484d8f086a5dff",64).
@@ -5249,7 +5399,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","19e528681e
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","19e528681ea1649ecc2fe18ee3db63d8",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","19e528681ea1649ecc2fe18ee3db63d8",6).
 dw_tag_function("/code/simple-example/cpp/math-client","e2863f2c60836210e1e001ca98fd1713").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","137513b408cf0ce2316a9d40d9afb795",0).
 die_has_child("e2863f2c60836210e1e001ca98fd1713","137513b408cf0ce2316a9d40d9afb795").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8c883a81850893f819cfedf1504fc0bc",1).
 die_has_child("e2863f2c60836210e1e001ca98fd1713","8c883a81850893f819cfedf1504fc0bc").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e2863f2c60836210e1e001ca98fd1713","wcscat").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e2863f2c60836210e1e001ca98fd1713",32).
@@ -5267,7 +5419,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","692
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","69297e038e0b1be52d8eefebb6742483","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","69297e038e0b1be52d8eefebb6742483",5).
 dw_tag_function("/code/simple-example/cpp/math-client","155af445a4cb95645c97c38024c55236").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","81c3e1cbfd44964e0d28e735cc61a222",0).
 die_has_child("155af445a4cb95645c97c38024c55236","81c3e1cbfd44964e0d28e735cc61a222").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d7f27683b3e0e8abb29675a28fd6b3dd",1).
 die_has_child("155af445a4cb95645c97c38024c55236","d7f27683b3e0e8abb29675a28fd6b3dd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","155af445a4cb95645c97c38024c55236","wcscmp").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","155af445a4cb95645c97c38024c55236",32).
@@ -5285,7 +5439,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","816
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","81664149a6000f419f1854e1332098fe","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","81664149a6000f419f1854e1332098fe",5).
 dw_tag_function("/code/simple-example/cpp/math-client","87a5699c6989b42f5565f7cdb712ac4c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f8b1de88ba97a6706f0653029e46dfb4",0).
 die_has_child("87a5699c6989b42f5565f7cdb712ac4c","f8b1de88ba97a6706f0653029e46dfb4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5c240e08a24ddd769d4e933d98e848ff",1).
 die_has_child("87a5699c6989b42f5565f7cdb712ac4c","5c240e08a24ddd769d4e933d98e848ff").
 dw_tag_function_name("/code/simple-example/cpp/math-client","87a5699c6989b42f5565f7cdb712ac4c","wcscoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","87a5699c6989b42f5565f7cdb712ac4c",32).
@@ -5303,7 +5459,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","345
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","34522d21dffbf958c0528deb943721e7","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","34522d21dffbf958c0528deb943721e7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e0841dcbbab05c2565b3490e1e50c0e1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fa276df4b304b0bdc0dbbde520d337f1",0).
 die_has_child("e0841dcbbab05c2565b3490e1e50c0e1","fa276df4b304b0bdc0dbbde520d337f1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9b7844ebfb8bd7fada74100bae3a31b3",1).
 die_has_child("e0841dcbbab05c2565b3490e1e50c0e1","9b7844ebfb8bd7fada74100bae3a31b3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e0841dcbbab05c2565b3490e1e50c0e1","wcscpy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e0841dcbbab05c2565b3490e1e50c0e1",32).
@@ -5321,7 +5479,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","abe
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","abe2828c20fbda37b10756fbaa8e46ec","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","abe2828c20fbda37b10756fbaa8e46ec",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3d2df3e9c1776db6da42640f6dcf5af0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5e751e069d00390395e1826a7b95e9fa",0).
 die_has_child("3d2df3e9c1776db6da42640f6dcf5af0","5e751e069d00390395e1826a7b95e9fa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","425f97ddef6238cdac6580fba7cd1ce0",1).
 die_has_child("3d2df3e9c1776db6da42640f6dcf5af0","425f97ddef6238cdac6580fba7cd1ce0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3d2df3e9c1776db6da42640f6dcf5af0","wcscspn").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3d2df3e9c1776db6da42640f6dcf5af0",64).
@@ -5339,9 +5499,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0b2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0b212caf01fe59d0408c3325e6e6f80d","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0b212caf01fe59d0408c3325e6e6f80d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e2345177c453a74280e994cb50ad7372").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","74b709b89bf6af178b7903babe96450f",0).
 die_has_child("e2345177c453a74280e994cb50ad7372","74b709b89bf6af178b7903babe96450f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","358771a09cbd046a8b22ccde2cff6610",1).
 die_has_child("e2345177c453a74280e994cb50ad7372","358771a09cbd046a8b22ccde2cff6610").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8d800fca6bf765385afa7dcfc3a159d9",2).
 die_has_child("e2345177c453a74280e994cb50ad7372","8d800fca6bf765385afa7dcfc3a159d9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee26b648271346076f797c1a6aea0bd9",3).
 die_has_child("e2345177c453a74280e994cb50ad7372","ee26b648271346076f797c1a6aea0bd9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e2345177c453a74280e994cb50ad7372","wcsftime").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e2345177c453a74280e994cb50ad7372",64).
@@ -5472,6 +5636,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","9a8534a20be9
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","9a8534a20be99bd7667262ac5e84ba47",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","9a8534a20be99bd7667262ac5e84ba47","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","afb6695b6ce13263c5126f0444955a5f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b22212818b4cde2c5daf671c7db410fb",0).
 die_has_child("afb6695b6ce13263c5126f0444955a5f","b22212818b4cde2c5daf671c7db410fb").
 dw_tag_function_name("/code/simple-example/cpp/math-client","afb6695b6ce13263c5126f0444955a5f","wcslen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","afb6695b6ce13263c5126f0444955a5f",64).
@@ -5485,8 +5650,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1e2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1e20542e29f04994cfb1be3c855add34","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1e20542e29f04994cfb1be3c855add34",5).
 dw_tag_function("/code/simple-example/cpp/math-client","13a5758d456ff459a3874df0ef1f7287").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b7cf37c1d557a60c51913ecf5d6de5c9",0).
 die_has_child("13a5758d456ff459a3874df0ef1f7287","b7cf37c1d557a60c51913ecf5d6de5c9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4851717a5ac23ed50995d7f2c847c53e",1).
 die_has_child("13a5758d456ff459a3874df0ef1f7287","4851717a5ac23ed50995d7f2c847c53e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9fdfd630591ee7e9be01d2694d3a0045",2).
 die_has_child("13a5758d456ff459a3874df0ef1f7287","9fdfd630591ee7e9be01d2694d3a0045").
 dw_tag_function_name("/code/simple-example/cpp/math-client","13a5758d456ff459a3874df0ef1f7287","wcsncat").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","13a5758d456ff459a3874df0ef1f7287",32).
@@ -5508,8 +5676,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a94
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a94e44235bd833d63e3375ca75a38672","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a94e44235bd833d63e3375ca75a38672",5).
 dw_tag_function("/code/simple-example/cpp/math-client","dc3a7f432a8328a737eb183b78825991").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f7a259527d1901669790d1e6e83134ca",0).
 die_has_child("dc3a7f432a8328a737eb183b78825991","f7a259527d1901669790d1e6e83134ca").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2ce925b78d74b9063a8cb3b0a436103f",1).
 die_has_child("dc3a7f432a8328a737eb183b78825991","2ce925b78d74b9063a8cb3b0a436103f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c3e18776eea8f5f8484df3b24e19018c",2).
 die_has_child("dc3a7f432a8328a737eb183b78825991","c3e18776eea8f5f8484df3b24e19018c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","dc3a7f432a8328a737eb183b78825991","wcsncmp").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","dc3a7f432a8328a737eb183b78825991",32).
@@ -5531,8 +5702,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","209
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","209739e878bf99b9bf1cd84d5b9e9948","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","209739e878bf99b9bf1cd84d5b9e9948",5).
 dw_tag_function("/code/simple-example/cpp/math-client","267b6fe52e15e4709d563facc4fa477e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6883f7e3fdcba34f96f6248ee7ad476f",0).
 die_has_child("267b6fe52e15e4709d563facc4fa477e","6883f7e3fdcba34f96f6248ee7ad476f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","40c65e4f6dfadad121880b73796b18e9",1).
 die_has_child("267b6fe52e15e4709d563facc4fa477e","40c65e4f6dfadad121880b73796b18e9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","54c517f48980994cf993555bc5c12b38",2).
 die_has_child("267b6fe52e15e4709d563facc4fa477e","54c517f48980994cf993555bc5c12b38").
 dw_tag_function_name("/code/simple-example/cpp/math-client","267b6fe52e15e4709d563facc4fa477e","wcsncpy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","267b6fe52e15e4709d563facc4fa477e",32).
@@ -5554,9 +5728,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4d5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4d5262f16602c1a34c55b4fb3d894558","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4d5262f16602c1a34c55b4fb3d894558",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3b86bac8811c7e40e4d3daef692092eb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","eb09126bfc2581656d4b883d8a6a6bb3",0).
 die_has_child("3b86bac8811c7e40e4d3daef692092eb","eb09126bfc2581656d4b883d8a6a6bb3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c08bf4e8ee4e5c5d5c95d1bc1f60b245",1).
 die_has_child("3b86bac8811c7e40e4d3daef692092eb","c08bf4e8ee4e5c5d5c95d1bc1f60b245").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7c544ee0a121d31d23c85ce92334f3f4",2).
 die_has_child("3b86bac8811c7e40e4d3daef692092eb","7c544ee0a121d31d23c85ce92334f3f4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8e746db5952ec91671f645ff3353eebd",3).
 die_has_child("3b86bac8811c7e40e4d3daef692092eb","8e746db5952ec91671f645ff3353eebd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3b86bac8811c7e40e4d3daef692092eb","wcsrtombs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3b86bac8811c7e40e4d3daef692092eb",64).
@@ -5587,7 +5765,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","5a41fd73ac
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","5a41fd73ac94a073a98df1962c29cf6e",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","5a41fd73ac94a073a98df1962c29cf6e",6).
 dw_tag_function("/code/simple-example/cpp/math-client","9e820b1ea0f23c29983d63bfd4c98bee").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","052a73e9ad4aee17981230aaade90806",0).
 die_has_child("9e820b1ea0f23c29983d63bfd4c98bee","052a73e9ad4aee17981230aaade90806").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2bb30735b3c11e602510e6c889831180",1).
 die_has_child("9e820b1ea0f23c29983d63bfd4c98bee","2bb30735b3c11e602510e6c889831180").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9e820b1ea0f23c29983d63bfd4c98bee","wcsspn").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9e820b1ea0f23c29983d63bfd4c98bee",64).
@@ -5605,7 +5785,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d5e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d5eb152137390a8cc533509224746742","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d5eb152137390a8cc533509224746742",5).
 dw_tag_function("/code/simple-example/cpp/math-client","99bd86b21d762ddcdf46275c18efaedf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cb708031919cc1d916de46b7c1c00b82",0).
 die_has_child("99bd86b21d762ddcdf46275c18efaedf","cb708031919cc1d916de46b7c1c00b82").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1d86b1064f42092f732224e65c5d21c3",1).
 die_has_child("99bd86b21d762ddcdf46275c18efaedf","1d86b1064f42092f732224e65c5d21c3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","99bd86b21d762ddcdf46275c18efaedf","wcstod").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","99bd86b21d762ddcdf46275c18efaedf",64).
@@ -5628,7 +5810,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","ca16635b48
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","ca16635b485330ecefea8ff0b3f779fc",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","ca16635b485330ecefea8ff0b3f779fc",6).
 dw_tag_function("/code/simple-example/cpp/math-client","2d4cecdef2917a43a5c7f576a8fd8d59").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b6510896fe0004ae2fed4d80a4be4e66",0).
 die_has_child("2d4cecdef2917a43a5c7f576a8fd8d59","b6510896fe0004ae2fed4d80a4be4e66").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cbf472b1c771e3f91a0de9b70db506c3",1).
 die_has_child("2d4cecdef2917a43a5c7f576a8fd8d59","cbf472b1c771e3f91a0de9b70db506c3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2d4cecdef2917a43a5c7f576a8fd8d59","wcstof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2d4cecdef2917a43a5c7f576a8fd8d59",32).
@@ -5646,8 +5830,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","32a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","32a29c4dca398a0f719c3c5206a4079c","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","32a29c4dca398a0f719c3c5206a4079c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","aa8300ace3d02847bb25a39244c39592").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","61369f43666d641c7a00add51dec48ac",0).
 die_has_child("aa8300ace3d02847bb25a39244c39592","61369f43666d641c7a00add51dec48ac").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ba9c7cd6d81c7eebe7b35c264e6c39d4",1).
 die_has_child("aa8300ace3d02847bb25a39244c39592","ba9c7cd6d81c7eebe7b35c264e6c39d4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","192b876361240a77b47ef163cee837a4",2).
 die_has_child("aa8300ace3d02847bb25a39244c39592","192b876361240a77b47ef163cee837a4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","aa8300ace3d02847bb25a39244c39592","wcstok").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","aa8300ace3d02847bb25a39244c39592",32).
@@ -5669,8 +5856,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","509
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5093f2eb99afe22f2c63b372025850e3","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5093f2eb99afe22f2c63b372025850e3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1c8baf7c05b6dc2f7bc7d58a3a6a56c5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0dbb76d3418f4566e6fe86bd6f4c2f34",0).
 die_has_child("1c8baf7c05b6dc2f7bc7d58a3a6a56c5","0dbb76d3418f4566e6fe86bd6f4c2f34").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f0e57e4a2abdb6439ae97d7cc25b6913",1).
 die_has_child("1c8baf7c05b6dc2f7bc7d58a3a6a56c5","f0e57e4a2abdb6439ae97d7cc25b6913").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d9571103a38508114a9e1f499c26a11a",2).
 die_has_child("1c8baf7c05b6dc2f7bc7d58a3a6a56c5","d9571103a38508114a9e1f499c26a11a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1c8baf7c05b6dc2f7bc7d58a3a6a56c5","wcstol").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1c8baf7c05b6dc2f7bc7d58a3a6a56c5",64).
@@ -5702,8 +5892,11 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","5915729c38b2
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","5915729c38b253296954aaa52f450f4d",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","5915729c38b253296954aaa52f450f4d","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","0678625fd90a3c2309a2f36222e3544f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9c2099983913c17517fe4eaf7e62f649",0).
 die_has_child("0678625fd90a3c2309a2f36222e3544f","9c2099983913c17517fe4eaf7e62f649").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1265f7a7807a3831895de5779e930d84",1).
 die_has_child("0678625fd90a3c2309a2f36222e3544f","1265f7a7807a3831895de5779e930d84").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d804999933607235610ea8dabaa76898",2).
 die_has_child("0678625fd90a3c2309a2f36222e3544f","d804999933607235610ea8dabaa76898").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0678625fd90a3c2309a2f36222e3544f","wcstoul").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0678625fd90a3c2309a2f36222e3544f",64).
@@ -5725,8 +5918,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","48b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","48b78d6b12f59956fba4f26700792019","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","48b78d6b12f59956fba4f26700792019",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6f00c200ec5499ca13b7eb278bcabef2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1195f609325e489978cb49d8ee365c8b",0).
 die_has_child("6f00c200ec5499ca13b7eb278bcabef2","1195f609325e489978cb49d8ee365c8b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7d0878e408279293dd5b19592cdb4b53",1).
 die_has_child("6f00c200ec5499ca13b7eb278bcabef2","7d0878e408279293dd5b19592cdb4b53").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bad7b927111ba13d286836e5525cc549",2).
 die_has_child("6f00c200ec5499ca13b7eb278bcabef2","bad7b927111ba13d286836e5525cc549").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6f00c200ec5499ca13b7eb278bcabef2","wcsxfrm").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6f00c200ec5499ca13b7eb278bcabef2",64).
@@ -5748,6 +5944,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b59
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b595c8e138ce727216586c481a82b221","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b595c8e138ce727216586c481a82b221",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c06684a208369307da1b60523cec3571").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bf0dd3fa0c10f0c88c7a4c1dc3bda4fb",0).
 die_has_child("c06684a208369307da1b60523cec3571","bf0dd3fa0c10f0c88c7a4c1dc3bda4fb").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c06684a208369307da1b60523cec3571","wctob").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c06684a208369307da1b60523cec3571",32).
@@ -5761,8 +5958,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b01
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b01d38018e1a6a51ac8fafe9d88dcc7a","unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b01d38018e1a6a51ac8fafe9d88dcc7a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","aedd9a94dec8fb8cd44da08270de8905").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d39586111763c575fcabc8731f788201",0).
 die_has_child("aedd9a94dec8fb8cd44da08270de8905","d39586111763c575fcabc8731f788201").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cb41691df0406d5b32941d4a04407c75",1).
 die_has_child("aedd9a94dec8fb8cd44da08270de8905","cb41691df0406d5b32941d4a04407c75").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","906d3595d71ce51b99504046a3cd68f8",2).
 die_has_child("aedd9a94dec8fb8cd44da08270de8905","906d3595d71ce51b99504046a3cd68f8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","aedd9a94dec8fb8cd44da08270de8905","wmemcmp").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","aedd9a94dec8fb8cd44da08270de8905",32).
@@ -5784,8 +5984,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4d5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4d534e28f489f143b7d4b99e6cfe31c8","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4d534e28f489f143b7d4b99e6cfe31c8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","44ed785c132a2c959f14d56af9d6f9f9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6b56d68657d7dcdd890eb01cb5148196",0).
 die_has_child("44ed785c132a2c959f14d56af9d6f9f9","6b56d68657d7dcdd890eb01cb5148196").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f5e4997d85e3cf75a577643260a9db8b",1).
 die_has_child("44ed785c132a2c959f14d56af9d6f9f9","f5e4997d85e3cf75a577643260a9db8b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a28f05476187fcc89f9ab1e857053982",2).
 die_has_child("44ed785c132a2c959f14d56af9d6f9f9","a28f05476187fcc89f9ab1e857053982").
 dw_tag_function_name("/code/simple-example/cpp/math-client","44ed785c132a2c959f14d56af9d6f9f9","wmemcpy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","44ed785c132a2c959f14d56af9d6f9f9",32).
@@ -5807,8 +6010,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","87c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","87c717890bfd3a17ad2c746c8e631260","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","87c717890bfd3a17ad2c746c8e631260",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5be61944cbea509035f532857ae57410").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5a302c815c4209768cda4a9504406c1e",0).
 die_has_child("5be61944cbea509035f532857ae57410","5a302c815c4209768cda4a9504406c1e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","39e349df9b36f7a7cbc841c2a843dec4",1).
 die_has_child("5be61944cbea509035f532857ae57410","39e349df9b36f7a7cbc841c2a843dec4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","53950b072d7112588660e305044feef5",2).
 die_has_child("5be61944cbea509035f532857ae57410","53950b072d7112588660e305044feef5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5be61944cbea509035f532857ae57410","wmemmove").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5be61944cbea509035f532857ae57410",32).
@@ -5830,8 +6036,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","740
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7400d413cfa92270395dbcf17f15edde","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7400d413cfa92270395dbcf17f15edde",5).
 dw_tag_function("/code/simple-example/cpp/math-client","fb7ab6278fddafb020231ee374ed27bb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e1cbbdcc1f39ea42aebbbdf5020c4530",0).
 die_has_child("fb7ab6278fddafb020231ee374ed27bb","e1cbbdcc1f39ea42aebbbdf5020c4530").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","504ba13e6acc569fb64b2d9acaf39522",1).
 die_has_child("fb7ab6278fddafb020231ee374ed27bb","504ba13e6acc569fb64b2d9acaf39522").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8d042e309fe07522815cbd6c9ddbf9f1",2).
 die_has_child("fb7ab6278fddafb020231ee374ed27bb","8d042e309fe07522815cbd6c9ddbf9f1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","fb7ab6278fddafb020231ee374ed27bb","wmemset").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","fb7ab6278fddafb020231ee374ed27bb",32).
@@ -5853,6 +6062,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","56c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","56c5b177760803ec958fb20992239394","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","56c5b177760803ec958fb20992239394",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2b3803cd23ed957969efcac860eb34f9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e34cc47a5337f0c107e0a5b70f6cf623",0).
 die_has_child("2b3803cd23ed957969efcac860eb34f9","e34cc47a5337f0c107e0a5b70f6cf623").
 die_has_child("2b3803cd23ed957969efcac860eb34f9","34478a4706b95285c234d129d7c4e467").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2b3803cd23ed957969efcac860eb34f9","wprintf").
@@ -5869,6 +6079,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7768441
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb",1).
 dw_tag_function("/code/simple-example/cpp/math-client","bc6e81065a9deaa58bc223337b741dc6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c8752ff2adf2934b3e516884491ea1bb",0).
 die_has_child("bc6e81065a9deaa58bc223337b741dc6","c8752ff2adf2934b3e516884491ea1bb").
 die_has_child("bc6e81065a9deaa58bc223337b741dc6","96ff31224c6284eb04ee42e87235628c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bc6e81065a9deaa58bc223337b741dc6","wscanf").
@@ -5886,7 +6097,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6422435
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","ace918d535b18cbd298d5c352c4800fb",1).
 dw_tag_function("/code/simple-example/cpp/math-client","b2610b9e277b5083bced993dad511fa7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","97ed0b1a40fbe0115d802ccd23fdcd3f",0).
 die_has_child("b2610b9e277b5083bced993dad511fa7","97ed0b1a40fbe0115d802ccd23fdcd3f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c1fc7494fcd4ed36d04ac61cecf753ea",1).
 die_has_child("b2610b9e277b5083bced993dad511fa7","c1fc7494fcd4ed36d04ac61cecf753ea").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b2610b9e277b5083bced993dad511fa7","wcschr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b2610b9e277b5083bced993dad511fa7",32).
@@ -5905,7 +6118,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d70
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d7085f8bdbebfaf01a45f01de0a34813","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d7085f8bdbebfaf01a45f01de0a34813",5).
 dw_tag_function("/code/simple-example/cpp/math-client","156a717ee31b971023a0e14bdabe475f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","171dcdb34267fafce56dbeb0581e4ae8",0).
 die_has_child("156a717ee31b971023a0e14bdabe475f","171dcdb34267fafce56dbeb0581e4ae8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5fa9f1d23c8aeda7c5f64dc0294bdb39",1).
 die_has_child("156a717ee31b971023a0e14bdabe475f","5fa9f1d23c8aeda7c5f64dc0294bdb39").
 dw_tag_function_name("/code/simple-example/cpp/math-client","156a717ee31b971023a0e14bdabe475f","wcschr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","156a717ee31b971023a0e14bdabe475f",32).
@@ -5924,7 +6139,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b66
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b668a4ef2ca771ddfe5c7d35e576d6f9","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b668a4ef2ca771ddfe5c7d35e576d6f9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e2d4e8e5648c406d7d050902d32b531f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","efae6da85eaa8df831bdff3335552b2f",0).
 die_has_child("e2d4e8e5648c406d7d050902d32b531f","efae6da85eaa8df831bdff3335552b2f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","998194c0f7edc3fe92c13f10bb102c04",1).
 die_has_child("e2d4e8e5648c406d7d050902d32b531f","998194c0f7edc3fe92c13f10bb102c04").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e2d4e8e5648c406d7d050902d32b531f","wcspbrk").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e2d4e8e5648c406d7d050902d32b531f",32).
@@ -5943,7 +6160,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6fd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6fde47792fe857b0fbd75956668e37f3","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6fde47792fe857b0fbd75956668e37f3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0ed68b195888133628916c99002840a6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","88f953bfafecb9c1c59280a252e8c6c0",0).
 die_has_child("0ed68b195888133628916c99002840a6","88f953bfafecb9c1c59280a252e8c6c0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d756ee8a9f7459cbd7e196c79cd22307",1).
 die_has_child("0ed68b195888133628916c99002840a6","d756ee8a9f7459cbd7e196c79cd22307").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0ed68b195888133628916c99002840a6","wcspbrk").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0ed68b195888133628916c99002840a6",32).
@@ -5962,7 +6181,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9e8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9e80c87e1e9376f11aee030929fd79c4","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9e80c87e1e9376f11aee030929fd79c4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2ec6f7c5f9b510e1e676ed0f53a03ff7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3132d5ce5578c04805f986ad0bdd504f",0).
 die_has_child("2ec6f7c5f9b510e1e676ed0f53a03ff7","3132d5ce5578c04805f986ad0bdd504f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c809cee600fcd57c548f8ee4fb7a32ae",1).
 die_has_child("2ec6f7c5f9b510e1e676ed0f53a03ff7","c809cee600fcd57c548f8ee4fb7a32ae").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2ec6f7c5f9b510e1e676ed0f53a03ff7","wcsrchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2ec6f7c5f9b510e1e676ed0f53a03ff7",32).
@@ -5981,7 +6202,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b24
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b246563960c8811a6577b6c060c293d0","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b246563960c8811a6577b6c060c293d0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1104c0389243c8d99c2367adac108930").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f5ad354449e08390929edf116ac3870e",0).
 die_has_child("1104c0389243c8d99c2367adac108930","f5ad354449e08390929edf116ac3870e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5922fdb0f5861a090c8025b41085be65",1).
 die_has_child("1104c0389243c8d99c2367adac108930","5922fdb0f5861a090c8025b41085be65").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1104c0389243c8d99c2367adac108930","wcsrchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1104c0389243c8d99c2367adac108930",32).
@@ -6000,7 +6223,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a4d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a4d1f7bed5ece3fcaa7c042640654460","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a4d1f7bed5ece3fcaa7c042640654460",5).
 dw_tag_function("/code/simple-example/cpp/math-client","65bbfd46f42299b0a177616db9df022a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","10d601a6b8b1a83c5ec012ef53ee8295",0).
 die_has_child("65bbfd46f42299b0a177616db9df022a","10d601a6b8b1a83c5ec012ef53ee8295").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","37d180b29bc55e277004a38de13ba147",1).
 die_has_child("65bbfd46f42299b0a177616db9df022a","37d180b29bc55e277004a38de13ba147").
 dw_tag_function_name("/code/simple-example/cpp/math-client","65bbfd46f42299b0a177616db9df022a","wcsstr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","65bbfd46f42299b0a177616db9df022a",32).
@@ -6019,7 +6244,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3d8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3d8e35088074331a097b56bb512278ae","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3d8e35088074331a097b56bb512278ae",5).
 dw_tag_function("/code/simple-example/cpp/math-client","77c212541b06b738e70e4c4e34199a2a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1d96190f1f156c2a1c19c7052ee4b75e",0).
 die_has_child("77c212541b06b738e70e4c4e34199a2a","1d96190f1f156c2a1c19c7052ee4b75e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","eec8307ff3f27dd830e361929a22c30d",1).
 die_has_child("77c212541b06b738e70e4c4e34199a2a","eec8307ff3f27dd830e361929a22c30d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","77c212541b06b738e70e4c4e34199a2a","wcsstr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","77c212541b06b738e70e4c4e34199a2a",32).
@@ -6038,8 +6265,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","98b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","98b55edbcd37fa19d6479cab5e35a2fb","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","98b55edbcd37fa19d6479cab5e35a2fb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6f6a916ea40f6372448d66244281cdd1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8112777199aafed0df4411027f25f2d8",0).
 die_has_child("6f6a916ea40f6372448d66244281cdd1","8112777199aafed0df4411027f25f2d8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","555d092ca6541f51c629eaa2b7cf1f3e",1).
 die_has_child("6f6a916ea40f6372448d66244281cdd1","555d092ca6541f51c629eaa2b7cf1f3e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c78b936e5264ee4e573a4b1f138ecf8e",2).
 die_has_child("6f6a916ea40f6372448d66244281cdd1","c78b936e5264ee4e573a4b1f138ecf8e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6f6a916ea40f6372448d66244281cdd1","wmemchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6f6a916ea40f6372448d66244281cdd1",32).
@@ -6062,8 +6292,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9b8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9b8dfb4a5d0e13d4c52eb3ac17720e9d","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9b8dfb4a5d0e13d4c52eb3ac17720e9d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6666d8ce6c9666391cbbe50c74d6278d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","46683258e8f9271db675cc3c05a68c79",0).
 die_has_child("6666d8ce6c9666391cbbe50c74d6278d","46683258e8f9271db675cc3c05a68c79").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1e10d88a418343993e8c4f1aedc78b7c",1).
 die_has_child("6666d8ce6c9666391cbbe50c74d6278d","1e10d88a418343993e8c4f1aedc78b7c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","507432972552be3d8afefeb9fd93de67",2).
 die_has_child("6666d8ce6c9666391cbbe50c74d6278d","507432972552be3d8afefeb9fd93de67").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6666d8ce6c9666391cbbe50c74d6278d","wmemchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6666d8ce6c9666391cbbe50c74d6278d",32).
@@ -6086,7 +6319,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","115
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","11552b6828afa31af392a578a0483833","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","11552b6828afa31af392a578a0483833",5).
 dw_tag_function("/code/simple-example/cpp/math-client","07f2e431fc6906d55cfe88d634a9f7c4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e9179b30324d47f010fe0a7b6d586763",0).
 die_has_child("07f2e431fc6906d55cfe88d634a9f7c4","e9179b30324d47f010fe0a7b6d586763").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","642f42aad32018612c31be286498b67e",1).
 die_has_child("07f2e431fc6906d55cfe88d634a9f7c4","642f42aad32018612c31be286498b67e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","07f2e431fc6906d55cfe88d634a9f7c4","wcstold").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","07f2e431fc6906d55cfe88d634a9f7c4",128).
@@ -6104,8 +6339,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ce1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ce178ef4e3344d6ee7671e772d694f89","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ce178ef4e3344d6ee7671e772d694f89",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ddd2b59ad9d16163a09157eaf1df0565").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a4cf4812ec35d7afb3f3c13ededa9435",0).
 die_has_child("ddd2b59ad9d16163a09157eaf1df0565","a4cf4812ec35d7afb3f3c13ededa9435").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7e713661b78e60ebcd338ae81a43f461",1).
 die_has_child("ddd2b59ad9d16163a09157eaf1df0565","7e713661b78e60ebcd338ae81a43f461").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","13ce32a01cbd05502693a82a57e14ebe",2).
 die_has_child("ddd2b59ad9d16163a09157eaf1df0565","13ce32a01cbd05502693a82a57e14ebe").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ddd2b59ad9d16163a09157eaf1df0565","wcstoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ddd2b59ad9d16163a09157eaf1df0565",64).
@@ -6132,8 +6370,11 @@ dw_tag_base_type_size_in_bits("/code/simple-example/cpp/math-client","0eabf4d7b7
 dw_tag_base_type_die_size("/code/simple-example/cpp/math-client","0eabf4d7b7fd62216f23b05042015f51",7).
 dw_tag_base_type_encoding("/code/simple-example/cpp/math-client","0eabf4d7b7fd62216f23b05042015f51","5	(signed)").
 dw_tag_function("/code/simple-example/cpp/math-client","1c79729e9ff5b7d4245b3cae09a58f0c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f2884065d295b640e70ef885369c553d",0).
 die_has_child("1c79729e9ff5b7d4245b3cae09a58f0c","f2884065d295b640e70ef885369c553d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b240a1e209594fe272e7291035f9a5ca",1).
 die_has_child("1c79729e9ff5b7d4245b3cae09a58f0c","b240a1e209594fe272e7291035f9a5ca").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d2f42daea9c9e453c29ced60126efe5c",2).
 die_has_child("1c79729e9ff5b7d4245b3cae09a58f0c","d2f42daea9c9e453c29ced60126efe5c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1c79729e9ff5b7d4245b3cae09a58f0c","wcstoull").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1c79729e9ff5b7d4245b3cae09a58f0c",64).
@@ -6873,7 +7114,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","e27a8c3e26ac7d0c77785
 dw_tag_member_column("/code/simple-example/cpp/math-client","e27a8c3e26ac7d0c777852abe5bed255",8).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","e27a8c3e26ac7d0c777852abe5bed255",13).
 dw_tag_function("/code/simple-example/cpp/math-client","17528a8a5c9580142fa71d96f39a7bf5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","11c6698fa351cbfcf7d7b0985c553a5e",0).
 die_has_child("17528a8a5c9580142fa71d96f39a7bf5","11c6698fa351cbfcf7d7b0985c553a5e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7a97ede04cb7581394ea3d11c3d30cb4",1).
 die_has_child("17528a8a5c9580142fa71d96f39a7bf5","7a97ede04cb7581394ea3d11c3d30cb4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","17528a8a5c9580142fa71d96f39a7bf5","setlocale").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","17528a8a5c9580142fa71d96f39a7bf5",8).
@@ -7095,6 +7338,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ac740c5
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","ab31086a7485b7e3d11b4980474db5e0").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ab31086a7485b7e3d11b4980474db5e0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","fb1c265ae51537db67a74b9cb7443997").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","51cc73d4e52f0cd76d7c0041672546cf",0).
 die_has_child("fb1c265ae51537db67a74b9cb7443997","51cc73d4e52f0cd76d7c0041672546cf").
 dw_tag_function_name("/code/simple-example/cpp/math-client","fb1c265ae51537db67a74b9cb7443997","atexit").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","fb1c265ae51537db67a74b9cb7443997",32).
@@ -7111,6 +7355,7 @@ dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","3e56c57c38a
 dw_tag_subroutine_type("/code/simple-example/cpp/math-client","081e1bd7a17b10f507047475a89f0261").
 dw_tag_subroutine_type_die_size("/code/simple-example/cpp/math-client","081e1bd7a17b10f507047475a89f0261",1).
 dw_tag_function("/code/simple-example/cpp/math-client","7ac1b3a9b107766d4bf29e3865b32fa3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","18e6396d7951da7ccbd47c6fe96df060",0).
 die_has_child("7ac1b3a9b107766d4bf29e3865b32fa3","18e6396d7951da7ccbd47c6fe96df060").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7ac1b3a9b107766d4bf29e3865b32fa3","at_quick_exit").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7ac1b3a9b107766d4bf29e3865b32fa3",32).
@@ -7123,6 +7368,7 @@ dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","7ac1b3a9b10
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","8655eb9fb0a377dc95e7fb17bc61fc8d").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","8655eb9fb0a377dc95e7fb17bc61fc8d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a86217569bcd347b40ffa3c0a175719b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","11f79f3584108b9aa480e7008af72d53",0).
 die_has_child("a86217569bcd347b40ffa3c0a175719b","11f79f3584108b9aa480e7008af72d53").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a86217569bcd347b40ffa3c0a175719b","atof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a86217569bcd347b40ffa3c0a175719b",64).
@@ -7136,6 +7382,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","440
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","440bdf836440086234c2381b1d9560e4","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","440bdf836440086234c2381b1d9560e4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ada4b8e7e7732bab12635244ca4e565e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","30e7b4e9ad083a5d42d3fc5dd7c4695d",0).
 die_has_child("ada4b8e7e7732bab12635244ca4e565e","30e7b4e9ad083a5d42d3fc5dd7c4695d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ada4b8e7e7732bab12635244ca4e565e","atoi").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ada4b8e7e7732bab12635244ca4e565e",32).
@@ -7149,6 +7396,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f99
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f99b2c2791a3ce05cad3db4fa4a0a564","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f99b2c2791a3ce05cad3db4fa4a0a564",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b0cf9afc23a6aa1d6617b5e8dbdbae52").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f67819372d949b1a9be7b48f4aaa9138",0).
 die_has_child("b0cf9afc23a6aa1d6617b5e8dbdbae52","f67819372d949b1a9be7b48f4aaa9138").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b0cf9afc23a6aa1d6617b5e8dbdbae52","atol").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b0cf9afc23a6aa1d6617b5e8dbdbae52",64).
@@ -7162,10 +7410,15 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","513
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5138180d397a32296241e1c9ba571405","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5138180d397a32296241e1c9ba571405",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1c2ad0367d3d45e9019156fd259c07f8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5c4f7377ac88599f9bbafcee5af14c0b",0).
 die_has_child("1c2ad0367d3d45e9019156fd259c07f8","5c4f7377ac88599f9bbafcee5af14c0b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2af3d7bd1d18cb04c250a7fef5434f00",1).
 die_has_child("1c2ad0367d3d45e9019156fd259c07f8","2af3d7bd1d18cb04c250a7fef5434f00").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ddc8a9df72f2c9ce9c7da9ebea5d45ac",2).
 die_has_child("1c2ad0367d3d45e9019156fd259c07f8","ddc8a9df72f2c9ce9c7da9ebea5d45ac").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","91a9cc66d5b3635ddc96adc818f7002a",3).
 die_has_child("1c2ad0367d3d45e9019156fd259c07f8","91a9cc66d5b3635ddc96adc818f7002a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2b601c52070200ff23f5478b61216d22",4).
 die_has_child("1c2ad0367d3d45e9019156fd259c07f8","2b601c52070200ff23f5478b61216d22").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1c2ad0367d3d45e9019156fd259c07f8","bsearch").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1c2ad0367d3d45e9019156fd259c07f8",64).
@@ -7190,7 +7443,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","081
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","081a514f8445ca5d3b99529e6a8d1ad7","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","081a514f8445ca5d3b99529e6a8d1ad7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c6c3777072f81368d8ea12dc8a151abf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","da4e75190d34a8e6395c00e788454b6a",0).
 die_has_child("c6c3777072f81368d8ea12dc8a151abf","da4e75190d34a8e6395c00e788454b6a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","52fda323499b3e27158518761017cab8",1).
 die_has_child("c6c3777072f81368d8ea12dc8a151abf","52fda323499b3e27158518761017cab8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c6c3777072f81368d8ea12dc8a151abf","div").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c6c3777072f81368d8ea12dc8a151abf",64).
@@ -7208,6 +7463,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","71f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","71f2c3c038662fbc3af66c8809348e43","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","71f2c3c038662fbc3af66c8809348e43",5).
 dw_tag_function("/code/simple-example/cpp/math-client","caab9f17ce85f9b4fbed70d5f196e097").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1d1e37898c2e0b32f26b755099a83479",0).
 die_has_child("caab9f17ce85f9b4fbed70d5f196e097","1d1e37898c2e0b32f26b755099a83479").
 dw_tag_function_name("/code/simple-example/cpp/math-client","caab9f17ce85f9b4fbed70d5f196e097","getenv").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","caab9f17ce85f9b4fbed70d5f196e097",8).
@@ -7221,7 +7477,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","384
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","384cbab8ede73658685697a3f362e331","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","384cbab8ede73658685697a3f362e331",5).
 dw_tag_function("/code/simple-example/cpp/math-client","27ea987e602650cafd203f9052d086b1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f10cfaa31407b1e78741fffbab557854",0).
 die_has_child("27ea987e602650cafd203f9052d086b1","f10cfaa31407b1e78741fffbab557854").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","252b706ae9d9a505c889b1d847f83db1",1).
 die_has_child("27ea987e602650cafd203f9052d086b1","252b706ae9d9a505c889b1d847f83db1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","27ea987e602650cafd203f9052d086b1","ldiv").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","27ea987e602650cafd203f9052d086b1",128).
@@ -7239,7 +7497,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0b6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0b6599ef51b064bc74770171f2444226","long int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0b6599ef51b064bc74770171f2444226",5).
 dw_tag_function("/code/simple-example/cpp/math-client","167ad8a7da12d418655c8b2e4286f82d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","288c5920c5bea171ca825506f005eb80",0).
 die_has_child("167ad8a7da12d418655c8b2e4286f82d","288c5920c5bea171ca825506f005eb80").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6520639acd79e33c16d5ebcdff47794a",1).
 die_has_child("167ad8a7da12d418655c8b2e4286f82d","6520639acd79e33c16d5ebcdff47794a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","167ad8a7da12d418655c8b2e4286f82d","mblen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","167ad8a7da12d418655c8b2e4286f82d",32).
@@ -7257,8 +7517,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ef6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ef60986bf86cfb7eb14c62b2e3468fa1","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ef60986bf86cfb7eb14c62b2e3468fa1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f1456a491bc33461bcf689b063e32e64").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","50aa8b608bbe9e5322e704c59621e659",0).
 die_has_child("f1456a491bc33461bcf689b063e32e64","50aa8b608bbe9e5322e704c59621e659").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","442808599081fae81e880234a120732b",1).
 die_has_child("f1456a491bc33461bcf689b063e32e64","442808599081fae81e880234a120732b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","361b5f8a889d1a47a0c4c03177a74fc8",2).
 die_has_child("f1456a491bc33461bcf689b063e32e64","361b5f8a889d1a47a0c4c03177a74fc8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f1456a491bc33461bcf689b063e32e64","mbstowcs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f1456a491bc33461bcf689b063e32e64",64).
@@ -7280,8 +7543,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c31
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c31a7182b5d8c166a0b5e8f9865a7cff","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c31a7182b5d8c166a0b5e8f9865a7cff",5).
 dw_tag_function("/code/simple-example/cpp/math-client","df9cc89e1e8addbde294263cb9553186").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0a0f5a9fc6c4a592ccd2de6fcd68304a",0).
 die_has_child("df9cc89e1e8addbde294263cb9553186","0a0f5a9fc6c4a592ccd2de6fcd68304a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bcefb11a81344e4fdd532d4fd6efc43b",1).
 die_has_child("df9cc89e1e8addbde294263cb9553186","bcefb11a81344e4fdd532d4fd6efc43b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ba4db4cc976cc037b8638024cacf2ea5",2).
 die_has_child("df9cc89e1e8addbde294263cb9553186","ba4db4cc976cc037b8638024cacf2ea5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","df9cc89e1e8addbde294263cb9553186","mbtowc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","df9cc89e1e8addbde294263cb9553186",32).
@@ -7303,9 +7569,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","048
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","048f96ca29e248112bc31ded7f663df4","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","048f96ca29e248112bc31ded7f663df4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1259a6bfb08fbb65656239de0e140324").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a8096952ac53ecfdc42fd46426a7de3b",0).
 die_has_child("1259a6bfb08fbb65656239de0e140324","a8096952ac53ecfdc42fd46426a7de3b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8e5389e37bb3f10d47ca8fc37e12fb0d",1).
 die_has_child("1259a6bfb08fbb65656239de0e140324","8e5389e37bb3f10d47ca8fc37e12fb0d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0e677e126567128bc975e04c5107c925",2).
 die_has_child("1259a6bfb08fbb65656239de0e140324","0e677e126567128bc975e04c5107c925").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5201243ba83d21635872388c805c329b",3).
 die_has_child("1259a6bfb08fbb65656239de0e140324","5201243ba83d21635872388c805c329b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1259a6bfb08fbb65656239de0e140324","qsort").
 dw_tag_function_line("/code/simple-example/cpp/math-client","1259a6bfb08fbb65656239de0e140324",830).
@@ -7328,6 +7598,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f07
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f0731d1359f5d9f503189c29196e3eae","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f0731d1359f5d9f503189c29196e3eae",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1168deaec7cc046dc2315a6abf3f83ce").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a1dbe3c5feb3ac5b1be39613a376ff1f",0).
 die_has_child("1168deaec7cc046dc2315a6abf3f83ce","a1dbe3c5feb3ac5b1be39613a376ff1f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1168deaec7cc046dc2315a6abf3f83ce","quick_exit").
 dw_tag_function_line("/code/simple-example/cpp/math-client","1168deaec7cc046dc2315a6abf3f83ce",623).
@@ -7347,6 +7618,7 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","44033e48af3a1f82b
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","44033e48af3a1f82b4b53cfca83816bd",13).
 dw_tag_function_external("/code/simple-example/cpp/math-client","44033e48af3a1f82b4b53cfca83816bd","rand").
 dw_tag_function("/code/simple-example/cpp/math-client","62181151dac00f216b05be6259d349aa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f7c6aed27b77ff33fd3bef13112b1c63",0).
 die_has_child("62181151dac00f216b05be6259d349aa","f7c6aed27b77ff33fd3bef13112b1c63").
 dw_tag_function_name("/code/simple-example/cpp/math-client","62181151dac00f216b05be6259d349aa","srand").
 dw_tag_function_line("/code/simple-example/cpp/math-client","62181151dac00f216b05be6259d349aa",455).
@@ -7358,7 +7630,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7da
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7daaa0dd9d1389fae5b3c58a73a6562e","unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7daaa0dd9d1389fae5b3c58a73a6562e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ca3a08d1996dee97820fb140e774e446").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","17e6011d4bd1f6fee146ae7f3fd73f02",0).
 die_has_child("ca3a08d1996dee97820fb140e774e446","17e6011d4bd1f6fee146ae7f3fd73f02").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d77e7bf5b9d8d46f086499a93c2d31e3",1).
 die_has_child("ca3a08d1996dee97820fb140e774e446","d77e7bf5b9d8d46f086499a93c2d31e3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ca3a08d1996dee97820fb140e774e446","strtod").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ca3a08d1996dee97820fb140e774e446",64).
@@ -7381,8 +7655,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","0e7e58bd0b
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","0e7e58bd0bfaf305a66275a86d63892c",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","0e7e58bd0bfaf305a66275a86d63892c",6).
 dw_tag_function("/code/simple-example/cpp/math-client","1955516cf2049723cbde81f117ca9b13").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","db45330b9bd7818834f65f72f47e53d5",0).
 die_has_child("1955516cf2049723cbde81f117ca9b13","db45330b9bd7818834f65f72f47e53d5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c480f2accf77be305882a48bd5d9c604",1).
 die_has_child("1955516cf2049723cbde81f117ca9b13","c480f2accf77be305882a48bd5d9c604").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","338ed97f4514f088f4682f963d85cc3a",2).
 die_has_child("1955516cf2049723cbde81f117ca9b13","338ed97f4514f088f4682f963d85cc3a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1955516cf2049723cbde81f117ca9b13","strtol").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1955516cf2049723cbde81f117ca9b13",64).
@@ -7404,8 +7681,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bb4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bb4104af7634a903f02ea1b9eabb89b1","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bb4104af7634a903f02ea1b9eabb89b1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","841622dbd3f8aaf58849c6f9869c4d27").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fd8d0cc5f99f3fe87cef2f81e4b6f7ff",0).
 die_has_child("841622dbd3f8aaf58849c6f9869c4d27","fd8d0cc5f99f3fe87cef2f81e4b6f7ff").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e494b8ba43aeddc57a3205d3e347e3bb",1).
 die_has_child("841622dbd3f8aaf58849c6f9869c4d27","e494b8ba43aeddc57a3205d3e347e3bb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e475e7e2a35e9d27916584d4a6c0f597",2).
 die_has_child("841622dbd3f8aaf58849c6f9869c4d27","e475e7e2a35e9d27916584d4a6c0f597").
 dw_tag_function_name("/code/simple-example/cpp/math-client","841622dbd3f8aaf58849c6f9869c4d27","strtoul").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","841622dbd3f8aaf58849c6f9869c4d27",64).
@@ -7427,6 +7707,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bf5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bf5c0b517e560272a09c2166eadc7a35","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bf5c0b517e560272a09c2166eadc7a35",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e54e6b5459507deba06c075d77bf3905").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5a77bc1850635afeb3174b98ce6f9427",0).
 die_has_child("e54e6b5459507deba06c075d77bf3905","5a77bc1850635afeb3174b98ce6f9427").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e54e6b5459507deba06c075d77bf3905","system").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e54e6b5459507deba06c075d77bf3905",32).
@@ -7440,8 +7721,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","34b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","34bb407aa748cff9e46bc0c591252175","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","34bb407aa748cff9e46bc0c591252175",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c7219f249a269f7920859f18dd9bd3d0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d608bda4374b68cacc4654c50cb031b7",0).
 die_has_child("c7219f249a269f7920859f18dd9bd3d0","d608bda4374b68cacc4654c50cb031b7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5a79adef4cc8e80075e553787292b95f",1).
 die_has_child("c7219f249a269f7920859f18dd9bd3d0","5a79adef4cc8e80075e553787292b95f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","81a47d5614ba2d835bfc206bdc44dade",2).
 die_has_child("c7219f249a269f7920859f18dd9bd3d0","81a47d5614ba2d835bfc206bdc44dade").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c7219f249a269f7920859f18dd9bd3d0","wcstombs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c7219f249a269f7920859f18dd9bd3d0",64).
@@ -7463,7 +7747,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3ce
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3ce3c50997e2216dab6addc0cb3e48d5","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3ce3c50997e2216dab6addc0cb3e48d5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b6454b2026e0485f81fe29b5e97cf4d6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","997921ef37de483bac7173b3e2da8302",0).
 die_has_child("b6454b2026e0485f81fe29b5e97cf4d6","997921ef37de483bac7173b3e2da8302").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fbb5e311569a005d2da5a3beeaef6297",1).
 die_has_child("b6454b2026e0485f81fe29b5e97cf4d6","fbb5e311569a005d2da5a3beeaef6297").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b6454b2026e0485f81fe29b5e97cf4d6","wctomb").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b6454b2026e0485f81fe29b5e97cf4d6",32).
@@ -7481,7 +7767,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f2d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f2dab15dbd910be13c4e33b273a56213","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f2dab15dbd910be13c4e33b273a56213",5).
 dw_tag_function("/code/simple-example/cpp/math-client","89b0ee0468c005b8f9b3a65e11175c13").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","78701b19ccee3d4f3e872156fb29ee69",0).
 die_has_child("89b0ee0468c005b8f9b3a65e11175c13","78701b19ccee3d4f3e872156fb29ee69").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a5d8663955df2c6c56be8410a8eea992",1).
 die_has_child("89b0ee0468c005b8f9b3a65e11175c13","a5d8663955df2c6c56be8410a8eea992").
 dw_tag_function_name("/code/simple-example/cpp/math-client","89b0ee0468c005b8f9b3a65e11175c13","lldiv").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","89b0ee0468c005b8f9b3a65e11175c13",128).
@@ -7499,6 +7787,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","aea
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","aea41d96bb73747f28ab008e1cd965cb","long long int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","aea41d96bb73747f28ab008e1cd965cb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","4049dd814b283e6eb9688141f4216de7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2fd194aef90f7e2d493eb2b2cffa4a3f",0).
 die_has_child("4049dd814b283e6eb9688141f4216de7","2fd194aef90f7e2d493eb2b2cffa4a3f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4049dd814b283e6eb9688141f4216de7","atoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4049dd814b283e6eb9688141f4216de7",64).
@@ -7512,8 +7801,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a65
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a659903a6a7a09305839529b09e2c795","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a659903a6a7a09305839529b09e2c795",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e507a4cb771ae0ab4bcbef49a74c88e5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7dbe42ce16d3366fdf74323d564f747e",0).
 die_has_child("e507a4cb771ae0ab4bcbef49a74c88e5","7dbe42ce16d3366fdf74323d564f747e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","41cdcca24e4d9d836ddfad2e1dc64887",1).
 die_has_child("e507a4cb771ae0ab4bcbef49a74c88e5","41cdcca24e4d9d836ddfad2e1dc64887").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2acf7d4d65896b1efa78e300a802af7c",2).
 die_has_child("e507a4cb771ae0ab4bcbef49a74c88e5","2acf7d4d65896b1efa78e300a802af7c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e507a4cb771ae0ab4bcbef49a74c88e5","strtoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e507a4cb771ae0ab4bcbef49a74c88e5",64).
@@ -7535,8 +7827,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","92e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","92e8b7ab0b4ae2d882d7e8e3083d6d72","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","92e8b7ab0b4ae2d882d7e8e3083d6d72",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9e656580cab6c43ddadcb72e4420de3f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d2ccee0b0c0a2b007c7f9620a1f43842",0).
 die_has_child("9e656580cab6c43ddadcb72e4420de3f","d2ccee0b0c0a2b007c7f9620a1f43842").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","194324895715fc67db569d16bbf2c48b",1).
 die_has_child("9e656580cab6c43ddadcb72e4420de3f","194324895715fc67db569d16bbf2c48b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","157bff597aed51d1074588704eae3b18",2).
 die_has_child("9e656580cab6c43ddadcb72e4420de3f","157bff597aed51d1074588704eae3b18").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9e656580cab6c43ddadcb72e4420de3f","strtoull").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9e656580cab6c43ddadcb72e4420de3f",64).
@@ -7558,7 +7853,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","28d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","28df9557fc96f5ef06dbee9d52d2e0e9","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","28df9557fc96f5ef06dbee9d52d2e0e9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3528c5019298b430ddedf8dffb802ee9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6f552ba39dbaa5ec462ba84fc4349283",0).
 die_has_child("3528c5019298b430ddedf8dffb802ee9","6f552ba39dbaa5ec462ba84fc4349283").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","144187e3b9522ee78e1a9c5a00723a48",1).
 die_has_child("3528c5019298b430ddedf8dffb802ee9","144187e3b9522ee78e1a9c5a00723a48").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3528c5019298b430ddedf8dffb802ee9","strtof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3528c5019298b430ddedf8dffb802ee9",32).
@@ -7576,7 +7873,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","35c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","35c5e92273fe4e78953137f6d0a3c3ab","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","35c5e92273fe4e78953137f6d0a3c3ab",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e54b685d2f5db59476a7b86aa7422c15").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b86cbb10eb356ddf8cd40438a203c2ee",0).
 die_has_child("e54b685d2f5db59476a7b86aa7422c15","b86cbb10eb356ddf8cd40438a203c2ee").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ff6f43eec9037edb2b5e2660b701fa41",1).
 die_has_child("e54b685d2f5db59476a7b86aa7422c15","ff6f43eec9037edb2b5e2660b701fa41").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e54b685d2f5db59476a7b86aa7422c15","strtold").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e54b685d2f5db59476a7b86aa7422c15",128).
@@ -7761,6 +8060,7 @@ dw_tag_variable_column("/code/simple-example/cpp/math-client","716a0476e0a4dfdd3
 dw_tag_variable_die_size("/code/simple-example/cpp/math-client","716a0476e0a4dfdd3f015313dda97a6e",12).
 dw_tag_variable_external("/code/simple-example/cpp/math-client","716a0476e0a4dfdd3f015313dda97a6e","_sys_errlist").
 dw_tag_function("/code/simple-example/cpp/math-client","30b01d70223fbe629287d2573b747973").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4bc081bd1d3cab3d03f25c6fe88b7c43",0).
 die_has_child("30b01d70223fbe629287d2573b747973","4bc081bd1d3cab3d03f25c6fe88b7c43").
 dw_tag_function_name("/code/simple-example/cpp/math-client","30b01d70223fbe629287d2573b747973","clearerr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","30b01d70223fbe629287d2573b747973",757).
@@ -7772,6 +8072,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","323
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","32324ad2f1fb5a9340a4b925af6ed755","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","32324ad2f1fb5a9340a4b925af6ed755",5).
 dw_tag_function("/code/simple-example/cpp/math-client","98ff3b478a3e8e1f58ddedf060e72387").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a8ca641a60c0aa9a1dcf8848e388445c",0).
 die_has_child("98ff3b478a3e8e1f58ddedf060e72387","a8ca641a60c0aa9a1dcf8848e388445c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","98ff3b478a3e8e1f58ddedf060e72387","fclose").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","98ff3b478a3e8e1f58ddedf060e72387",32).
@@ -7785,6 +8086,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","112
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","11266d893802f239311965f346060945","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","11266d893802f239311965f346060945",5).
 dw_tag_function("/code/simple-example/cpp/math-client","29f644c9253719a8b495c8b52c08adc4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4b61532d254fe2f01d7289c26f6deb7a",0).
 die_has_child("29f644c9253719a8b495c8b52c08adc4","4b61532d254fe2f01d7289c26f6deb7a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","29f644c9253719a8b495c8b52c08adc4","feof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","29f644c9253719a8b495c8b52c08adc4",32).
@@ -7798,6 +8100,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4e8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4e864ea736b42b62970f37fde0d348ae","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4e864ea736b42b62970f37fde0d348ae",5).
 dw_tag_function("/code/simple-example/cpp/math-client","52726552ab6568ca36e3dbf4ecaa39a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2b185427047300661a4899b694c07549",0).
 die_has_child("52726552ab6568ca36e3dbf4ecaa39a3","2b185427047300661a4899b694c07549").
 dw_tag_function_name("/code/simple-example/cpp/math-client","52726552ab6568ca36e3dbf4ecaa39a3","ferror").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","52726552ab6568ca36e3dbf4ecaa39a3",32).
@@ -7811,6 +8114,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","161
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","161e708b2f871bdda7cc5cb9996eb6b6","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","161e708b2f871bdda7cc5cb9996eb6b6",5).
 dw_tag_function("/code/simple-example/cpp/math-client","36204347701a1625bad310abdef9565f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f8773fca3345dea8276db34da8d2bea4",0).
 die_has_child("36204347701a1625bad310abdef9565f","f8773fca3345dea8276db34da8d2bea4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","36204347701a1625bad310abdef9565f","fflush").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","36204347701a1625bad310abdef9565f",32).
@@ -7824,6 +8128,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2a9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2a9832cfd07b4f3e344a9d65fe3b463b","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2a9832cfd07b4f3e344a9d65fe3b463b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","68df6a68a8cbfc0bd1b3474799fba50f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a678cd2ac050328dc10f9ca52c0f9c00",0).
 die_has_child("68df6a68a8cbfc0bd1b3474799fba50f","a678cd2ac050328dc10f9ca52c0f9c00").
 dw_tag_function_name("/code/simple-example/cpp/math-client","68df6a68a8cbfc0bd1b3474799fba50f","fgetc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","68df6a68a8cbfc0bd1b3474799fba50f",32).
@@ -7837,7 +8142,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","305
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","305ca6261da245b54dc9d1dce19361f2","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","305ca6261da245b54dc9d1dce19361f2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ae3389293df58c45402103d4211556cb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ffffe4966dcca4c11b735cf46fe30094",0).
 die_has_child("ae3389293df58c45402103d4211556cb","ffffe4966dcca4c11b735cf46fe30094").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a0bb92bdf30b78edc03c66dcb8e0b1c4",1).
 die_has_child("ae3389293df58c45402103d4211556cb","a0bb92bdf30b78edc03c66dcb8e0b1c4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ae3389293df58c45402103d4211556cb","fgetpos").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ae3389293df58c45402103d4211556cb",32).
@@ -7860,8 +8167,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","30140aefbd
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","30140aefbde710296fa7ba03b181d1bc",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","30140aefbde710296fa7ba03b181d1bc",6).
 dw_tag_function("/code/simple-example/cpp/math-client","fdc45ecbb664a9ebc2aefbaf11b8c95a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0385f8d1ebb1f1f77638329c46aed29d",0).
 die_has_child("fdc45ecbb664a9ebc2aefbaf11b8c95a","0385f8d1ebb1f1f77638329c46aed29d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7e0333947d7241436442be9a3b18b889",1).
 die_has_child("fdc45ecbb664a9ebc2aefbaf11b8c95a","7e0333947d7241436442be9a3b18b889").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a5bc2826157de685a9f5d70a042d6763",2).
 die_has_child("fdc45ecbb664a9ebc2aefbaf11b8c95a","a5bc2826157de685a9f5d70a042d6763").
 dw_tag_function_name("/code/simple-example/cpp/math-client","fdc45ecbb664a9ebc2aefbaf11b8c95a","fgets").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","fdc45ecbb664a9ebc2aefbaf11b8c95a",8).
@@ -7883,7 +8193,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2a0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2a0f9e7205ab2d181cebd1e571f9c613","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2a0f9e7205ab2d181cebd1e571f9c613",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7b3841c734f61a3897589476d1a9b93b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0a98b17d3204ef8add6502cd334838ff",0).
 die_has_child("7b3841c734f61a3897589476d1a9b93b","0a98b17d3204ef8add6502cd334838ff").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","125dde1bd250f3f1d743fa1248c46e2b",1).
 die_has_child("7b3841c734f61a3897589476d1a9b93b","125dde1bd250f3f1d743fa1248c46e2b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7b3841c734f61a3897589476d1a9b93b","fopen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7b3841c734f61a3897589476d1a9b93b",1728).
@@ -7901,9 +8213,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","feb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","feb92566cc2a181b37bca590ac7d6709","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","feb92566cc2a181b37bca590ac7d6709",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c6abd5642dd9905e24b5e5086cdb0bcf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c56429d09768cf391d2129a5de01134c",0).
 die_has_child("c6abd5642dd9905e24b5e5086cdb0bcf","c56429d09768cf391d2129a5de01134c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3886ba75fb8e9c8a1f05d668e075fc45",1).
 die_has_child("c6abd5642dd9905e24b5e5086cdb0bcf","3886ba75fb8e9c8a1f05d668e075fc45").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a6f52e2d5d50d7ad9f1e2e80c11cc796",2).
 die_has_child("c6abd5642dd9905e24b5e5086cdb0bcf","a6f52e2d5d50d7ad9f1e2e80c11cc796").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e5823bfab5b814d6d88af5ca99bbbd46",3).
 die_has_child("c6abd5642dd9905e24b5e5086cdb0bcf","e5823bfab5b814d6d88af5ca99bbbd46").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c6abd5642dd9905e24b5e5086cdb0bcf","fread").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c6abd5642dd9905e24b5e5086cdb0bcf",64).
@@ -7928,8 +8244,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e50
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e50dc301445ac1c791cb0248d0a2067c","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e50dc301445ac1c791cb0248d0a2067c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","471b93ab0bcb90959dde117d7030a1ec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dce3248d7d407ebb89775846d97fba18",0).
 die_has_child("471b93ab0bcb90959dde117d7030a1ec","dce3248d7d407ebb89775846d97fba18").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","63f5207691764db9ba440e58676eb37d",1).
 die_has_child("471b93ab0bcb90959dde117d7030a1ec","63f5207691764db9ba440e58676eb37d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8c6a287920795ae92457719dfe5923ef",2).
 die_has_child("471b93ab0bcb90959dde117d7030a1ec","8c6a287920795ae92457719dfe5923ef").
 dw_tag_function_name("/code/simple-example/cpp/math-client","471b93ab0bcb90959dde117d7030a1ec","freopen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","471b93ab0bcb90959dde117d7030a1ec",1728).
@@ -7951,8 +8270,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","789
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7895e98fb3648cba0dc80b07e0df36c3","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7895e98fb3648cba0dc80b07e0df36c3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","236238dab84bebe7460492d4e6dbc9be").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3aa209528c9bb0403ebaab70d4857a67",0).
 die_has_child("236238dab84bebe7460492d4e6dbc9be","3aa209528c9bb0403ebaab70d4857a67").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1fbdaa09d1e89bf22c5765f5f146822f",1).
 die_has_child("236238dab84bebe7460492d4e6dbc9be","1fbdaa09d1e89bf22c5765f5f146822f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","88d02f89589c14b364c9eb03a1672755",2).
 die_has_child("236238dab84bebe7460492d4e6dbc9be","88d02f89589c14b364c9eb03a1672755").
 dw_tag_function_name("/code/simple-example/cpp/math-client","236238dab84bebe7460492d4e6dbc9be","fseek").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","236238dab84bebe7460492d4e6dbc9be",32).
@@ -7974,7 +8296,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","807
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","807acc0ad45527553c14f40473994f61","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","807acc0ad45527553c14f40473994f61",5).
 dw_tag_function("/code/simple-example/cpp/math-client","fe9b0906a24d7c34fcb63d735b431e0e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","723f4427a5bc8074df597e0bc41a952e",0).
 die_has_child("fe9b0906a24d7c34fcb63d735b431e0e","723f4427a5bc8074df597e0bc41a952e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2ee557a5cb70a17d05d731d93696e003",1).
 die_has_child("fe9b0906a24d7c34fcb63d735b431e0e","2ee557a5cb70a17d05d731d93696e003").
 dw_tag_function_name("/code/simple-example/cpp/math-client","fe9b0906a24d7c34fcb63d735b431e0e","fsetpos").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","fe9b0906a24d7c34fcb63d735b431e0e",32).
@@ -7997,6 +8321,7 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","51462b6472
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","51462b6472ca2f41aa841d7af9adc12f",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","51462b6472ca2f41aa841d7af9adc12f",6).
 dw_tag_function("/code/simple-example/cpp/math-client","dcd7c018ecce9c1e833d147ab5371d0c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","64707106acb947165cd57211f1f47634",0).
 die_has_child("dcd7c018ecce9c1e833d147ab5371d0c","64707106acb947165cd57211f1f47634").
 dw_tag_function_name("/code/simple-example/cpp/math-client","dcd7c018ecce9c1e833d147ab5371d0c","ftell").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","dcd7c018ecce9c1e833d147ab5371d0c",64).
@@ -8010,6 +8335,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","73d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","73d8fad020f54812f3983876e82867d9","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","73d8fad020f54812f3983876e82867d9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","847d619441dc6213d4eeeae5b8ed2257").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","068116c838e0bf8b35160e1bee107c8a",0).
 die_has_child("847d619441dc6213d4eeeae5b8ed2257","068116c838e0bf8b35160e1bee107c8a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","847d619441dc6213d4eeeae5b8ed2257","getc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","847d619441dc6213d4eeeae5b8ed2257",32).
@@ -8031,6 +8357,7 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","2fe326ec02507c0bd
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","2fe326ec02507c0bd64ea9a07df0e669",13).
 dw_tag_function_external("/code/simple-example/cpp/math-client","2fe326ec02507c0bd64ea9a07df0e669","getchar").
 dw_tag_function("/code/simple-example/cpp/math-client","361981e67cdc43314e836e57201344c6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b50c7292356b6987099c132baad4e778",0).
 die_has_child("361981e67cdc43314e836e57201344c6","b50c7292356b6987099c132baad4e778").
 dw_tag_function_name("/code/simple-example/cpp/math-client","361981e67cdc43314e836e57201344c6","perror").
 dw_tag_function_line("/code/simple-example/cpp/math-client","361981e67cdc43314e836e57201344c6",775).
@@ -8042,6 +8369,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","813
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","8136629cd94a1de57aaa33f6597db75b","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","8136629cd94a1de57aaa33f6597db75b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0d1461ea60845104fb6e63d6118d23c2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7c5c5f864b615f5b0fac8d6175c59c96",0).
 die_has_child("0d1461ea60845104fb6e63d6118d23c2","7c5c5f864b615f5b0fac8d6175c59c96").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0d1461ea60845104fb6e63d6118d23c2","remove").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0d1461ea60845104fb6e63d6118d23c2",32).
@@ -8055,7 +8383,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4f8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4f85de00fea541a58007433ed940c8ad","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4f85de00fea541a58007433ed940c8ad",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3bfc97e6d5c220e2df71ef26c6798fb0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","84593168d1a1ad8852067a957fda632e",0).
 die_has_child("3bfc97e6d5c220e2df71ef26c6798fb0","84593168d1a1ad8852067a957fda632e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c2733b7e7587814234f370703e7e071a",1).
 die_has_child("3bfc97e6d5c220e2df71ef26c6798fb0","c2733b7e7587814234f370703e7e071a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3bfc97e6d5c220e2df71ef26c6798fb0","rename").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3bfc97e6d5c220e2df71ef26c6798fb0",32).
@@ -8073,6 +8403,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6f4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6f4fe42f369e10687b123cba753e2d12","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6f4fe42f369e10687b123cba753e2d12",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ff9f6987b7a322c2e04ce543fe8bae69").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0fd7856bb747cd767015f0f27a1a01ee",0).
 die_has_child("ff9f6987b7a322c2e04ce543fe8bae69","0fd7856bb747cd767015f0f27a1a01ee").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ff9f6987b7a322c2e04ce543fe8bae69","rewind").
 dw_tag_function_line("/code/simple-example/cpp/math-client","ff9f6987b7a322c2e04ce543fe8bae69",694).
@@ -8084,7 +8415,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","26f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","26fd4ee6d3637920f98ddb7a708407fc","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","26fd4ee6d3637920f98ddb7a708407fc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","70361aff0280dbf2f08af720124581d8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c6352228834e4e0330d58fe5ca221ee4",0).
 die_has_child("70361aff0280dbf2f08af720124581d8","c6352228834e4e0330d58fe5ca221ee4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2a48ed98b791948c78960ab66568e433",1).
 die_has_child("70361aff0280dbf2f08af720124581d8","2a48ed98b791948c78960ab66568e433").
 dw_tag_function_name("/code/simple-example/cpp/math-client","70361aff0280dbf2f08af720124581d8","setbuf").
 dw_tag_function_line("/code/simple-example/cpp/math-client","70361aff0280dbf2f08af720124581d8",304).
@@ -8100,9 +8433,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1f7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1f75b79eb109a0fb114160a3cada1fa1","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1f75b79eb109a0fb114160a3cada1fa1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","09fd9fa6a931e1e14a0dee566b74007a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","13a96673bf9c9bd4a1f8b7b4e288b1b6",0).
 die_has_child("09fd9fa6a931e1e14a0dee566b74007a","13a96673bf9c9bd4a1f8b7b4e288b1b6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cd7b7cdb3e81875ec76e59f6b1212521",1).
 die_has_child("09fd9fa6a931e1e14a0dee566b74007a","cd7b7cdb3e81875ec76e59f6b1212521").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c9f71d1ef7bebacb352450abb8ea5606",2).
 die_has_child("09fd9fa6a931e1e14a0dee566b74007a","c9f71d1ef7bebacb352450abb8ea5606").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b3c855e84ee5da4d31a863977b978db6",3).
 die_has_child("09fd9fa6a931e1e14a0dee566b74007a","b3c855e84ee5da4d31a863977b978db6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","09fd9fa6a931e1e14a0dee566b74007a","setvbuf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","09fd9fa6a931e1e14a0dee566b74007a",32).
@@ -8136,6 +8473,7 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","09e5702ce81b44080
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","09e5702ce81b44080d017da1e04e8903",12).
 dw_tag_function_external("/code/simple-example/cpp/math-client","09e5702ce81b44080d017da1e04e8903","tmpfile").
 dw_tag_function("/code/simple-example/cpp/math-client","a3081a4815185ecea07633a1bae08db5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f59e7f4da666005ea6c5ebace6b49c39",0).
 die_has_child("a3081a4815185ecea07633a1bae08db5","f59e7f4da666005ea6c5ebace6b49c39").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a3081a4815185ecea07633a1bae08db5","tmpnam").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a3081a4815185ecea07633a1bae08db5",8).
@@ -8149,7 +8487,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","731
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7316fe55b8e481612ced68c4f9f02488","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7316fe55b8e481612ced68c4f9f02488",5).
 dw_tag_function("/code/simple-example/cpp/math-client","05ad67761a89f1cf4c32cc9f18c5183e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d17af01e76e90614527668fba39345b6",0).
 die_has_child("05ad67761a89f1cf4c32cc9f18c5183e","d17af01e76e90614527668fba39345b6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","985a310df5b317cfde8c5b25f573dfb0",1).
 die_has_child("05ad67761a89f1cf4c32cc9f18c5183e","985a310df5b317cfde8c5b25f573dfb0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","05ad67761a89f1cf4c32cc9f18c5183e","ungetc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","05ad67761a89f1cf4c32cc9f18c5183e",32).
@@ -8219,7 +8559,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","800b7c47dd
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","800b7c47dd65a09fc66535491bd907e7",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","800b7c47dd65a09fc66535491bd907e7",6).
 dw_tag_function("/code/simple-example/cpp/math-client","d217c77d928e597064b6f045a038dc18").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","315fb3e792f21d6a7a43614c35db9be7",0).
 die_has_child("d217c77d928e597064b6f045a038dc18","315fb3e792f21d6a7a43614c35db9be7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ebb1d18b1b23088997d82a6ad463cb7c",1).
 die_has_child("d217c77d928e597064b6f045a038dc18","ebb1d18b1b23088997d82a6ad463cb7c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d217c77d928e597064b6f045a038dc18","iswctype").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d217c77d928e597064b6f045a038dc18",32).
@@ -8237,7 +8579,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","455
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","455f9766362d28982c3aabfabfeb1a8a","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","455f9766362d28982c3aabfabfeb1a8a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2452c49754ca67039300c6628a39b9a1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d21dd0d019b67a8205da10e7030b1523",0).
 die_has_child("2452c49754ca67039300c6628a39b9a1","d21dd0d019b67a8205da10e7030b1523").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cada94bffd24181587d7a73d9d58e2ee",1).
 die_has_child("2452c49754ca67039300c6628a39b9a1","cada94bffd24181587d7a73d9d58e2ee").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2452c49754ca67039300c6628a39b9a1","towctrans").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2452c49754ca67039300c6628a39b9a1",32).
@@ -8255,6 +8599,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b66
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b661ce49f9da8eb23396e624b0f0688f","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b661ce49f9da8eb23396e624b0f0688f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","269d709b403d3045a4a7f88e61cfa4e9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","31796595cc29c67e68616ca2d073ede3",0).
 die_has_child("269d709b403d3045a4a7f88e61cfa4e9","31796595cc29c67e68616ca2d073ede3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","269d709b403d3045a4a7f88e61cfa4e9","wctrans").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","269d709b403d3045a4a7f88e61cfa4e9",32).
@@ -8268,6 +8613,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","490
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4908079712e2eb8349debe8d12ef6e86","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4908079712e2eb8349debe8d12ef6e86",5).
 dw_tag_function("/code/simple-example/cpp/math-client","54e40edc8080450c6b74bd102b4eab96").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","40791230f9888f72a59720d58bf86a45",0).
 die_has_child("54e40edc8080450c6b74bd102b4eab96","40791230f9888f72a59720d58bf86a45").
 dw_tag_function_name("/code/simple-example/cpp/math-client","54e40edc8080450c6b74bd102b4eab96","wctype").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","54e40edc8080450c6b74bd102b4eab96",64).
@@ -8300,7 +8646,9 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","5d1c2c653cf3c0b
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","5d1c2c653cf3c0b9a2e5372fd6a46ea1",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","5d1c2c653cf3c0b9a2e5372fd6a46ea1","no").
 dw_tag_function("/code/simple-example/cpp/math-client","c237458cbf13e83a8ecc3daa9b13704b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fde3f9b78e54b84f9b9fe0c06fe6b9c2",0).
 die_has_child("c237458cbf13e83a8ecc3daa9b13704b","fde3f9b78e54b84f9b9fe0c06fe6b9c2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e0359ad4016c4c666b19e35e7dc04b69",1).
 die_has_child("c237458cbf13e83a8ecc3daa9b13704b","e0359ad4016c4c666b19e35e7dc04b69").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c237458cbf13e83a8ecc3daa9b13704b","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c237458cbf13e83a8ecc3daa9b13704b",64).
@@ -8319,7 +8667,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6f1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6f13fbfa99e99d3904b8346fa88aae63","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6f13fbfa99e99d3904b8346fa88aae63",5).
 dw_tag_function("/code/simple-example/cpp/math-client","35eba187cc2ceb73f82c2fa1ab676b13").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5fe3b6a10f02621083529f4abf4f662f",0).
 die_has_child("35eba187cc2ceb73f82c2fa1ab676b13","5fe3b6a10f02621083529f4abf4f662f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cdddb6cea4701497bae70d9fd318cce1",1).
 die_has_child("35eba187cc2ceb73f82c2fa1ab676b13","cdddb6cea4701497bae70d9fd318cce1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","35eba187cc2ceb73f82c2fa1ab676b13","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","35eba187cc2ceb73f82c2fa1ab676b13",64).
@@ -8338,7 +8688,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","664
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","664e1418e1abea6a1c00d7f07cb2fff8","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","664e1418e1abea6a1c00d7f07cb2fff8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","4ab8094d275ef599c94b2054a0d063d8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","19cdb1417ae9488d077fc6d5af715d61",0).
 die_has_child("4ab8094d275ef599c94b2054a0d063d8","19cdb1417ae9488d077fc6d5af715d61").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c425cdb25b5ee30c55da073e3e7e603d",1).
 die_has_child("4ab8094d275ef599c94b2054a0d063d8","c425cdb25b5ee30c55da073e3e7e603d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4ab8094d275ef599c94b2054a0d063d8","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4ab8094d275ef599c94b2054a0d063d8",64).
@@ -8357,7 +8709,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","489
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","489c28ba939f10a6031de81972fbd323","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","489c28ba939f10a6031de81972fbd323",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e80c49d860156d86dd53070f5e048bef").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","060fd88d39c44a90aa3e84453d44c120",0).
 die_has_child("e80c49d860156d86dd53070f5e048bef","060fd88d39c44a90aa3e84453d44c120").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a5ff777272ad6ffe0ca97b278307b75f",1).
 die_has_child("e80c49d860156d86dd53070f5e048bef","a5ff777272ad6ffe0ca97b278307b75f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e80c49d860156d86dd53070f5e048bef","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e80c49d860156d86dd53070f5e048bef",64).
@@ -8436,7 +8790,9 @@ dw_tag_function("/code/simple-example/cpp/math-client","9006552b39189faa325f9d3b
 dw_tag_function_name("/code/simple-example/cpp/math-client","9006552b39189faa325f9d3b63d636ad","_GLOBAL__sub_I_main").
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","9006552b39189faa325f9d3b63d636ad",23).
 dw_tag_function("/code/simple-example/cpp/math-client","376d59ad6a7fdb322107c15a062cd25c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4e6c9e116eb3bee6b31f4af10293e1c1",0).
 die_has_child("376d59ad6a7fdb322107c15a062cd25c","4e6c9e116eb3bee6b31f4af10293e1c1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5eb5e302796363b8f91daf99b5e36631",1).
 die_has_child("376d59ad6a7fdb322107c15a062cd25c","5eb5e302796363b8f91daf99b5e36631").
 dw_tag_function_name("/code/simple-example/cpp/math-client","376d59ad6a7fdb322107c15a062cd25c","__static_initialization_and_destruction_0").
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","376d59ad6a7fdb322107c15a062cd25c",27).
@@ -9012,6 +9368,7 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","f6120f3968d
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","f6120f3968deaba91eda7ad5e7a483fa",13).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","f6120f3968deaba91eda7ad5e7a483fa","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","963095a7f718e2e208de730c5a86e5ff").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","03dfe9cc725ef29e553a65c0f804c98f",0).
 die_has_child("963095a7f718e2e208de730c5a86e5ff","03dfe9cc725ef29e553a65c0f804c98f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","963095a7f718e2e208de730c5a86e5ff","nothrow_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","963095a7f718e2e208de730c5a86e5ff",94).
@@ -9076,7 +9433,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","7808a0732c568b7c71012
 dw_tag_member_column("/code/simple-example/cpp/math-client","7808a0732c568b7c7101260c8b5438d8",13).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","7808a0732c568b7c7101260c8b5438d8",13).
 dw_tag_function("/code/simple-example/cpp/math-client","c40ab3bc89f85f3ba77c6ccdc38da4f6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f5551b4f21ac29ed62a68715bef86f51",0).
 die_has_child("c40ab3bc89f85f3ba77c6ccdc38da4f6","f5551b4f21ac29ed62a68715bef86f51").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","08517038b7e9c6a16a090b0d137f5227",1).
 die_has_child("c40ab3bc89f85f3ba77c6ccdc38da4f6","08517038b7e9c6a16a090b0d137f5227").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c40ab3bc89f85f3ba77c6ccdc38da4f6","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","c40ab3bc89f85f3ba77c6ccdc38da4f6",83).
@@ -9093,6 +9452,7 @@ dw_tag_formal_parameter("/code/simple-example/cpp/math-client","0e48bea1a9536fe5
 dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0e48bea1a9536fe55df90ae10bf890df",64).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0e48bea1a9536fe55df90ae10bf890df",5).
 dw_tag_function("/code/simple-example/cpp/math-client","dad534b22c231e3565f273f30849fdfd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0211bd5c8e631feca656ac3f20995cdc",0).
 die_has_child("dad534b22c231e3565f273f30849fdfd","0211bd5c8e631feca656ac3f20995cdc").
 dw_tag_function_name("/code/simple-example/cpp/math-client","dad534b22c231e3565f273f30849fdfd","_M_addref").
 dw_tag_function_line("/code/simple-example/cpp/math-client","dad534b22c231e3565f273f30849fdfd",85).
@@ -9105,6 +9465,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","eb1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","eb1f75038dfaf1f445cba43e51803592","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","eb1f75038dfaf1f445cba43e51803592",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a6891675ee06fc4a865a3a7f28649abc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dd06b981f33ec96044ee2390d96876da",0).
 die_has_child("a6891675ee06fc4a865a3a7f28649abc","dd06b981f33ec96044ee2390d96876da").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a6891675ee06fc4a865a3a7f28649abc","_M_release").
 dw_tag_function_line("/code/simple-example/cpp/math-client","a6891675ee06fc4a865a3a7f28649abc",86).
@@ -9117,6 +9478,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ee9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ee9116c561f405147beb1acd9ad8d973","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ee9116c561f405147beb1acd9ad8d973",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5bbacc0f8c1c55040019666615b802aa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","16a51fd82447a13faf89300b5ff8a37b",0).
 die_has_child("5bbacc0f8c1c55040019666615b802aa","16a51fd82447a13faf89300b5ff8a37b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5bbacc0f8c1c55040019666615b802aa","_M_get").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5bbacc0f8c1c55040019666615b802aa",64).
@@ -9130,6 +9492,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","18c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","18c9804ff41e6813137d098f0198e611","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","18c9804ff41e6813137d098f0198e611",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f2364be82664b07311c0a2bb4b3965bd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","23dcdfefd18a22f1f5757e7745b07aef",0).
 die_has_child("f2364be82664b07311c0a2bb4b3965bd","23dcdfefd18a22f1f5757e7745b07aef").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f2364be82664b07311c0a2bb4b3965bd","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","f2364be82664b07311c0a2bb4b3965bd",96).
@@ -9142,7 +9505,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","884
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","884ca378fdc6db738d5029274ab56d72","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","884ca378fdc6db738d5029274ab56d72",5).
 dw_tag_function("/code/simple-example/cpp/math-client","bddfb3bd6602d6749f908b3445ebad2d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c2acf3b8b28eccdf0222eb7d54d0e7ab",0).
 die_has_child("bddfb3bd6602d6749f908b3445ebad2d","c2acf3b8b28eccdf0222eb7d54d0e7ab").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6cbe2cd9e6fb14eead9847d07bd07cc4",1).
 die_has_child("bddfb3bd6602d6749f908b3445ebad2d","6cbe2cd9e6fb14eead9847d07bd07cc4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bddfb3bd6602d6749f908b3445ebad2d","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","bddfb3bd6602d6749f908b3445ebad2d",98).
@@ -9159,7 +9524,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b65
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b651b44b6f18c1d3ab0f0c890d75c435","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b651b44b6f18c1d3ab0f0c890d75c435",5).
 dw_tag_function("/code/simple-example/cpp/math-client","94ce589f057bff6e0c02d964dea7d28f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6ed0e393a9db5d449094a81e392293ed",0).
 die_has_child("94ce589f057bff6e0c02d964dea7d28f","6ed0e393a9db5d449094a81e392293ed").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","348b43ad75571248b358f27e8492e2df",1).
 die_has_child("94ce589f057bff6e0c02d964dea7d28f","348b43ad75571248b358f27e8492e2df").
 dw_tag_function_name("/code/simple-example/cpp/math-client","94ce589f057bff6e0c02d964dea7d28f","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","94ce589f057bff6e0c02d964dea7d28f",101).
@@ -9174,7 +9541,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3865db9
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","71bc5b17a985ae03154c9f277b87156d").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","71bc5b17a985ae03154c9f277b87156d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a4cf444f4e87c5e648dd994462896024").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","06670244340d8a3f5c27348ea6215cfd",0).
 die_has_child("a4cf444f4e87c5e648dd994462896024","06670244340d8a3f5c27348ea6215cfd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3fb6a5d9894fc48b30a24bd054590533",1).
 die_has_child("a4cf444f4e87c5e648dd994462896024","3fb6a5d9894fc48b30a24bd054590533").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a4cf444f4e87c5e648dd994462896024","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","a4cf444f4e87c5e648dd994462896024",105).
@@ -9191,7 +9560,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0f6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0f65bc2f8542e30f6f53a2e479eb9625","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0f65bc2f8542e30f6f53a2e479eb9625",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2c125580db82ec899d91b1103c0684ce").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","23e0e246f09fb0a7275a67c3537fc4b2",0).
 die_has_child("2c125580db82ec899d91b1103c0684ce","23e0e246f09fb0a7275a67c3537fc4b2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cd31bd3592f6e680440666c4ed28a138",1).
 die_has_child("2c125580db82ec899d91b1103c0684ce","cd31bd3592f6e680440666c4ed28a138").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2c125580db82ec899d91b1103c0684ce","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2c125580db82ec899d91b1103c0684ce",64).
@@ -9210,7 +9581,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","220
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","220138392296a25555613b5529604ec5","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","220138392296a25555613b5529604ec5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","53bb54edbed3b7d8ef727fbe42bbb8a7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","99c29710c7c2c11c1b1fbf9016a9aefd",0).
 die_has_child("53bb54edbed3b7d8ef727fbe42bbb8a7","99c29710c7c2c11c1b1fbf9016a9aefd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","38b2660f67e51066e64867c2f60fe4c6",1).
 die_has_child("53bb54edbed3b7d8ef727fbe42bbb8a7","38b2660f67e51066e64867c2f60fe4c6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","53bb54edbed3b7d8ef727fbe42bbb8a7","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","53bb54edbed3b7d8ef727fbe42bbb8a7",64).
@@ -9229,7 +9602,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e3a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e3a153cf72bde26b8954afdc426a4d67","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e3a153cf72bde26b8954afdc426a4d67",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6d0ed844a4b0c6e20e178babc2c396bf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","47808e3b33c72d3a01911f4156a689ba",0).
 die_has_child("6d0ed844a4b0c6e20e178babc2c396bf","47808e3b33c72d3a01911f4156a689ba").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","16fa8fbd17c958df130392e14fde7da7",1).
 die_has_child("6d0ed844a4b0c6e20e178babc2c396bf","16fa8fbd17c958df130392e14fde7da7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6d0ed844a4b0c6e20e178babc2c396bf","~exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","6d0ed844a4b0c6e20e178babc2c396bf",129).
@@ -9246,7 +9621,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","224
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","224340e56027e646ef14d6ea1bd81a6f","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","224340e56027e646ef14d6ea1bd81a6f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c8f4da6e9ff4ab36aab3a419e64c1032").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","20db01940eb7de36bd04e63793823b97",0).
 die_has_child("c8f4da6e9ff4ab36aab3a419e64c1032","20db01940eb7de36bd04e63793823b97").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cd165ed273a12db2122f9286cfe6779f",1).
 die_has_child("c8f4da6e9ff4ab36aab3a419e64c1032","cd165ed273a12db2122f9286cfe6779f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c8f4da6e9ff4ab36aab3a419e64c1032","swap").
 dw_tag_function_line("/code/simple-example/cpp/math-client","c8f4da6e9ff4ab36aab3a419e64c1032",132).
@@ -9263,6 +9640,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ace
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","acec6c3ec688aed06f60e96b99f843a2","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","acec6c3ec688aed06f60e96b99f843a2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f6c925957896a97218b8bb1ca0c9f7b3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0bbb2d6b08cb622507de5c0d7ef98be7",0).
 die_has_child("f6c925957896a97218b8bb1ca0c9f7b3","0bbb2d6b08cb622507de5c0d7ef98be7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f6c925957896a97218b8bb1ca0c9f7b3","operator bool").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f6c925957896a97218b8bb1ca0c9f7b3",8).
@@ -9278,6 +9656,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e69
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e69de8a24e93bd6c61beb6abff99cb17","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e69de8a24e93bd6c61beb6abff99cb17",5).
 dw_tag_function("/code/simple-example/cpp/math-client","38435cd2773ca582a9c087effb078014").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a1873b52b6fcbe6564d616ce80ad2b3e",0).
 die_has_child("38435cd2773ca582a9c087effb078014","a1873b52b6fcbe6564d616ce80ad2b3e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","38435cd2773ca582a9c087effb078014","__cxa_exception_type").
 dw_tag_function_non_complete_type("/code/simple-example/cpp/math-client","38435cd2773ca582a9c087effb078014","yes").
@@ -9304,6 +9683,7 @@ dw_tag_imported_declaration_line("/code/simple-example/cpp/math-client","ac1b662
 dw_tag_imported_declaration_column("/code/simple-example/cpp/math-client","ac1b662243ef30d8e92a051e0e07cce3",26).
 dw_tag_imported_declaration_die_size("/code/simple-example/cpp/math-client","ac1b662243ef30d8e92a051e0e07cce3",8).
 dw_tag_function("/code/simple-example/cpp/math-client","abe127ef86dfa1623554ef0b6e19de4c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4ef8158fdd661efe4b4e18c54ea94261",0).
 die_has_child("abe127ef86dfa1623554ef0b6e19de4c","4ef8158fdd661efe4b4e18c54ea94261").
 dw_tag_function_name("/code/simple-example/cpp/math-client","abe127ef86dfa1623554ef0b6e19de4c","rethrow_exception").
 dw_tag_function_line("/code/simple-example/cpp/math-client","abe127ef86dfa1623554ef0b6e19de4c",69).
@@ -9358,6 +9738,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","6e524b08df59676c67ef
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","6e524b08df59676c67ef9f58c22371a4",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","6e524b08df59676c67ef9f58c22371a4",12).
 dw_tag_function("/code/simple-example/cpp/math-client","f501942c8bf8d642f0a725a4937ad15e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","53a4d03cb0d32be412dd63e02e1522ed",0).
 die_has_child("f501942c8bf8d642f0a725a4937ad15e","53a4d03cb0d32be412dd63e02e1522ed").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f501942c8bf8d642f0a725a4937ad15e","operator std::integral_constant<bool, false>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f501942c8bf8d642f0a725a4937ad15e",8).
@@ -9372,6 +9753,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f54
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f54d544788c6f6150780c291eab23a74","integral_constant<bool, false>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f54d544788c6f6150780c291eab23a74",5).
 dw_tag_function("/code/simple-example/cpp/math-client","82ba8c7cb68ef7f70a012711560233e4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3b8a9f03d50dd9dcf4e1a5e93896580f",0).
 die_has_child("82ba8c7cb68ef7f70a012711560233e4","3b8a9f03d50dd9dcf4e1a5e93896580f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","82ba8c7cb68ef7f70a012711560233e4","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","82ba8c7cb68ef7f70a012711560233e4",8).
@@ -9431,6 +9813,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","62f167c00f51d8184357
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","62f167c00f51d818435757e04a6cd009",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","62f167c00f51d818435757e04a6cd009",12).
 dw_tag_function("/code/simple-example/cpp/math-client","a6b043c20a6ca2e55d379df9ac1b6172").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","abf7f0408c83a98bb80138aaee6627f9",0).
 die_has_child("a6b043c20a6ca2e55d379df9ac1b6172","abf7f0408c83a98bb80138aaee6627f9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a6b043c20a6ca2e55d379df9ac1b6172","operator std::integral_constant<bool, true>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a6b043c20a6ca2e55d379df9ac1b6172",8).
@@ -9445,6 +9828,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1c5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1c54acc8c996e4550b7dd9d8565797d2","integral_constant<bool, true>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1c54acc8c996e4550b7dd9d8565797d2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","252a464d2066347666bd6745ec9ce32e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e9aa0396d7cb3e1365f7e53d96e61bb0",0).
 die_has_child("252a464d2066347666bd6745ec9ce32e","e9aa0396d7cb3e1365f7e53d96e61bb0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","252a464d2066347666bd6745ec9ce32e","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","252a464d2066347666bd6745ec9ce32e",8).
@@ -9581,6 +9965,7 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","19f6c45b10c
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","19f6c45b10cb2104d61f212c609e455a",13).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","19f6c45b10cb2104d61f212c609e455a","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","145405f0fa0763fd8227d416ed800d2b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fa54615f28674e70bb86123befc768a2",0).
 die_has_child("145405f0fa0763fd8227d416ed800d2b","fa54615f28674e70bb86123befc768a2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","145405f0fa0763fd8227d416ed800d2b","piecewise_construct_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","145405f0fa0763fd8227d416ed800d2b",76).
@@ -9640,7 +10025,9 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","af01edb5dac
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","af01edb5dac6e7dbc51d57f2411e0cdb",14).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","af01edb5dac6e7dbc51d57f2411e0cdb","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","707e3beb38d86c21ccac154a5687e244").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f908b105677de3134dd7a1c39133d125",0).
 die_has_child("707e3beb38d86c21ccac154a5687e244","f908b105677de3134dd7a1c39133d125").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fd838fd000dbf4a49d804e0a0c826c56",1).
 die_has_child("707e3beb38d86c21ccac154a5687e244","fd838fd000dbf4a49d804e0a0c826c56").
 dw_tag_function_name("/code/simple-example/cpp/math-client","707e3beb38d86c21ccac154a5687e244","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","707e3beb38d86c21ccac154a5687e244",299).
@@ -9669,7 +10056,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","499c0ed27337
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","499c0ed2733719f0832e58d59abe625f",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","499c0ed2733719f0832e58d59abe625f","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","d2e0eab13b050a120c5d0df5e5bc7fdf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1fa4eb5c9bcd12c78d3b899f01896d03",0).
 die_has_child("d2e0eab13b050a120c5d0df5e5bc7fdf","1fa4eb5c9bcd12c78d3b899f01896d03").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6623efd744cb5441e61614dcbf10c277",1).
 die_has_child("d2e0eab13b050a120c5d0df5e5bc7fdf","6623efd744cb5441e61614dcbf10c277").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d2e0eab13b050a120c5d0df5e5bc7fdf","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d2e0eab13b050a120c5d0df5e5bc7fdf",8).
@@ -9688,7 +10077,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","78b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","78be0a57902c47fa3c91808404617c30","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","78be0a57902c47fa3c91808404617c30",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7c94135508feb8d823b80163f4199aca").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c730b1305911912e1a5c9f472d72b2ea",0).
 die_has_child("7c94135508feb8d823b80163f4199aca","c730b1305911912e1a5c9f472d72b2ea").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","03c0ffdbede040cb6472034e057d51a9",1).
 die_has_child("7c94135508feb8d823b80163f4199aca","03c0ffdbede040cb6472034e057d51a9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7c94135508feb8d823b80163f4199aca","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7c94135508feb8d823b80163f4199aca",8).
@@ -9707,8 +10098,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2be
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2beaa41d346728c31317bb43c34099cc","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2beaa41d346728c31317bb43c34099cc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","bd608571f5a081392f639213252068a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0a80a7f8a5e621e5437cb8d47cb29bd5",0).
 die_has_child("bd608571f5a081392f639213252068a4","0a80a7f8a5e621e5437cb8d47cb29bd5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","273f3e350c4ea62d3a3e4e19c74f2ff3",1).
 die_has_child("bd608571f5a081392f639213252068a4","273f3e350c4ea62d3a3e4e19c74f2ff3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","58b1a1334b47ce8226c7f22d52f13067",2).
 die_has_child("bd608571f5a081392f639213252068a4","58b1a1334b47ce8226c7f22d52f13067").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bd608571f5a081392f639213252068a4","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","bd608571f5a081392f639213252068a4",32).
@@ -9731,6 +10125,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bf7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bf7a3364b147ef5e5e4f16db3bce5539","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bf7a3364b147ef5e5e4f16db3bce5539",5).
 dw_tag_function("/code/simple-example/cpp/math-client","564d7fa75d03830238b68cb002a83529").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e2f3eb8eda48737135bfb31fbb7f48f0",0).
 die_has_child("564d7fa75d03830238b68cb002a83529","e2f3eb8eda48737135bfb31fbb7f48f0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","564d7fa75d03830238b68cb002a83529","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","564d7fa75d03830238b68cb002a83529",64).
@@ -9745,8 +10140,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e52
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e5272ea95fa3f578a09f11b3cc35e2e3","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e5272ea95fa3f578a09f11b3cc35e2e3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","faa052c2a2229fb2fbca8fcc90b777c7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d14d74ded8830435b0ca8062ad80d8af",0).
 die_has_child("faa052c2a2229fb2fbca8fcc90b777c7","d14d74ded8830435b0ca8062ad80d8af").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6068b95c94895af8a250904c2a0bcf2e",1).
 die_has_child("faa052c2a2229fb2fbca8fcc90b777c7","6068b95c94895af8a250904c2a0bcf2e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ab17a4d6266aeaebe5b4bc00863bcd28",2).
 die_has_child("faa052c2a2229fb2fbca8fcc90b777c7","ab17a4d6266aeaebe5b4bc00863bcd28").
 dw_tag_function_name("/code/simple-example/cpp/math-client","faa052c2a2229fb2fbca8fcc90b777c7","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","faa052c2a2229fb2fbca8fcc90b777c7",8).
@@ -9769,8 +10167,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d3a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d3adbbd67daf33c5d0a24e21bb5520d2","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d3adbbd67daf33c5d0a24e21bb5520d2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f6d282f5a9442073457f441b22fa16fe").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d84710085c63f0ebc830dd8ab092ad5d",0).
 die_has_child("f6d282f5a9442073457f441b22fa16fe","d84710085c63f0ebc830dd8ab092ad5d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","992b7b47b2e69ca695c6c116ab19942e",1).
 die_has_child("f6d282f5a9442073457f441b22fa16fe","992b7b47b2e69ca695c6c116ab19942e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7d96371d58c4e82b6498a2e72407ef7b",2).
 die_has_child("f6d282f5a9442073457f441b22fa16fe","7d96371d58c4e82b6498a2e72407ef7b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f6d282f5a9442073457f441b22fa16fe","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f6d282f5a9442073457f441b22fa16fe",8).
@@ -9793,8 +10194,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","30e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","30e3fc410f0a36170ec879f1a302cdbf","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","30e3fc410f0a36170ec879f1a302cdbf",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a92f7c3676d6b146958f0e7746987086").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ebfe40e169b7fa556d99f1ed7d5aa5af",0).
 die_has_child("a92f7c3676d6b146958f0e7746987086","ebfe40e169b7fa556d99f1ed7d5aa5af").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","55815c52311606e4f33b32481f24b231",1).
 die_has_child("a92f7c3676d6b146958f0e7746987086","55815c52311606e4f33b32481f24b231").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","905eef3ee895dd4b6174170c0f474d0e",2).
 die_has_child("a92f7c3676d6b146958f0e7746987086","905eef3ee895dd4b6174170c0f474d0e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a92f7c3676d6b146958f0e7746987086","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a92f7c3676d6b146958f0e7746987086",8).
@@ -9817,8 +10221,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","337
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3370bf9aaf1f7b94f2f1597106ccf437","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3370bf9aaf1f7b94f2f1597106ccf437",5).
 dw_tag_function("/code/simple-example/cpp/math-client","626c63d0d5e1812513a6057f8eab4995").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","be73d1464e463d21b9bc19cb7f27d73e",0).
 die_has_child("626c63d0d5e1812513a6057f8eab4995","be73d1464e463d21b9bc19cb7f27d73e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f7e18b21811c3053f4caadb7a4d9e1d9",1).
 die_has_child("626c63d0d5e1812513a6057f8eab4995","f7e18b21811c3053f4caadb7a4d9e1d9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5c48b03e6410ccd6d4224c9fd054370e",2).
 die_has_child("626c63d0d5e1812513a6057f8eab4995","5c48b03e6410ccd6d4224c9fd054370e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","626c63d0d5e1812513a6057f8eab4995","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","626c63d0d5e1812513a6057f8eab4995",8).
@@ -9841,6 +10248,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7b9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7b98af64cb1f5742ab70ff2af1eecf8f","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7b98af64cb1f5742ab70ff2af1eecf8f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5db08f3f4ff2dd85d2977bd008e71ffa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a577c9b69bb506a98b03e0af2565cf71",0).
 die_has_child("5db08f3f4ff2dd85d2977bd008e71ffa","a577c9b69bb506a98b03e0af2565cf71").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5db08f3f4ff2dd85d2977bd008e71ffa","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5db08f3f4ff2dd85d2977bd008e71ffa",8).
@@ -9867,6 +10275,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","abc39211bad8
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","abc39211bad88853d0adebec0777b1c0",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","abc39211bad88853d0adebec0777b1c0","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","ee72d25f5625b8b68f776ff7795ea223").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","96ad0823eb945b20c9ce1023a2b58c63",0).
 die_has_child("ee72d25f5625b8b68f776ff7795ea223","96ad0823eb945b20c9ce1023a2b58c63").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ee72d25f5625b8b68f776ff7795ea223","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ee72d25f5625b8b68f776ff7795ea223",32).
@@ -9881,7 +10290,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e1e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e1e57542d7b46ff9180cab3a617bc2a9","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e1e57542d7b46ff9180cab3a617bc2a9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a2cd1b520d185a8a8a6281c6dab3c4a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4cfd56358d8663bd0aeb1d7e2a15e6db",0).
 die_has_child("a2cd1b520d185a8a8a6281c6dab3c4a3","4cfd56358d8663bd0aeb1d7e2a15e6db").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9881cf3609c8066a3f7b9396de15b8cf",1).
 die_has_child("a2cd1b520d185a8a8a6281c6dab3c4a3","9881cf3609c8066a3f7b9396de15b8cf").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a2cd1b520d185a8a8a6281c6dab3c4a3","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a2cd1b520d185a8a8a6281c6dab3c4a3",8).
@@ -9909,6 +10320,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","bcb3bc5b13aec30
 dw_tag_function_external("/code/simple-example/cpp/math-client","bcb3bc5b13aec30b65a113553fc977a7","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","bcb3bc5b13aec30b65a113553fc977a7","_ZNSt11char_traitsIcE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","5775adc94cf8b2d481e5472012038516").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","01321d432b8e9582bd4cfc2dae629ee2",0).
 die_has_child("5775adc94cf8b2d481e5472012038516","01321d432b8e9582bd4cfc2dae629ee2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5775adc94cf8b2d481e5472012038516","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5775adc94cf8b2d481e5472012038516",32).
@@ -9954,7 +10366,9 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","b425de6f860
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","b425de6f860f5c0187a0b59b86fe36dc",14).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","b425de6f860f5c0187a0b59b86fe36dc","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","753106e1f5d8250ef108e3630ffb06c3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","009471dcad7e73937c45ae2d5ba7be93",0).
 die_has_child("753106e1f5d8250ef108e3630ffb06c3","009471dcad7e73937c45ae2d5ba7be93").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","245006addad66aae560846b75c1b62d5",1).
 die_has_child("753106e1f5d8250ef108e3630ffb06c3","245006addad66aae560846b75c1b62d5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","753106e1f5d8250ef108e3630ffb06c3","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","753106e1f5d8250ef108e3630ffb06c3",412).
@@ -9983,7 +10397,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","e18fac9a1ea8
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","e18fac9a1ea8ad88ebb76299d5f31c4d",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","e18fac9a1ea8ad88ebb76299d5f31c4d","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","15035e74fc00720fe040defc8b331874").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","90ebe819660dc95767d1dc43bf821db8",0).
 die_has_child("15035e74fc00720fe040defc8b331874","90ebe819660dc95767d1dc43bf821db8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","56faba0afb502cac356bbab06d2aa3c0",1).
 die_has_child("15035e74fc00720fe040defc8b331874","56faba0afb502cac356bbab06d2aa3c0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","15035e74fc00720fe040defc8b331874","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","15035e74fc00720fe040defc8b331874",8).
@@ -10002,7 +10418,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ba7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ba73a12923c533fe7ad7d4c56d3eefda","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ba73a12923c533fe7ad7d4c56d3eefda",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ddc325a3276fdda5f9fa8baa6abda6df").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","73bd4c4f294ee20a369f4a799c865deb",0).
 die_has_child("ddc325a3276fdda5f9fa8baa6abda6df","73bd4c4f294ee20a369f4a799c865deb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","544b7aa4e52ed17ebd10c6c75fca5fe1",1).
 die_has_child("ddc325a3276fdda5f9fa8baa6abda6df","544b7aa4e52ed17ebd10c6c75fca5fe1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ddc325a3276fdda5f9fa8baa6abda6df","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ddc325a3276fdda5f9fa8baa6abda6df",8).
@@ -10021,8 +10439,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d1f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d1f4adbdb568e3c1bd1caf0bd834a5d5","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d1f4adbdb568e3c1bd1caf0bd834a5d5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","757891c93027da2d86f27ef1c114036a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","19419289a1fb73480e2be9da3a8c589c",0).
 die_has_child("757891c93027da2d86f27ef1c114036a","19419289a1fb73480e2be9da3a8c589c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9eb57617808c116e7fa2aa64b44a7de0",1).
 die_has_child("757891c93027da2d86f27ef1c114036a","9eb57617808c116e7fa2aa64b44a7de0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","077ebf5cfbadd71e7736b81d000ebdb7",2).
 die_has_child("757891c93027da2d86f27ef1c114036a","077ebf5cfbadd71e7736b81d000ebdb7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","757891c93027da2d86f27ef1c114036a","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","757891c93027da2d86f27ef1c114036a",32).
@@ -10045,6 +10466,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","79f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","79f2d0760a30130ea91b4ba391dc68d7","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","79f2d0760a30130ea91b4ba391dc68d7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d1c6e33e32737d18ced7c8643daa3c68").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f1756c51102141c78868323a3b077185",0).
 die_has_child("d1c6e33e32737d18ced7c8643daa3c68","f1756c51102141c78868323a3b077185").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d1c6e33e32737d18ced7c8643daa3c68","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d1c6e33e32737d18ced7c8643daa3c68",64).
@@ -10059,8 +10481,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","14b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","14b48098ae09e302d6ea44e34c72101f","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","14b48098ae09e302d6ea44e34c72101f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ef96469c39c71be272e7899604d215cf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","81f0d93915b7bc38ea2acb6121973ffa",0).
 die_has_child("ef96469c39c71be272e7899604d215cf","81f0d93915b7bc38ea2acb6121973ffa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","06282ebccb11f64c81fcbba1348fe8c0",1).
 die_has_child("ef96469c39c71be272e7899604d215cf","06282ebccb11f64c81fcbba1348fe8c0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","78b6ef1818dda59b5f0925d4a260cd42",2).
 die_has_child("ef96469c39c71be272e7899604d215cf","78b6ef1818dda59b5f0925d4a260cd42").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ef96469c39c71be272e7899604d215cf","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ef96469c39c71be272e7899604d215cf",32).
@@ -10083,8 +10508,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","721
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","721758e19e61a126c4c97660d67c192e","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","721758e19e61a126c4c97660d67c192e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c7f749a4ec30650929c9dba7971f2d37").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","570870c2ac127215e1468a195f1fbbb0",0).
 die_has_child("c7f749a4ec30650929c9dba7971f2d37","570870c2ac127215e1468a195f1fbbb0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bd265eeecefff3c81499b19a963b0360",1).
 die_has_child("c7f749a4ec30650929c9dba7971f2d37","bd265eeecefff3c81499b19a963b0360").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fe0e51381eb3ae7fead308cab76e1409",2).
 die_has_child("c7f749a4ec30650929c9dba7971f2d37","fe0e51381eb3ae7fead308cab76e1409").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c7f749a4ec30650929c9dba7971f2d37","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c7f749a4ec30650929c9dba7971f2d37",32).
@@ -10107,8 +10535,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","eb6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","eb62d5c769cd3442a9c088ffdebf4def","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","eb62d5c769cd3442a9c088ffdebf4def",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c9a47b5b40048f81eea1216bec541d5b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5aa6b00c5cc9ac26ee2b8e54b462fb96",0).
 die_has_child("c9a47b5b40048f81eea1216bec541d5b","5aa6b00c5cc9ac26ee2b8e54b462fb96").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","783f1865137a89b29ec1f7ecdce75bd6",1).
 die_has_child("c9a47b5b40048f81eea1216bec541d5b","783f1865137a89b29ec1f7ecdce75bd6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0c707c9baf8792286dde35165f27edb8",2).
 die_has_child("c9a47b5b40048f81eea1216bec541d5b","0c707c9baf8792286dde35165f27edb8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c9a47b5b40048f81eea1216bec541d5b","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c9a47b5b40048f81eea1216bec541d5b",32).
@@ -10131,8 +10562,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","914
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9140424e81f8a894746e8c87e51c1f8d","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9140424e81f8a894746e8c87e51c1f8d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5cddc0a78e222b80602493a9aa98d87f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f5ab6828bbc9827eff8ac8e6db2cb0a0",0).
 die_has_child("5cddc0a78e222b80602493a9aa98d87f","f5ab6828bbc9827eff8ac8e6db2cb0a0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","db8cbfb1c864fe7c58048d203abfdb29",1).
 die_has_child("5cddc0a78e222b80602493a9aa98d87f","db8cbfb1c864fe7c58048d203abfdb29").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0f86b9cb1fa8903ae6e47edbe00f3f9e",2).
 die_has_child("5cddc0a78e222b80602493a9aa98d87f","0f86b9cb1fa8903ae6e47edbe00f3f9e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5cddc0a78e222b80602493a9aa98d87f","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5cddc0a78e222b80602493a9aa98d87f",32).
@@ -10155,6 +10589,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3a3
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3a3433beba181d2d628506d485fbcae4","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3a3433beba181d2d628506d485fbcae4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ce20e0871e41a44d970730a89e80c6e3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c7cc280a22086f9ab074fb6ffbb86b09",0).
 die_has_child("ce20e0871e41a44d970730a89e80c6e3","c7cc280a22086f9ab074fb6ffbb86b09").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ce20e0871e41a44d970730a89e80c6e3","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ce20e0871e41a44d970730a89e80c6e3",32).
@@ -10181,6 +10616,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","dbf83d7a1498
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","dbf83d7a1498c29bcadbf830971cac0b",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","dbf83d7a1498c29bcadbf830971cac0b","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","a6199792a8e0dcd77c08389ce21c33e7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b3410306f690bfb4ee405a6a36aad15c",0).
 die_has_child("a6199792a8e0dcd77c08389ce21c33e7","b3410306f690bfb4ee405a6a36aad15c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a6199792a8e0dcd77c08389ce21c33e7","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a6199792a8e0dcd77c08389ce21c33e7",32).
@@ -10195,7 +10631,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d20
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d201fd3c8c52cd1709062ab053334b8a","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d201fd3c8c52cd1709062ab053334b8a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b11fd591564c1fbc58229f33631a66c5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","468560c6b83cea00f5011bba6c74a3b4",0).
 die_has_child("b11fd591564c1fbc58229f33631a66c5","468560c6b83cea00f5011bba6c74a3b4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b28a61bde9da35a0e99e1f6694733ac0",1).
 die_has_child("b11fd591564c1fbc58229f33631a66c5","b28a61bde9da35a0e99e1f6694733ac0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b11fd591564c1fbc58229f33631a66c5","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b11fd591564c1fbc58229f33631a66c5",8).
@@ -10223,6 +10661,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","e90b7da2ef18fd6
 dw_tag_function_external("/code/simple-example/cpp/math-client","e90b7da2ef18fd60ad134eb07ebd51b1","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","e90b7da2ef18fd60ad134eb07ebd51b1","_ZNSt11char_traitsIwE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","340ac99177e30bcae512fc9731cd7407").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e44c94b6aee54b03503f084f081e65a8",0).
 die_has_child("340ac99177e30bcae512fc9731cd7407","e44c94b6aee54b03503f084f081e65a8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","340ac99177e30bcae512fc9731cd7407","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","340ac99177e30bcae512fc9731cd7407",32).
@@ -10657,6 +11096,7 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","d0d6f2116c34e00
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","d0d6f2116c34e00f92e74b4da43ffb1b",15).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","d0d6f2116c34e00f92e74b4da43ffb1b","no").
 dw_tag_function("/code/simple-example/cpp/math-client","9cba943884832bae96521877e473c898").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","59dd80a2a176976ee00e7b3c5980c7ee",0).
 die_has_child("9cba943884832bae96521877e473c898","59dd80a2a176976ee00e7b3c5980c7ee").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9cba943884832bae96521877e473c898","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","9cba943884832bae96521877e473c898",607).
@@ -10669,7 +11109,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1fc
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1fcc29f0b3ab2c767a6013589c76ed1e","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1fcc29f0b3ab2c767a6013589c76ed1e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7636113939e6621a349ef4a0febb96fe").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8473e348ae41bfa66df08cff529b37d7",0).
 die_has_child("7636113939e6621a349ef4a0febb96fe","8473e348ae41bfa66df08cff529b37d7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","600515647b116260c98f4fff31928e8e",1).
 die_has_child("7636113939e6621a349ef4a0febb96fe","600515647b116260c98f4fff31928e8e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7636113939e6621a349ef4a0febb96fe","~Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","7636113939e6621a349ef4a0febb96fe",608).
@@ -10686,7 +11128,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","660
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","660f858e4afde41dcf74040e753caa70","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","660f858e4afde41dcf74040e753caa70",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a732d9b32e6c2b42f2bb771d97703271").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ae000f9d50ec14b2fe2310c26fdf3825",0).
 die_has_child("a732d9b32e6c2b42f2bb771d97703271","ae000f9d50ec14b2fe2310c26fdf3825").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f1055e3717e05cff43189fd95a7c9fc1",1).
 die_has_child("a732d9b32e6c2b42f2bb771d97703271","f1055e3717e05cff43189fd95a7c9fc1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a732d9b32e6c2b42f2bb771d97703271","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","a732d9b32e6c2b42f2bb771d97703271",611).
@@ -10704,7 +11148,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2de
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2de4519d6dd8cc0111816799c75d3e93","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2de4519d6dd8cc0111816799c75d3e93",5).
 dw_tag_function("/code/simple-example/cpp/math-client","68b6b5bd3cc9cb12d1dae12c3626ba4c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b7deb4b87cdad1ba017c7ce5fefddc43",0).
 die_has_child("68b6b5bd3cc9cb12d1dae12c3626ba4c","b7deb4b87cdad1ba017c7ce5fefddc43").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f9c89cdd784e974592a51e49bdbe6013",1).
 die_has_child("68b6b5bd3cc9cb12d1dae12c3626ba4c","f9c89cdd784e974592a51e49bdbe6013").
 dw_tag_function_name("/code/simple-example/cpp/math-client","68b6b5bd3cc9cb12d1dae12c3626ba4c","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","68b6b5bd3cc9cb12d1dae12c3626ba4c",8).
@@ -11241,6 +11687,7 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","63491f109a4
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","63491f109a4fa6c4b1e2ecfab7791019",13).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","63491f109a4fa6c4b1e2ecfab7791019","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","d0d18f668c832703ea715117be48b0a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0ed25bf8251e3b5369110753fd8212c2",0).
 die_has_child("d0d18f668c832703ea715117be48b0a3","0ed25bf8251e3b5369110753fd8212c2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d0d18f668c832703ea715117be48b0a3","nothrow_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","d0d18f668c832703ea715117be48b0a3",94).
@@ -11255,6 +11702,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f38
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f38e12910a45940e41e4d2a9e15a3794","nothrow_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f38e12910a45940e41e4d2a9e15a3794",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e0e35628ae2b0d6fb5342cce05e59f24").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","347d2f9005578749c6950f6c41beabf7",0).
 die_has_child("e0e35628ae2b0d6fb5342cce05e59f24","347d2f9005578749c6950f6c41beabf7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e0e35628ae2b0d6fb5342cce05e59f24","nothrow_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","e0e35628ae2b0d6fb5342cce05e59f24",94).
@@ -11323,7 +11771,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","d744702b441b01120652a
 dw_tag_member_column("/code/simple-example/cpp/math-client","d744702b441b01120652a6cb546dd194",13).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","d744702b441b01120652a6cb546dd194",13).
 dw_tag_function("/code/simple-example/cpp/math-client","767abb055ebe8dd7be74488e56621497").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dfe9e59ae88ab430099f8db8586a4760",0).
 die_has_child("767abb055ebe8dd7be74488e56621497","dfe9e59ae88ab430099f8db8586a4760").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2651535863027864ce328a285b35a88d",1).
 die_has_child("767abb055ebe8dd7be74488e56621497","2651535863027864ce328a285b35a88d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","767abb055ebe8dd7be74488e56621497","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","767abb055ebe8dd7be74488e56621497",83).
@@ -11340,6 +11790,7 @@ dw_tag_formal_parameter("/code/simple-example/cpp/math-client","d476f8dee5d015a2
 dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d476f8dee5d015a206d2653a577428a8",64).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d476f8dee5d015a206d2653a577428a8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","54896831ceed9d7fe15941d6e5a26a09").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0ab662761b41f7e281096c9e5886ac38",0).
 die_has_child("54896831ceed9d7fe15941d6e5a26a09","0ab662761b41f7e281096c9e5886ac38").
 dw_tag_function_name("/code/simple-example/cpp/math-client","54896831ceed9d7fe15941d6e5a26a09","_M_addref").
 dw_tag_function_line("/code/simple-example/cpp/math-client","54896831ceed9d7fe15941d6e5a26a09",85).
@@ -11352,6 +11803,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","339
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","339b4526498628e4bf40b069a0f8607c","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","339b4526498628e4bf40b069a0f8607c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","02995baf707e845c4713f16e0b1aaa49").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4bafe2901bb188f4a2ea28fb70ebadd7",0).
 die_has_child("02995baf707e845c4713f16e0b1aaa49","4bafe2901bb188f4a2ea28fb70ebadd7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","02995baf707e845c4713f16e0b1aaa49","_M_release").
 dw_tag_function_line("/code/simple-example/cpp/math-client","02995baf707e845c4713f16e0b1aaa49",86).
@@ -11364,6 +11816,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","cee
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ceebc97f04724ee3bbcc6c54cb3ccbfe","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ceebc97f04724ee3bbcc6c54cb3ccbfe",5).
 dw_tag_function("/code/simple-example/cpp/math-client","52a9c340fb02e75fd584a527dda6935e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2095ccd5d5ac5c29a4b3b6c178366f3f",0).
 die_has_child("52a9c340fb02e75fd584a527dda6935e","2095ccd5d5ac5c29a4b3b6c178366f3f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","52a9c340fb02e75fd584a527dda6935e","_M_get").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","52a9c340fb02e75fd584a527dda6935e",64).
@@ -11377,6 +11830,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","12a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","12a3e896391f55b50db4d50aefeef977","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","12a3e896391f55b50db4d50aefeef977",5).
 dw_tag_function("/code/simple-example/cpp/math-client","eadebd19a8910707c5b166cf5dd0d176").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","196195e398e3b4de0b0438d16e73844f",0).
 die_has_child("eadebd19a8910707c5b166cf5dd0d176","196195e398e3b4de0b0438d16e73844f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","eadebd19a8910707c5b166cf5dd0d176","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","eadebd19a8910707c5b166cf5dd0d176",96).
@@ -11389,7 +11843,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bb5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bb5d34aa9ad6bbd2d37cdcb4ef546e23","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bb5d34aa9ad6bbd2d37cdcb4ef546e23",5).
 dw_tag_function("/code/simple-example/cpp/math-client","08d8530493032e6335ecc3a960da95c3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a1c59a68679c76cc0d5e930bd62e85b4",0).
 die_has_child("08d8530493032e6335ecc3a960da95c3","a1c59a68679c76cc0d5e930bd62e85b4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4ec0c50cbfc6564ba0f025aa30e4d6d5",1).
 die_has_child("08d8530493032e6335ecc3a960da95c3","4ec0c50cbfc6564ba0f025aa30e4d6d5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","08d8530493032e6335ecc3a960da95c3","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","08d8530493032e6335ecc3a960da95c3",98).
@@ -11406,7 +11862,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","835
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","835623cc125601d72e7ea1c617166eb9","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","835623cc125601d72e7ea1c617166eb9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0e4605a12e8cd3c8fee591ac49b6d7bf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d2a45f5361f989d964ab3a793942a46e",0).
 die_has_child("0e4605a12e8cd3c8fee591ac49b6d7bf","d2a45f5361f989d964ab3a793942a46e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","be64d75d752bd514024569ea56d75892",1).
 die_has_child("0e4605a12e8cd3c8fee591ac49b6d7bf","be64d75d752bd514024569ea56d75892").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0e4605a12e8cd3c8fee591ac49b6d7bf","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","0e4605a12e8cd3c8fee591ac49b6d7bf",101).
@@ -11421,7 +11879,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","438d317
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","64a1bfa64ec75f6886465720dde888d2").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","64a1bfa64ec75f6886465720dde888d2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","04fd093626fd64f33429ef3ef1e07f5d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","643dd3e85ec774f96b59a34dc2292c3d",0).
 die_has_child("04fd093626fd64f33429ef3ef1e07f5d","643dd3e85ec774f96b59a34dc2292c3d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","de2321f0dc5058b158239c82ae4f06af",1).
 die_has_child("04fd093626fd64f33429ef3ef1e07f5d","de2321f0dc5058b158239c82ae4f06af").
 dw_tag_function_name("/code/simple-example/cpp/math-client","04fd093626fd64f33429ef3ef1e07f5d","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","04fd093626fd64f33429ef3ef1e07f5d",105).
@@ -11438,7 +11898,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","51c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","51c5630189748c425501d406c9214974","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","51c5630189748c425501d406c9214974",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1eff727fd7140666447776433bbd3eeb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","38e79e748d235948ba60d475bafb54d6",0).
 die_has_child("1eff727fd7140666447776433bbd3eeb","38e79e748d235948ba60d475bafb54d6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1a65c22e413947c3f3794dc71d53f7fd",1).
 die_has_child("1eff727fd7140666447776433bbd3eeb","1a65c22e413947c3f3794dc71d53f7fd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1eff727fd7140666447776433bbd3eeb","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1eff727fd7140666447776433bbd3eeb",64).
@@ -11457,7 +11919,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bd9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bd93107e874e6f61900ab0d06c86421a","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bd93107e874e6f61900ab0d06c86421a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e9dbb72dcc7a960dd6083b3a060ffd33").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3a9fec7e4dccc1cc463b8d50bcb5fd0d",0).
 die_has_child("e9dbb72dcc7a960dd6083b3a060ffd33","3a9fec7e4dccc1cc463b8d50bcb5fd0d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8614d782ea109a5b2d61827bed8d93d3",1).
 die_has_child("e9dbb72dcc7a960dd6083b3a060ffd33","8614d782ea109a5b2d61827bed8d93d3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e9dbb72dcc7a960dd6083b3a060ffd33","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e9dbb72dcc7a960dd6083b3a060ffd33",64).
@@ -11476,7 +11940,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0b1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0b1e997344d95236a9f6f96020e04e6a","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0b1e997344d95236a9f6f96020e04e6a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c85cda657282112111b977898e4bd15c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","db7b385ad4b92c5288b93785cf427b69",0).
 die_has_child("c85cda657282112111b977898e4bd15c","db7b385ad4b92c5288b93785cf427b69").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c57683c51dabe143301806b9b4c35734",1).
 die_has_child("c85cda657282112111b977898e4bd15c","c57683c51dabe143301806b9b4c35734").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c85cda657282112111b977898e4bd15c","~exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","c85cda657282112111b977898e4bd15c",129).
@@ -11493,7 +11959,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","fbb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","fbbf6890ec02bc5d9768e3e44d50a7cb","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","fbbf6890ec02bc5d9768e3e44d50a7cb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7e205d64b82dfa86300ebc8d568d36f4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ac6d7b10b2efb7541c194a57b979b0a0",0).
 die_has_child("7e205d64b82dfa86300ebc8d568d36f4","ac6d7b10b2efb7541c194a57b979b0a0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c537b479b494fcb6a6349b84d4c4be1d",1).
 die_has_child("7e205d64b82dfa86300ebc8d568d36f4","c537b479b494fcb6a6349b84d4c4be1d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7e205d64b82dfa86300ebc8d568d36f4","swap").
 dw_tag_function_line("/code/simple-example/cpp/math-client","7e205d64b82dfa86300ebc8d568d36f4",132).
@@ -11510,6 +11978,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","452
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","452ae2b1ac72dc9c7b1990b3a22b4c54","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","452ae2b1ac72dc9c7b1990b3a22b4c54",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7b68e3161ea1e56cd207a2e18518a482").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bf1576cd4ef9d0f2306f60e3ba2bcdda",0).
 die_has_child("7b68e3161ea1e56cd207a2e18518a482","bf1576cd4ef9d0f2306f60e3ba2bcdda").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7b68e3161ea1e56cd207a2e18518a482","operator bool").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7b68e3161ea1e56cd207a2e18518a482",8).
@@ -11525,6 +11994,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2a5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2a58e997ca5164c6d0333ae07827c3ee","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2a58e997ca5164c6d0333ae07827c3ee",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c4b96605d9b9d236fde386a3004a168f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ddf3ceaccfbc3d7d30fc00ed30473646",0).
 die_has_child("c4b96605d9b9d236fde386a3004a168f","ddf3ceaccfbc3d7d30fc00ed30473646").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c4b96605d9b9d236fde386a3004a168f","__cxa_exception_type").
 dw_tag_function_non_complete_type("/code/simple-example/cpp/math-client","c4b96605d9b9d236fde386a3004a168f","yes").
@@ -11575,7 +12045,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","9e99032a961268ae518b9
 dw_tag_member_column("/code/simple-example/cpp/math-client","9e99032a961268ae518b99d3ed5f6db8",13).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","9e99032a961268ae518b99d3ed5f6db8",13).
 dw_tag_function("/code/simple-example/cpp/math-client","7957a63e995f5186019206ff836ba748").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","28d0f690459ba84d2890f37eb23cde8f",0).
 die_has_child("7957a63e995f5186019206ff836ba748","28d0f690459ba84d2890f37eb23cde8f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b01a52be8a92db07a06a71ecb33cb972",1).
 die_has_child("7957a63e995f5186019206ff836ba748","b01a52be8a92db07a06a71ecb33cb972").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7957a63e995f5186019206ff836ba748","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","7957a63e995f5186019206ff836ba748",83).
@@ -11592,6 +12064,7 @@ dw_tag_formal_parameter("/code/simple-example/cpp/math-client","54dd1d41b1c4eaf4
 dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","54dd1d41b1c4eaf43d8d2891ecaf05de",64).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","54dd1d41b1c4eaf43d8d2891ecaf05de",5).
 dw_tag_function("/code/simple-example/cpp/math-client","25ed77e1f373e06da6c4df4393287d09").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2d3107e953d36f3856ee2a6e2b5d8fa4",0).
 die_has_child("25ed77e1f373e06da6c4df4393287d09","2d3107e953d36f3856ee2a6e2b5d8fa4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","25ed77e1f373e06da6c4df4393287d09","_M_addref").
 dw_tag_function_line("/code/simple-example/cpp/math-client","25ed77e1f373e06da6c4df4393287d09",85).
@@ -11604,6 +12077,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1f9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1f9c6de2f4bb56c4699940cc51e8511f","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1f9c6de2f4bb56c4699940cc51e8511f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d1eac273bfa465a4c498e89e88e79793").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","119049108edb5a7133ec083ab3a80ddc",0).
 die_has_child("d1eac273bfa465a4c498e89e88e79793","119049108edb5a7133ec083ab3a80ddc").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d1eac273bfa465a4c498e89e88e79793","_M_release").
 dw_tag_function_line("/code/simple-example/cpp/math-client","d1eac273bfa465a4c498e89e88e79793",86).
@@ -11616,6 +12090,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","77b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","77b9f227b9e6e4201df7ed9dd70d2d2e","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","77b9f227b9e6e4201df7ed9dd70d2d2e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b006876bcd91938840b9584f4e911f73").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7fc4675ebba582f9b1541292f5dd9961",0).
 die_has_child("b006876bcd91938840b9584f4e911f73","7fc4675ebba582f9b1541292f5dd9961").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b006876bcd91938840b9584f4e911f73","_M_get").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b006876bcd91938840b9584f4e911f73",64).
@@ -11629,6 +12104,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e16
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e168e61209ff5c280ce3a148e57d70bc","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e168e61209ff5c280ce3a148e57d70bc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","8574c45bba2e1ad6fe5f8776bacfb926").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","734e9da0aada6c91014497b86f2d5ab8",0).
 die_has_child("8574c45bba2e1ad6fe5f8776bacfb926","734e9da0aada6c91014497b86f2d5ab8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","8574c45bba2e1ad6fe5f8776bacfb926","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","8574c45bba2e1ad6fe5f8776bacfb926",96).
@@ -11641,7 +12117,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6eb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6ebca64f53c6d8270a64b0d7a06f6cf5","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6ebca64f53c6d8270a64b0d7a06f6cf5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","84180cfb17d6abd6c34901779cb8cb4d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","730c14c7467f4aade85704a60c844944",0).
 die_has_child("84180cfb17d6abd6c34901779cb8cb4d","730c14c7467f4aade85704a60c844944").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bc20bfa98af708891ca76c96593167c2",1).
 die_has_child("84180cfb17d6abd6c34901779cb8cb4d","bc20bfa98af708891ca76c96593167c2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","84180cfb17d6abd6c34901779cb8cb4d","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","84180cfb17d6abd6c34901779cb8cb4d",98).
@@ -11658,7 +12136,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c34
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c349527871bcb359a5b2d53af9f689ce","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c349527871bcb359a5b2d53af9f689ce",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ce62457e1a409b588ca5e752c8ac5124").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0af9f766b0229b42685f657c18a9aeb3",0).
 die_has_child("ce62457e1a409b588ca5e752c8ac5124","0af9f766b0229b42685f657c18a9aeb3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","aca20eb6c68b1ac2a39ac734d83ce6aa",1).
 die_has_child("ce62457e1a409b588ca5e752c8ac5124","aca20eb6c68b1ac2a39ac734d83ce6aa").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ce62457e1a409b588ca5e752c8ac5124","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","ce62457e1a409b588ca5e752c8ac5124",101).
@@ -11673,7 +12153,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d8f6741
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","0a27b3660fa67b08f0ea690992967223").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0a27b3660fa67b08f0ea690992967223",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2db3cf8decf6c38e6b967a98fd351999").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d68768924f3de2d813f603cd9087375d",0).
 die_has_child("2db3cf8decf6c38e6b967a98fd351999","d68768924f3de2d813f603cd9087375d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","25c3057dc2a3afd3b66f7a5ebc142738",1).
 die_has_child("2db3cf8decf6c38e6b967a98fd351999","25c3057dc2a3afd3b66f7a5ebc142738").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2db3cf8decf6c38e6b967a98fd351999","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","2db3cf8decf6c38e6b967a98fd351999",105).
@@ -11690,7 +12172,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a73
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a7345e080b9a847654ad37a81be6a23b","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a7345e080b9a847654ad37a81be6a23b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","64ec9fed1c6a302fdca042f3d903fe9f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","556cccf6b9d2fbdb2ef0ac00409c2db3",0).
 die_has_child("64ec9fed1c6a302fdca042f3d903fe9f","556cccf6b9d2fbdb2ef0ac00409c2db3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c699b7f33d179bc165c7f28c281f71e1",1).
 die_has_child("64ec9fed1c6a302fdca042f3d903fe9f","c699b7f33d179bc165c7f28c281f71e1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","64ec9fed1c6a302fdca042f3d903fe9f","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","64ec9fed1c6a302fdca042f3d903fe9f",64).
@@ -11709,7 +12193,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d8b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d8b46af37baa3e9431465ea6ac440b42","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d8b46af37baa3e9431465ea6ac440b42",5).
 dw_tag_function("/code/simple-example/cpp/math-client","21f5f6ab41e16bd7455b7aaa41c0c914").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2d80761879f7600922ebeb5ad64bfd23",0).
 die_has_child("21f5f6ab41e16bd7455b7aaa41c0c914","2d80761879f7600922ebeb5ad64bfd23").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","161c260745f1eac88399bd50f540cf29",1).
 die_has_child("21f5f6ab41e16bd7455b7aaa41c0c914","161c260745f1eac88399bd50f540cf29").
 dw_tag_function_name("/code/simple-example/cpp/math-client","21f5f6ab41e16bd7455b7aaa41c0c914","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","21f5f6ab41e16bd7455b7aaa41c0c914",64).
@@ -11728,7 +12214,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","abb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","abb63b5bef320f1a82556d2123273671","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","abb63b5bef320f1a82556d2123273671",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0b5bc2ca5b5ead28be5eb55b6c9fc44f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d37e32af8c299bd8af99875bbbead585",0).
 die_has_child("0b5bc2ca5b5ead28be5eb55b6c9fc44f","d37e32af8c299bd8af99875bbbead585").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0168128e538754a0f94efec10f3849c4",1).
 die_has_child("0b5bc2ca5b5ead28be5eb55b6c9fc44f","0168128e538754a0f94efec10f3849c4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0b5bc2ca5b5ead28be5eb55b6c9fc44f","~exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","0b5bc2ca5b5ead28be5eb55b6c9fc44f",129).
@@ -11745,7 +12233,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","527
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","527f940bc82246cdebea7a683270f00b","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","527f940bc82246cdebea7a683270f00b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","614e4a0590ae5aa301a33a932d3e70a9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","10c707b054435f1f66cd5b4746805975",0).
 die_has_child("614e4a0590ae5aa301a33a932d3e70a9","10c707b054435f1f66cd5b4746805975").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee25e0c379facb082e82db544bd70c44",1).
 die_has_child("614e4a0590ae5aa301a33a932d3e70a9","ee25e0c379facb082e82db544bd70c44").
 dw_tag_function_name("/code/simple-example/cpp/math-client","614e4a0590ae5aa301a33a932d3e70a9","swap").
 dw_tag_function_line("/code/simple-example/cpp/math-client","614e4a0590ae5aa301a33a932d3e70a9",132).
@@ -11762,6 +12252,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5f0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5f02a902195f21cf77265f00d47b96e5","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5f02a902195f21cf77265f00d47b96e5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c391d8c90a33aaa03e732a0fab297546").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cd62d835cd23d6c6ea515bbf6974436f",0).
 die_has_child("c391d8c90a33aaa03e732a0fab297546","cd62d835cd23d6c6ea515bbf6974436f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c391d8c90a33aaa03e732a0fab297546","operator bool").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c391d8c90a33aaa03e732a0fab297546",8).
@@ -11777,6 +12268,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4c2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4c2ba5e1755ee04e600649f15ef33cc8","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4c2ba5e1755ee04e600649f15ef33cc8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","8fa4081d07d26692fd55ace1bf3c704a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0a8ae6cdb7c7229815b9c9bc42463077",0).
 die_has_child("8fa4081d07d26692fd55ace1bf3c704a","0a8ae6cdb7c7229815b9c9bc42463077").
 dw_tag_function_name("/code/simple-example/cpp/math-client","8fa4081d07d26692fd55ace1bf3c704a","__cxa_exception_type").
 dw_tag_function_non_complete_type("/code/simple-example/cpp/math-client","8fa4081d07d26692fd55ace1bf3c704a","yes").
@@ -11796,7 +12288,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","ad1a8d122f383190751b7
 dw_tag_member_column("/code/simple-example/cpp/math-client","ad1a8d122f383190751b7effa700bff1",13).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","ad1a8d122f383190751b7effa700bff1",13).
 dw_tag_function("/code/simple-example/cpp/math-client","f1e97dc7fb63576f19a935c5a1e01eb9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fc520f7a90062bda96fee9cc57a8812a",0).
 die_has_child("f1e97dc7fb63576f19a935c5a1e01eb9","fc520f7a90062bda96fee9cc57a8812a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","62fa19f4b62eb9f3cfe81a86af8ed334",1).
 die_has_child("f1e97dc7fb63576f19a935c5a1e01eb9","62fa19f4b62eb9f3cfe81a86af8ed334").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f1e97dc7fb63576f19a935c5a1e01eb9","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","f1e97dc7fb63576f19a935c5a1e01eb9",83).
@@ -11820,6 +12314,7 @@ dw_tag_formal_parameter("/code/simple-example/cpp/math-client","f0a14d8813e49608
 dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f0a14d8813e496089d3b5b7ea383762b",64).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f0a14d8813e496089d3b5b7ea383762b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","fdaef203fc0e954955798922d24feabf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","00cf7e58f6c0fa25c1ffe469247d1f49",0).
 die_has_child("fdaef203fc0e954955798922d24feabf","00cf7e58f6c0fa25c1ffe469247d1f49").
 dw_tag_function_name("/code/simple-example/cpp/math-client","fdaef203fc0e954955798922d24feabf","_M_addref").
 dw_tag_function_line("/code/simple-example/cpp/math-client","fdaef203fc0e954955798922d24feabf",85).
@@ -11836,6 +12331,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ec0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ec040ffdede97df956aab32e8e634e1d","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ec040ffdede97df956aab32e8e634e1d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ac4ec43c7a23b90b78a942c509aa6701").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3695809d52084febba44d0b8f97c69ec",0).
 die_has_child("ac4ec43c7a23b90b78a942c509aa6701","3695809d52084febba44d0b8f97c69ec").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ac4ec43c7a23b90b78a942c509aa6701","_M_release").
 dw_tag_function_line("/code/simple-example/cpp/math-client","ac4ec43c7a23b90b78a942c509aa6701",86).
@@ -11852,6 +12348,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","93e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","93e20b2da50ea22ea10ada979415aafb","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","93e20b2da50ea22ea10ada979415aafb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0cba007107028222d14d320c3c065858").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1f60db2ac7117865192ba7bd1bbcb52e",0).
 die_has_child("0cba007107028222d14d320c3c065858","1f60db2ac7117865192ba7bd1bbcb52e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0cba007107028222d14d320c3c065858","_M_get").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0cba007107028222d14d320c3c065858",64).
@@ -11869,6 +12366,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e1d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e1df1fd4b9f84488a0350f4c6e646511","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e1df1fd4b9f84488a0350f4c6e646511",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d42f9ec1fb9fb3cda5e3f31c6f41c8a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d15fd3462f168a822b6069f415186af5",0).
 die_has_child("d42f9ec1fb9fb3cda5e3f31c6f41c8a4","d15fd3462f168a822b6069f415186af5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d42f9ec1fb9fb3cda5e3f31c6f41c8a4","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","d42f9ec1fb9fb3cda5e3f31c6f41c8a4",96).
@@ -11885,7 +12383,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","556
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5561b8fc56b4c210fc8dc61d0e97856a","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5561b8fc56b4c210fc8dc61d0e97856a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3243f9fd7aaae78769d81cbbbc67907c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","87d82f0a62d313536b12d04af67f8d6b",0).
 die_has_child("3243f9fd7aaae78769d81cbbbc67907c","87d82f0a62d313536b12d04af67f8d6b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","59f03795207ea98975c048ef309bcfaa",1).
 die_has_child("3243f9fd7aaae78769d81cbbbc67907c","59f03795207ea98975c048ef309bcfaa").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3243f9fd7aaae78769d81cbbbc67907c","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","3243f9fd7aaae78769d81cbbbc67907c",98).
@@ -11910,7 +12410,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","8dc
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","8dc866807627d1cffd2f7fb193467f2c","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","8dc866807627d1cffd2f7fb193467f2c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b70c63ab4e7368d2ac6f06e0ddcf0a01").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","04942ee2f08e4164831bf8bea424f920",0).
 die_has_child("b70c63ab4e7368d2ac6f06e0ddcf0a01","04942ee2f08e4164831bf8bea424f920").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9b049eee8f619299d3da23af463fd939",1).
 die_has_child("b70c63ab4e7368d2ac6f06e0ddcf0a01","9b049eee8f619299d3da23af463fd939").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b70c63ab4e7368d2ac6f06e0ddcf0a01","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","b70c63ab4e7368d2ac6f06e0ddcf0a01",101).
@@ -11931,7 +12433,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e5c8ad7
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","77c0930071823a45e502e9f41d5f92b0").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","77c0930071823a45e502e9f41d5f92b0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","4af63d5d5a65edba79703a0b6d73864e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e6e02f2a06704971543c98256fe1aeba",0).
 die_has_child("4af63d5d5a65edba79703a0b6d73864e","e6e02f2a06704971543c98256fe1aeba").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dbe393600a439532ad998a5cbc45b107",1).
 die_has_child("4af63d5d5a65edba79703a0b6d73864e","dbe393600a439532ad998a5cbc45b107").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4af63d5d5a65edba79703a0b6d73864e","exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","4af63d5d5a65edba79703a0b6d73864e",105).
@@ -11956,7 +12460,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c33
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c336644a3d57ae93af605c5f9eb20cfd","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c336644a3d57ae93af605c5f9eb20cfd",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e48d9d8d690797ae52a0b50db2ede14c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d4d1e6d59f2454236fb2f18b67a0aed5",0).
 die_has_child("e48d9d8d690797ae52a0b50db2ede14c","d4d1e6d59f2454236fb2f18b67a0aed5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","451fc2ac17472224c47f8ac29dc3a8f0",1).
 die_has_child("e48d9d8d690797ae52a0b50db2ede14c","451fc2ac17472224c47f8ac29dc3a8f0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e48d9d8d690797ae52a0b50db2ede14c","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e48d9d8d690797ae52a0b50db2ede14c",64).
@@ -11983,7 +12489,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bcc
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bcc63f137e7c17860bd6d48fbc6ad843","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bcc63f137e7c17860bd6d48fbc6ad843",5).
 dw_tag_function("/code/simple-example/cpp/math-client","36e8f0cfa89bde4392df510b73391127").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e970f65f620ff339d03cb7bd7c342431",0).
 die_has_child("36e8f0cfa89bde4392df510b73391127","e970f65f620ff339d03cb7bd7c342431").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9e530379f72488410d8f5c31309ed2ad",1).
 die_has_child("36e8f0cfa89bde4392df510b73391127","9e530379f72488410d8f5c31309ed2ad").
 dw_tag_function_name("/code/simple-example/cpp/math-client","36e8f0cfa89bde4392df510b73391127","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","36e8f0cfa89bde4392df510b73391127",64).
@@ -12010,7 +12518,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","980
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9802dc46c19e5f76d2002bf27495d162","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9802dc46c19e5f76d2002bf27495d162",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7d953d9d5edd369c2f4713c7addbc1eb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","be761cae399c91687f97b49f18a3c031",0).
 die_has_child("7d953d9d5edd369c2f4713c7addbc1eb","be761cae399c91687f97b49f18a3c031").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","82829356cc5fc4d9c92d975030a8b73b",1).
 die_has_child("7d953d9d5edd369c2f4713c7addbc1eb","82829356cc5fc4d9c92d975030a8b73b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7d953d9d5edd369c2f4713c7addbc1eb","~exception_ptr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","7d953d9d5edd369c2f4713c7addbc1eb",129).
@@ -12035,7 +12545,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c9a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c9aaa9a6b73ab282f66a14c799e42988","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c9aaa9a6b73ab282f66a14c799e42988",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6e658320ecae9e1f7facd5e072ecf51a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","525ec2287c963b389c658d65427c38f4",0).
 die_has_child("6e658320ecae9e1f7facd5e072ecf51a","525ec2287c963b389c658d65427c38f4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","68100d3d65b831fa009d4a31c97c2e54",1).
 die_has_child("6e658320ecae9e1f7facd5e072ecf51a","68100d3d65b831fa009d4a31c97c2e54").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6e658320ecae9e1f7facd5e072ecf51a","swap").
 dw_tag_function_line("/code/simple-example/cpp/math-client","6e658320ecae9e1f7facd5e072ecf51a",132).
@@ -12060,6 +12572,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6b8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6b8415dec8fbbe5f95807ced24f9e04e","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6b8415dec8fbbe5f95807ced24f9e04e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1456d6a6a8540129967677fb624c87f4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5a5fc69e30648d68ef91f00f7674f89f",0).
 die_has_child("1456d6a6a8540129967677fb624c87f4","5a5fc69e30648d68ef91f00f7674f89f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1456d6a6a8540129967677fb624c87f4","operator bool").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1456d6a6a8540129967677fb624c87f4",8).
@@ -12079,6 +12592,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","07f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","07f023805215e203c0720dfc6a0af412","exception_ptr").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","07f023805215e203c0720dfc6a0af412",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0c1214e4b64b1df1287f1cbca58dce3a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0b528767dd5f328290b9902aeefb0b9f",0).
 die_has_child("0c1214e4b64b1df1287f1cbca58dce3a","0b528767dd5f328290b9902aeefb0b9f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0c1214e4b64b1df1287f1cbca58dce3a","__cxa_exception_type").
 dw_tag_function_non_complete_type("/code/simple-example/cpp/math-client","0c1214e4b64b1df1287f1cbca58dce3a","yes").
@@ -12109,6 +12623,7 @@ dw_tag_imported_declaration_line("/code/simple-example/cpp/math-client","ad6edd7
 dw_tag_imported_declaration_column("/code/simple-example/cpp/math-client","ad6edd7f160087d79732e88101ed7117",26).
 dw_tag_imported_declaration_die_size("/code/simple-example/cpp/math-client","ad6edd7f160087d79732e88101ed7117",8).
 dw_tag_function("/code/simple-example/cpp/math-client","42e8debdc50117f698cb98a3b43cd3f4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2a0de894da061bca4c9bdbacecdc9aba",0).
 die_has_child("42e8debdc50117f698cb98a3b43cd3f4","2a0de894da061bca4c9bdbacecdc9aba").
 dw_tag_function_name("/code/simple-example/cpp/math-client","42e8debdc50117f698cb98a3b43cd3f4","rethrow_exception").
 dw_tag_function_line("/code/simple-example/cpp/math-client","42e8debdc50117f698cb98a3b43cd3f4",69).
@@ -12167,6 +12682,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","112da990671c9f4b6945
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","112da990671c9f4b69455a0232fc4faa",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","112da990671c9f4b69455a0232fc4faa",12).
 dw_tag_function("/code/simple-example/cpp/math-client","b27900e4384e149734fc323f08ab0b64").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f21fc476ff813ff27f4ddfd0d01d748a",0).
 die_has_child("b27900e4384e149734fc323f08ab0b64","f21fc476ff813ff27f4ddfd0d01d748a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b27900e4384e149734fc323f08ab0b64","operator std::integral_constant<bool, false>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b27900e4384e149734fc323f08ab0b64",8).
@@ -12181,6 +12697,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d90
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d9083853073bceb3aea79a75d97dfa6f","integral_constant<bool, false>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d9083853073bceb3aea79a75d97dfa6f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5cc2068b9b91ae0389722749af4d8258").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a8206350998a71d85aa77535ba4c74b7",0).
 die_has_child("5cc2068b9b91ae0389722749af4d8258","a8206350998a71d85aa77535ba4c74b7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5cc2068b9b91ae0389722749af4d8258","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5cc2068b9b91ae0389722749af4d8258",8).
@@ -12222,6 +12739,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","6a4f7003c6a6f0e62c1a
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","6a4f7003c6a6f0e62c1a9955cf89abc3",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","6a4f7003c6a6f0e62c1a9955cf89abc3",12).
 dw_tag_function("/code/simple-example/cpp/math-client","227933bcfe288ec819d0aa07c53a1b1a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","21dd3ea47617558ae9d22834e468d69a",0).
 die_has_child("227933bcfe288ec819d0aa07c53a1b1a","21dd3ea47617558ae9d22834e468d69a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","227933bcfe288ec819d0aa07c53a1b1a","operator std::integral_constant<bool, false>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","227933bcfe288ec819d0aa07c53a1b1a",8).
@@ -12240,6 +12758,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3a9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3a92b5ec08342743bdcd46614b6f9fdd","integral_constant<bool, false>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3a92b5ec08342743bdcd46614b6f9fdd",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a615e9dcfa136894063f621dd504fc05").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9399455a5d5cbb42e632c86edc2087b1",0).
 die_has_child("a615e9dcfa136894063f621dd504fc05","9399455a5d5cbb42e632c86edc2087b1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a615e9dcfa136894063f621dd504fc05","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a615e9dcfa136894063f621dd504fc05",8).
@@ -12303,6 +12822,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","b5cf7785b20eebdbbc8a
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","b5cf7785b20eebdbbc8a669ada850a73",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","b5cf7785b20eebdbbc8a669ada850a73",12).
 dw_tag_function("/code/simple-example/cpp/math-client","eeee8c7eb7b93b5f32c0926811a12280").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9cb5bbded39d3bbbeac3b4032d369bc0",0).
 die_has_child("eeee8c7eb7b93b5f32c0926811a12280","9cb5bbded39d3bbbeac3b4032d369bc0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","eeee8c7eb7b93b5f32c0926811a12280","operator std::integral_constant<bool, true>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","eeee8c7eb7b93b5f32c0926811a12280",8).
@@ -12317,6 +12837,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f74
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f7462a860fd74a4039433d8d1c27118a","integral_constant<bool, true>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f7462a860fd74a4039433d8d1c27118a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","36e90a9f71f0e15718ef77345fd8072c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","58779237d8371741a77753afc044e4cf",0).
 die_has_child("36e90a9f71f0e15718ef77345fd8072c","58779237d8371741a77753afc044e4cf").
 dw_tag_function_name("/code/simple-example/cpp/math-client","36e90a9f71f0e15718ef77345fd8072c","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","36e90a9f71f0e15718ef77345fd8072c",8).
@@ -12358,6 +12879,7 @@ dw_tag_typedef_line("/code/simple-example/cpp/math-client","da2f94155c8647a7adab
 dw_tag_typedef_column("/code/simple-example/cpp/math-client","da2f94155c8647a7adaba4e39ee997b1",45).
 dw_tag_typedef_die_size("/code/simple-example/cpp/math-client","da2f94155c8647a7adaba4e39ee997b1",12).
 dw_tag_function("/code/simple-example/cpp/math-client","51fbdafb75b3b24c1078543eec873881").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","07ae22595333d750ccb869aacfb343c9",0).
 die_has_child("51fbdafb75b3b24c1078543eec873881","07ae22595333d750ccb869aacfb343c9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","51fbdafb75b3b24c1078543eec873881","operator std::integral_constant<bool, true>::value_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","51fbdafb75b3b24c1078543eec873881",8).
@@ -12376,6 +12898,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d99
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d9923f33d62ea68b788816317374c660","integral_constant<bool, true>").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d9923f33d62ea68b788816317374c660",5).
 dw_tag_function("/code/simple-example/cpp/math-client","97e1732cb4f2119c3fea1867c3afbdb2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ff21ad71f81b46a406701beee19078b5",0).
 die_has_child("97e1732cb4f2119c3fea1867c3afbdb2","ff21ad71f81b46a406701beee19078b5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","97e1732cb4f2119c3fea1867c3afbdb2","operator()").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","97e1732cb4f2119c3fea1867c3afbdb2",8).
@@ -12582,6 +13105,7 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","ae8d636c25b
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","ae8d636c25bde87b44a52120c9094031",13).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","ae8d636c25bde87b44a52120c9094031","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","c13a55d9f914117dcbceb160bcacf027").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bd3e425e2320e789c8d295491c4b0604",0).
 die_has_child("c13a55d9f914117dcbceb160bcacf027","bd3e425e2320e789c8d295491c4b0604").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c13a55d9f914117dcbceb160bcacf027","piecewise_construct_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","c13a55d9f914117dcbceb160bcacf027",76).
@@ -12596,6 +13120,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","758
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","758adaff2c4b999bfe64ef70607b9e60","piecewise_construct_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","758adaff2c4b999bfe64ef70607b9e60",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5a53bfae6d8650cf0b3d3488c8339dd5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a7dbf2955eba13749539e92b16f397f3",0).
 die_has_child("5a53bfae6d8650cf0b3d3488c8339dd5","a7dbf2955eba13749539e92b16f397f3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5a53bfae6d8650cf0b3d3488c8339dd5","piecewise_construct_t").
 dw_tag_function_line("/code/simple-example/cpp/math-client","5a53bfae6d8650cf0b3d3488c8339dd5",76).
@@ -12659,7 +13184,9 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","74c34e47bf1
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","74c34e47bf1b3c9eaa201283b7dc07d7",14).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","74c34e47bf1b3c9eaa201283b7dc07d7","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","03624d76f4a18237947f8c67660b5b05").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0dcd3390e1a3f826d225c53311124988",0).
 die_has_child("03624d76f4a18237947f8c67660b5b05","0dcd3390e1a3f826d225c53311124988").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9d83ef52e998bf7db3bf3fe5d19e8144",1).
 die_has_child("03624d76f4a18237947f8c67660b5b05","9d83ef52e998bf7db3bf3fe5d19e8144").
 dw_tag_function_name("/code/simple-example/cpp/math-client","03624d76f4a18237947f8c67660b5b05","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","03624d76f4a18237947f8c67660b5b05",299).
@@ -12688,7 +13215,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","ea1875e3082d
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","ea1875e3082d10261cedc626da2bef05",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","ea1875e3082d10261cedc626da2bef05","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","f0751777bdb715e6fdb5dbd6724e2dee").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d277c7874354e901a4d3fea37882423f",0).
 die_has_child("f0751777bdb715e6fdb5dbd6724e2dee","d277c7874354e901a4d3fea37882423f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d488cd36f34275175a5d7d544b457f29",1).
 die_has_child("f0751777bdb715e6fdb5dbd6724e2dee","d488cd36f34275175a5d7d544b457f29").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f0751777bdb715e6fdb5dbd6724e2dee","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f0751777bdb715e6fdb5dbd6724e2dee",8).
@@ -12707,7 +13236,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ad1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ad16321460700d1a8d2701b284651208","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ad16321460700d1a8d2701b284651208",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ed7303dd31dfc511d1ac1ac1f1631ae0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8f0a9d2e4ade46fdf6b388f9c30f9ca7",0).
 die_has_child("ed7303dd31dfc511d1ac1ac1f1631ae0","8f0a9d2e4ade46fdf6b388f9c30f9ca7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","22c67c9c8f2d3e83d07110fa0231b75a",1).
 die_has_child("ed7303dd31dfc511d1ac1ac1f1631ae0","22c67c9c8f2d3e83d07110fa0231b75a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ed7303dd31dfc511d1ac1ac1f1631ae0","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ed7303dd31dfc511d1ac1ac1f1631ae0",8).
@@ -12726,8 +13257,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e7f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e7f0dded70f2dc6891bc4ec7252089f5","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e7f0dded70f2dc6891bc4ec7252089f5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d9cc7c40df19433db5ce3e69b3e993ec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ca5e0fcd6b2734086b4ae953edefa799",0).
 die_has_child("d9cc7c40df19433db5ce3e69b3e993ec","ca5e0fcd6b2734086b4ae953edefa799").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f0804abdea48dcf69fe90b383f3eab87",1).
 die_has_child("d9cc7c40df19433db5ce3e69b3e993ec","f0804abdea48dcf69fe90b383f3eab87").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d6737067eb85c614a711976e2072d846",2).
 die_has_child("d9cc7c40df19433db5ce3e69b3e993ec","d6737067eb85c614a711976e2072d846").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d9cc7c40df19433db5ce3e69b3e993ec","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d9cc7c40df19433db5ce3e69b3e993ec",32).
@@ -12750,6 +13284,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","611
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6110f167b1d57da904132c1f2b44234f","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6110f167b1d57da904132c1f2b44234f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e7f0d79a1006fc16edc23808292dc50a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d8453b0ec4acc5fe81cf7384ee8eac59",0).
 die_has_child("e7f0d79a1006fc16edc23808292dc50a","d8453b0ec4acc5fe81cf7384ee8eac59").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e7f0d79a1006fc16edc23808292dc50a","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e7f0d79a1006fc16edc23808292dc50a",64).
@@ -12764,8 +13299,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e18
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e183efcd780eadfebf551e51441a7c43","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e183efcd780eadfebf551e51441a7c43",5).
 dw_tag_function("/code/simple-example/cpp/math-client","68812888f1ff4431756278debd5deb45").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c0618f088e1dea2148ca4081bba283f2",0).
 die_has_child("68812888f1ff4431756278debd5deb45","c0618f088e1dea2148ca4081bba283f2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fbfa0eed6b3d17c09ce18a6fcd51b4cd",1).
 die_has_child("68812888f1ff4431756278debd5deb45","fbfa0eed6b3d17c09ce18a6fcd51b4cd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7f5f94a9e1f9d62688f20024f8e12c4e",2).
 die_has_child("68812888f1ff4431756278debd5deb45","7f5f94a9e1f9d62688f20024f8e12c4e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","68812888f1ff4431756278debd5deb45","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","68812888f1ff4431756278debd5deb45",8).
@@ -12788,8 +13326,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1da
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1da0abfeb56364ba21db1039d012c085","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1da0abfeb56364ba21db1039d012c085",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d8935341767a585751ce961f43ad8c92").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","64503b3b0ebcb76b83f16190726f4a79",0).
 die_has_child("d8935341767a585751ce961f43ad8c92","64503b3b0ebcb76b83f16190726f4a79").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8af35037a9185a49a367cd72052ef3fd",1).
 die_has_child("d8935341767a585751ce961f43ad8c92","8af35037a9185a49a367cd72052ef3fd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bf685a1fc486c3a80983fd3d6d6caac0",2).
 die_has_child("d8935341767a585751ce961f43ad8c92","bf685a1fc486c3a80983fd3d6d6caac0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d8935341767a585751ce961f43ad8c92","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d8935341767a585751ce961f43ad8c92",8).
@@ -12812,8 +13353,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6f3
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6f3476ea270b9960ee5c5ad89dfc90cc","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6f3476ea270b9960ee5c5ad89dfc90cc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","020d2a8f320b864be1c42aacb35b669e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f0db4fde2841331de16a36dab4032ca9",0).
 die_has_child("020d2a8f320b864be1c42aacb35b669e","f0db4fde2841331de16a36dab4032ca9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","17d9e3eb398880a452d209f1d2aa1bb0",1).
 die_has_child("020d2a8f320b864be1c42aacb35b669e","17d9e3eb398880a452d209f1d2aa1bb0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a824cef0a12554a0562c021bb3b37309",2).
 die_has_child("020d2a8f320b864be1c42aacb35b669e","a824cef0a12554a0562c021bb3b37309").
 dw_tag_function_name("/code/simple-example/cpp/math-client","020d2a8f320b864be1c42aacb35b669e","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","020d2a8f320b864be1c42aacb35b669e",8).
@@ -12836,8 +13380,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d02
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d02432bf7b1d441b380a82be36d159ff","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d02432bf7b1d441b380a82be36d159ff",5).
 dw_tag_function("/code/simple-example/cpp/math-client","cbfb16819a769887df40b7368201ff8b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2cf3e8db94ce60844c05a5856fe841fd",0).
 die_has_child("cbfb16819a769887df40b7368201ff8b","2cf3e8db94ce60844c05a5856fe841fd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","97284aad78681c8d9357427646ef6b57",1).
 die_has_child("cbfb16819a769887df40b7368201ff8b","97284aad78681c8d9357427646ef6b57").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","87d1f66aa553ca37b9592b4cfa0f3872",2).
 die_has_child("cbfb16819a769887df40b7368201ff8b","87d1f66aa553ca37b9592b4cfa0f3872").
 dw_tag_function_name("/code/simple-example/cpp/math-client","cbfb16819a769887df40b7368201ff8b","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","cbfb16819a769887df40b7368201ff8b",8).
@@ -12860,6 +13407,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3d8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3d86fb62c872480dfb5daae370276c56","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3d86fb62c872480dfb5daae370276c56",5).
 dw_tag_function("/code/simple-example/cpp/math-client","228db704e7037f65619a3d765350b1d3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","84b6b731da0470bb64d653f8e6f96550",0).
 die_has_child("228db704e7037f65619a3d765350b1d3","84b6b731da0470bb64d653f8e6f96550").
 dw_tag_function_name("/code/simple-example/cpp/math-client","228db704e7037f65619a3d765350b1d3","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","228db704e7037f65619a3d765350b1d3",8).
@@ -12886,6 +13434,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","5cd7ee5a8ffa
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","5cd7ee5a8ffa58abd3babf7efe7eef33",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","5cd7ee5a8ffa58abd3babf7efe7eef33","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","cd810cbf6651e77a548334fca210eff6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c6171e5b38dd50d44dc69e271f9cb0ef",0).
 die_has_child("cd810cbf6651e77a548334fca210eff6","c6171e5b38dd50d44dc69e271f9cb0ef").
 dw_tag_function_name("/code/simple-example/cpp/math-client","cd810cbf6651e77a548334fca210eff6","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","cd810cbf6651e77a548334fca210eff6",32).
@@ -12900,7 +13449,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7e5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7e5ff400b98e0c6c133093296409ccea","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7e5ff400b98e0c6c133093296409ccea",5).
 dw_tag_function("/code/simple-example/cpp/math-client","572272bc8784f7da6674501b28d4d983").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a81b5218f094d5be0c3f605128eee6a0",0).
 die_has_child("572272bc8784f7da6674501b28d4d983","a81b5218f094d5be0c3f605128eee6a0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7baeb877ab4a1583ceff369ff09354d4",1).
 die_has_child("572272bc8784f7da6674501b28d4d983","7baeb877ab4a1583ceff369ff09354d4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","572272bc8784f7da6674501b28d4d983","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","572272bc8784f7da6674501b28d4d983",8).
@@ -12928,6 +13479,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","095cc796a6befc5
 dw_tag_function_external("/code/simple-example/cpp/math-client","095cc796a6befc5106819cfd932b3739","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","095cc796a6befc5106819cfd932b3739","_ZNSt11char_traitsIcE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","745a5f81bcac7b643083e019d9cdfe2c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","71b0342cb893dad72cd484cb344c5991",0).
 die_has_child("745a5f81bcac7b643083e019d9cdfe2c","71b0342cb893dad72cd484cb344c5991").
 dw_tag_function_name("/code/simple-example/cpp/math-client","745a5f81bcac7b643083e019d9cdfe2c","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","745a5f81bcac7b643083e019d9cdfe2c",32).
@@ -12947,7 +13499,9 @@ dw_tag_template_type_param_size_in_bits("/code/simple-example/cpp/math-client","
 dw_tag_template_type_param_type_name("/code/simple-example/cpp/math-client","5154397b9ffa0bd6ef2a03ad50e4e25f","char").
 dw_tag_template_type_param_die_size("/code/simple-example/cpp/math-client","5154397b9ffa0bd6ef2a03ad50e4e25f",9).
 dw_tag_function("/code/simple-example/cpp/math-client","181df90f51cf019c39fb761ba05fb8aa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ac9ac9f27e73e1546062d1104ea76a45",0).
 die_has_child("181df90f51cf019c39fb761ba05fb8aa","ac9ac9f27e73e1546062d1104ea76a45").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","30b6326d52e8cae61928a7fa89422b5f",1).
 die_has_child("181df90f51cf019c39fb761ba05fb8aa","30b6326d52e8cae61928a7fa89422b5f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","181df90f51cf019c39fb761ba05fb8aa","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","181df90f51cf019c39fb761ba05fb8aa",299).
@@ -12984,7 +13538,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","4a3d53b37614
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","4a3d53b3761438c58cc492391e6a7739",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","4a3d53b3761438c58cc492391e6a7739","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","257922bfacddaead46c269b92b5836c0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","abcf50ef4e21df0970a1676680228f54",0).
 die_has_child("257922bfacddaead46c269b92b5836c0","abcf50ef4e21df0970a1676680228f54").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b5ff8711fcd3d507f7347331616e7106",1).
 die_has_child("257922bfacddaead46c269b92b5836c0","b5ff8711fcd3d507f7347331616e7106").
 dw_tag_function_name("/code/simple-example/cpp/math-client","257922bfacddaead46c269b92b5836c0","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","257922bfacddaead46c269b92b5836c0",8).
@@ -13011,7 +13567,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5e2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5e205e60f6260ee1a49e5165a3b273c4","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5e205e60f6260ee1a49e5165a3b273c4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0b15289e6b57ece72c7ed4af63fda717").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f5c1a6ee46cd070e8f788ff88f123556",0).
 die_has_child("0b15289e6b57ece72c7ed4af63fda717","f5c1a6ee46cd070e8f788ff88f123556").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","384b815924da685d8502ae4f0e98a656",1).
 die_has_child("0b15289e6b57ece72c7ed4af63fda717","384b815924da685d8502ae4f0e98a656").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0b15289e6b57ece72c7ed4af63fda717","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0b15289e6b57ece72c7ed4af63fda717",8).
@@ -13038,8 +13596,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a1a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a1a210e70995ea1cbb43246894f7ab7f","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a1a210e70995ea1cbb43246894f7ab7f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0cbbba296b1e190d70a2100416075bbc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","31f73e53964e39ecc9bdf07d1486cd18",0).
 die_has_child("0cbbba296b1e190d70a2100416075bbc","31f73e53964e39ecc9bdf07d1486cd18").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","db465517a17c7b61dd9c54b4a88e3375",1).
 die_has_child("0cbbba296b1e190d70a2100416075bbc","db465517a17c7b61dd9c54b4a88e3375").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","295762702362353fe2b7cda4ad6a6e88",2).
 die_has_child("0cbbba296b1e190d70a2100416075bbc","295762702362353fe2b7cda4ad6a6e88").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0cbbba296b1e190d70a2100416075bbc","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0cbbba296b1e190d70a2100416075bbc",32).
@@ -13074,6 +13635,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","809
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","809be86bec5ca4363a7458b78d8216d3","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","809be86bec5ca4363a7458b78d8216d3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c860e060e77f95ab3dcf3998080decd0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a08535b64a2b51538a4ec4f36b0dbe82",0).
 die_has_child("c860e060e77f95ab3dcf3998080decd0","a08535b64a2b51538a4ec4f36b0dbe82").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c860e060e77f95ab3dcf3998080decd0","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c860e060e77f95ab3dcf3998080decd0",64).
@@ -13092,8 +13654,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c93
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c935debbb325440f44b08f86f1e87a73","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c935debbb325440f44b08f86f1e87a73",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f84fae994a6087a07d019f2e54f71fc7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e952bc6c4410f2b9d7ae127812729a20",0).
 die_has_child("f84fae994a6087a07d019f2e54f71fc7","e952bc6c4410f2b9d7ae127812729a20").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8ed0104039b0bbdd85bf3fda37426d11",1).
 die_has_child("f84fae994a6087a07d019f2e54f71fc7","8ed0104039b0bbdd85bf3fda37426d11").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5d2a646076e1fad3b47b2efae8ac1826",2).
 die_has_child("f84fae994a6087a07d019f2e54f71fc7","5d2a646076e1fad3b47b2efae8ac1826").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f84fae994a6087a07d019f2e54f71fc7","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f84fae994a6087a07d019f2e54f71fc7",8).
@@ -13128,8 +13693,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a5d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a5d01963a422405bfb047ce2d5e143db","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a5d01963a422405bfb047ce2d5e143db",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0e2f2119cbb126a6983d114d399c9cf3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b221535e0108785bbf29e644803f4dbc",0).
 die_has_child("0e2f2119cbb126a6983d114d399c9cf3","b221535e0108785bbf29e644803f4dbc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e0928a0abb977f8aeb22e50ecad27e45",1).
 die_has_child("0e2f2119cbb126a6983d114d399c9cf3","e0928a0abb977f8aeb22e50ecad27e45").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","99ffdc396a452ebcc83fa4ff6c1cc17f",2).
 die_has_child("0e2f2119cbb126a6983d114d399c9cf3","99ffdc396a452ebcc83fa4ff6c1cc17f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0e2f2119cbb126a6983d114d399c9cf3","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0e2f2119cbb126a6983d114d399c9cf3",8).
@@ -13164,8 +13732,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a4e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a4ea3b8d0bed1c600af3666fa16255c5","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a4ea3b8d0bed1c600af3666fa16255c5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5a705ff304cfb7bf313acdf8705f8b68").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6885653fd3b9dbaa4c77f3823e9fcc5e",0).
 die_has_child("5a705ff304cfb7bf313acdf8705f8b68","6885653fd3b9dbaa4c77f3823e9fcc5e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b23f846ae96d27cf8e8c3dc696d0ad8e",1).
 die_has_child("5a705ff304cfb7bf313acdf8705f8b68","b23f846ae96d27cf8e8c3dc696d0ad8e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","876d89a4363a9bb9e070abba3a7fdad1",2).
 die_has_child("5a705ff304cfb7bf313acdf8705f8b68","876d89a4363a9bb9e070abba3a7fdad1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5a705ff304cfb7bf313acdf8705f8b68","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5a705ff304cfb7bf313acdf8705f8b68",8).
@@ -13200,8 +13771,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5b1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5b15ec297ef9f7d575067174b18ab3e8","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5b15ec297ef9f7d575067174b18ab3e8",5).
 dw_tag_function("/code/simple-example/cpp/math-client","15a1a400b44670c1945bbe66047168cc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","25a509043c5e43d4d92f10d6a7c6bb75",0).
 die_has_child("15a1a400b44670c1945bbe66047168cc","25a509043c5e43d4d92f10d6a7c6bb75").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9f102f30b3e6a10e84be042c8a71b857",1).
 die_has_child("15a1a400b44670c1945bbe66047168cc","9f102f30b3e6a10e84be042c8a71b857").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7616f464d133d03fa7e087b8d4577ce4",2).
 die_has_child("15a1a400b44670c1945bbe66047168cc","7616f464d133d03fa7e087b8d4577ce4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","15a1a400b44670c1945bbe66047168cc","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","15a1a400b44670c1945bbe66047168cc",8).
@@ -13236,6 +13810,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d45
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d450cb6548ac7898edf798728b880f5f","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d450cb6548ac7898edf798728b880f5f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","00ba6203ef8df33c9bfcf76a62dee4e2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","01120ddd6f74c485ac9a675958d6b5de",0).
 die_has_child("00ba6203ef8df33c9bfcf76a62dee4e2","01120ddd6f74c485ac9a675958d6b5de").
 dw_tag_function_name("/code/simple-example/cpp/math-client","00ba6203ef8df33c9bfcf76a62dee4e2","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","00ba6203ef8df33c9bfcf76a62dee4e2",8).
@@ -13266,6 +13841,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","1dd2480f7e5f
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","1dd2480f7e5f35fe36348b12878ed46c",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","1dd2480f7e5f35fe36348b12878ed46c","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","2228a98ab32e054d08af4dee1384caeb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8058937beb8eb05e8e5ba030901c78d0",0).
 die_has_child("2228a98ab32e054d08af4dee1384caeb","8058937beb8eb05e8e5ba030901c78d0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2228a98ab32e054d08af4dee1384caeb","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2228a98ab32e054d08af4dee1384caeb",32).
@@ -13284,7 +13860,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","590
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","590ee04c049bdb4ac68ae59aa6575ccb","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","590ee04c049bdb4ac68ae59aa6575ccb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6f1da877191df21184d6a456fba10f80").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c089f72ff7a710ab0c06cb6c6c1ab877",0).
 die_has_child("6f1da877191df21184d6a456fba10f80","c089f72ff7a710ab0c06cb6c6c1ab877").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6616c9f575a30e8ba57d728c865c935c",1).
 die_has_child("6f1da877191df21184d6a456fba10f80","6616c9f575a30e8ba57d728c865c935c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6f1da877191df21184d6a456fba10f80","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6f1da877191df21184d6a456fba10f80",8).
@@ -13320,6 +13898,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","9cb50fb886433bd
 dw_tag_function_external("/code/simple-example/cpp/math-client","9cb50fb886433bdfa84dc5334b2a6e32","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","9cb50fb886433bdfa84dc5334b2a6e32","_ZNSt11char_traitsIcE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","d382f7db636373536e0f727607cb02a0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","afed9df4350ecbbf2c1e8f944522b194",0).
 die_has_child("d382f7db636373536e0f727607cb02a0","afed9df4350ecbbf2c1e8f944522b194").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d382f7db636373536e0f727607cb02a0","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d382f7db636373536e0f727607cb02a0",32).
@@ -13369,7 +13948,9 @@ dw_tag_structure_type_column("/code/simple-example/cpp/math-client","8b475f8c44a
 dw_tag_structure_type_die_size("/code/simple-example/cpp/math-client","8b475f8c44af1632586dabbe12000153",14).
 dw_tag_structure_type_is_struct("/code/simple-example/cpp/math-client","8b475f8c44af1632586dabbe12000153","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","39cd83830ca4b22d82b11d2847261f2b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9016e4837f80ca68be68eabfeebca217",0).
 die_has_child("39cd83830ca4b22d82b11d2847261f2b","9016e4837f80ca68be68eabfeebca217").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","36518f4e76074290e5afec956a52db44",1).
 die_has_child("39cd83830ca4b22d82b11d2847261f2b","36518f4e76074290e5afec956a52db44").
 dw_tag_function_name("/code/simple-example/cpp/math-client","39cd83830ca4b22d82b11d2847261f2b","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","39cd83830ca4b22d82b11d2847261f2b",412).
@@ -13398,7 +13979,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","240ce35d01da
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","240ce35d01da6daa3ecb717e52111ee6",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","240ce35d01da6daa3ecb717e52111ee6","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","053562efd4d287ea8140c8f51773138a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dcc63e252478f65cd5a212a0016533a4",0).
 die_has_child("053562efd4d287ea8140c8f51773138a","dcc63e252478f65cd5a212a0016533a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1e1b03a9cffcd719d2eba0700ddd952c",1).
 die_has_child("053562efd4d287ea8140c8f51773138a","1e1b03a9cffcd719d2eba0700ddd952c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","053562efd4d287ea8140c8f51773138a","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","053562efd4d287ea8140c8f51773138a",8).
@@ -13417,7 +14000,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0f4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0f4c96529e168d9c2378194d38b78831","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0f4c96529e168d9c2378194d38b78831",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c19b0c0d3944338064747f09b48ed1cb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5d5ade86e997bae9a91a53f06d1dd218",0).
 die_has_child("c19b0c0d3944338064747f09b48ed1cb","5d5ade86e997bae9a91a53f06d1dd218").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","05a12e2a27427622f2d5dae798416606",1).
 die_has_child("c19b0c0d3944338064747f09b48ed1cb","05a12e2a27427622f2d5dae798416606").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c19b0c0d3944338064747f09b48ed1cb","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c19b0c0d3944338064747f09b48ed1cb",8).
@@ -13436,8 +14021,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d63
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d63dafaa7ff99c65dc81a7229efe2cb4","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d63dafaa7ff99c65dc81a7229efe2cb4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2fe1ce35a0ed96da6f050977159da4a1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b50126bc6edc592b2f390f9ccf304641",0).
 die_has_child("2fe1ce35a0ed96da6f050977159da4a1","b50126bc6edc592b2f390f9ccf304641").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8cbe790cc99ffe2d286163ddf2972292",1).
 die_has_child("2fe1ce35a0ed96da6f050977159da4a1","8cbe790cc99ffe2d286163ddf2972292").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3f9b7ca646dc6eb42eaa19c258253bcf",2).
 die_has_child("2fe1ce35a0ed96da6f050977159da4a1","3f9b7ca646dc6eb42eaa19c258253bcf").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2fe1ce35a0ed96da6f050977159da4a1","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2fe1ce35a0ed96da6f050977159da4a1",32).
@@ -13460,6 +14048,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bfd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bfd602962b7d78ff901d5849608f374e","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bfd602962b7d78ff901d5849608f374e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","959549a5b078e0baef5dd413addb483d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1b605395868674acad8c84f212b92593",0).
 die_has_child("959549a5b078e0baef5dd413addb483d","1b605395868674acad8c84f212b92593").
 dw_tag_function_name("/code/simple-example/cpp/math-client","959549a5b078e0baef5dd413addb483d","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","959549a5b078e0baef5dd413addb483d",64).
@@ -13474,8 +14063,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0cf
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0cf94c77097b94486616b9eac33f3539","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0cf94c77097b94486616b9eac33f3539",5).
 dw_tag_function("/code/simple-example/cpp/math-client","45b565b61a27a91009b5e21e4b863b24").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","462b489ff905dc994a742e3defb5f16b",0).
 die_has_child("45b565b61a27a91009b5e21e4b863b24","462b489ff905dc994a742e3defb5f16b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","30ebbb276b1697ea671d798cad26cfd6",1).
 die_has_child("45b565b61a27a91009b5e21e4b863b24","30ebbb276b1697ea671d798cad26cfd6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","95906debffa0242f34ff47311a4c48f4",2).
 die_has_child("45b565b61a27a91009b5e21e4b863b24","95906debffa0242f34ff47311a4c48f4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","45b565b61a27a91009b5e21e4b863b24","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","45b565b61a27a91009b5e21e4b863b24",32).
@@ -13498,8 +14090,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7aa
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7aab89dbf8701bad3538b7fbd55725e0","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7aab89dbf8701bad3538b7fbd55725e0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a98aeb4628f71e486a1c235a2e4b7b54").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","85bef2c9096bfbc3a44a32eeed3c539d",0).
 die_has_child("a98aeb4628f71e486a1c235a2e4b7b54","85bef2c9096bfbc3a44a32eeed3c539d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","26be41999d35dbc5cc10a249e58c0c37",1).
 die_has_child("a98aeb4628f71e486a1c235a2e4b7b54","26be41999d35dbc5cc10a249e58c0c37").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7af0d9d64256784694b23935d43022a6",2).
 die_has_child("a98aeb4628f71e486a1c235a2e4b7b54","7af0d9d64256784694b23935d43022a6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a98aeb4628f71e486a1c235a2e4b7b54","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a98aeb4628f71e486a1c235a2e4b7b54",32).
@@ -13522,8 +14117,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a92
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a92850bde08231cd0944ae2c04b7969b","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a92850bde08231cd0944ae2c04b7969b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","77f3339caae37f7135eb8f8a834a572b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8b54048175d7bd92d103dbe476cfb58b",0).
 die_has_child("77f3339caae37f7135eb8f8a834a572b","8b54048175d7bd92d103dbe476cfb58b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4b709e18bae3e394bb52b989dafddd57",1).
 die_has_child("77f3339caae37f7135eb8f8a834a572b","4b709e18bae3e394bb52b989dafddd57").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","282044ecb80e98008f06caaf605c3066",2).
 die_has_child("77f3339caae37f7135eb8f8a834a572b","282044ecb80e98008f06caaf605c3066").
 dw_tag_function_name("/code/simple-example/cpp/math-client","77f3339caae37f7135eb8f8a834a572b","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","77f3339caae37f7135eb8f8a834a572b",32).
@@ -13546,8 +14144,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0fa
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0fa771339299a9e38494003ca5f7159d","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0fa771339299a9e38494003ca5f7159d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","61d2d4983421c51f4d714d4fbd615c69").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dfc0611dd789ef64f6f26260a3c38f6c",0).
 die_has_child("61d2d4983421c51f4d714d4fbd615c69","dfc0611dd789ef64f6f26260a3c38f6c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c2954167a8624c3a03756bdb7f464b45",1).
 die_has_child("61d2d4983421c51f4d714d4fbd615c69","c2954167a8624c3a03756bdb7f464b45").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","da2d65fede737ce1ab5fb912ce549ea5",2).
 die_has_child("61d2d4983421c51f4d714d4fbd615c69","da2d65fede737ce1ab5fb912ce549ea5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","61d2d4983421c51f4d714d4fbd615c69","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","61d2d4983421c51f4d714d4fbd615c69",32).
@@ -13570,6 +14171,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","513
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","513bff3b4d1e4f26b9e231d6377365d2","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","513bff3b4d1e4f26b9e231d6377365d2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","624af80a2edfe80db03e8b9a5172a88b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cdc698420fcd42156a18c1788d0a765a",0).
 die_has_child("624af80a2edfe80db03e8b9a5172a88b","cdc698420fcd42156a18c1788d0a765a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","624af80a2edfe80db03e8b9a5172a88b","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","624af80a2edfe80db03e8b9a5172a88b",32).
@@ -13596,6 +14198,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","c8eab8979cda
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","c8eab8979cdad75f577d3cd15178bc78",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","c8eab8979cdad75f577d3cd15178bc78","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","242d4dc7069b952292bbfc6f9718da9d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee4adec2de580bd84974fe8b3657e8bc",0).
 die_has_child("242d4dc7069b952292bbfc6f9718da9d","ee4adec2de580bd84974fe8b3657e8bc").
 dw_tag_function_name("/code/simple-example/cpp/math-client","242d4dc7069b952292bbfc6f9718da9d","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","242d4dc7069b952292bbfc6f9718da9d",32).
@@ -13610,7 +14213,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","61c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","61c6b743effcebad62291c7514a002fa","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","61c6b743effcebad62291c7514a002fa",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b0c9b3dce367b2350f30abd10a6195d6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2f42a23eaf540ea9a799a1e2ccf7fa2f",0).
 die_has_child("b0c9b3dce367b2350f30abd10a6195d6","2f42a23eaf540ea9a799a1e2ccf7fa2f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","94727df8245167e2a55406d80975e31b",1).
 die_has_child("b0c9b3dce367b2350f30abd10a6195d6","94727df8245167e2a55406d80975e31b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b0c9b3dce367b2350f30abd10a6195d6","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b0c9b3dce367b2350f30abd10a6195d6",8).
@@ -13638,6 +14243,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","ce46c6766c3423c
 dw_tag_function_external("/code/simple-example/cpp/math-client","ce46c6766c3423ca67258b15cdc69159","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","ce46c6766c3423ca67258b15cdc69159","_ZNSt11char_traitsIwE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","db2e619e8346236653658f140e7ec801").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","79cba1860bcf7e2249d17d5e6e745676",0).
 die_has_child("db2e619e8346236653658f140e7ec801","79cba1860bcf7e2249d17d5e6e745676").
 dw_tag_function_name("/code/simple-example/cpp/math-client","db2e619e8346236653658f140e7ec801","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","db2e619e8346236653658f140e7ec801",32).
@@ -13657,7 +14263,9 @@ dw_tag_template_type_param_size_in_bits("/code/simple-example/cpp/math-client","
 dw_tag_template_type_param_type_name("/code/simple-example/cpp/math-client","500a8b8837e9442e398daa80068b8a7c","wchar_t").
 dw_tag_template_type_param_die_size("/code/simple-example/cpp/math-client","500a8b8837e9442e398daa80068b8a7c",9).
 dw_tag_function("/code/simple-example/cpp/math-client","283e0fbb933facc5cb3190dfac3733ea").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1fc9fa28bd5367d3dc6449ae367957e4",0).
 die_has_child("283e0fbb933facc5cb3190dfac3733ea","1fc9fa28bd5367d3dc6449ae367957e4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","98e743f725e1f237c2dcb42c446a2796",1).
 die_has_child("283e0fbb933facc5cb3190dfac3733ea","98e743f725e1f237c2dcb42c446a2796").
 dw_tag_function_name("/code/simple-example/cpp/math-client","283e0fbb933facc5cb3190dfac3733ea","assign").
 dw_tag_function_line("/code/simple-example/cpp/math-client","283e0fbb933facc5cb3190dfac3733ea",412).
@@ -13694,7 +14302,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","385609b674b8
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","385609b674b86d4352e9ac843ac6259b",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","385609b674b86d4352e9ac843ac6259b","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","7456eef3b33c2d0cd429eeb623c5b2fe").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6f4bb79815efe095517c341483596942",0).
 die_has_child("7456eef3b33c2d0cd429eeb623c5b2fe","6f4bb79815efe095517c341483596942").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","105987ba5a63096b80c5f9c055c54c5e",1).
 die_has_child("7456eef3b33c2d0cd429eeb623c5b2fe","105987ba5a63096b80c5f9c055c54c5e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7456eef3b33c2d0cd429eeb623c5b2fe","eq").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7456eef3b33c2d0cd429eeb623c5b2fe",8).
@@ -13721,7 +14331,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c07
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c07481bc3e53cf46b6c21a84d8d67606","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c07481bc3e53cf46b6c21a84d8d67606",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6b9d85d18c7f5f0a2d272cd64f7122c5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8feb756952179f2790058687058037be",0).
 die_has_child("6b9d85d18c7f5f0a2d272cd64f7122c5","8feb756952179f2790058687058037be").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9a56a58ab425da8c4df97df247cff81e",1).
 die_has_child("6b9d85d18c7f5f0a2d272cd64f7122c5","9a56a58ab425da8c4df97df247cff81e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6b9d85d18c7f5f0a2d272cd64f7122c5","lt").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6b9d85d18c7f5f0a2d272cd64f7122c5",8).
@@ -13748,8 +14360,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d53
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d534f5d3658b09a045010565804e2b7a","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d534f5d3658b09a045010565804e2b7a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9db02810a174800117529f93373442dc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cad6adf616b9c86cc6b7b19a8e24cb78",0).
 die_has_child("9db02810a174800117529f93373442dc","cad6adf616b9c86cc6b7b19a8e24cb78").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5661d034042988cf24260f9d808eefb4",1).
 die_has_child("9db02810a174800117529f93373442dc","5661d034042988cf24260f9d808eefb4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","739b262bfab6762a6efed933b632e1e6",2).
 die_has_child("9db02810a174800117529f93373442dc","739b262bfab6762a6efed933b632e1e6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9db02810a174800117529f93373442dc","compare").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9db02810a174800117529f93373442dc",32).
@@ -13784,6 +14399,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","833
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","833a7ae69185b56e3cadb08d67bebae7","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","833a7ae69185b56e3cadb08d67bebae7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","aa98d4a5a6b766d5d2cb5516a6ad8636").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0ed46f346ac20fccc5ae1129523bbabe",0).
 die_has_child("aa98d4a5a6b766d5d2cb5516a6ad8636","0ed46f346ac20fccc5ae1129523bbabe").
 dw_tag_function_name("/code/simple-example/cpp/math-client","aa98d4a5a6b766d5d2cb5516a6ad8636","length").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","aa98d4a5a6b766d5d2cb5516a6ad8636",64).
@@ -13802,8 +14418,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d91
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d91a2634de5e014832d33499861610ca","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d91a2634de5e014832d33499861610ca",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9937af0e3173688f49d21adf9e27e64b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dfc54117f564b85b6b3aa43608e5c330",0).
 die_has_child("9937af0e3173688f49d21adf9e27e64b","dfc54117f564b85b6b3aa43608e5c330").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6cb6efb7bc2324ec135af7455f2c58fb",1).
 die_has_child("9937af0e3173688f49d21adf9e27e64b","6cb6efb7bc2324ec135af7455f2c58fb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d28b0970ea04726aa70f74003bb11368",2).
 die_has_child("9937af0e3173688f49d21adf9e27e64b","d28b0970ea04726aa70f74003bb11368").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9937af0e3173688f49d21adf9e27e64b","find").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9937af0e3173688f49d21adf9e27e64b",32).
@@ -13838,8 +14457,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","601
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","601b1ee5df4535472f5f6475fbd5ff80","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","601b1ee5df4535472f5f6475fbd5ff80",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1af3f91112b23f762ba8502e47b92bf8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","001602dc395552b6faaabd97ac351638",0).
 die_has_child("1af3f91112b23f762ba8502e47b92bf8","001602dc395552b6faaabd97ac351638").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","14f9b57f9fddcd5ff389209d9aef0756",1).
 die_has_child("1af3f91112b23f762ba8502e47b92bf8","14f9b57f9fddcd5ff389209d9aef0756").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8eabce096809d22590c1daa6d87d9ed5",2).
 die_has_child("1af3f91112b23f762ba8502e47b92bf8","8eabce096809d22590c1daa6d87d9ed5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1af3f91112b23f762ba8502e47b92bf8","move").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1af3f91112b23f762ba8502e47b92bf8",32).
@@ -13874,8 +14496,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","873
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","87379734df0c851634107872475eb000","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","87379734df0c851634107872475eb000",5).
 dw_tag_function("/code/simple-example/cpp/math-client","dd8272c42b8a911d18605bf326420046").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d6e7bc1ae9c3bb7f7a0ffde9e4b5e413",0).
 die_has_child("dd8272c42b8a911d18605bf326420046","d6e7bc1ae9c3bb7f7a0ffde9e4b5e413").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e0b3fa830ef09282d7bb438b3e6c72cd",1).
 die_has_child("dd8272c42b8a911d18605bf326420046","e0b3fa830ef09282d7bb438b3e6c72cd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8a3fecbff7f31401035c0935a4a440d0",2).
 die_has_child("dd8272c42b8a911d18605bf326420046","8a3fecbff7f31401035c0935a4a440d0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","dd8272c42b8a911d18605bf326420046","copy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","dd8272c42b8a911d18605bf326420046",32).
@@ -13910,8 +14535,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","87b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","87b6926d1ae6185a8b699d1a33686311","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","87b6926d1ae6185a8b699d1a33686311",5).
 dw_tag_function("/code/simple-example/cpp/math-client","abe2fde0d9f98f54519295867085c8a2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7db2772dea399f96d63b136b17664cb8",0).
 die_has_child("abe2fde0d9f98f54519295867085c8a2","7db2772dea399f96d63b136b17664cb8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1f930b9ff51be642d4c69f7ac04e5e03",1).
 die_has_child("abe2fde0d9f98f54519295867085c8a2","1f930b9ff51be642d4c69f7ac04e5e03").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d958c2e90205b3edf021ef271ef92de3",2).
 die_has_child("abe2fde0d9f98f54519295867085c8a2","d958c2e90205b3edf021ef271ef92de3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","abe2fde0d9f98f54519295867085c8a2","assign").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","abe2fde0d9f98f54519295867085c8a2",32).
@@ -13946,6 +14574,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","933
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9330ac90c06c0900e8eab8115fc1122b","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9330ac90c06c0900e8eab8115fc1122b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a2227fa98f3a81e4e9e1caaa59c33725").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f41f6c85d2e2fa7489e7a5ba01859791",0).
 die_has_child("a2227fa98f3a81e4e9e1caaa59c33725","f41f6c85d2e2fa7489e7a5ba01859791").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a2227fa98f3a81e4e9e1caaa59c33725","to_char_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a2227fa98f3a81e4e9e1caaa59c33725",32).
@@ -13976,6 +14605,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","a65d58809f7e
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","a65d58809f7e4cf8524e1cbb83ce6ef3",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","a65d58809f7e4cf8524e1cbb83ce6ef3","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","149fedf8af92c4c4161c92f9071b2c6e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","878eb78119195cd6820e5a84147da48f",0).
 die_has_child("149fedf8af92c4c4161c92f9071b2c6e","878eb78119195cd6820e5a84147da48f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","149fedf8af92c4c4161c92f9071b2c6e","to_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","149fedf8af92c4c4161c92f9071b2c6e",32).
@@ -13994,7 +14624,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b0c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b0ca575d358d4e9c03415d83db3b30c4","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b0ca575d358d4e9c03415d83db3b30c4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","4b12a29cc3275043012f1cb7c758c965").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f45b492aa2b0c381adf2d88749046db0",0).
 die_has_child("4b12a29cc3275043012f1cb7c758c965","f45b492aa2b0c381adf2d88749046db0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e27dadde314477b8d79f02e18b7d961f",1).
 die_has_child("4b12a29cc3275043012f1cb7c758c965","e27dadde314477b8d79f02e18b7d961f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4b12a29cc3275043012f1cb7c758c965","eq_int_type").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4b12a29cc3275043012f1cb7c758c965",8).
@@ -14030,6 +14662,7 @@ dw_tag_function_die_size("/code/simple-example/cpp/math-client","cc7a6dfb8619609
 dw_tag_function_external("/code/simple-example/cpp/math-client","cc7a6dfb8619609ebcf7af758c850286","eof").
 dw_tag_function_mangled_name("/code/simple-example/cpp/math-client","cc7a6dfb8619609ebcf7af758c850286","_ZNSt11char_traitsIwE3eofEv").
 dw_tag_function("/code/simple-example/cpp/math-client","f77d198f32332b9ad81fdb3e8da4fe6c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","61142248554823434f9da61708e7625b",0).
 die_has_child("f77d198f32332b9ad81fdb3e8da4fe6c","61142248554823434f9da61708e7625b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f77d198f32332b9ad81fdb3e8da4fe6c","not_eof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f77d198f32332b9ad81fdb3e8da4fe6c",32).
@@ -14477,6 +15110,7 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","6f61b7be32ae13b
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","6f61b7be32ae13b498d4a8b8d39d80ea",15).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","6f61b7be32ae13b498d4a8b8d39d80ea","no").
 dw_tag_function("/code/simple-example/cpp/math-client","0063e9145ed68ed4d6a8935f59026982").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8b7464721b45572febcc950cf98fba71",0).
 die_has_child("0063e9145ed68ed4d6a8935f59026982","8b7464721b45572febcc950cf98fba71").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0063e9145ed68ed4d6a8935f59026982","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","0063e9145ed68ed4d6a8935f59026982",607).
@@ -14489,7 +15123,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","239
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","239e9f905fe9bb974063127f5185615b","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","239e9f905fe9bb974063127f5185615b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b98104161f88fc80bee67344c17e840a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7279e154c94a72be60ed2d1f5eeb433d",0).
 die_has_child("b98104161f88fc80bee67344c17e840a","7279e154c94a72be60ed2d1f5eeb433d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e770f3bc26084d9b2c0418a4ef311671",1).
 die_has_child("b98104161f88fc80bee67344c17e840a","e770f3bc26084d9b2c0418a4ef311671").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b98104161f88fc80bee67344c17e840a","~Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","b98104161f88fc80bee67344c17e840a",608).
@@ -14506,7 +15142,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bae
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bae5eeae42c7653c77729d5eda30636f","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bae5eeae42c7653c77729d5eda30636f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","91548b5630910fea5cecc3f49e42db65").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1e812915698260c63e683c0186d23c1d",0).
 die_has_child("91548b5630910fea5cecc3f49e42db65","1e812915698260c63e683c0186d23c1d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b4d0c59f730326c2333f44ade9617157",1).
 die_has_child("91548b5630910fea5cecc3f49e42db65","b4d0c59f730326c2333f44ade9617157").
 dw_tag_function_name("/code/simple-example/cpp/math-client","91548b5630910fea5cecc3f49e42db65","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","91548b5630910fea5cecc3f49e42db65",611).
@@ -14524,7 +15162,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","efc
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","efc4e509cb8de5ee0dfde64ac90c0e89","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","efc4e509cb8de5ee0dfde64ac90c0e89",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c736d3f2498758a3570afb4ed25b6c72").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d7a7709c9820bfbd9005a12980ce1143",0).
 die_has_child("c736d3f2498758a3570afb4ed25b6c72","d7a7709c9820bfbd9005a12980ce1143").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3a54e6e26afa9325eaf62ac2e2de2e90",1).
 die_has_child("c736d3f2498758a3570afb4ed25b6c72","3a54e6e26afa9325eaf62ac2e2de2e90").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c736d3f2498758a3570afb4ed25b6c72","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c736d3f2498758a3570afb4ed25b6c72",8).
@@ -14578,6 +15218,7 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","245e6f3d906fa69
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","245e6f3d906fa6958239cca19cee0847",15).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","245e6f3d906fa6958239cca19cee0847","no").
 dw_tag_function("/code/simple-example/cpp/math-client","3a77a4e57a4ea12ce787f925d6b6e7f5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b3fb6fe6341bb7b554131b3ec9127463",0).
 die_has_child("3a77a4e57a4ea12ce787f925d6b6e7f5","b3fb6fe6341bb7b554131b3ec9127463").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3a77a4e57a4ea12ce787f925d6b6e7f5","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","3a77a4e57a4ea12ce787f925d6b6e7f5",607).
@@ -14590,7 +15231,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b16
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b167db5c778c0ed7b5f8a88345532ae0","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b167db5c778c0ed7b5f8a88345532ae0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","20ae7c6ce978b389c2801d827832e6c1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","eba36b4062ee19210f58953831206f98",0).
 die_has_child("20ae7c6ce978b389c2801d827832e6c1","eba36b4062ee19210f58953831206f98").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a64a2b26926a6de0377563ba5de3a904",1).
 die_has_child("20ae7c6ce978b389c2801d827832e6c1","a64a2b26926a6de0377563ba5de3a904").
 dw_tag_function_name("/code/simple-example/cpp/math-client","20ae7c6ce978b389c2801d827832e6c1","~Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","20ae7c6ce978b389c2801d827832e6c1",608).
@@ -14607,7 +15250,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","303
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3031f9b8313f04ffd7cd083e3d8809be","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3031f9b8313f04ffd7cd083e3d8809be",5).
 dw_tag_function("/code/simple-example/cpp/math-client","14ea5f685e9db2c3a81e4f751f40e5de").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1228518f230cf61279f48e036567d800",0).
 die_has_child("14ea5f685e9db2c3a81e4f751f40e5de","1228518f230cf61279f48e036567d800").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","40713f6a0228a5a08485d7447082fa77",1).
 die_has_child("14ea5f685e9db2c3a81e4f751f40e5de","40713f6a0228a5a08485d7447082fa77").
 dw_tag_function_name("/code/simple-example/cpp/math-client","14ea5f685e9db2c3a81e4f751f40e5de","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","14ea5f685e9db2c3a81e4f751f40e5de",611).
@@ -14625,7 +15270,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","edb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","edb10a081c0aa88acf16ed18aece253b","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","edb10a081c0aa88acf16ed18aece253b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","27896daa84021a3615acad90559b7a16").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0fd166876a80704ae120f9bbb4365a6c",0).
 die_has_child("27896daa84021a3615acad90559b7a16","0fd166876a80704ae120f9bbb4365a6c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","506fb65fbd7489d8980ea08c55fa1500",1).
 die_has_child("27896daa84021a3615acad90559b7a16","506fb65fbd7489d8980ea08c55fa1500").
 dw_tag_function_name("/code/simple-example/cpp/math-client","27896daa84021a3615acad90559b7a16","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","27896daa84021a3615acad90559b7a16",8).
@@ -14661,6 +15308,7 @@ dw_tag_member_column("/code/simple-example/cpp/math-client","fffc73a0fcdb604acf3
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","fffc73a0fcdb604acf3284d715bc248c",13).
 dw_tag_member_external("/code/simple-example/cpp/math-client","fffc73a0fcdb604acf3284d715bc248c","_S_synced_with_stdio").
 dw_tag_function("/code/simple-example/cpp/math-client","1746a43cbc2c3ef07c0964c8581df364").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","72dd449ac668a610501bba83d44a8e02",0).
 die_has_child("1746a43cbc2c3ef07c0964c8581df364","72dd449ac668a610501bba83d44a8e02").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1746a43cbc2c3ef07c0964c8581df364","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","1746a43cbc2c3ef07c0964c8581df364",607).
@@ -14677,7 +15325,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e7d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e7db9605684e28744ab1fa9b20455b3b","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e7db9605684e28744ab1fa9b20455b3b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","35a7095b1f0d522932a2e471d1d30eaf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","20e96cee68887d675515a8dac2b55299",0).
 die_has_child("35a7095b1f0d522932a2e471d1d30eaf","20e96cee68887d675515a8dac2b55299").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b8bc79adc31893e52cdad30ad096a34d",1).
 die_has_child("35a7095b1f0d522932a2e471d1d30eaf","b8bc79adc31893e52cdad30ad096a34d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","35a7095b1f0d522932a2e471d1d30eaf","~Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","35a7095b1f0d522932a2e471d1d30eaf",608).
@@ -14702,7 +15352,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","94a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","94ab666841f02567e494c9b612a58155","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","94ab666841f02567e494c9b612a58155",5).
 dw_tag_function("/code/simple-example/cpp/math-client","00edbce1719144c844490d6b441d1a53").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","46fcba5b6dada95ec3e9ba84fd661c22",0).
 die_has_child("00edbce1719144c844490d6b441d1a53","46fcba5b6dada95ec3e9ba84fd661c22").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2717a8227e0ac281d57d06269be68df1",1).
 die_has_child("00edbce1719144c844490d6b441d1a53","2717a8227e0ac281d57d06269be68df1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","00edbce1719144c844490d6b441d1a53","Init").
 dw_tag_function_line("/code/simple-example/cpp/math-client","00edbce1719144c844490d6b441d1a53",611).
@@ -14728,7 +15380,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7cb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7cb88d5568602000878da9f312f7b54c","Init").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7cb88d5568602000878da9f312f7b54c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1638f0bf3d4659dcc36d4b94fbcb458d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","677f739a1859a004254f4d1ed1dae9b1",0).
 die_has_child("1638f0bf3d4659dcc36d4b94fbcb458d","677f739a1859a004254f4d1ed1dae9b1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2efa56647bf86d49764dadc0114e1c80",1).
 die_has_child("1638f0bf3d4659dcc36d4b94fbcb458d","2efa56647bf86d49764dadc0114e1c80").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1638f0bf3d4659dcc36d4b94fbcb458d","operator=").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1638f0bf3d4659dcc36d4b94fbcb458d",8).
@@ -15144,7 +15798,9 @@ dw_tag_imported_declaration_line("/code/simple-example/cpp/math-client","70edbc1
 dw_tag_imported_declaration_column("/code/simple-example/cpp/math-client","70edbc1f1ac5c4953691abd5cd2151f6",11).
 dw_tag_imported_declaration_die_size("/code/simple-example/cpp/math-client","70edbc1f1ac5c4953691abd5cd2151f6",8).
 dw_tag_function("/code/simple-example/cpp/math-client","c484917728d4d1f412078b550afbf366").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ef65ce899f94ef5d1ca572d7fc1ff37f",0).
 die_has_child("c484917728d4d1f412078b550afbf366","ef65ce899f94ef5d1ca572d7fc1ff37f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5a23da6f61c38224fbde014f479012d3",1).
 die_has_child("c484917728d4d1f412078b550afbf366","5a23da6f61c38224fbde014f479012d3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c484917728d4d1f412078b550afbf366","div").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c484917728d4d1f412078b550afbf366",128).
@@ -15654,7 +16310,9 @@ dw_tag_imported_declaration_line("/code/simple-example/cpp/math-client","01a87f5
 dw_tag_imported_declaration_column("/code/simple-example/cpp/math-client","01a87f5f41f98446797c09d5bee1d225",11).
 dw_tag_imported_declaration_die_size("/code/simple-example/cpp/math-client","01a87f5f41f98446797c09d5bee1d225",8).
 dw_tag_function("/code/simple-example/cpp/math-client","cc4a12d7b4abef8ef9e9f9bd347027eb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6dbfc00c049b7113a134ede18e70125e",0).
 die_has_child("cc4a12d7b4abef8ef9e9f9bd347027eb","6dbfc00c049b7113a134ede18e70125e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9619a2df4e17a46c27ba3784f4eb2abd",1).
 die_has_child("cc4a12d7b4abef8ef9e9f9bd347027eb","9619a2df4e17a46c27ba3784f4eb2abd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","cc4a12d7b4abef8ef9e9f9bd347027eb","div").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","cc4a12d7b4abef8ef9e9f9bd347027eb",128).
@@ -16999,6 +17657,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","ca2003236f01
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","ca2003236f01742b0605d7162bb40904",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","ca2003236f01742b0605d7162bb40904","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","875527feb5beee2fddbc2a3f89b3b1a1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d61bf850e75f3e8ab7322a1e5c3e0bf2",0).
 die_has_child("875527feb5beee2fddbc2a3f89b3b1a1","d61bf850e75f3e8ab7322a1e5c3e0bf2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","875527feb5beee2fddbc2a3f89b3b1a1","btowc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","875527feb5beee2fddbc2a3f89b3b1a1",32).
@@ -17016,6 +17675,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e8e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e8e09012fba3bbb671aea91f1bbd6041","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e8e09012fba3bbb671aea91f1bbd6041",5).
 dw_tag_function("/code/simple-example/cpp/math-client","275160cc06cedb2bc99dafaf1b93d2c1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","61ab0698a5376d16ba133bc8f509d326",0).
 die_has_child("275160cc06cedb2bc99dafaf1b93d2c1","61ab0698a5376d16ba133bc8f509d326").
 dw_tag_function_name("/code/simple-example/cpp/math-client","275160cc06cedb2bc99dafaf1b93d2c1","fgetwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","275160cc06cedb2bc99dafaf1b93d2c1",32).
@@ -17038,8 +17698,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","ca4d9335b9
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","ca4d9335b99a869dcd9313599cb25580",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","ca4d9335b99a869dcd9313599cb25580",6).
 dw_tag_function("/code/simple-example/cpp/math-client","f0fb650c34e4cd62f5838532363a2e60").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f5a050e1a131dc4cb29aea91a1e7464a",0).
 die_has_child("f0fb650c34e4cd62f5838532363a2e60","f5a050e1a131dc4cb29aea91a1e7464a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","98163ed23065dead8b4b275aaf3c36bd",1).
 die_has_child("f0fb650c34e4cd62f5838532363a2e60","98163ed23065dead8b4b275aaf3c36bd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b678e2b8fbed1015c6511b54c99a34b3",2).
 die_has_child("f0fb650c34e4cd62f5838532363a2e60","b678e2b8fbed1015c6511b54c99a34b3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f0fb650c34e4cd62f5838532363a2e60","fgetws").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f0fb650c34e4cd62f5838532363a2e60",32).
@@ -17088,7 +17751,9 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","7e1c4ec988d0
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","7e1c4ec988d027700ecde3167053ca65",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","7e1c4ec988d027700ecde3167053ca65","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","a00261b62ff82ea59bfae47fb6830b06").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","088a8aea94054768771e254b84bf5fd3",0).
 die_has_child("a00261b62ff82ea59bfae47fb6830b06","088a8aea94054768771e254b84bf5fd3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c54108b80040ac74c5c83d8cfd3bace7",1).
 die_has_child("a00261b62ff82ea59bfae47fb6830b06","c54108b80040ac74c5c83d8cfd3bace7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a00261b62ff82ea59bfae47fb6830b06","fputwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a00261b62ff82ea59bfae47fb6830b06",32).
@@ -17114,7 +17779,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9b7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9b72d518cc0df2eb71d91eb78c77aebb","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9b72d518cc0df2eb71d91eb78c77aebb",5).
 dw_tag_function("/code/simple-example/cpp/math-client","48545b9b856421ce487b968a6964d422").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","185fffb8f5389dca88bc8da80e1035a8",0).
 die_has_child("48545b9b856421ce487b968a6964d422","185fffb8f5389dca88bc8da80e1035a8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","79b17f3940a5eddb36c896c9176e49c1",1).
 die_has_child("48545b9b856421ce487b968a6964d422","79b17f3940a5eddb36c896c9176e49c1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","48545b9b856421ce487b968a6964d422","fputws").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","48545b9b856421ce487b968a6964d422",32).
@@ -17145,7 +17812,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","68d778edb0
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","68d778edb00f790cd7e4b2f672aac47a",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","68d778edb00f790cd7e4b2f672aac47a",6).
 dw_tag_function("/code/simple-example/cpp/math-client","0a8d086d8f52ae85c59a4b9d45ed082c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a4cb4604d21918fb88dbdaf8ee5913f3",0).
 die_has_child("0a8d086d8f52ae85c59a4b9d45ed082c","a4cb4604d21918fb88dbdaf8ee5913f3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","577d4bfa1bf32f2602d9742c7eae8276",1).
 die_has_child("0a8d086d8f52ae85c59a4b9d45ed082c","577d4bfa1bf32f2602d9742c7eae8276").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0a8d086d8f52ae85c59a4b9d45ed082c","fwide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0a8d086d8f52ae85c59a4b9d45ed082c",32).
@@ -17171,7 +17840,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c1b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c1b3bdc2109fbf811edb9eca40e35a56","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c1b3bdc2109fbf811edb9eca40e35a56",5).
 dw_tag_function("/code/simple-example/cpp/math-client","553ef663392025e6aff4101b8e4ba25f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","079ff23d77cba79904c72cf46dfe7c09",0).
 die_has_child("553ef663392025e6aff4101b8e4ba25f","079ff23d77cba79904c72cf46dfe7c09").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4168c4e5a4dda1c3c07ff2fb989a2a52",1).
 die_has_child("553ef663392025e6aff4101b8e4ba25f","4168c4e5a4dda1c3c07ff2fb989a2a52").
 die_has_child("553ef663392025e6aff4101b8e4ba25f","dc898709dfd7474bb0dd2079d3bdb69f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","553ef663392025e6aff4101b8e4ba25f","fwprintf").
@@ -17202,7 +17873,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ac864df
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a",1).
 dw_tag_function("/code/simple-example/cpp/math-client","6d4ed4c5a84af932ad0d06309f9aaba2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","673cd694de34c52d76e7e5f811b3ef59",0).
 die_has_child("6d4ed4c5a84af932ad0d06309f9aaba2","673cd694de34c52d76e7e5f811b3ef59").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f95e1343596b27ee1bbeced96d063815",1).
 die_has_child("6d4ed4c5a84af932ad0d06309f9aaba2","f95e1343596b27ee1bbeced96d063815").
 die_has_child("6d4ed4c5a84af932ad0d06309f9aaba2","7afce9054e115b61c962a35c815ce9f0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6d4ed4c5a84af932ad0d06309f9aaba2","fwscanf").
@@ -17234,6 +17907,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e8787dc
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a",1).
 dw_tag_function("/code/simple-example/cpp/math-client","ec92b3c694f0a6edb6401fd75bd067f1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c04a496b12d8d8bc67ff45f6b72b7bc9",0).
 die_has_child("ec92b3c694f0a6edb6401fd75bd067f1","c04a496b12d8d8bc67ff45f6b72b7bc9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ec92b3c694f0a6edb6401fd75bd067f1","getwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ec92b3c694f0a6edb6401fd75bd067f1",32).
@@ -17259,8 +17933,11 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","757fdaf30cb65ca59
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","757fdaf30cb65ca59a060ba9a5d58336",13).
 dw_tag_function_external("/code/simple-example/cpp/math-client","757fdaf30cb65ca59a060ba9a5d58336","getwchar").
 dw_tag_function("/code/simple-example/cpp/math-client","d41f2fdf3acac02eaa5c9e46103d7565").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","85b65f5e80aa3b4f71f88e6528ad1743",0).
 die_has_child("d41f2fdf3acac02eaa5c9e46103d7565","85b65f5e80aa3b4f71f88e6528ad1743").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0f070e86262552a3e324aef17a1c9a4d",1).
 die_has_child("d41f2fdf3acac02eaa5c9e46103d7565","0f070e86262552a3e324aef17a1c9a4d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0ef32e6cb9157dc68ce06fbaadfe08fc",2).
 die_has_child("d41f2fdf3acac02eaa5c9e46103d7565","0ef32e6cb9157dc68ce06fbaadfe08fc").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d41f2fdf3acac02eaa5c9e46103d7565","mbrlen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d41f2fdf3acac02eaa5c9e46103d7565",64).
@@ -17299,9 +17976,13 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","8b9cb5770e
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","8b9cb5770e15cf656af67f7db158f738",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","8b9cb5770e15cf656af67f7db158f738",6).
 dw_tag_function("/code/simple-example/cpp/math-client","3121e6f359604becd064f7c842675c91").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e470bf56a2b4c47abdc61a1842dc3616",0).
 die_has_child("3121e6f359604becd064f7c842675c91","e470bf56a2b4c47abdc61a1842dc3616").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3ad500f8e421b0a46d234add9c050e12",1).
 die_has_child("3121e6f359604becd064f7c842675c91","3ad500f8e421b0a46d234add9c050e12").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c20e62cf084e2aef451da67cd96eaebd",2).
 die_has_child("3121e6f359604becd064f7c842675c91","c20e62cf084e2aef451da67cd96eaebd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2d386e459cc2461ff2d6a8af98301e4a",3).
 die_has_child("3121e6f359604becd064f7c842675c91","2d386e459cc2461ff2d6a8af98301e4a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3121e6f359604becd064f7c842675c91","mbrtowc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3121e6f359604becd064f7c842675c91",64).
@@ -17343,6 +18024,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0d3
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0d3a337638be7844f258a3b519ee79f3","11__mbstate_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0d3a337638be7844f258a3b519ee79f3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f06b033348b78fb5a05bb48f7f2e9468").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d09f5f438c1c6910688cf45a2b9f0014",0).
 die_has_child("f06b033348b78fb5a05bb48f7f2e9468","d09f5f438c1c6910688cf45a2b9f0014").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f06b033348b78fb5a05bb48f7f2e9468","mbsinit").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f06b033348b78fb5a05bb48f7f2e9468",32).
@@ -17365,9 +18047,13 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","fa38a70c45
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","fa38a70c455b4f9a494d010ddad2475b",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","fa38a70c455b4f9a494d010ddad2475b",6).
 dw_tag_function("/code/simple-example/cpp/math-client","758dd09009bdd7b2386977fa31aba975").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","958cd36174b197ad5307951cda3a0877",0).
 die_has_child("758dd09009bdd7b2386977fa31aba975","958cd36174b197ad5307951cda3a0877").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e8a328bfce9aa177c34fd2a0748816f5",1).
 die_has_child("758dd09009bdd7b2386977fa31aba975","e8a328bfce9aa177c34fd2a0748816f5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e42231902170819cb1cbb288075e06ff",2).
 die_has_child("758dd09009bdd7b2386977fa31aba975","e42231902170819cb1cbb288075e06ff").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5501ca6784f0eb7ea272a64b7ef9accd",3).
 die_has_child("758dd09009bdd7b2386977fa31aba975","5501ca6784f0eb7ea272a64b7ef9accd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","758dd09009bdd7b2386977fa31aba975","mbsrtowcs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","758dd09009bdd7b2386977fa31aba975",64).
@@ -17414,7 +18100,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","be232ee8de
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","be232ee8de80666531d0418a42ea852f",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","be232ee8de80666531d0418a42ea852f",6).
 dw_tag_function("/code/simple-example/cpp/math-client","6d9a4db8a867efd3db9d568b8ab74817").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a2004e1e20a0ede0083e96fb07d9997e",0).
 die_has_child("6d9a4db8a867efd3db9d568b8ab74817","a2004e1e20a0ede0083e96fb07d9997e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0e3ff665682e6d22b680189c8dfa597a",1).
 die_has_child("6d9a4db8a867efd3db9d568b8ab74817","0e3ff665682e6d22b680189c8dfa597a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6d9a4db8a867efd3db9d568b8ab74817","putwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6d9a4db8a867efd3db9d568b8ab74817",32).
@@ -17440,6 +18128,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","00d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","00dafbaf448b284881a76bcaa58bb926","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","00dafbaf448b284881a76bcaa58bb926",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ba490b9053904e99687fe3dd6d838757").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5ea04a0cd9b5dfca9f521c866fcc7aa0",0).
 die_has_child("ba490b9053904e99687fe3dd6d838757","5ea04a0cd9b5dfca9f521c866fcc7aa0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ba490b9053904e99687fe3dd6d838757","putwchar").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ba490b9053904e99687fe3dd6d838757",32).
@@ -17457,8 +18146,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","977
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9771c5b39d0300d1666ac9ebbdee925a","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9771c5b39d0300d1666ac9ebbdee925a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3775800021212847da89ae83ce310ef0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","541ebcbfe86a8a06310389ab052a4cec",0).
 die_has_child("3775800021212847da89ae83ce310ef0","541ebcbfe86a8a06310389ab052a4cec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1c933d79a52f33dbfc1345237b588ee9",1).
 die_has_child("3775800021212847da89ae83ce310ef0","1c933d79a52f33dbfc1345237b588ee9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9d15fb0073e9be795325380c354d98cf",2).
 die_has_child("3775800021212847da89ae83ce310ef0","9d15fb0073e9be795325380c354d98cf").
 die_has_child("3775800021212847da89ae83ce310ef0","be89ea8663a832d0fa18c86f5c93fcd4").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3775800021212847da89ae83ce310ef0","swprintf").
@@ -17497,7 +18189,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","26b8e7d
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a",1).
 dw_tag_function("/code/simple-example/cpp/math-client","f05165ffdff83f7bfbe0646a08645534").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","343e6cd547972bce9ecfb295f2b4e4a7",0).
 die_has_child("f05165ffdff83f7bfbe0646a08645534","343e6cd547972bce9ecfb295f2b4e4a7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","85ecf275c0db399e44461280e9eb911d",1).
 die_has_child("f05165ffdff83f7bfbe0646a08645534","85ecf275c0db399e44461280e9eb911d").
 die_has_child("f05165ffdff83f7bfbe0646a08645534","04c9286d046854106939d2d0c64d3530").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f05165ffdff83f7bfbe0646a08645534","swscanf").
@@ -17529,7 +18223,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4d0685f
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a",1).
 dw_tag_function("/code/simple-example/cpp/math-client","6e6cacffbbee95a5ce535aebccdd5dfa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","96c62c5f77122730d5c9fdb4478393ec",0).
 die_has_child("6e6cacffbbee95a5ce535aebccdd5dfa","96c62c5f77122730d5c9fdb4478393ec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e392f47b37dbfee1f158ca9587c02603",1).
 die_has_child("6e6cacffbbee95a5ce535aebccdd5dfa","e392f47b37dbfee1f158ca9587c02603").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6e6cacffbbee95a5ce535aebccdd5dfa","ungetwc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6e6cacffbbee95a5ce535aebccdd5dfa",32).
@@ -17555,8 +18251,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","853
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","853264b5e9708b7a483a3f66bc97bada","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","853264b5e9708b7a483a3f66bc97bada",5).
 dw_tag_function("/code/simple-example/cpp/math-client","8634b090b3d742941661871bcf4929df").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ad0bd53725d295c1296225ec2f7f751e",0).
 die_has_child("8634b090b3d742941661871bcf4929df","ad0bd53725d295c1296225ec2f7f751e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9591c07d804892360dd2ee2c7dddf918",1).
 die_has_child("8634b090b3d742941661871bcf4929df","9591c07d804892360dd2ee2c7dddf918").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","57b53381b531ccbe3e9f2f31a9109e5d",2).
 die_has_child("8634b090b3d742941661871bcf4929df","57b53381b531ccbe3e9f2f31a9109e5d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","8634b090b3d742941661871bcf4929df","vfwprintf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","8634b090b3d742941661871bcf4929df",32).
@@ -17595,8 +18294,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","017bffbcdc
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","017bffbcdcbd7a47f43a029090cd88b1",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","017bffbcdcbd7a47f43a029090cd88b1",6).
 dw_tag_function("/code/simple-example/cpp/math-client","4c9ad3fbfa912f25d8c103021bfbcf31").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cebb811af696780bcce9a571b6f42a1b",0).
 die_has_child("4c9ad3fbfa912f25d8c103021bfbcf31","cebb811af696780bcce9a571b6f42a1b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f4ee2efcfe167ab3f02eb000a91f83fb",1).
 die_has_child("4c9ad3fbfa912f25d8c103021bfbcf31","f4ee2efcfe167ab3f02eb000a91f83fb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a96f3a0cc83745bce1f2f2daa45a2f72",2).
 die_has_child("4c9ad3fbfa912f25d8c103021bfbcf31","a96f3a0cc83745bce1f2f2daa45a2f72").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4c9ad3fbfa912f25d8c103021bfbcf31","vfwscanf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4c9ad3fbfa912f25d8c103021bfbcf31",32).
@@ -17631,9 +18333,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","488
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","48808af1502f4b92d1b74174a81dab1b","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","48808af1502f4b92d1b74174a81dab1b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6a27f5918b3d14af359d2be947ca2a7a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4991cc944e16c85a2e73505fec1e7bfc",0).
 die_has_child("6a27f5918b3d14af359d2be947ca2a7a","4991cc944e16c85a2e73505fec1e7bfc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","51b854675db99d48eed4f671aabf58a5",1).
 die_has_child("6a27f5918b3d14af359d2be947ca2a7a","51b854675db99d48eed4f671aabf58a5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","29abca371dec24fdb4ad961ebfc80ffc",2).
 die_has_child("6a27f5918b3d14af359d2be947ca2a7a","29abca371dec24fdb4ad961ebfc80ffc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","38c83123e14893011808a10a7e26b977",3).
 die_has_child("6a27f5918b3d14af359d2be947ca2a7a","38c83123e14893011808a10a7e26b977").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6a27f5918b3d14af359d2be947ca2a7a","vswprintf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6a27f5918b3d14af359d2be947ca2a7a",32).
@@ -17675,8 +18381,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","eb1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","eb149c11de4979142055397b82c8ea3d","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","eb149c11de4979142055397b82c8ea3d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","73a1f66daf83b0905443c229421a2d87").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","414ca1e2ffac6462f96e09ba513a899d",0).
 die_has_child("73a1f66daf83b0905443c229421a2d87","414ca1e2ffac6462f96e09ba513a899d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9c0becab6d89b53dbcbaa5f5d91bf5fd",1).
 die_has_child("73a1f66daf83b0905443c229421a2d87","9c0becab6d89b53dbcbaa5f5d91bf5fd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","52859fa90507a7f4f2a56f51a1229466",2).
 die_has_child("73a1f66daf83b0905443c229421a2d87","52859fa90507a7f4f2a56f51a1229466").
 dw_tag_function_name("/code/simple-example/cpp/math-client","73a1f66daf83b0905443c229421a2d87","vswscanf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","73a1f66daf83b0905443c229421a2d87",32).
@@ -17711,7 +18420,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b7d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b7d4667e3808bce7a4ea6bcc710810e0","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b7d4667e3808bce7a4ea6bcc710810e0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","678b237ce74fcac5cc19018e1cd4a4cf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6626210e327479a456eaeb8ab1c89765",0).
 die_has_child("678b237ce74fcac5cc19018e1cd4a4cf","6626210e327479a456eaeb8ab1c89765").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","256876e1e29ecf3b6351e2221d7710bd",1).
 die_has_child("678b237ce74fcac5cc19018e1cd4a4cf","256876e1e29ecf3b6351e2221d7710bd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","678b237ce74fcac5cc19018e1cd4a4cf","vwprintf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","678b237ce74fcac5cc19018e1cd4a4cf",32).
@@ -17737,7 +18448,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b4d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b4d194371701abf41c0c61a2ee05b9a2","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b4d194371701abf41c0c61a2ee05b9a2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","837ff556df59e7238b53058ac8a661ef").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","34d8e86a9daca6e08867fcb9fed7341e",0).
 die_has_child("837ff556df59e7238b53058ac8a661ef","34d8e86a9daca6e08867fcb9fed7341e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3431ce44b334943110708cdf3a11b93e",1).
 die_has_child("837ff556df59e7238b53058ac8a661ef","3431ce44b334943110708cdf3a11b93e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","837ff556df59e7238b53058ac8a661ef","vwscanf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","837ff556df59e7238b53058ac8a661ef",32).
@@ -17764,8 +18477,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","71f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","71f62b9bda269c927942e5dbd708d773","typedef __va_list_tag __va_list_tag").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","71f62b9bda269c927942e5dbd708d773",5).
 dw_tag_function("/code/simple-example/cpp/math-client","68c9d9eef9a9e8457298478aa1042db4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0aba76618e511f9a2ab05de93e41be74",0).
 die_has_child("68c9d9eef9a9e8457298478aa1042db4","0aba76618e511f9a2ab05de93e41be74").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2c6048bf10aa206e6dcb46d67efe4bf7",1).
 die_has_child("68c9d9eef9a9e8457298478aa1042db4","2c6048bf10aa206e6dcb46d67efe4bf7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","525bf1dc5185725654534d629c0a8999",2).
 die_has_child("68c9d9eef9a9e8457298478aa1042db4","525bf1dc5185725654534d629c0a8999").
 dw_tag_function_name("/code/simple-example/cpp/math-client","68c9d9eef9a9e8457298478aa1042db4","wcrtomb").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","68c9d9eef9a9e8457298478aa1042db4",64).
@@ -17804,7 +18520,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","8085f0f742
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","8085f0f742efc1084829580e4af33574",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","8085f0f742efc1084829580e4af33574",6).
 dw_tag_function("/code/simple-example/cpp/math-client","574043a981f90fe690366c54692493b2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9c60d6bba63d9b513c9d30def1d174ee",0).
 die_has_child("574043a981f90fe690366c54692493b2","9c60d6bba63d9b513c9d30def1d174ee").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cf94c987d6ded3d8861448300fe01cbd",1).
 die_has_child("574043a981f90fe690366c54692493b2","cf94c987d6ded3d8861448300fe01cbd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","574043a981f90fe690366c54692493b2","wcscat").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","574043a981f90fe690366c54692493b2",32).
@@ -17830,7 +18548,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","fd2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","fd2c26c07aa12ca3cf7f4fd112a577e4","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","fd2c26c07aa12ca3cf7f4fd112a577e4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0d1cea733adf5eff582d55ef940d42b2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2efca056437e73dc15784fa0534e846c",0).
 die_has_child("0d1cea733adf5eff582d55ef940d42b2","2efca056437e73dc15784fa0534e846c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9dccfd9b682706d0bbfcce2648248176",1).
 die_has_child("0d1cea733adf5eff582d55ef940d42b2","9dccfd9b682706d0bbfcce2648248176").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0d1cea733adf5eff582d55ef940d42b2","wcscmp").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0d1cea733adf5eff582d55ef940d42b2",32).
@@ -17856,7 +18576,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f5c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f5cf7dc4d8333f52d850a13780e5f2c9","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f5cf7dc4d8333f52d850a13780e5f2c9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","16a3de4dfd4a5798cb537946a125e3eb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","df0b5744a4d1c587659b369c81601406",0).
 die_has_child("16a3de4dfd4a5798cb537946a125e3eb","df0b5744a4d1c587659b369c81601406").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e9a0f20557f84fac28cf5190c751b800",1).
 die_has_child("16a3de4dfd4a5798cb537946a125e3eb","e9a0f20557f84fac28cf5190c751b800").
 dw_tag_function_name("/code/simple-example/cpp/math-client","16a3de4dfd4a5798cb537946a125e3eb","wcscoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","16a3de4dfd4a5798cb537946a125e3eb",32).
@@ -17882,7 +18604,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9d4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9d470d32528bc02c3312c1acc5886f0b","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9d470d32528bc02c3312c1acc5886f0b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e452f071e338ef46109c438b52183135").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","eb1623af8c87c4451708f5560e7c48f7",0).
 die_has_child("e452f071e338ef46109c438b52183135","eb1623af8c87c4451708f5560e7c48f7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5f8be34445940f568f5cafe7f2b33805",1).
 die_has_child("e452f071e338ef46109c438b52183135","5f8be34445940f568f5cafe7f2b33805").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e452f071e338ef46109c438b52183135","wcscpy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e452f071e338ef46109c438b52183135",32).
@@ -17908,7 +18632,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ae3
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ae357df01cf649a3e6860feec608b578","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ae357df01cf649a3e6860feec608b578",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0b98235e29259db2aa43f006349d85d6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0a28f05c2b10d2e34107aec8889a23aa",0).
 die_has_child("0b98235e29259db2aa43f006349d85d6","0a28f05c2b10d2e34107aec8889a23aa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","82f7353ac253b8c411dd38cfa84e6a71",1).
 die_has_child("0b98235e29259db2aa43f006349d85d6","82f7353ac253b8c411dd38cfa84e6a71").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0b98235e29259db2aa43f006349d85d6","wcscspn").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0b98235e29259db2aa43f006349d85d6",64).
@@ -17934,9 +18660,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7fa
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7fa6dbeff8ae7f25429d66833b43b848","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7fa6dbeff8ae7f25429d66833b43b848",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a5354583645c7eeacafb275a9ea67a66").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3eeca2e2886c97e2c9cebbd5ba0a720a",0).
 die_has_child("a5354583645c7eeacafb275a9ea67a66","3eeca2e2886c97e2c9cebbd5ba0a720a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","14af7bfe4eab2210d026a9f11e860030",1).
 die_has_child("a5354583645c7eeacafb275a9ea67a66","14af7bfe4eab2210d026a9f11e860030").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d984bab6660c4bf1df11ebaee91ecfe1",2).
 die_has_child("a5354583645c7eeacafb275a9ea67a66","d984bab6660c4bf1df11ebaee91ecfe1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cc8ba31ae4d88da266a7bc4202f9c181",3).
 die_has_child("a5354583645c7eeacafb275a9ea67a66","cc8ba31ae4d88da266a7bc4202f9c181").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a5354583645c7eeacafb275a9ea67a66","wcsftime").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a5354583645c7eeacafb275a9ea67a66",64).
@@ -18160,6 +18890,7 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","a8782cfaa2a3
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","a8782cfaa2a31ea2aa14975d9b511539",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","a8782cfaa2a31ea2aa14975d9b511539","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","c8eb611390ff0a2c5a44d8da807755a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","61eabdedbf655e158bff56844d71253f",0).
 die_has_child("c8eb611390ff0a2c5a44d8da807755a3","61eabdedbf655e158bff56844d71253f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c8eb611390ff0a2c5a44d8da807755a3","wcslen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c8eb611390ff0a2c5a44d8da807755a3",64).
@@ -18177,8 +18908,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4f4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4f44d82f5918c843a7d62ec71b0c45a2","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4f44d82f5918c843a7d62ec71b0c45a2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d0fa0ed8c7febef2446a450ef17c1810").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee1cc057527b1a98e5ce1a4414905b8e",0).
 die_has_child("d0fa0ed8c7febef2446a450ef17c1810","ee1cc057527b1a98e5ce1a4414905b8e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f48df67c228905b0b0273b81692b2449",1).
 die_has_child("d0fa0ed8c7febef2446a450ef17c1810","f48df67c228905b0b0273b81692b2449").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d2eacf19995dea66de4b6e136b590d9c",2).
 die_has_child("d0fa0ed8c7febef2446a450ef17c1810","d2eacf19995dea66de4b6e136b590d9c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d0fa0ed8c7febef2446a450ef17c1810","wcsncat").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d0fa0ed8c7febef2446a450ef17c1810",32).
@@ -18212,8 +18946,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","74b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","74b31f123749be561028a8b018044ec5","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","74b31f123749be561028a8b018044ec5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2df07b75634ed2c71199f3f91a5d9a6e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","16368b314a53e32bb6e9bc0b5705e973",0).
 die_has_child("2df07b75634ed2c71199f3f91a5d9a6e","16368b314a53e32bb6e9bc0b5705e973").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","21dafd3429985d6954f85dd44c67fede",1).
 die_has_child("2df07b75634ed2c71199f3f91a5d9a6e","21dafd3429985d6954f85dd44c67fede").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dddf71af5efcbe0e84379347344d73d1",2).
 die_has_child("2df07b75634ed2c71199f3f91a5d9a6e","dddf71af5efcbe0e84379347344d73d1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2df07b75634ed2c71199f3f91a5d9a6e","wcsncmp").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2df07b75634ed2c71199f3f91a5d9a6e",32).
@@ -18247,8 +18984,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f11
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f1162ef19bb332e11586695a4a764ad3","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f1162ef19bb332e11586695a4a764ad3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","2ab6937b7aaf30dd5a84c9903fd4cb64").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9ba7f2ac8b7b33db753b29a027afe78b",0).
 die_has_child("2ab6937b7aaf30dd5a84c9903fd4cb64","9ba7f2ac8b7b33db753b29a027afe78b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6b6a97d76821e66f79ad57fa910265d4",1).
 die_has_child("2ab6937b7aaf30dd5a84c9903fd4cb64","6b6a97d76821e66f79ad57fa910265d4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8eba48128f64b7ba1b510a6a1314408c",2).
 die_has_child("2ab6937b7aaf30dd5a84c9903fd4cb64","8eba48128f64b7ba1b510a6a1314408c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2ab6937b7aaf30dd5a84c9903fd4cb64","wcsncpy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2ab6937b7aaf30dd5a84c9903fd4cb64",32).
@@ -18282,9 +19022,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ce1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ce1cf3ef77e74bd20db43eda6f7ab9ab","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ce1cf3ef77e74bd20db43eda6f7ab9ab",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b4b4bdfc27e7cd4670281cbbb7d9e80a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c400da9d59541b2310a4902a2525d464",0).
 die_has_child("b4b4bdfc27e7cd4670281cbbb7d9e80a","c400da9d59541b2310a4902a2525d464").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3eac915b014a2c54678ea09715491d89",1).
 die_has_child("b4b4bdfc27e7cd4670281cbbb7d9e80a","3eac915b014a2c54678ea09715491d89").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7ef3fa759a0a01b11bff17a791f7c804",2).
 die_has_child("b4b4bdfc27e7cd4670281cbbb7d9e80a","7ef3fa759a0a01b11bff17a791f7c804").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","01b0f180358ddca4d46a89476c79e56f",3).
 die_has_child("b4b4bdfc27e7cd4670281cbbb7d9e80a","01b0f180358ddca4d46a89476c79e56f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b4b4bdfc27e7cd4670281cbbb7d9e80a","wcsrtombs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b4b4bdfc27e7cd4670281cbbb7d9e80a",64).
@@ -18331,7 +19075,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","769573095e
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","769573095e54b5e55c152c26293dfc4c",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","769573095e54b5e55c152c26293dfc4c",6).
 dw_tag_function("/code/simple-example/cpp/math-client","80c4a68540f3b3bf3915c65511c1b907").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e0aab65ac01fcc4b3afc2c66d88cc35f",0).
 die_has_child("80c4a68540f3b3bf3915c65511c1b907","e0aab65ac01fcc4b3afc2c66d88cc35f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4caa923afebf676e1168da68ad9b8e43",1).
 die_has_child("80c4a68540f3b3bf3915c65511c1b907","4caa923afebf676e1168da68ad9b8e43").
 dw_tag_function_name("/code/simple-example/cpp/math-client","80c4a68540f3b3bf3915c65511c1b907","wcsspn").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","80c4a68540f3b3bf3915c65511c1b907",64).
@@ -18357,7 +19103,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2ae
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2ae9ea3063fb785848eb93e70dbd6f1b","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2ae9ea3063fb785848eb93e70dbd6f1b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f3fce0073b57a46625e3e8cee871999f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","74ee16ddb6f65bf54a9d22d91beda693",0).
 die_has_child("f3fce0073b57a46625e3e8cee871999f","74ee16ddb6f65bf54a9d22d91beda693").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","322f81ec6652950008d9311048e87c11",1).
 die_has_child("f3fce0073b57a46625e3e8cee871999f","322f81ec6652950008d9311048e87c11").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f3fce0073b57a46625e3e8cee871999f","wcstod").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f3fce0073b57a46625e3e8cee871999f",64).
@@ -18388,7 +19136,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","5b1c81e1bd
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","5b1c81e1bdb646e7d2b14a0f0088985a",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","5b1c81e1bdb646e7d2b14a0f0088985a",6).
 dw_tag_function("/code/simple-example/cpp/math-client","e8025887bdbe30c5db00114650109e5a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","af676e10ffeaaa1fb20f991eb0fb486d",0).
 die_has_child("e8025887bdbe30c5db00114650109e5a","af676e10ffeaaa1fb20f991eb0fb486d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","afdb3b445f77af684e0e74e512491060",1).
 die_has_child("e8025887bdbe30c5db00114650109e5a","afdb3b445f77af684e0e74e512491060").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e8025887bdbe30c5db00114650109e5a","wcstof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e8025887bdbe30c5db00114650109e5a",32).
@@ -18414,8 +19164,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","727
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","72762bc843a8de1a36da101c2578ab64","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","72762bc843a8de1a36da101c2578ab64",5).
 dw_tag_function("/code/simple-example/cpp/math-client","cbca6ba45b7c9abb68c0c0316679b53f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dfae817e80c9602f40400a8069bb851c",0).
 die_has_child("cbca6ba45b7c9abb68c0c0316679b53f","dfae817e80c9602f40400a8069bb851c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ae36f3a81ea0e0edf7868ac2677e4c5d",1).
 die_has_child("cbca6ba45b7c9abb68c0c0316679b53f","ae36f3a81ea0e0edf7868ac2677e4c5d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b85229668ec6e52a588736ad3d2a51aa",2).
 die_has_child("cbca6ba45b7c9abb68c0c0316679b53f","b85229668ec6e52a588736ad3d2a51aa").
 dw_tag_function_name("/code/simple-example/cpp/math-client","cbca6ba45b7c9abb68c0c0316679b53f","wcstok").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","cbca6ba45b7c9abb68c0c0316679b53f",32).
@@ -18449,8 +19202,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d69
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d69f7e303787f5adae22356de8edf9dd","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d69f7e303787f5adae22356de8edf9dd",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f588748f5bf89d87ae3cccf476a115d0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ddf81068ab6b8f6911ab60d3a0cdd98d",0).
 die_has_child("f588748f5bf89d87ae3cccf476a115d0","ddf81068ab6b8f6911ab60d3a0cdd98d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","82d0c4d08269cfe3212891421ea801e3",1).
 die_has_child("f588748f5bf89d87ae3cccf476a115d0","82d0c4d08269cfe3212891421ea801e3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","de35e6da2ffb6a20797d57df193f5d9a",2).
 die_has_child("f588748f5bf89d87ae3cccf476a115d0","de35e6da2ffb6a20797d57df193f5d9a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f588748f5bf89d87ae3cccf476a115d0","wcstol").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f588748f5bf89d87ae3cccf476a115d0",64).
@@ -18494,8 +19250,11 @@ dw_tag_const_type_type_name("/code/simple-example/cpp/math-client","90ba5023f5ea
 dw_tag_const_type_die_size("/code/simple-example/cpp/math-client","90ba5023f5ea4f0e0e08d7c679b2f7f4",5).
 dw_tag_const_type_const("/code/simple-example/cpp/math-client","90ba5023f5ea4f0e0e08d7c679b2f7f4","yes").
 dw_tag_function("/code/simple-example/cpp/math-client","4225ac7193f48d0260658cf12945aae0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","010e9f9dbccc00ff0b2fa64d40f183b0",0).
 die_has_child("4225ac7193f48d0260658cf12945aae0","010e9f9dbccc00ff0b2fa64d40f183b0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3550a1ac11214152c443b654dae6fc1d",1).
 die_has_child("4225ac7193f48d0260658cf12945aae0","3550a1ac11214152c443b654dae6fc1d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bc29c2f16f104ba3e049e73591108612",2).
 die_has_child("4225ac7193f48d0260658cf12945aae0","bc29c2f16f104ba3e049e73591108612").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4225ac7193f48d0260658cf12945aae0","wcstoul").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4225ac7193f48d0260658cf12945aae0",64).
@@ -18529,8 +19288,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","540
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","540ab8f8e83723565908d4bc9e154c23","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","540ab8f8e83723565908d4bc9e154c23",5).
 dw_tag_function("/code/simple-example/cpp/math-client","aeafdf46bfd28c3a4c998d90a0a83ac3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7d4fef794fbebf0cd2d41b1fd382b633",0).
 die_has_child("aeafdf46bfd28c3a4c998d90a0a83ac3","7d4fef794fbebf0cd2d41b1fd382b633").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a120f7d758186ea9b2aad0f7a9601eff",1).
 die_has_child("aeafdf46bfd28c3a4c998d90a0a83ac3","a120f7d758186ea9b2aad0f7a9601eff").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","02190b0d07fc9a9d24bdd862012712dc",2).
 die_has_child("aeafdf46bfd28c3a4c998d90a0a83ac3","02190b0d07fc9a9d24bdd862012712dc").
 dw_tag_function_name("/code/simple-example/cpp/math-client","aeafdf46bfd28c3a4c998d90a0a83ac3","wcsxfrm").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","aeafdf46bfd28c3a4c998d90a0a83ac3",64).
@@ -18564,6 +19326,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","9b6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","9b652924cbed1bdbc844796ceef4bce7","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","9b652924cbed1bdbc844796ceef4bce7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3f24e2f245324f76c01fc99a7f38e543").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6b1e2759de74ea42da190bd6fc01a894",0).
 die_has_child("3f24e2f245324f76c01fc99a7f38e543","6b1e2759de74ea42da190bd6fc01a894").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3f24e2f245324f76c01fc99a7f38e543","wctob").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3f24e2f245324f76c01fc99a7f38e543",32).
@@ -18581,8 +19344,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","aa4
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","aa43abc942afcf06685ea19fa2abd6bc","unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","aa43abc942afcf06685ea19fa2abd6bc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","85229c43248aa13b0e2d1578e0f8cfab").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","787df1ed67aba69634800464d9bd8302",0).
 die_has_child("85229c43248aa13b0e2d1578e0f8cfab","787df1ed67aba69634800464d9bd8302").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6f2fe95c46088744256cd9285866c66d",1).
 die_has_child("85229c43248aa13b0e2d1578e0f8cfab","6f2fe95c46088744256cd9285866c66d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d04866919829d229101de37af4d21e67",2).
 die_has_child("85229c43248aa13b0e2d1578e0f8cfab","d04866919829d229101de37af4d21e67").
 dw_tag_function_name("/code/simple-example/cpp/math-client","85229c43248aa13b0e2d1578e0f8cfab","wmemcmp").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","85229c43248aa13b0e2d1578e0f8cfab",32).
@@ -18616,8 +19382,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f9a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f9a00fc324d8f3e2e9a17fdc5a7b3d3a","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f9a00fc324d8f3e2e9a17fdc5a7b3d3a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ddc65969643ce22ced52d3518db1789a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b222bce0f60604fede09c8d758f2c90b",0).
 die_has_child("ddc65969643ce22ced52d3518db1789a","b222bce0f60604fede09c8d758f2c90b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8b2bb68c781f3ab1870f1cf6d5685004",1).
 die_has_child("ddc65969643ce22ced52d3518db1789a","8b2bb68c781f3ab1870f1cf6d5685004").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","224f6c2bdc34a98a0564bb50fb0a406a",2).
 die_has_child("ddc65969643ce22ced52d3518db1789a","224f6c2bdc34a98a0564bb50fb0a406a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ddc65969643ce22ced52d3518db1789a","wmemcpy").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ddc65969643ce22ced52d3518db1789a",32).
@@ -18651,8 +19420,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","cb9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","cb9e219b1e4431a9d49fbc7e4ff14944","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","cb9e219b1e4431a9d49fbc7e4ff14944",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a6bb77f595fa4cbc5b4b5c2b54906012").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4d9047a8dc94054de1ae12e396c8d547",0).
 die_has_child("a6bb77f595fa4cbc5b4b5c2b54906012","4d9047a8dc94054de1ae12e396c8d547").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8b78c0d13061a114b6a085b97fa5ec18",1).
 die_has_child("a6bb77f595fa4cbc5b4b5c2b54906012","8b78c0d13061a114b6a085b97fa5ec18").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","daafc306b3f38d154799914b83ccdfc1",2).
 die_has_child("a6bb77f595fa4cbc5b4b5c2b54906012","daafc306b3f38d154799914b83ccdfc1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a6bb77f595fa4cbc5b4b5c2b54906012","wmemmove").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a6bb77f595fa4cbc5b4b5c2b54906012",32).
@@ -18686,8 +19458,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5b2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5b2d27f2a296d4ecf3891591b6d493ac","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5b2d27f2a296d4ecf3891591b6d493ac",5).
 dw_tag_function("/code/simple-example/cpp/math-client","459e0529da4f4188872f7bc1e8e20e09").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9fa5bf9d51653d486e9dfe355de3a8b5",0).
 die_has_child("459e0529da4f4188872f7bc1e8e20e09","9fa5bf9d51653d486e9dfe355de3a8b5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4c9bb8021a665d51395cbc9c44a8f8e2",1).
 die_has_child("459e0529da4f4188872f7bc1e8e20e09","4c9bb8021a665d51395cbc9c44a8f8e2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","30675fa8538f3bd85befdc21c7b16524",2).
 die_has_child("459e0529da4f4188872f7bc1e8e20e09","30675fa8538f3bd85befdc21c7b16524").
 dw_tag_function_name("/code/simple-example/cpp/math-client","459e0529da4f4188872f7bc1e8e20e09","wmemset").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","459e0529da4f4188872f7bc1e8e20e09",32).
@@ -18721,6 +19496,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e2c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e2c13ea5cd607e8d363eeaf6af9f8eec","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e2c13ea5cd607e8d363eeaf6af9f8eec",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d56d8b42ec9d5f84442b6610a229523c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","96fdc6ee7dceccf485d3aa0c792faec5",0).
 die_has_child("d56d8b42ec9d5f84442b6610a229523c","96fdc6ee7dceccf485d3aa0c792faec5").
 die_has_child("d56d8b42ec9d5f84442b6610a229523c","1824e0f2a3ca69a99580fc495faa26e5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d56d8b42ec9d5f84442b6610a229523c","wprintf").
@@ -18743,6 +19519,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5cd2d2b
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a",1).
 dw_tag_function("/code/simple-example/cpp/math-client","5c6ed82174bb00d31a4e12ab447e36ba").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ac154107cfd963401b87e8a211cefd89",0).
 die_has_child("5c6ed82174bb00d31a4e12ab447e36ba","ac154107cfd963401b87e8a211cefd89").
 die_has_child("5c6ed82174bb00d31a4e12ab447e36ba","c55230705fb7dbdb95f3658113ed1e68").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5c6ed82174bb00d31a4e12ab447e36ba","wscanf").
@@ -18766,7 +19543,9 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a2db310
 dw_tag_unspecified_parameters("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a").
 dw_tag_unspecified_parameters_die_size("/code/simple-example/cpp/math-client","b89845643d2fff9c0b28b084c89a091a",1).
 dw_tag_function("/code/simple-example/cpp/math-client","9876c46890633803e30c3bc8568f38c8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7cc9b3fb23061adc153112f1b4784290",0).
 die_has_child("9876c46890633803e30c3bc8568f38c8","7cc9b3fb23061adc153112f1b4784290").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e63bf3ff96d7b478f251421b44a8558e",1).
 die_has_child("9876c46890633803e30c3bc8568f38c8","e63bf3ff96d7b478f251421b44a8558e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9876c46890633803e30c3bc8568f38c8","wcschr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9876c46890633803e30c3bc8568f38c8",32).
@@ -18793,7 +19572,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e18
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e181da85f9c850cd3ee84caf357410f1","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e181da85f9c850cd3ee84caf357410f1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c3dff0fdb022a752ed48e8927d1afece").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f06f07b68b2a1c9bb5c4abeb988c0d29",0).
 die_has_child("c3dff0fdb022a752ed48e8927d1afece","f06f07b68b2a1c9bb5c4abeb988c0d29").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7ffe7079470e20490cdf988c781c494b",1).
 die_has_child("c3dff0fdb022a752ed48e8927d1afece","7ffe7079470e20490cdf988c781c494b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c3dff0fdb022a752ed48e8927d1afece","wcschr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c3dff0fdb022a752ed48e8927d1afece",32).
@@ -18820,7 +19601,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","27e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","27e259fff7c2e652ade3feb1bde858b0","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","27e259fff7c2e652ade3feb1bde858b0",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b85f03cef2636c887ea69f66ede020bf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","94d26c583314c779ca5812c9dec12534",0).
 die_has_child("b85f03cef2636c887ea69f66ede020bf","94d26c583314c779ca5812c9dec12534").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","25d353c776b827128a2dda105f494c50",1).
 die_has_child("b85f03cef2636c887ea69f66ede020bf","25d353c776b827128a2dda105f494c50").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b85f03cef2636c887ea69f66ede020bf","wcspbrk").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b85f03cef2636c887ea69f66ede020bf",32).
@@ -18847,7 +19630,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ee0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ee0cfba43ada6e49662bf546f91d5b37","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ee0cfba43ada6e49662bf546f91d5b37",5).
 dw_tag_function("/code/simple-example/cpp/math-client","683d73626a9eda0abb96f14db1065b42").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","26f7a95ecb7c8e0ed5c61bb1a0655487",0).
 die_has_child("683d73626a9eda0abb96f14db1065b42","26f7a95ecb7c8e0ed5c61bb1a0655487").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","76793cfe05102c87f7ed94b9dbe6ddee",1).
 die_has_child("683d73626a9eda0abb96f14db1065b42","76793cfe05102c87f7ed94b9dbe6ddee").
 dw_tag_function_name("/code/simple-example/cpp/math-client","683d73626a9eda0abb96f14db1065b42","wcspbrk").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","683d73626a9eda0abb96f14db1065b42",32).
@@ -18874,7 +19659,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0a1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0a1a6145afafb5f41323e3082ee67ea1","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0a1a6145afafb5f41323e3082ee67ea1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b302ae78a5efc2f96624dc3276c33382").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","83fda1f4689a762396511746ab49a12c",0).
 die_has_child("b302ae78a5efc2f96624dc3276c33382","83fda1f4689a762396511746ab49a12c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cb7d7e02d73d1c87ba0db6df2770a158",1).
 die_has_child("b302ae78a5efc2f96624dc3276c33382","cb7d7e02d73d1c87ba0db6df2770a158").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b302ae78a5efc2f96624dc3276c33382","wcsrchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b302ae78a5efc2f96624dc3276c33382",32).
@@ -18901,7 +19688,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0ab
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0ab6fe8ccf0d090d9175a42f6fc63481","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0ab6fe8ccf0d090d9175a42f6fc63481",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e742fb692416d4f2ea9730df0716b3de").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","097669266d7d336f537a39b99f04a564",0).
 die_has_child("e742fb692416d4f2ea9730df0716b3de","097669266d7d336f537a39b99f04a564").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","65ad3e196cc9cb535c2e7c58d4b65dce",1).
 die_has_child("e742fb692416d4f2ea9730df0716b3de","65ad3e196cc9cb535c2e7c58d4b65dce").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e742fb692416d4f2ea9730df0716b3de","wcsrchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e742fb692416d4f2ea9730df0716b3de",32).
@@ -18928,7 +19717,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","da1
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","da1bc5e3440f026fbb24114c1f4b7416","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","da1bc5e3440f026fbb24114c1f4b7416",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9584fb9548e66271229e43b4d5cfd35c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","29fb4de5899c27f65c44cd6e1dd4c187",0).
 die_has_child("9584fb9548e66271229e43b4d5cfd35c","29fb4de5899c27f65c44cd6e1dd4c187").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e5431fa54743d9aa7a8c1b72279b2df5",1).
 die_has_child("9584fb9548e66271229e43b4d5cfd35c","e5431fa54743d9aa7a8c1b72279b2df5").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9584fb9548e66271229e43b4d5cfd35c","wcsstr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9584fb9548e66271229e43b4d5cfd35c",32).
@@ -18955,7 +19746,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","604
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","60423e84fa77001491f5d0a50f7018cd","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","60423e84fa77001491f5d0a50f7018cd",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d16b6ad383c052c2c99cb563cbc40682").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3d09cbd1dae8b5e990e5865ff96850cb",0).
 die_has_child("d16b6ad383c052c2c99cb563cbc40682","3d09cbd1dae8b5e990e5865ff96850cb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e5b3b9998eacf562d9c55d454063bd46",1).
 die_has_child("d16b6ad383c052c2c99cb563cbc40682","e5b3b9998eacf562d9c55d454063bd46").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d16b6ad383c052c2c99cb563cbc40682","wcsstr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d16b6ad383c052c2c99cb563cbc40682",32).
@@ -18982,8 +19775,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b8e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b8e4370da4412dac95f5f363c1f50140","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b8e4370da4412dac95f5f363c1f50140",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1db93f3b180b8a07f5881e76f2e6a542").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1998d18862ec1f4e7f23fc797aea02bc",0).
 die_has_child("1db93f3b180b8a07f5881e76f2e6a542","1998d18862ec1f4e7f23fc797aea02bc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","19b180f510cfd6dbe671da77c47d973d",1).
 die_has_child("1db93f3b180b8a07f5881e76f2e6a542","19b180f510cfd6dbe671da77c47d973d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9f587061456d790e16f7ecc2b66d931d",2).
 die_has_child("1db93f3b180b8a07f5881e76f2e6a542","9f587061456d790e16f7ecc2b66d931d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1db93f3b180b8a07f5881e76f2e6a542","wmemchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1db93f3b180b8a07f5881e76f2e6a542",32).
@@ -19018,8 +19814,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","df9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","df99200c76d4650b729fb3d01ef6a62f","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","df99200c76d4650b729fb3d01ef6a62f",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0bf2801da80ffe64c082a23636699aaa").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f2bf57c5d2428c8d439bf009fe9e0d32",0).
 die_has_child("0bf2801da80ffe64c082a23636699aaa","f2bf57c5d2428c8d439bf009fe9e0d32").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee4818b0f6dfbd4ef28820c18a5173db",1).
 die_has_child("0bf2801da80ffe64c082a23636699aaa","ee4818b0f6dfbd4ef28820c18a5173db").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","334b01bc12347adf58ad0be0e8a3ec93",2).
 die_has_child("0bf2801da80ffe64c082a23636699aaa","334b01bc12347adf58ad0be0e8a3ec93").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0bf2801da80ffe64c082a23636699aaa","wmemchr").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0bf2801da80ffe64c082a23636699aaa",32).
@@ -19054,7 +19853,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b63
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b638800d89a369dca95723f58afac4ac","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b638800d89a369dca95723f58afac4ac",5).
 dw_tag_function("/code/simple-example/cpp/math-client","218230c7a87598ff581dbec32191d815").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3973e49562d0ab652d9dd32cefa96c3c",0).
 die_has_child("218230c7a87598ff581dbec32191d815","3973e49562d0ab652d9dd32cefa96c3c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","202aa20fbe247601e84bc14b55bba627",1).
 die_has_child("218230c7a87598ff581dbec32191d815","202aa20fbe247601e84bc14b55bba627").
 dw_tag_function_name("/code/simple-example/cpp/math-client","218230c7a87598ff581dbec32191d815","wcstold").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","218230c7a87598ff581dbec32191d815",128).
@@ -19080,8 +19881,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","869
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","86993458f50d1d3cfc80bf29d7071a3b","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","86993458f50d1d3cfc80bf29d7071a3b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","789748c234f9beb7df7d2f5fd361514f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","147bd288ea04e4b06d881c2658bca6a4",0).
 die_has_child("789748c234f9beb7df7d2f5fd361514f","147bd288ea04e4b06d881c2658bca6a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9ad5c89403ceddd0ee18c8ed5c1187ce",1).
 die_has_child("789748c234f9beb7df7d2f5fd361514f","9ad5c89403ceddd0ee18c8ed5c1187ce").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fd2995b55698cfa294804293c6842fd1",2).
 die_has_child("789748c234f9beb7df7d2f5fd361514f","fd2995b55698cfa294804293c6842fd1").
 dw_tag_function_name("/code/simple-example/cpp/math-client","789748c234f9beb7df7d2f5fd361514f","wcstoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","789748c234f9beb7df7d2f5fd361514f",64).
@@ -19120,8 +19924,11 @@ dw_tag_base_type_size_in_bits("/code/simple-example/cpp/math-client","59e94a97c6
 dw_tag_base_type_die_size("/code/simple-example/cpp/math-client","59e94a97c6cf68394c8120464e5d6aa4",7).
 dw_tag_base_type_encoding("/code/simple-example/cpp/math-client","59e94a97c6cf68394c8120464e5d6aa4","5	(signed)").
 dw_tag_function("/code/simple-example/cpp/math-client","a4bea978e4cf5bea172b9e84c420cd11").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","931a46ece0a6956fc32c73e6e08efe2f",0).
 die_has_child("a4bea978e4cf5bea172b9e84c420cd11","931a46ece0a6956fc32c73e6e08efe2f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7daa57b63939a075b1e2cec16ec9f1d9",1).
 die_has_child("a4bea978e4cf5bea172b9e84c420cd11","7daa57b63939a075b1e2cec16ec9f1d9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8c664ecb27aaf76dbd244bd257238f03",2).
 die_has_child("a4bea978e4cf5bea172b9e84c420cd11","8c664ecb27aaf76dbd244bd257238f03").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a4bea978e4cf5bea172b9e84c420cd11","wcstoull").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a4bea978e4cf5bea172b9e84c420cd11",64).
@@ -20045,7 +20852,9 @@ dw_tag_member_line("/code/simple-example/cpp/math-client","764768cc0a258c2042b72
 dw_tag_member_column("/code/simple-example/cpp/math-client","764768cc0a258c2042b7278ee0d906b0",8).
 dw_tag_member_die_size("/code/simple-example/cpp/math-client","764768cc0a258c2042b7278ee0d906b0",13).
 dw_tag_function("/code/simple-example/cpp/math-client","0b65ed6c00ecba72f174ea5289f597c7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","18dc96b8647c4e68ceba7f1efc71c55f",0).
 die_has_child("0b65ed6c00ecba72f174ea5289f597c7","18dc96b8647c4e68ceba7f1efc71c55f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1b3ab929641de6a3b25dd868a0b91bfd",1).
 die_has_child("0b65ed6c00ecba72f174ea5289f597c7","1b3ab929641de6a3b25dd868a0b91bfd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0b65ed6c00ecba72f174ea5289f597c7","setlocale").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0b65ed6c00ecba72f174ea5289f597c7",8).
@@ -20326,6 +21135,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","edd595a
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","6c8afbd7946f93e7d6f46d2a8c7809de").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6c8afbd7946f93e7d6f46d2a8c7809de",5).
 dw_tag_function("/code/simple-example/cpp/math-client","de670f75e5b1ab112cd053cf736d4acc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3ae920bd2566f0e94c2b67b6e6ec1cb3",0).
 die_has_child("de670f75e5b1ab112cd053cf736d4acc","3ae920bd2566f0e94c2b67b6e6ec1cb3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","de670f75e5b1ab112cd053cf736d4acc","atexit").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","de670f75e5b1ab112cd053cf736d4acc",32).
@@ -20344,6 +21154,7 @@ dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","f481bc1310b
 dw_tag_subroutine_type("/code/simple-example/cpp/math-client","6287f9f67895176f062beae3435cba55").
 dw_tag_subroutine_type_die_size("/code/simple-example/cpp/math-client","6287f9f67895176f062beae3435cba55",1).
 dw_tag_function("/code/simple-example/cpp/math-client","3c89e4fe7bfce57f441f845f03682ed8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","809b4c8e114025eaff346e0db9e1b2e6",0).
 die_has_child("3c89e4fe7bfce57f441f845f03682ed8","809b4c8e114025eaff346e0db9e1b2e6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3c89e4fe7bfce57f441f845f03682ed8","at_quick_exit").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3c89e4fe7bfce57f441f845f03682ed8",32).
@@ -20358,6 +21169,7 @@ dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","809b4c8
 dw_tag_formal_parameter("/code/simple-example/cpp/math-client","b62ce3d5287e71abcd40013ffd8b3b97").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b62ce3d5287e71abcd40013ffd8b3b97",5).
 dw_tag_function("/code/simple-example/cpp/math-client","6dcf3c2d982c1d0422e10e541de717fc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cabf222d0f30367d4980b6fd9be2449c",0).
 die_has_child("6dcf3c2d982c1d0422e10e541de717fc","cabf222d0f30367d4980b6fd9be2449c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","6dcf3c2d982c1d0422e10e541de717fc","atof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","6dcf3c2d982c1d0422e10e541de717fc",64).
@@ -20375,6 +21187,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d0e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d0e968eec1cdf4640f614edd581dc268","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d0e968eec1cdf4640f614edd581dc268",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e467f9dd73b76d088759de3e09ffdb18").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6a04ad421d9a5ff35df73b56c04cef69",0).
 die_has_child("e467f9dd73b76d088759de3e09ffdb18","6a04ad421d9a5ff35df73b56c04cef69").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e467f9dd73b76d088759de3e09ffdb18","atoi").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e467f9dd73b76d088759de3e09ffdb18",32).
@@ -20392,6 +21205,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","238
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2389e0a4653e2939843086685d3d3adc","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2389e0a4653e2939843086685d3d3adc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1de0f15a9cfc96fc76f5d64439009b95").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","66ed49e4942de78b4024a99a7b7ed3b6",0).
 die_has_child("1de0f15a9cfc96fc76f5d64439009b95","66ed49e4942de78b4024a99a7b7ed3b6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1de0f15a9cfc96fc76f5d64439009b95","atol").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1de0f15a9cfc96fc76f5d64439009b95",64).
@@ -20409,10 +21223,15 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","8f3
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","8f3dcf72ef41acd5a3a70661d5a656fd","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","8f3dcf72ef41acd5a3a70661d5a656fd",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b9a7bf7b4f562bc16cf0c05ee8f452ac").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5e15af8f7a48fcaa1669ff1c1f6ead60",0).
 die_has_child("b9a7bf7b4f562bc16cf0c05ee8f452ac","5e15af8f7a48fcaa1669ff1c1f6ead60").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","53e45abd97fa94d5f643e07c1d4bf39b",1).
 die_has_child("b9a7bf7b4f562bc16cf0c05ee8f452ac","53e45abd97fa94d5f643e07c1d4bf39b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","09bf1f678d14e365bd089edf9424414a",2).
 die_has_child("b9a7bf7b4f562bc16cf0c05ee8f452ac","09bf1f678d14e365bd089edf9424414a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a8d87c7b093efa4b9046571b77610de0",3).
 die_has_child("b9a7bf7b4f562bc16cf0c05ee8f452ac","a8d87c7b093efa4b9046571b77610de0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a7d59b5c35df7a9ce071a876817ad1fd",4).
 die_has_child("b9a7bf7b4f562bc16cf0c05ee8f452ac","a7d59b5c35df7a9ce071a876817ad1fd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b9a7bf7b4f562bc16cf0c05ee8f452ac","bsearch").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b9a7bf7b4f562bc16cf0c05ee8f452ac",64).
@@ -20453,7 +21272,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","993
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","993c3182ab027e208247272afab45ec2","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","993c3182ab027e208247272afab45ec2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9ac856554dcf1d5dad16b5727324f8ee").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","303dd00aaf264dfc126afdefe5fbc4e0",0).
 die_has_child("9ac856554dcf1d5dad16b5727324f8ee","303dd00aaf264dfc126afdefe5fbc4e0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d91db83a27174c5ef4498d46f765fed7",1).
 die_has_child("9ac856554dcf1d5dad16b5727324f8ee","d91db83a27174c5ef4498d46f765fed7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9ac856554dcf1d5dad16b5727324f8ee","div").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9ac856554dcf1d5dad16b5727324f8ee",64).
@@ -20479,6 +21300,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","5b9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","5b930bc10f32b83c351b37c928f3aeaf","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","5b930bc10f32b83c351b37c928f3aeaf",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5a6e0e36a9393fdebb069b4efea2f9e3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","157fa643b52488a5d5d23d149963721e",0).
 die_has_child("5a6e0e36a9393fdebb069b4efea2f9e3","157fa643b52488a5d5d23d149963721e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5a6e0e36a9393fdebb069b4efea2f9e3","getenv").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5a6e0e36a9393fdebb069b4efea2f9e3",8).
@@ -20496,7 +21318,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","cca
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ccab1a737a58e548e08ce1962636a693","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ccab1a737a58e548e08ce1962636a693",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d73cd02107e64588bc0263a707e8d012").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","81cde6c8418870c7ec65499c3740769a",0).
 die_has_child("d73cd02107e64588bc0263a707e8d012","81cde6c8418870c7ec65499c3740769a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bea8e3c02f32b2ddfaf27833aece4e8d",1).
 die_has_child("d73cd02107e64588bc0263a707e8d012","bea8e3c02f32b2ddfaf27833aece4e8d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d73cd02107e64588bc0263a707e8d012","ldiv").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d73cd02107e64588bc0263a707e8d012",128).
@@ -20522,7 +21346,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","eec
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","eec633ce73de8e4bbf032a6424794525","long int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","eec633ce73de8e4bbf032a6424794525",5).
 dw_tag_function("/code/simple-example/cpp/math-client","8e470b426ffe4908b38bc86226f9d8da").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4dd69d2b58cc7dc88738ce39d3518c92",0).
 die_has_child("8e470b426ffe4908b38bc86226f9d8da","4dd69d2b58cc7dc88738ce39d3518c92").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e1c9eb4a4744d84da26490e284910eac",1).
 die_has_child("8e470b426ffe4908b38bc86226f9d8da","e1c9eb4a4744d84da26490e284910eac").
 dw_tag_function_name("/code/simple-example/cpp/math-client","8e470b426ffe4908b38bc86226f9d8da","mblen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","8e470b426ffe4908b38bc86226f9d8da",32).
@@ -20548,8 +21374,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","118
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1186a9f577ba97e575cec4012872165b","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1186a9f577ba97e575cec4012872165b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d5c483c823dbff8955629bade2a0999d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","95085e6da4914152f90c30e0e0b8bf73",0).
 die_has_child("d5c483c823dbff8955629bade2a0999d","95085e6da4914152f90c30e0e0b8bf73").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3ad5c15af5a57b4ab619c58d8350c682",1).
 die_has_child("d5c483c823dbff8955629bade2a0999d","3ad5c15af5a57b4ab619c58d8350c682").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f414d40508d21eab7ae06e736e1955af",2).
 die_has_child("d5c483c823dbff8955629bade2a0999d","f414d40508d21eab7ae06e736e1955af").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d5c483c823dbff8955629bade2a0999d","mbstowcs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d5c483c823dbff8955629bade2a0999d",64).
@@ -20583,8 +21412,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","26e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","26e502f13e1f56d447bc178afc1c6add","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","26e502f13e1f56d447bc178afc1c6add",5).
 dw_tag_function("/code/simple-example/cpp/math-client","06606341e5e77b381592f34ab2e9d601").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d7187b25d1f89544a77474219b225031",0).
 die_has_child("06606341e5e77b381592f34ab2e9d601","d7187b25d1f89544a77474219b225031").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a7d30ff1212eb25333c53eec065d68da",1).
 die_has_child("06606341e5e77b381592f34ab2e9d601","a7d30ff1212eb25333c53eec065d68da").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","643a89889392ee42241cd30620cdda49",2).
 die_has_child("06606341e5e77b381592f34ab2e9d601","643a89889392ee42241cd30620cdda49").
 dw_tag_function_name("/code/simple-example/cpp/math-client","06606341e5e77b381592f34ab2e9d601","mbtowc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","06606341e5e77b381592f34ab2e9d601",32).
@@ -20618,9 +21450,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","875
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","875feec621d2615c60190680a97e7aa4","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","875feec621d2615c60190680a97e7aa4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9ded760003fef2f87d3c20d8495be21f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d4c8827140d9ce5db37272520c254b53",0).
 die_has_child("9ded760003fef2f87d3c20d8495be21f","d4c8827140d9ce5db37272520c254b53").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","aafdf4ec889da1e547ff63333b64359f",1).
 die_has_child("9ded760003fef2f87d3c20d8495be21f","aafdf4ec889da1e547ff63333b64359f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0535eaabc04be34dba3a76b4d731fa95",2).
 die_has_child("9ded760003fef2f87d3c20d8495be21f","0535eaabc04be34dba3a76b4d731fa95").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a03876d1c55e1413cce82ec0cf76a8c3",3).
 die_has_child("9ded760003fef2f87d3c20d8495be21f","a03876d1c55e1413cce82ec0cf76a8c3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9ded760003fef2f87d3c20d8495be21f","qsort").
 dw_tag_function_line("/code/simple-example/cpp/math-client","9ded760003fef2f87d3c20d8495be21f",830).
@@ -20658,6 +21494,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","49c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","49c21ecbf4dbfcd6ab6dc2aa8c6a897d","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","49c21ecbf4dbfcd6ab6dc2aa8c6a897d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","4337c8e1a12f9505a19b54c363f8ee5c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","03697cb707edf3cf2d8e9bd6ad323d06",0).
 die_has_child("4337c8e1a12f9505a19b54c363f8ee5c","03697cb707edf3cf2d8e9bd6ad323d06").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4337c8e1a12f9505a19b54c363f8ee5c","quick_exit").
 dw_tag_function_line("/code/simple-example/cpp/math-client","4337c8e1a12f9505a19b54c363f8ee5c",623).
@@ -20681,6 +21518,7 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","ba49041f7d4fb5180
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","ba49041f7d4fb5180db87bd901f10eed",13).
 dw_tag_function_external("/code/simple-example/cpp/math-client","ba49041f7d4fb5180db87bd901f10eed","rand").
 dw_tag_function("/code/simple-example/cpp/math-client","536edfa2c8546b833323b180150357c8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","925cca84983b66fecb218dab72e31e74",0).
 die_has_child("536edfa2c8546b833323b180150357c8","925cca84983b66fecb218dab72e31e74").
 dw_tag_function_name("/code/simple-example/cpp/math-client","536edfa2c8546b833323b180150357c8","srand").
 dw_tag_function_line("/code/simple-example/cpp/math-client","536edfa2c8546b833323b180150357c8",455).
@@ -20696,7 +21534,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","295
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","295fedba17968f48f920955c82c1db31","unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","295fedba17968f48f920955c82c1db31",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d2b4b5d800c43bd09cada02a1d7ba75b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","da26c0c257d9082a023a52405f8155db",0).
 die_has_child("d2b4b5d800c43bd09cada02a1d7ba75b","da26c0c257d9082a023a52405f8155db").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","daa91e72848069e3d293bc1044b43625",1).
 die_has_child("d2b4b5d800c43bd09cada02a1d7ba75b","daa91e72848069e3d293bc1044b43625").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d2b4b5d800c43bd09cada02a1d7ba75b","strtod").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d2b4b5d800c43bd09cada02a1d7ba75b",64).
@@ -20727,8 +21567,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","b895507cc2
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","b895507cc21f42087240eb5e4eab0004",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","b895507cc21f42087240eb5e4eab0004",6).
 dw_tag_function("/code/simple-example/cpp/math-client","2e239dfb140c1bd2b6a8ccca6808668b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d7fdfb2189ed67d64701d24a96d1351e",0).
 die_has_child("2e239dfb140c1bd2b6a8ccca6808668b","d7fdfb2189ed67d64701d24a96d1351e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b9db4d30adffe4dd7af0481ce451805e",1).
 die_has_child("2e239dfb140c1bd2b6a8ccca6808668b","b9db4d30adffe4dd7af0481ce451805e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6745ee12d2e5355681eac88d216aa9e6",2).
 die_has_child("2e239dfb140c1bd2b6a8ccca6808668b","6745ee12d2e5355681eac88d216aa9e6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2e239dfb140c1bd2b6a8ccca6808668b","strtol").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","2e239dfb140c1bd2b6a8ccca6808668b",64).
@@ -20762,8 +21605,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","abd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","abd891f52ef88415d9c349cd23a18c88","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","abd891f52ef88415d9c349cd23a18c88",5).
 dw_tag_function("/code/simple-example/cpp/math-client","f0d1fb14f185f592dc26119e5a089dc1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7a66362231debbbc9152b60d8cab1d1f",0).
 die_has_child("f0d1fb14f185f592dc26119e5a089dc1","7a66362231debbbc9152b60d8cab1d1f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8a075d49b5edc6726336493457ab60ba",1).
 die_has_child("f0d1fb14f185f592dc26119e5a089dc1","8a075d49b5edc6726336493457ab60ba").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","fdb2154b717574f61b56ec1980c51a40",2).
 die_has_child("f0d1fb14f185f592dc26119e5a089dc1","fdb2154b717574f61b56ec1980c51a40").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f0d1fb14f185f592dc26119e5a089dc1","strtoul").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f0d1fb14f185f592dc26119e5a089dc1",64).
@@ -20797,6 +21643,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","97a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","97afb55cacdcb215e6f3a2b643f8248c","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","97afb55cacdcb215e6f3a2b643f8248c",5).
 dw_tag_function("/code/simple-example/cpp/math-client","5f6199dfe32ba7c0ee7f08fc84737a60").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2dd8155d6adf6b846c4713f92a8f6ca6",0).
 die_has_child("5f6199dfe32ba7c0ee7f08fc84737a60","2dd8155d6adf6b846c4713f92a8f6ca6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","5f6199dfe32ba7c0ee7f08fc84737a60","system").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","5f6199dfe32ba7c0ee7f08fc84737a60",32).
@@ -20814,8 +21661,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","f99
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","f99d46f65e0794e0f3630a683515794d","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","f99d46f65e0794e0f3630a683515794d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","701990fea1ebac41a2d0a8a0215ad6c4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cead931a5865543b83913efdf6044fc7",0).
 die_has_child("701990fea1ebac41a2d0a8a0215ad6c4","cead931a5865543b83913efdf6044fc7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b39eedd979f86240bcb7e456dac4b82f",1).
 die_has_child("701990fea1ebac41a2d0a8a0215ad6c4","b39eedd979f86240bcb7e456dac4b82f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c9052ada7164dacc9318a5e4dfb6da91",2).
 die_has_child("701990fea1ebac41a2d0a8a0215ad6c4","c9052ada7164dacc9318a5e4dfb6da91").
 dw_tag_function_name("/code/simple-example/cpp/math-client","701990fea1ebac41a2d0a8a0215ad6c4","wcstombs").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","701990fea1ebac41a2d0a8a0215ad6c4",64).
@@ -20849,7 +21699,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","fc2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","fc27a57952013f43c0a5b3cbff954104","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","fc27a57952013f43c0a5b3cbff954104",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b1ed83e5c33617bbb1566edb1898c29a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","789200246604c08dc69673b995cb8fb3",0).
 die_has_child("b1ed83e5c33617bbb1566edb1898c29a","789200246604c08dc69673b995cb8fb3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","82c003f03713934b39bfb0d2bbe5d38d",1).
 die_has_child("b1ed83e5c33617bbb1566edb1898c29a","82c003f03713934b39bfb0d2bbe5d38d").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b1ed83e5c33617bbb1566edb1898c29a","wctomb").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b1ed83e5c33617bbb1566edb1898c29a",32).
@@ -20875,7 +21727,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","1d9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","1d9a3da7e69cbeea915bf18223c334f9","wchar_t").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","1d9a3da7e69cbeea915bf18223c334f9",5).
 dw_tag_function("/code/simple-example/cpp/math-client","37dacb31f42fee0f0db1baa9b336e822").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c38c5e1f3df6108715585b0f723f75d9",0).
 die_has_child("37dacb31f42fee0f0db1baa9b336e822","c38c5e1f3df6108715585b0f723f75d9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2ec5a301bb6ee1ff8386ddf1b7aa3161",1).
 die_has_child("37dacb31f42fee0f0db1baa9b336e822","2ec5a301bb6ee1ff8386ddf1b7aa3161").
 dw_tag_function_name("/code/simple-example/cpp/math-client","37dacb31f42fee0f0db1baa9b336e822","lldiv").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","37dacb31f42fee0f0db1baa9b336e822",128).
@@ -20901,6 +21755,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c76
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c768a385b7103decaa7bd6f5645433ae","long long int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c768a385b7103decaa7bd6f5645433ae",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d9406b9ff720fa37ebd9d2a4a0ba6f60").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0be8647fba6911c14e77964a42ff582a",0).
 die_has_child("d9406b9ff720fa37ebd9d2a4a0ba6f60","0be8647fba6911c14e77964a42ff582a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d9406b9ff720fa37ebd9d2a4a0ba6f60","atoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d9406b9ff720fa37ebd9d2a4a0ba6f60",64).
@@ -20918,8 +21773,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e1e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e1ee41d5b9defc8b0a990abdec65d360","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e1ee41d5b9defc8b0a990abdec65d360",5).
 dw_tag_function("/code/simple-example/cpp/math-client","62532847a72e8f02c6c4d898e22c547c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dcf6d4d9c245b8255179230a6904e5a3",0).
 die_has_child("62532847a72e8f02c6c4d898e22c547c","dcf6d4d9c245b8255179230a6904e5a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2284078515770995310a16b192a710f6",1).
 die_has_child("62532847a72e8f02c6c4d898e22c547c","2284078515770995310a16b192a710f6").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","7bdaf6865093ed5078f8af15f8407c0b",2).
 die_has_child("62532847a72e8f02c6c4d898e22c547c","7bdaf6865093ed5078f8af15f8407c0b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","62532847a72e8f02c6c4d898e22c547c","strtoll").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","62532847a72e8f02c6c4d898e22c547c",64).
@@ -20953,8 +21811,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","c10
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","c109fda1037b44414c4abdfcd0c6d9dc","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","c109fda1037b44414c4abdfcd0c6d9dc",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1ed0b8fb95ad80d8906b1e0f47ac8efb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","550eac2c3ffdc4839ab16c2c265a9e2c",0).
 die_has_child("1ed0b8fb95ad80d8906b1e0f47ac8efb","550eac2c3ffdc4839ab16c2c265a9e2c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","6451cef0d120f05a61b7db67c4894594",1).
 die_has_child("1ed0b8fb95ad80d8906b1e0f47ac8efb","6451cef0d120f05a61b7db67c4894594").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","59d207a58f84d3488adb05219b37dc84",2).
 die_has_child("1ed0b8fb95ad80d8906b1e0f47ac8efb","59d207a58f84d3488adb05219b37dc84").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1ed0b8fb95ad80d8906b1e0f47ac8efb","strtoull").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1ed0b8fb95ad80d8906b1e0f47ac8efb",64).
@@ -20988,7 +21849,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","706
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7068331c336b47adc47d0990cc0481b7","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7068331c336b47adc47d0990cc0481b7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","4973800af3dcd3e31390271e7b9231d8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","00599b084c8a5a8d7d2caec9e669b702",0).
 die_has_child("4973800af3dcd3e31390271e7b9231d8","00599b084c8a5a8d7d2caec9e669b702").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a18530df1824b877995da283c243b212",1).
 die_has_child("4973800af3dcd3e31390271e7b9231d8","a18530df1824b877995da283c243b212").
 dw_tag_function_name("/code/simple-example/cpp/math-client","4973800af3dcd3e31390271e7b9231d8","strtof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","4973800af3dcd3e31390271e7b9231d8",32).
@@ -21014,7 +21877,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a3c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a3ce05cdda74b4ea620afe485e0626ac","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a3ce05cdda74b4ea620afe485e0626ac",5).
 dw_tag_function("/code/simple-example/cpp/math-client","bc793cc1f74d831b13c965893b930a79").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","55d6a25f8ea56dea5d8ddcb96a5b69be",0).
 die_has_child("bc793cc1f74d831b13c965893b930a79","55d6a25f8ea56dea5d8ddcb96a5b69be").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","724cee2299f1d4de6bbea7ca3e9bee1f",1).
 die_has_child("bc793cc1f74d831b13c965893b930a79","724cee2299f1d4de6bbea7ca3e9bee1f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bc793cc1f74d831b13c965893b930a79","strtold").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","bc793cc1f74d831b13c965893b930a79",128).
@@ -21233,6 +22098,7 @@ dw_tag_variable_column("/code/simple-example/cpp/math-client","d150942e514911f90
 dw_tag_variable_die_size("/code/simple-example/cpp/math-client","d150942e514911f90f4b0308d981279f",12).
 dw_tag_variable_external("/code/simple-example/cpp/math-client","d150942e514911f90f4b0308d981279f","_sys_errlist").
 dw_tag_function("/code/simple-example/cpp/math-client","623b4dc5caeefdc2b3ebab2d3cde6c77").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0ed20cc95cf92d127ecbe390a9fa2b8c",0).
 die_has_child("623b4dc5caeefdc2b3ebab2d3cde6c77","0ed20cc95cf92d127ecbe390a9fa2b8c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","623b4dc5caeefdc2b3ebab2d3cde6c77","clearerr").
 dw_tag_function_line("/code/simple-example/cpp/math-client","623b4dc5caeefdc2b3ebab2d3cde6c77",757).
@@ -21248,6 +22114,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","4fd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","4fd3325f3a803d9f73ce068dfcde0afa","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","4fd3325f3a803d9f73ce068dfcde0afa",5).
 dw_tag_function("/code/simple-example/cpp/math-client","fdf9f958094e92b37b1b2d0e303fab79").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e4d734e01dc527b7f975c49cf3648ae2",0).
 die_has_child("fdf9f958094e92b37b1b2d0e303fab79","e4d734e01dc527b7f975c49cf3648ae2").
 dw_tag_function_name("/code/simple-example/cpp/math-client","fdf9f958094e92b37b1b2d0e303fab79","fclose").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","fdf9f958094e92b37b1b2d0e303fab79",32).
@@ -21265,6 +22132,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","180
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","180f37eca0a8e68c205de1a6965dd579","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","180f37eca0a8e68c205de1a6965dd579",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0dd96705f5a92620b7ef379b47d50bb4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5502f7bd102d97c325f3c31afd1498de",0).
 die_has_child("0dd96705f5a92620b7ef379b47d50bb4","5502f7bd102d97c325f3c31afd1498de").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0dd96705f5a92620b7ef379b47d50bb4","feof").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0dd96705f5a92620b7ef379b47d50bb4",32).
@@ -21282,6 +22150,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a8b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a8b008210b3a9d6223e9343a8115324a","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a8b008210b3a9d6223e9343a8115324a",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d4baea3d49f8eeb7d4cd0dc5651a874c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f2a20e44a6bb06b1da6edf57c8d41a15",0).
 die_has_child("d4baea3d49f8eeb7d4cd0dc5651a874c","f2a20e44a6bb06b1da6edf57c8d41a15").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d4baea3d49f8eeb7d4cd0dc5651a874c","ferror").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d4baea3d49f8eeb7d4cd0dc5651a874c",32).
@@ -21299,6 +22168,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7ee
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7ee0f44cedbe7abc7e9c98b39a5c19b3","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7ee0f44cedbe7abc7e9c98b39a5c19b3",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d81358be209290bf624decaee7af2657").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2b3fe55a4071a6f7c135b7789f623032",0).
 die_has_child("d81358be209290bf624decaee7af2657","2b3fe55a4071a6f7c135b7789f623032").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d81358be209290bf624decaee7af2657","fflush").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","d81358be209290bf624decaee7af2657",32).
@@ -21316,6 +22186,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6f0
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6f0cb034fd63bff999e13501fa4f81d5","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6f0cb034fd63bff999e13501fa4f81d5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","3c5a7c92da8ab4f914ef65885cb9c081").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bb1fb1e99f794a8bf9c2c525f57366f7",0).
 die_has_child("3c5a7c92da8ab4f914ef65885cb9c081","bb1fb1e99f794a8bf9c2c525f57366f7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","3c5a7c92da8ab4f914ef65885cb9c081","fgetc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","3c5a7c92da8ab4f914ef65885cb9c081",32).
@@ -21333,7 +22204,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3c6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3c6f10fdce3a4b7b5e1f8563f8a63bc2","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3c6f10fdce3a4b7b5e1f8563f8a63bc2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","128132895dc2d229f9b2956710bf1f76").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9ffc71e48c9177d5abfa90583d499bae",0).
 die_has_child("128132895dc2d229f9b2956710bf1f76","9ffc71e48c9177d5abfa90583d499bae").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2b857891628dc53368396e83a222f0c6",1).
 die_has_child("128132895dc2d229f9b2956710bf1f76","2b857891628dc53368396e83a222f0c6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","128132895dc2d229f9b2956710bf1f76","fgetpos").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","128132895dc2d229f9b2956710bf1f76",32).
@@ -21364,8 +22237,11 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","4ed928c45b
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","4ed928c45bb97d21ea5a0f1c7f648cb3",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","4ed928c45bb97d21ea5a0f1c7f648cb3",6).
 dw_tag_function("/code/simple-example/cpp/math-client","9ca7d922a8b829e5fdfe122702c65e1f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dcc4b2a0271147dcd08a12b68982e049",0).
 die_has_child("9ca7d922a8b829e5fdfe122702c65e1f","dcc4b2a0271147dcd08a12b68982e049").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","bacbe9e174ec866c4b4e06172ae28f26",1).
 die_has_child("9ca7d922a8b829e5fdfe122702c65e1f","bacbe9e174ec866c4b4e06172ae28f26").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1c21ede6f512223458f538e564bf8781",2).
 die_has_child("9ca7d922a8b829e5fdfe122702c65e1f","1c21ede6f512223458f538e564bf8781").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9ca7d922a8b829e5fdfe122702c65e1f","fgets").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9ca7d922a8b829e5fdfe122702c65e1f",8).
@@ -21399,7 +22275,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","cac
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","cac1303a5abd5aeb281e0518d5c010b5","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","cac1303a5abd5aeb281e0518d5c010b5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","39b52f1df4ae6aecef9d1d1fb6318f82").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","a1159e9f19faef034aacf5d44849217b",0).
 die_has_child("39b52f1df4ae6aecef9d1d1fb6318f82","a1159e9f19faef034aacf5d44849217b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","60ff147c8f5578901fa63acc8b8318e9",1).
 die_has_child("39b52f1df4ae6aecef9d1d1fb6318f82","60ff147c8f5578901fa63acc8b8318e9").
 dw_tag_function_name("/code/simple-example/cpp/math-client","39b52f1df4ae6aecef9d1d1fb6318f82","fopen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","39b52f1df4ae6aecef9d1d1fb6318f82",1728).
@@ -21425,9 +22303,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","0de
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0deed08d47a345c334adaddc553f4a4d","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0deed08d47a345c334adaddc553f4a4d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b55012d4d5ef30a5a298b54f5cfcd300").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8b1a1bc80d6c823a972eb7bce55f7022",0).
 die_has_child("b55012d4d5ef30a5a298b54f5cfcd300","8b1a1bc80d6c823a972eb7bce55f7022").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b39f1f37663712ab054ad20bedc38071",1).
 die_has_child("b55012d4d5ef30a5a298b54f5cfcd300","b39f1f37663712ab054ad20bedc38071").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","07485eb67c3a873999301d9572f86bb3",2).
 die_has_child("b55012d4d5ef30a5a298b54f5cfcd300","07485eb67c3a873999301d9572f86bb3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","82e6f37f7f2ba6508a4b7085aaa18837",3).
 die_has_child("b55012d4d5ef30a5a298b54f5cfcd300","82e6f37f7f2ba6508a4b7085aaa18837").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b55012d4d5ef30a5a298b54f5cfcd300","fread").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b55012d4d5ef30a5a298b54f5cfcd300",64).
@@ -21467,8 +22349,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","7dd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","7dde2d27495c1114da3d456e6714e89d","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","7dde2d27495c1114da3d456e6714e89d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","7b5391746680bb1160702a8337067ba9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c440378705801a162356289fedff03b1",0).
 die_has_child("7b5391746680bb1160702a8337067ba9","c440378705801a162356289fedff03b1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","8acf091b76770e6e2a590ec60cb96206",1).
 die_has_child("7b5391746680bb1160702a8337067ba9","8acf091b76770e6e2a590ec60cb96206").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","712180a02e20fbbd2297cb14e58a2f7f",2).
 die_has_child("7b5391746680bb1160702a8337067ba9","712180a02e20fbbd2297cb14e58a2f7f").
 dw_tag_function_name("/code/simple-example/cpp/math-client","7b5391746680bb1160702a8337067ba9","freopen").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","7b5391746680bb1160702a8337067ba9",1728).
@@ -21502,8 +22387,11 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","411
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","411cd2001bb46aba477952f9eb670c4b","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","411cd2001bb46aba477952f9eb670c4b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ad819c748cc55977488f2aa87242d4c8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e199f4081f6ad3ad03e36d797d3967a3",0).
 die_has_child("ad819c748cc55977488f2aa87242d4c8","e199f4081f6ad3ad03e36d797d3967a3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","32ad37414efc036b0956045b543c759b",1).
 die_has_child("ad819c748cc55977488f2aa87242d4c8","32ad37414efc036b0956045b543c759b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","4a9ced3a939104add771f554d5748f56",2).
 die_has_child("ad819c748cc55977488f2aa87242d4c8","4a9ced3a939104add771f554d5748f56").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ad819c748cc55977488f2aa87242d4c8","fseek").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ad819c748cc55977488f2aa87242d4c8",32).
@@ -21537,7 +22425,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","a3c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","a3c0e30b17a0c13b44da6aaf0e6da505","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","a3c0e30b17a0c13b44da6aaf0e6da505",5).
 dw_tag_function("/code/simple-example/cpp/math-client","e03783bfcb258341c397f2e32721ed2c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","0baacf943fb36e4737924ded592f551c",0).
 die_has_child("e03783bfcb258341c397f2e32721ed2c","0baacf943fb36e4737924ded592f551c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","940dd6231b7b8142968aaa556a9c4dd8",1).
 die_has_child("e03783bfcb258341c397f2e32721ed2c","940dd6231b7b8142968aaa556a9c4dd8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","e03783bfcb258341c397f2e32721ed2c","fsetpos").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","e03783bfcb258341c397f2e32721ed2c",32).
@@ -21568,6 +22458,7 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","6495371375
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","6495371375ecb8763435fd676ab54ff1",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","6495371375ecb8763435fd676ab54ff1",6).
 dw_tag_function("/code/simple-example/cpp/math-client","02803241e686b427386c000f79f55e8e").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c055808b1f8fb20673ef29cdc4f0af8e",0).
 die_has_child("02803241e686b427386c000f79f55e8e","c055808b1f8fb20673ef29cdc4f0af8e").
 dw_tag_function_name("/code/simple-example/cpp/math-client","02803241e686b427386c000f79f55e8e","ftell").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","02803241e686b427386c000f79f55e8e",64).
@@ -21585,6 +22476,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","630
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","630aa905c758f0e5b5d023316e2d5921","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","630aa905c758f0e5b5d023316e2d5921",5).
 dw_tag_function("/code/simple-example/cpp/math-client","265a5d7aa7422e5bd918a6bd43430530").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1a294e3810494fcc5eec38025c6d0461",0).
 die_has_child("265a5d7aa7422e5bd918a6bd43430530","1a294e3810494fcc5eec38025c6d0461").
 dw_tag_function_name("/code/simple-example/cpp/math-client","265a5d7aa7422e5bd918a6bd43430530","getc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","265a5d7aa7422e5bd918a6bd43430530",32).
@@ -21610,6 +22502,7 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","9804691c882e1cfc5
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","9804691c882e1cfc597728eb5f6a617f",13).
 dw_tag_function_external("/code/simple-example/cpp/math-client","9804691c882e1cfc597728eb5f6a617f","getchar").
 dw_tag_function("/code/simple-example/cpp/math-client","2f2aeccd2f2bdaa9da707978e4859cb0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5e358eac5cabc75212750ee2a93f0d04",0).
 die_has_child("2f2aeccd2f2bdaa9da707978e4859cb0","5e358eac5cabc75212750ee2a93f0d04").
 dw_tag_function_name("/code/simple-example/cpp/math-client","2f2aeccd2f2bdaa9da707978e4859cb0","perror").
 dw_tag_function_line("/code/simple-example/cpp/math-client","2f2aeccd2f2bdaa9da707978e4859cb0",775).
@@ -21625,6 +22518,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","88e
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","88ec9740aa78900b73e76813401fabc2","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","88ec9740aa78900b73e76813401fabc2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","8edb526480cdc5bc70d1055969156de0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9ac5666b8ea7d94c977786205d5a72fd",0).
 die_has_child("8edb526480cdc5bc70d1055969156de0","9ac5666b8ea7d94c977786205d5a72fd").
 dw_tag_function_name("/code/simple-example/cpp/math-client","8edb526480cdc5bc70d1055969156de0","remove").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","8edb526480cdc5bc70d1055969156de0",32).
@@ -21642,7 +22536,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","6b5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","6b57785d0ee2add614609e5e990ab17e","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","6b57785d0ee2add614609e5e990ab17e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1ae7431e8ecdb583e7bbd053e77b800b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1fb301043a46862c2001a4742c6551b0",0).
 die_has_child("1ae7431e8ecdb583e7bbd053e77b800b","1fb301043a46862c2001a4742c6551b0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","cbd460cc82f62c0bbf9c06e86a8670f3",1).
 die_has_child("1ae7431e8ecdb583e7bbd053e77b800b","cbd460cc82f62c0bbf9c06e86a8670f3").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1ae7431e8ecdb583e7bbd053e77b800b","rename").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1ae7431e8ecdb583e7bbd053e77b800b",32).
@@ -21668,6 +22564,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","e77
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","e7794cbb409a32f6f5dc6995b817eb7d","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","e7794cbb409a32f6f5dc6995b817eb7d",5).
 dw_tag_function("/code/simple-example/cpp/math-client","d2aefab3c75aed0164b0e61d06f3198f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b14d162eeda311d41892a0457b534a9b",0).
 die_has_child("d2aefab3c75aed0164b0e61d06f3198f","b14d162eeda311d41892a0457b534a9b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d2aefab3c75aed0164b0e61d06f3198f","rewind").
 dw_tag_function_line("/code/simple-example/cpp/math-client","d2aefab3c75aed0164b0e61d06f3198f",694).
@@ -21683,7 +22580,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","47d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","47d9e565419a6f75f20e5c53155fdf6e","_IO_FILE").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","47d9e565419a6f75f20e5c53155fdf6e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9224fee13284ecb15cc1c77941980cd3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2f471f2c9dfe030e8be59b9098785395",0).
 die_has_child("9224fee13284ecb15cc1c77941980cd3","2f471f2c9dfe030e8be59b9098785395").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dfe91aff65d870f200371fcfc39b7e1b",1).
 die_has_child("9224fee13284ecb15cc1c77941980cd3","dfe91aff65d870f200371fcfc39b7e1b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9224fee13284ecb15cc1c77941980cd3","setbuf").
 dw_tag_function_line("/code/simple-example/cpp/math-client","9224fee13284ecb15cc1c77941980cd3",304).
@@ -21707,9 +22606,13 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","ec2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","ec2957914cd4728d3a900ca2c8bf9fe5","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","ec2957914cd4728d3a900ca2c8bf9fe5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","bde924eb1947b6b5158877a297e91126").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f184e1dff1208456cbd38262e45bbafb",0).
 die_has_child("bde924eb1947b6b5158877a297e91126","f184e1dff1208456cbd38262e45bbafb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","19439b0965b569ad2f77ae5b1724e653",1).
 die_has_child("bde924eb1947b6b5158877a297e91126","19439b0965b569ad2f77ae5b1724e653").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3d91654d59a1b462d7db6b1790aff600",2).
 die_has_child("bde924eb1947b6b5158877a297e91126","3d91654d59a1b462d7db6b1790aff600").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e8cf2d0e0e5eba3f11b22f61c5fdea41",3).
 die_has_child("bde924eb1947b6b5158877a297e91126","e8cf2d0e0e5eba3f11b22f61c5fdea41").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bde924eb1947b6b5158877a297e91126","setvbuf").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","bde924eb1947b6b5158877a297e91126",32).
@@ -21759,6 +22662,7 @@ dw_tag_function_column("/code/simple-example/cpp/math-client","759094793b47d7334
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","759094793b47d7334173ed7adb372dff",12).
 dw_tag_function_external("/code/simple-example/cpp/math-client","759094793b47d7334173ed7adb372dff","tmpfile").
 dw_tag_function("/code/simple-example/cpp/math-client","c14d301db8a1727a767b9275b0292e0b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","3dde8596c8d06d4be1096ac50a8e6e94",0).
 die_has_child("c14d301db8a1727a767b9275b0292e0b","3dde8596c8d06d4be1096ac50a8e6e94").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c14d301db8a1727a767b9275b0292e0b","tmpnam").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c14d301db8a1727a767b9275b0292e0b",8).
@@ -21776,7 +22680,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","732
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","732dac6f5d2d27640922367d0dd77cea","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","732dac6f5d2d27640922367d0dd77cea",5).
 dw_tag_function("/code/simple-example/cpp/math-client","b5b271084d72138007bb458dbd569ec3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","2707d79d9727e1893bc99fa91597f00d",0).
 die_has_child("b5b271084d72138007bb458dbd569ec3","2707d79d9727e1893bc99fa91597f00d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f775a70fa6692f5aa6c02e9fbc44f3fe",1).
 die_has_child("b5b271084d72138007bb458dbd569ec3","f775a70fa6692f5aa6c02e9fbc44f3fe").
 dw_tag_function_name("/code/simple-example/cpp/math-client","b5b271084d72138007bb458dbd569ec3","ungetc").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","b5b271084d72138007bb458dbd569ec3",32).
@@ -21854,7 +22760,9 @@ dw_tag_pointer_type_type_name("/code/simple-example/cpp/math-client","fb51d59dc6
 dw_tag_pointer_type_size_in_bits("/code/simple-example/cpp/math-client","fb51d59dc674fda50006b08a271edd24",64).
 dw_tag_pointer_type_die_size("/code/simple-example/cpp/math-client","fb51d59dc674fda50006b08a271edd24",6).
 dw_tag_function("/code/simple-example/cpp/math-client","f884cfeefa9cd34a761d907a4f267159").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","099d2ac5682750dd03e6aaa8708d4e8f",0).
 die_has_child("f884cfeefa9cd34a761d907a4f267159","099d2ac5682750dd03e6aaa8708d4e8f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","17d4db6c0b84d88a6397218204366ad8",1).
 die_has_child("f884cfeefa9cd34a761d907a4f267159","17d4db6c0b84d88a6397218204366ad8").
 dw_tag_function_name("/code/simple-example/cpp/math-client","f884cfeefa9cd34a761d907a4f267159","iswctype").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","f884cfeefa9cd34a761d907a4f267159",32).
@@ -21880,7 +22788,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2cd
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2cda4e27bbd92247f190756b71fdac7b","long unsigned int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2cda4e27bbd92247f190756b71fdac7b",5).
 dw_tag_function("/code/simple-example/cpp/math-client","92be793067147c091f81805f2c1944fb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b428729fd4f4c6ed049175de10263e94",0).
 die_has_child("92be793067147c091f81805f2c1944fb","b428729fd4f4c6ed049175de10263e94").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ef80a4e7386a50ec8f049a471ac28200",1).
 die_has_child("92be793067147c091f81805f2c1944fb","ef80a4e7386a50ec8f049a471ac28200").
 dw_tag_function_name("/code/simple-example/cpp/math-client","92be793067147c091f81805f2c1944fb","towctrans").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","92be793067147c091f81805f2c1944fb",32).
@@ -21906,6 +22816,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2e7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2e73f92e2d66cdb6ce2ec696d6d7c698","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2e73f92e2d66cdb6ce2ec696d6d7c698",5).
 dw_tag_function("/code/simple-example/cpp/math-client","cfef0d7bf68b433fc89ad40bb69b2fb8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1490715d492bc0c2cf4df5e34dd9008a",0).
 die_has_child("cfef0d7bf68b433fc89ad40bb69b2fb8","1490715d492bc0c2cf4df5e34dd9008a").
 dw_tag_function_name("/code/simple-example/cpp/math-client","cfef0d7bf68b433fc89ad40bb69b2fb8","wctrans").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","cfef0d7bf68b433fc89ad40bb69b2fb8",32).
@@ -21923,6 +22834,7 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","bdb
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","bdb9694551c6a4a8168222d5e76ebb2e","char").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","bdb9694551c6a4a8168222d5e76ebb2e",5).
 dw_tag_function("/code/simple-example/cpp/math-client","1cc93c63083bb08541021e35c6e5f306").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","48b1079a09fe1a8aa163a6f65b6813c7",0).
 die_has_child("1cc93c63083bb08541021e35c6e5f306","48b1079a09fe1a8aa163a6f65b6813c7").
 dw_tag_function_name("/code/simple-example/cpp/math-client","1cc93c63083bb08541021e35c6e5f306","wctype").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","1cc93c63083bb08541021e35c6e5f306",64).
@@ -21959,7 +22871,9 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","c539a51b1cf27b0
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","c539a51b1cf27b0196cabaaba7cf0e69",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","c539a51b1cf27b0196cabaaba7cf0e69","no").
 dw_tag_function("/code/simple-example/cpp/math-client","71ac3920b6ef4de390918fdb7d3b3b0b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c9330c1d0eec05790c2cd3cfec9be7c3",0).
 die_has_child("71ac3920b6ef4de390918fdb7d3b3b0b","c9330c1d0eec05790c2cd3cfec9be7c3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c76a84b93561760fe6c7065854cb5e99",1).
 die_has_child("71ac3920b6ef4de390918fdb7d3b3b0b","c76a84b93561760fe6c7065854cb5e99").
 dw_tag_function_name("/code/simple-example/cpp/math-client","71ac3920b6ef4de390918fdb7d3b3b0b","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","71ac3920b6ef4de390918fdb7d3b3b0b",64).
@@ -21978,7 +22892,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","3e2
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","3e2577a66b6530e42aa5a1ef4c0a2aa1","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","3e2577a66b6530e42aa5a1ef4c0a2aa1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","bf6f9d8254ecb2015042dd64e245fd92").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b94ae486bcef2452f8f1ee8820c445e7",0).
 die_has_child("bf6f9d8254ecb2015042dd64e245fd92","b94ae486bcef2452f8f1ee8820c445e7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","26f6789c09d706fa485a9ab0a0acbcf0",1).
 die_has_child("bf6f9d8254ecb2015042dd64e245fd92","26f6789c09d706fa485a9ab0a0acbcf0").
 dw_tag_function_name("/code/simple-example/cpp/math-client","bf6f9d8254ecb2015042dd64e245fd92","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","bf6f9d8254ecb2015042dd64e245fd92",64).
@@ -21997,7 +22913,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","b40
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","b40e92a2bb0fefb1383e1f5c30eb3aa2","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","b40e92a2bb0fefb1383e1f5c30eb3aa2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","ed3d7e59dc429ed9ce0e92487cd77457").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1ec29c11fbd7ebbed47fb3d5a9614989",0).
 die_has_child("ed3d7e59dc429ed9ce0e92487cd77457","1ec29c11fbd7ebbed47fb3d5a9614989").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","83b439c7e4e8e1ea1d3843dc78f57e68",1).
 die_has_child("ed3d7e59dc429ed9ce0e92487cd77457","83b439c7e4e8e1ea1d3843dc78f57e68").
 dw_tag_function_name("/code/simple-example/cpp/math-client","ed3d7e59dc429ed9ce0e92487cd77457","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","ed3d7e59dc429ed9ce0e92487cd77457",64).
@@ -22016,7 +22934,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","d2d
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","d2d56fed918c0d1e07a99032d77aab79","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","d2d56fed918c0d1e07a99032d77aab79",5).
 dw_tag_function("/code/simple-example/cpp/math-client","72d65cb22d13ac47df717c482bc02729").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c20780c2a2056b3aa1e471a046260365",0).
 die_has_child("72d65cb22d13ac47df717c482bc02729","c20780c2a2056b3aa1e471a046260365").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","384c6be42eaa932e53dbeb565c344d0b",1).
 die_has_child("72d65cb22d13ac47df717c482bc02729","384c6be42eaa932e53dbeb565c344d0b").
 dw_tag_function_name("/code/simple-example/cpp/math-client","72d65cb22d13ac47df717c482bc02729","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","72d65cb22d13ac47df717c482bc02729",64).
@@ -22046,7 +22966,9 @@ dw_tag_class_type_column("/code/simple-example/cpp/math-client","abf2031dd28cc71
 dw_tag_class_type_die_size("/code/simple-example/cpp/math-client","abf2031dd28cc7113916a9d6fc955c63",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/math-client","abf2031dd28cc7113916a9d6fc955c63","no").
 dw_tag_function("/code/simple-example/cpp/math-client","258e1645d5c80826d56bb39b7eedb5a7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","9451eab23cbd9a53b8f15302084a27f0",0).
 die_has_child("258e1645d5c80826d56bb39b7eedb5a7","9451eab23cbd9a53b8f15302084a27f0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","dc0408462c3fa1da660fb1ab94ce6648",1).
 die_has_child("258e1645d5c80826d56bb39b7eedb5a7","dc0408462c3fa1da660fb1ab94ce6648").
 dw_tag_function_name("/code/simple-example/cpp/math-client","258e1645d5c80826d56bb39b7eedb5a7","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","258e1645d5c80826d56bb39b7eedb5a7",64).
@@ -22065,7 +22987,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","170
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","17057f653c48fc14dec66b616cecf430","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","17057f653c48fc14dec66b616cecf430",5).
 dw_tag_function("/code/simple-example/cpp/math-client","c6b8f9c95573156d3b6c136bd1838a79").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","acf93161cdd786a0b1d7cc86c461e8ae",0).
 die_has_child("c6b8f9c95573156d3b6c136bd1838a79","acf93161cdd786a0b1d7cc86c461e8ae").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","b506ba8cbe4c329071da16a8727fe751",1).
 die_has_child("c6b8f9c95573156d3b6c136bd1838a79","b506ba8cbe4c329071da16a8727fe751").
 dw_tag_function_name("/code/simple-example/cpp/math-client","c6b8f9c95573156d3b6c136bd1838a79","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","c6b8f9c95573156d3b6c136bd1838a79",64).
@@ -22084,7 +23008,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","144
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","144c20b159d881a9ebfc3c9fd961e4c5","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","144c20b159d881a9ebfc3c9fd961e4c5",5).
 dw_tag_function("/code/simple-example/cpp/math-client","39a21d7e6f8717c56f6bfab716073fc7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","d21fa877e95e75c441675a12f93c2eb5",0).
 die_has_child("39a21d7e6f8717c56f6bfab716073fc7","d21fa877e95e75c441675a12f93c2eb5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","1e51657fa9df6755cfab8e707cd54f17",1).
 die_has_child("39a21d7e6f8717c56f6bfab716073fc7","1e51657fa9df6755cfab8e707cd54f17").
 dw_tag_function_name("/code/simple-example/cpp/math-client","39a21d7e6f8717c56f6bfab716073fc7","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","39a21d7e6f8717c56f6bfab716073fc7",64).
@@ -22103,7 +23029,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","057
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","0572e3f3cf9f49fa2acd2583ca9f05b4","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","0572e3f3cf9f49fa2acd2583ca9f05b4",5).
 dw_tag_function("/code/simple-example/cpp/math-client","a94acdfb4a8f60ee7b14219b0797ca77").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","41d134b65d89beff2ed6a09659bbe6cd",0).
 die_has_child("a94acdfb4a8f60ee7b14219b0797ca77","41d134b65d89beff2ed6a09659bbe6cd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","10917cee729069b1b3cb3476ba3b4553",1).
 die_has_child("a94acdfb4a8f60ee7b14219b0797ca77","10917cee729069b1b3cb3476ba3b4553").
 dw_tag_function_name("/code/simple-example/cpp/math-client","a94acdfb4a8f60ee7b14219b0797ca77","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","a94acdfb4a8f60ee7b14219b0797ca77",64).
@@ -22122,7 +23050,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","2ce
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","2ce6d568f841bba1b82119ce3088a5c2","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","2ce6d568f841bba1b82119ce3088a5c2",5).
 dw_tag_function("/code/simple-example/cpp/math-client","0ee765ac1b7571dc9c06abe58fb0143a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","01826afabed46a476a2a0b5030af4677",0).
 die_has_child("0ee765ac1b7571dc9c06abe58fb0143a","01826afabed46a476a2a0b5030af4677").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","40ac644ca62d9e8d397680593a9fd8a6",1).
 die_has_child("0ee765ac1b7571dc9c06abe58fb0143a","40ac644ca62d9e8d397680593a9fd8a6").
 dw_tag_function_name("/code/simple-example/cpp/math-client","0ee765ac1b7571dc9c06abe58fb0143a","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","0ee765ac1b7571dc9c06abe58fb0143a",64).
@@ -22149,7 +23079,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","954
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","95443656d404a92fd233c789d03af1a7","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","95443656d404a92fd233c789d03af1a7",5).
 dw_tag_function("/code/simple-example/cpp/math-client","9c392620c48c4f995179b6ce37abb10f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","facde6cd75805fd8edd058bc8878a46d",0).
 die_has_child("9c392620c48c4f995179b6ce37abb10f","facde6cd75805fd8edd058bc8878a46d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","c786504c7186607fcce12083d4be4565",1).
 die_has_child("9c392620c48c4f995179b6ce37abb10f","c786504c7186607fcce12083d4be4565").
 dw_tag_function_name("/code/simple-example/cpp/math-client","9c392620c48c4f995179b6ce37abb10f","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","9c392620c48c4f995179b6ce37abb10f",64).
@@ -22176,7 +23108,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","17b
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","17b9e11d1b189f236201ffc2ea897ee1","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","17b9e11d1b189f236201ffc2ea897ee1",5).
 dw_tag_function("/code/simple-example/cpp/math-client","465eb632d897cfa17f513f3c92b4283d").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","f33d0f9a73297c68316ad80e54a6f5bc",0).
 die_has_child("465eb632d897cfa17f513f3c92b4283d","f33d0f9a73297c68316ad80e54a6f5bc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","e43e32cc496d6a8d5e3a63e2b90e3faa",1).
 die_has_child("465eb632d897cfa17f513f3c92b4283d","e43e32cc496d6a8d5e3a63e2b90e3faa").
 dw_tag_function_name("/code/simple-example/cpp/math-client","465eb632d897cfa17f513f3c92b4283d","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","465eb632d897cfa17f513f3c92b4283d",64).
@@ -22203,7 +23137,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/math-client","db5
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/math-client","db54799167c67fb87069431098bd3e59","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/math-client","db54799167c67fb87069431098bd3e59",5).
 dw_tag_function("/code/simple-example/cpp/math-client","596aff9194de77d35ef2dce8c110b910").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","5b84ef87cf389bd88942c16ef442eb66",0).
 die_has_child("596aff9194de77d35ef2dce8c110b910","5b84ef87cf389bd88942c16ef442eb66").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","98ef4c4b2aaf7e4a85e1ad83bc17ec11",1).
 die_has_child("596aff9194de77d35ef2dce8c110b910","98ef4c4b2aaf7e4a85e1ad83bc17ec11").
 dw_tag_function_name("/code/simple-example/cpp/math-client","596aff9194de77d35ef2dce8c110b910","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/math-client","596aff9194de77d35ef2dce8c110b910",64).
@@ -22290,7 +23226,9 @@ dw_tag_function("/code/simple-example/cpp/math-client","287b05655eabd665d059be04
 dw_tag_function_name("/code/simple-example/cpp/math-client","287b05655eabd665d059be04e07b2035","_GLOBAL__sub_I_main").
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","287b05655eabd665d059be04e07b2035",23).
 dw_tag_function("/code/simple-example/cpp/math-client","d908d56af05d578c7802fa01c66c653b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","ee34907ac2b8ce622a27b8c003cac2da",0).
 die_has_child("d908d56af05d578c7802fa01c66c653b","ee34907ac2b8ce622a27b8c003cac2da").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/math-client","36bee0ae22fa99b28a4f7cc934f5f50c",1).
 die_has_child("d908d56af05d578c7802fa01c66c653b","36bee0ae22fa99b28a4f7cc934f5f50c").
 dw_tag_function_name("/code/simple-example/cpp/math-client","d908d56af05d578c7802fa01c66c653b","__static_initialization_and_destruction_0").
 dw_tag_function_die_size("/code/simple-example/cpp/math-client","d908d56af05d578c7802fa01c66c653b",27).
@@ -22396,7 +23334,9 @@ dw_tag_class_type_column("/code/simple-example/cpp/libmath-v2.so","a862a77c5cc46
 dw_tag_class_type_die_size("/code/simple-example/cpp/libmath-v2.so","a862a77c5cc46e2bb5661e8dddfc51b8",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/libmath-v2.so","a862a77c5cc46e2bb5661e8dddfc51b8","no").
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","68fbedeecbdd2d5863f01481470634a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","d188f7886cf630ef8eb6bb97cb955afc",0).
 die_has_child("68fbedeecbdd2d5863f01481470634a4","d188f7886cf630ef8eb6bb97cb955afc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","e5e86a58dc142b8aac75df73b5c8412b",1).
 die_has_child("68fbedeecbdd2d5863f01481470634a4","e5e86a58dc142b8aac75df73b5c8412b").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","68fbedeecbdd2d5863f01481470634a4","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","68fbedeecbdd2d5863f01481470634a4",32).
@@ -22415,7 +23355,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","f
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","fca5748ef4712ff863880f989d505ed5","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","fca5748ef4712ff863880f989d505ed5",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","5b0a186db476d684abe94e9ef386ae30").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","9b44d1840cdec5cef7fd9b615dc62c83",0).
 die_has_child("5b0a186db476d684abe94e9ef386ae30","9b44d1840cdec5cef7fd9b615dc62c83").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","155778f9b193bf311cf1d8a01292112f",1).
 die_has_child("5b0a186db476d684abe94e9ef386ae30","155778f9b193bf311cf1d8a01292112f").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","5b0a186db476d684abe94e9ef386ae30","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","5b0a186db476d684abe94e9ef386ae30",64).
@@ -22434,7 +23376,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","8b45f47f41582218be8876260e66f487","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","8b45f47f41582218be8876260e66f487",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","7f225fba2b5644b901825ae67b44d934").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","f019312aa26142098af614998f5e1bf8",0).
 die_has_child("7f225fba2b5644b901825ae67b44d934","f019312aa26142098af614998f5e1bf8").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","798db7e743f934ad4d2d6246772834da",1).
 die_has_child("7f225fba2b5644b901825ae67b44d934","798db7e743f934ad4d2d6246772834da").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","7f225fba2b5644b901825ae67b44d934","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","7f225fba2b5644b901825ae67b44d934",64).
@@ -22453,7 +23397,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","a404e2dd19c27214b3b682da4233d615","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","a404e2dd19c27214b3b682da4233d615",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","951c1ac89c16f70b18a2ee148c4f9140").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","7d454d2e6bdf02207cb75d49f72af00f",0).
 die_has_child("951c1ac89c16f70b18a2ee148c4f9140","7d454d2e6bdf02207cb75d49f72af00f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","b5bada4adaa08ccb3feb9f80db507804",1).
 die_has_child("951c1ac89c16f70b18a2ee148c4f9140","b5bada4adaa08ccb3feb9f80db507804").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","951c1ac89c16f70b18a2ee148c4f9140","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","951c1ac89c16f70b18a2ee148c4f9140",64).
@@ -22482,7 +23428,9 @@ dw_tag_base_type_size_in_bits("/code/simple-example/cpp/libmath-v2.so","16f0affa
 dw_tag_base_type_die_size("/code/simple-example/cpp/libmath-v2.so","16f0affa537b066f89576be9cc9903b0",7).
 dw_tag_base_type_encoding("/code/simple-example/cpp/libmath-v2.so","16f0affa537b066f89576be9cc9903b0","4	(float)").
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","dc24fbe2fc48393b49691c78c6d56b72").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","91b62a3d2d1eac82328a1cc89de46d17",0).
 die_has_child("dc24fbe2fc48393b49691c78c6d56b72","91b62a3d2d1eac82328a1cc89de46d17").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","169e6446b14c26562fd9e10596f802c5",1).
 die_has_child("dc24fbe2fc48393b49691c78c6d56b72","169e6446b14c26562fd9e10596f802c5").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","dc24fbe2fc48393b49691c78c6d56b72",24).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","dc24fbe2fc48393b49691c78c6d56b72",12).
@@ -22502,7 +23450,9 @@ dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v2.so","29b9f04ff
 dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v2.so","29b9f04ffb9cc399f3a79c153bf8b492",48).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","29b9f04ffb9cc399f3a79c153bf8b492",13).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","b52550e99f86fe49580a488c21b6ae87").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","c3e079fd8cdf06fbfc9b3351532747ee",0).
 die_has_child("b52550e99f86fe49580a488c21b6ae87","c3e079fd8cdf06fbfc9b3351532747ee").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","d9a506205faafeb7b49a1f53c8193da3",1).
 die_has_child("b52550e99f86fe49580a488c21b6ae87","d9a506205faafeb7b49a1f53c8193da3").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","b52550e99f86fe49580a488c21b6ae87",19).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","b52550e99f86fe49580a488c21b6ae87",12).
@@ -22522,7 +23472,9 @@ dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v2.so","f4017eb5f
 dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v2.so","f4017eb5fcba9fb6c43ed6a9a1e030c1",50).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","f4017eb5fcba9fb6c43ed6a9a1e030c1",13).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","9f36fe23ca31f253247f47df0d25ec7f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","2c5f76ec7ac397588974ca5eee7e665c",0).
 die_has_child("9f36fe23ca31f253247f47df0d25ec7f","2c5f76ec7ac397588974ca5eee7e665c").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","ddb9c5722e09194f076e9c5f245a8a9e",1).
 die_has_child("9f36fe23ca31f253247f47df0d25ec7f","ddb9c5722e09194f076e9c5f245a8a9e").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","9f36fe23ca31f253247f47df0d25ec7f",14).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","9f36fe23ca31f253247f47df0d25ec7f",12).
@@ -22542,7 +23494,9 @@ dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v2.so","a558d0a0f
 dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v2.so","a558d0a0fb321cdc9fd67bac0ac0af31",50).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","a558d0a0fb321cdc9fd67bac0ac0af31",13).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","ebfb5fae4cf21aea3bbaa6b9c7bebba1").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","9109a8eb55d9c857c6d87e0162e4b3d3",0).
 die_has_child("ebfb5fae4cf21aea3bbaa6b9c7bebba1","9109a8eb55d9c857c6d87e0162e4b3d3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","d4f72ee6acc8273afc97c21d08a5716d",1).
 die_has_child("ebfb5fae4cf21aea3bbaa6b9c7bebba1","d4f72ee6acc8273afc97c21d08a5716d").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","ebfb5fae4cf21aea3bbaa6b9c7bebba1",9).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","ebfb5fae4cf21aea3bbaa6b9c7bebba1",9).
@@ -22579,7 +23533,9 @@ dw_tag_class_type_column("/code/simple-example/cpp/libmath-v2.so","159f349450aca
 dw_tag_class_type_die_size("/code/simple-example/cpp/libmath-v2.so","159f349450aca932f56ac8c48213f9e5",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/libmath-v2.so","159f349450aca932f56ac8c48213f9e5","no").
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","5e0059d24cc216dd58e5c3502ff227dc").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","b76f9d0c4276c10ffe80e8e1a77588e3",0).
 die_has_child("5e0059d24cc216dd58e5c3502ff227dc","b76f9d0c4276c10ffe80e8e1a77588e3").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","cc2c1650deeecb7f94965160d4e8676f",1).
 die_has_child("5e0059d24cc216dd58e5c3502ff227dc","cc2c1650deeecb7f94965160d4e8676f").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","5e0059d24cc216dd58e5c3502ff227dc","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","5e0059d24cc216dd58e5c3502ff227dc",32).
@@ -22598,7 +23554,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","a
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","a4c2e8e65abeb974b00358fd756e0a9d","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","a4c2e8e65abeb974b00358fd756e0a9d",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","b0b9aa52017887a8872bc51f864aa0a4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","0d28d8a40d9314bc8e35cf110746c338",0).
 die_has_child("b0b9aa52017887a8872bc51f864aa0a4","0d28d8a40d9314bc8e35cf110746c338").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","2b299d0bc537a75430d8686a5f50bb5f",1).
 die_has_child("b0b9aa52017887a8872bc51f864aa0a4","2b299d0bc537a75430d8686a5f50bb5f").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","b0b9aa52017887a8872bc51f864aa0a4","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","b0b9aa52017887a8872bc51f864aa0a4",64).
@@ -22617,7 +23575,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","c72826c6f430a3488902a5f8b410a42f","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","c72826c6f430a3488902a5f8b410a42f",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","ae7948d6fbf004ed05a150d9d03a04d7").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","013630f407844e8fe9852d6401a99e2f",0).
 die_has_child("ae7948d6fbf004ed05a150d9d03a04d7","013630f407844e8fe9852d6401a99e2f").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","5fb7faef558b138636bbd0dafe1bdf03",1).
 die_has_child("ae7948d6fbf004ed05a150d9d03a04d7","5fb7faef558b138636bbd0dafe1bdf03").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","ae7948d6fbf004ed05a150d9d03a04d7","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","ae7948d6fbf004ed05a150d9d03a04d7",64).
@@ -22636,7 +23596,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","69daef66681d834f7513d5cea6ad72a9","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","69daef66681d834f7513d5cea6ad72a9",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","94929da3a618a328d7f785ca0ad165b9").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","e7a5ba7f0d230ae7a21d89abc356c3ec",0).
 die_has_child("94929da3a618a328d7f785ca0ad165b9","e7a5ba7f0d230ae7a21d89abc356c3ec").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","ea3d68ff2d8a4a91f8d21b210bb68715",1).
 die_has_child("94929da3a618a328d7f785ca0ad165b9","ea3d68ff2d8a4a91f8d21b210bb68715").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","94929da3a618a328d7f785ca0ad165b9","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","94929da3a618a328d7f785ca0ad165b9",64).
@@ -22666,7 +23628,9 @@ dw_tag_class_type_column("/code/simple-example/cpp/libmath-v2.so","7fb22ea5a88d0
 dw_tag_class_type_die_size("/code/simple-example/cpp/libmath-v2.so","7fb22ea5a88d0a8e06bc367ca31478a2",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/libmath-v2.so","7fb22ea5a88d0a8e06bc367ca31478a2","no").
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","84592be349ab1e61e618767ff3bd4554").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","f69c4515e4a84a6b46069af60db9aba0",0).
 die_has_child("84592be349ab1e61e618767ff3bd4554","f69c4515e4a84a6b46069af60db9aba0").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","6f54bf872fc70190e33d9afa8f0c3bb6",1).
 die_has_child("84592be349ab1e61e618767ff3bd4554","6f54bf872fc70190e33d9afa8f0c3bb6").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","84592be349ab1e61e618767ff3bd4554","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","84592be349ab1e61e618767ff3bd4554",32).
@@ -22685,7 +23649,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","9
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","93a290fd2e9ad4c9658e68e0b91e71b5","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","93a290fd2e9ad4c9658e68e0b91e71b5",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","393ae3c3158e4b1a41b86d8dafa2637a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","4393811b82b22aee14838cee8a3f4573",0).
 die_has_child("393ae3c3158e4b1a41b86d8dafa2637a","4393811b82b22aee14838cee8a3f4573").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","6d89e175a2007f8fa7a0b97f6e586964",1).
 die_has_child("393ae3c3158e4b1a41b86d8dafa2637a","6d89e175a2007f8fa7a0b97f6e586964").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","393ae3c3158e4b1a41b86d8dafa2637a","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","393ae3c3158e4b1a41b86d8dafa2637a",64).
@@ -22704,7 +23670,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","8251eca2bc300a66774a69d9849577b7","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","8251eca2bc300a66774a69d9849577b7",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","1ef255528f15e50e055ee6d0b5f99555").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","90957f29e8213e1efc57be0de770edfd",0).
 die_has_child("1ef255528f15e50e055ee6d0b5f99555","90957f29e8213e1efc57be0de770edfd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","16f2e097600117c252182363c09de515",1).
 die_has_child("1ef255528f15e50e055ee6d0b5f99555","16f2e097600117c252182363c09de515").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","1ef255528f15e50e055ee6d0b5f99555","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","1ef255528f15e50e055ee6d0b5f99555",64).
@@ -22723,7 +23691,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","74eb32267ae2359ce8cac9ac03b32e9d","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","74eb32267ae2359ce8cac9ac03b32e9d",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","d2d4e1a9e3a5a04a7355a1f02d899c0b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","61247ab9e06cb4420fc8f7d8bd7615ef",0).
 die_has_child("d2d4e1a9e3a5a04a7355a1f02d899c0b","61247ab9e06cb4420fc8f7d8bd7615ef").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","cf5bc93c0c304859dad0bc74e89df612",1).
 die_has_child("d2d4e1a9e3a5a04a7355a1f02d899c0b","cf5bc93c0c304859dad0bc74e89df612").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","d2d4e1a9e3a5a04a7355a1f02d899c0b","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","d2d4e1a9e3a5a04a7355a1f02d899c0b",64).
@@ -22742,7 +23712,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","c
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","ca0c757d1d1241a3ad229eaa20d47fca","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","ca0c757d1d1241a3ad229eaa20d47fca",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","d62a942889060ea53f227826147e685b").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","43545c29623ec7312a76a94369ca58cb",0).
 die_has_child("d62a942889060ea53f227826147e685b","43545c29623ec7312a76a94369ca58cb").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","40fbc7c2e5409599bc470784a86b5ecb",1).
 die_has_child("d62a942889060ea53f227826147e685b","40fbc7c2e5409599bc470784a86b5ecb").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","d62a942889060ea53f227826147e685b","Add").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","d62a942889060ea53f227826147e685b",32).
@@ -22769,7 +23741,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","8
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","813712b23cfac23699e7397d4f5ccefd","int").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","813712b23cfac23699e7397d4f5ccefd",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","f1dc9f28512d9081696c7842c99f596a").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","b63cbd5180bd1825a0ca3a7b7cf34eac",0).
 die_has_child("f1dc9f28512d9081696c7842c99f596a","b63cbd5180bd1825a0ca3a7b7cf34eac").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","6b0725957aad988f8ca757c57dda58db",1).
 die_has_child("f1dc9f28512d9081696c7842c99f596a","6b0725957aad988f8ca757c57dda58db").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","f1dc9f28512d9081696c7842c99f596a","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","f1dc9f28512d9081696c7842c99f596a",64).
@@ -22796,7 +23770,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","7
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","7bdba7bae4d7111154f6f9a26c14da98","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","7bdba7bae4d7111154f6f9a26c14da98",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","f0c64a9c600c4ba203fd329623cc2961").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","ec61c80cb257d93469d90051ced74fba",0).
 die_has_child("f0c64a9c600c4ba203fd329623cc2961","ec61c80cb257d93469d90051ced74fba").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","7b5e454a16813c0b071674554e04b1b4",1).
 die_has_child("f0c64a9c600c4ba203fd329623cc2961","7b5e454a16813c0b071674554e04b1b4").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","f0c64a9c600c4ba203fd329623cc2961","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","f0c64a9c600c4ba203fd329623cc2961",64).
@@ -22823,7 +23799,9 @@ dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v2.so","6
 dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v2.so","6f8677342f04dc8e43591d1e4c1cdf1c","double").
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","6f8677342f04dc8e43591d1e4c1cdf1c",5).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","7307c2a3d4436fb56206ad914bae01b2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","c421730bdd66cdcb1992057dcceff064",0).
 die_has_child("7307c2a3d4436fb56206ad914bae01b2","c421730bdd66cdcb1992057dcceff064").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","df75ef9cbff7de65bc6f69fccf4a4de8",1).
 die_has_child("7307c2a3d4436fb56206ad914bae01b2","df75ef9cbff7de65bc6f69fccf4a4de8").
 dw_tag_function_name("/code/simple-example/cpp/libmath-v2.so","7307c2a3d4436fb56206ad914bae01b2","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v2.so","7307c2a3d4436fb56206ad914bae01b2",64).
@@ -22860,7 +23838,9 @@ dw_tag_base_type_size_in_bits("/code/simple-example/cpp/libmath-v2.so","b3b91a26
 dw_tag_base_type_die_size("/code/simple-example/cpp/libmath-v2.so","b3b91a2624b3df7cdee19eb3acc8d58d",7).
 dw_tag_base_type_encoding("/code/simple-example/cpp/libmath-v2.so","b3b91a2624b3df7cdee19eb3acc8d58d","4	(float)").
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","0c0ab64283ca2a6094f899225d09dca4").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","e8a878947339536be068847ddf38bd33",0).
 die_has_child("0c0ab64283ca2a6094f899225d09dca4","e8a878947339536be068847ddf38bd33").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","03a9a66db82e32d789d7b9c97a3f1d78",1).
 die_has_child("0c0ab64283ca2a6094f899225d09dca4","03a9a66db82e32d789d7b9c97a3f1d78").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","0c0ab64283ca2a6094f899225d09dca4",24).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","0c0ab64283ca2a6094f899225d09dca4",12).
@@ -22894,7 +23874,9 @@ dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v2.so","19e25c010
 dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v2.so","19e25c01062bca12b6ad81a71a14da9d",48).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","19e25c01062bca12b6ad81a71a14da9d",13).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","00609f0a1fea6ed7ce2717fc6784c7b5").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","d25e5b838b4e7f5ea26483a744e4bdc2",0).
 die_has_child("00609f0a1fea6ed7ce2717fc6784c7b5","d25e5b838b4e7f5ea26483a744e4bdc2").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","0d151731359e33efebc9650eb242008e",1).
 die_has_child("00609f0a1fea6ed7ce2717fc6784c7b5","0d151731359e33efebc9650eb242008e").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","00609f0a1fea6ed7ce2717fc6784c7b5",19).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","00609f0a1fea6ed7ce2717fc6784c7b5",12).
@@ -22928,7 +23910,9 @@ dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v2.so","a3157c766
 dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v2.so","a3157c766243083db54c13fa58860377",50).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","a3157c766243083db54c13fa58860377",13).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","4373f2a128850beab62e8e69a127df18").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","d209ee1c0000bdd1aadcd029638e9521",0).
 die_has_child("4373f2a128850beab62e8e69a127df18","d209ee1c0000bdd1aadcd029638e9521").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","0d88c2f754bbaa950b26d63ba06a565c",1).
 die_has_child("4373f2a128850beab62e8e69a127df18","0d88c2f754bbaa950b26d63ba06a565c").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","4373f2a128850beab62e8e69a127df18",14).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","4373f2a128850beab62e8e69a127df18",12).
@@ -22962,7 +23946,9 @@ dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v2.so","0567d3964
 dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v2.so","0567d39648bc50f1b77dc05215c8fe2f",50).
 dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v2.so","0567d39648bc50f1b77dc05215c8fe2f",13).
 dw_tag_function("/code/simple-example/cpp/libmath-v2.so","f27c6ea4da9d349acab519e15c37c7bf").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","c73b437daf47ef66bbca2f5cc5923afd",0).
 die_has_child("f27c6ea4da9d349acab519e15c37c7bf","c73b437daf47ef66bbca2f5cc5923afd").
+dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v2.so","6b8f47cba1b91da651e3b485c3abaa72",1).
 die_has_child("f27c6ea4da9d349acab519e15c37c7bf","6b8f47cba1b91da651e3b485c3abaa72").
 dw_tag_function_line("/code/simple-example/cpp/libmath-v2.so","f27c6ea4da9d349acab519e15c37c7bf",9).
 dw_tag_function_column("/code/simple-example/cpp/libmath-v2.so","f27c6ea4da9d349acab519e15c37c7bf",9).
@@ -23030,7 +24016,9 @@ needed_dw_tag_class_type_column("/code/simple-example/cpp/libmath-v1.so","b60083
 needed_dw_tag_class_type_die_size("/code/simple-example/cpp/libmath-v1.so","b60083daa7e9e29f6a70c5a239efef9a",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/libmath-v1.so","b60083daa7e9e29f6a70c5a239efef9a","no").
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","cd191c13b20a4378e1f98ff074b0a192").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","3c5875b3658408d1409d6f9a57bcdabb",0).
 die_has_child("cd191c13b20a4378e1f98ff074b0a192","3c5875b3658408d1409d6f9a57bcdabb").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","6e9b076aec3bf938737b29a7c403bded",1).
 die_has_child("cd191c13b20a4378e1f98ff074b0a192","6e9b076aec3bf938737b29a7c403bded").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","cd191c13b20a4378e1f98ff074b0a192","Add").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","cd191c13b20a4378e1f98ff074b0a192",64).
@@ -23049,7 +24037,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","72ae50de94eff0b0227c28afeef21920","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","72ae50de94eff0b0227c28afeef21920",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","d65515a0447364a2faa0dad56cbfcc34").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","3665d5b376dc479a608cc54dfa1d8bb8",0).
 die_has_child("d65515a0447364a2faa0dad56cbfcc34","3665d5b376dc479a608cc54dfa1d8bb8").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","cde51d843c38a51e3ead97c7b25fb89e",1).
 die_has_child("d65515a0447364a2faa0dad56cbfcc34","cde51d843c38a51e3ead97c7b25fb89e").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","d65515a0447364a2faa0dad56cbfcc34","Subtract").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","d65515a0447364a2faa0dad56cbfcc34",64).
@@ -23068,7 +24058,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","9185fa7929c385363d82abd9b2b151c2","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","9185fa7929c385363d82abd9b2b151c2",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","fa9bdff6fa8b2d0dabc3f70d1d310fb9").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","5a5ed17ab05c4b4c8c710259453c675a",0).
 die_has_child("fa9bdff6fa8b2d0dabc3f70d1d310fb9","5a5ed17ab05c4b4c8c710259453c675a").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","a92d92d3674a2865ae76b8e1640963f4",1).
 die_has_child("fa9bdff6fa8b2d0dabc3f70d1d310fb9","a92d92d3674a2865ae76b8e1640963f4").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","fa9bdff6fa8b2d0dabc3f70d1d310fb9","Multiply").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","fa9bdff6fa8b2d0dabc3f70d1d310fb9",64).
@@ -23087,7 +24079,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","89f8881f3d85f5a6f6a28eaa3c12d66d","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","89f8881f3d85f5a6f6a28eaa3c12d66d",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","a99dd9f57603fd909ff3481e45507b46").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","73546eab1f3d0d54dbbede7bf66e13c5",0).
 die_has_child("a99dd9f57603fd909ff3481e45507b46","73546eab1f3d0d54dbbede7bf66e13c5").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","a0f856c71ef3c26835d5a124c7ac41c1",1).
 die_has_child("a99dd9f57603fd909ff3481e45507b46","a0f856c71ef3c26835d5a124c7ac41c1").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","a99dd9f57603fd909ff3481e45507b46","Divide").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","a99dd9f57603fd909ff3481e45507b46",64).
@@ -23111,7 +24105,9 @@ needed_dw_tag_base_type_size_in_bits("/code/simple-example/cpp/libmath-v1.so","2
 needed_dw_tag_base_type_die_size("/code/simple-example/cpp/libmath-v1.so","237bd4d5e9748f73051c12b4cd5d0309",7).
 needed_dw_tag_base_type_encoding("/code/simple-example/cpp/libmath-v1.so","237bd4d5e9748f73051c12b4cd5d0309","4	(float)").
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","96787353a7394c72fd23a3055d87b359").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","df2295319f84fe197155e360603685f7",0).
 die_has_child("96787353a7394c72fd23a3055d87b359","df2295319f84fe197155e360603685f7").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","060eeee5ca2bad3629fb201f73e1a9cd",1).
 die_has_child("96787353a7394c72fd23a3055d87b359","060eeee5ca2bad3629fb201f73e1a9cd").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","96787353a7394c72fd23a3055d87b359",24).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","96787353a7394c72fd23a3055d87b359",12).
@@ -23131,7 +24127,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v1.so","6a
 needed_dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v1.so","6a408c1d5db7bc1f7207ab5da5953bbb",48).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","6a408c1d5db7bc1f7207ab5da5953bbb",13).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","6a6f879ae458d6f5b21b00714479c5fa").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","28cf52a79ff1bde662779633def0e964",0).
 die_has_child("6a6f879ae458d6f5b21b00714479c5fa","28cf52a79ff1bde662779633def0e964").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","1870be9d64f323165ca6e05606d46fc2",1).
 die_has_child("6a6f879ae458d6f5b21b00714479c5fa","1870be9d64f323165ca6e05606d46fc2").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","6a6f879ae458d6f5b21b00714479c5fa",19).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","6a6f879ae458d6f5b21b00714479c5fa",12).
@@ -23151,7 +24149,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v1.so","34
 needed_dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v1.so","3491b2e41fe954e66639ce205f1cca5c",50).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","3491b2e41fe954e66639ce205f1cca5c",13).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","14411768e72d84dfe210058875c13f5c").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","a0c7c15e5a0db863b7a671470d9b55b3",0).
 die_has_child("14411768e72d84dfe210058875c13f5c","a0c7c15e5a0db863b7a671470d9b55b3").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","2a1fdf59ff363256865b4d5c59cbc199",1).
 die_has_child("14411768e72d84dfe210058875c13f5c","2a1fdf59ff363256865b4d5c59cbc199").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","14411768e72d84dfe210058875c13f5c",14).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","14411768e72d84dfe210058875c13f5c",12).
@@ -23171,7 +24171,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v1.so","78
 needed_dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v1.so","785b41e048decddc7b12fa6d44099628",50).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","785b41e048decddc7b12fa6d44099628",13).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","22784718e673cbdc36660e03b7591660").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","030815db0fe6b894c46a7597de3aee95",0).
 die_has_child("22784718e673cbdc36660e03b7591660","030815db0fe6b894c46a7597de3aee95").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","2c160f2c880d905e63b3ab8f42426829",1).
 die_has_child("22784718e673cbdc36660e03b7591660","2c160f2c880d905e63b3ab8f42426829").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","22784718e673cbdc36660e03b7591660",9).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","22784718e673cbdc36660e03b7591660",12).
@@ -23208,7 +24210,9 @@ needed_dw_tag_class_type_column("/code/simple-example/cpp/libmath-v1.so","f10b0d
 needed_dw_tag_class_type_die_size("/code/simple-example/cpp/libmath-v1.so","f10b0de302a4bba1dbfe1b91190d315b",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/libmath-v1.so","f10b0de302a4bba1dbfe1b91190d315b","no").
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","e6610d1a51fec0aff7626e4b7b9bb4e0").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","c06686c86c5c37208f1a57c6b8110ce2",0).
 die_has_child("e6610d1a51fec0aff7626e4b7b9bb4e0","c06686c86c5c37208f1a57c6b8110ce2").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","feba0c1d1afacfec5fc588a31a35bced",1).
 die_has_child("e6610d1a51fec0aff7626e4b7b9bb4e0","feba0c1d1afacfec5fc588a31a35bced").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","e6610d1a51fec0aff7626e4b7b9bb4e0","Add").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","e6610d1a51fec0aff7626e4b7b9bb4e0",64).
@@ -23227,7 +24231,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","2833cd3c3a3a2d079f2e8ca835fca8be","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","2833cd3c3a3a2d079f2e8ca835fca8be",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","3b94ee526e3f4d71a478c042dd4b4f9e").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","9821d1c7985c0173335d451cfad2bba4",0).
 die_has_child("3b94ee526e3f4d71a478c042dd4b4f9e","9821d1c7985c0173335d451cfad2bba4").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","76c9264a8b4b26db569ecc38961f650d",1).
 die_has_child("3b94ee526e3f4d71a478c042dd4b4f9e","76c9264a8b4b26db569ecc38961f650d").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","3b94ee526e3f4d71a478c042dd4b4f9e","Subtract").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","3b94ee526e3f4d71a478c042dd4b4f9e",64).
@@ -23246,7 +24252,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","0a6ca52ab6dc46729971347e33235c8c","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","0a6ca52ab6dc46729971347e33235c8c",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","8fe97705adc4e0a619ce78bf7ab67b3f").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","08420e271a7e8825cbc81df7bbd8a208",0).
 die_has_child("8fe97705adc4e0a619ce78bf7ab67b3f","08420e271a7e8825cbc81df7bbd8a208").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","d98458dbfd13f2f8d5445381301c8ca0",1).
 die_has_child("8fe97705adc4e0a619ce78bf7ab67b3f","d98458dbfd13f2f8d5445381301c8ca0").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","8fe97705adc4e0a619ce78bf7ab67b3f","Multiply").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","8fe97705adc4e0a619ce78bf7ab67b3f",64).
@@ -23265,7 +24273,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","6dccc9c95e949872841236b173bbb733","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","6dccc9c95e949872841236b173bbb733",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","2a3f982d02cf1c8617ada35026149f04").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","41ef3438245c28771c816ce0e216da27",0).
 die_has_child("2a3f982d02cf1c8617ada35026149f04","41ef3438245c28771c816ce0e216da27").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","065ee07f71060e7779870ac195090bd1",1).
 die_has_child("2a3f982d02cf1c8617ada35026149f04","065ee07f71060e7779870ac195090bd1").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","2a3f982d02cf1c8617ada35026149f04","Divide").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","2a3f982d02cf1c8617ada35026149f04",64).
@@ -23295,7 +24305,9 @@ needed_dw_tag_class_type_column("/code/simple-example/cpp/libmath-v1.so","365638
 needed_dw_tag_class_type_die_size("/code/simple-example/cpp/libmath-v1.so","365638b0e69b5dfbc053dc2c66539db9",9).
 dw_tag_class_type_is_struct("/code/simple-example/cpp/libmath-v1.so","365638b0e69b5dfbc053dc2c66539db9","no").
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","f22089eb3ebcfaef3da37f78c9b5f9ab").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","827c7ab80001c697f88ad03d25ea4aed",0).
 die_has_child("f22089eb3ebcfaef3da37f78c9b5f9ab","827c7ab80001c697f88ad03d25ea4aed").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","154a313a2442eeb44dd494a3be475c8e",1).
 die_has_child("f22089eb3ebcfaef3da37f78c9b5f9ab","154a313a2442eeb44dd494a3be475c8e").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","f22089eb3ebcfaef3da37f78c9b5f9ab","Add").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","f22089eb3ebcfaef3da37f78c9b5f9ab",64).
@@ -23314,7 +24326,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","ccb8639466c3a6fa5b8d858de6ab005f","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","ccb8639466c3a6fa5b8d858de6ab005f",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","2a89c1fff8cec82fd5fa94e82a34edc5").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","d5e9149ce32a5162d0e821c674a2db79",0).
 die_has_child("2a89c1fff8cec82fd5fa94e82a34edc5","d5e9149ce32a5162d0e821c674a2db79").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","eed73dceb594a94e7ecaa72f26206c4b",1).
 die_has_child("2a89c1fff8cec82fd5fa94e82a34edc5","eed73dceb594a94e7ecaa72f26206c4b").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","2a89c1fff8cec82fd5fa94e82a34edc5","Subtract").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","2a89c1fff8cec82fd5fa94e82a34edc5",64).
@@ -23333,7 +24347,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","4df42158951ffae1e00b184901b6ad1b","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","4df42158951ffae1e00b184901b6ad1b",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","88b8d1e31e81067ec075e95a2708a584").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","63b3180c43b573f466195bc37b78ab0c",0).
 die_has_child("88b8d1e31e81067ec075e95a2708a584","63b3180c43b573f466195bc37b78ab0c").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","d99ead0fcb1ede2a046dfe7f91508763",1).
 die_has_child("88b8d1e31e81067ec075e95a2708a584","d99ead0fcb1ede2a046dfe7f91508763").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","88b8d1e31e81067ec075e95a2708a584","Multiply").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","88b8d1e31e81067ec075e95a2708a584",64).
@@ -23352,7 +24368,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","60787a71be4b8728111e7c728b5afd47","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","60787a71be4b8728111e7c728b5afd47",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","d499621b9cc9b7aa1a962dbe82aaab3a").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","a50d0f9fdd3d003b945b6c15302bfec5",0).
 die_has_child("d499621b9cc9b7aa1a962dbe82aaab3a","a50d0f9fdd3d003b945b6c15302bfec5").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","e789c9e741cdefc2af2c1560b0c8978d",1).
 die_has_child("d499621b9cc9b7aa1a962dbe82aaab3a","e789c9e741cdefc2af2c1560b0c8978d").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","d499621b9cc9b7aa1a962dbe82aaab3a","Divide").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","d499621b9cc9b7aa1a962dbe82aaab3a",64).
@@ -23371,7 +24389,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","c7baa6a5db2aa64121baf5d33cff5653","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","c7baa6a5db2aa64121baf5d33cff5653",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","7101ac81cd4ead63a9f5c547f186f05c").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","28dc342e3593f6d781a430379cfd5ed2",0).
 die_has_child("7101ac81cd4ead63a9f5c547f186f05c","28dc342e3593f6d781a430379cfd5ed2").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","9020b232639cb3226adf0ba2b16c6ca3",1).
 die_has_child("7101ac81cd4ead63a9f5c547f186f05c","9020b232639cb3226adf0ba2b16c6ca3").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","7101ac81cd4ead63a9f5c547f186f05c","Add").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","7101ac81cd4ead63a9f5c547f186f05c",64).
@@ -23398,7 +24418,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","3289000c9f7094f32539e20c2d7fbc1f","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","3289000c9f7094f32539e20c2d7fbc1f",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","de1b5cee3b627625ad26910bd1ab5b48").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","0c689871fb1c547e51cf88ff5fb39f57",0).
 die_has_child("de1b5cee3b627625ad26910bd1ab5b48","0c689871fb1c547e51cf88ff5fb39f57").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","acfac2b7650941c79974b9b45bd0becf",1).
 die_has_child("de1b5cee3b627625ad26910bd1ab5b48","acfac2b7650941c79974b9b45bd0becf").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","de1b5cee3b627625ad26910bd1ab5b48","Subtract").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","de1b5cee3b627625ad26910bd1ab5b48",64).
@@ -23425,7 +24447,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","7e9d526fd39a3c5ac3e6c0f4a3031222","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","7e9d526fd39a3c5ac3e6c0f4a3031222",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","25f274a4a960f9f4887c5c23eafb7d43").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","2c5d043ed67a80f52bee860bc7977652",0).
 die_has_child("25f274a4a960f9f4887c5c23eafb7d43","2c5d043ed67a80f52bee860bc7977652").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","315c863a9eedd86319ef1b593a3b8513",1).
 die_has_child("25f274a4a960f9f4887c5c23eafb7d43","315c863a9eedd86319ef1b593a3b8513").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","25f274a4a960f9f4887c5c23eafb7d43","Multiply").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","25f274a4a960f9f4887c5c23eafb7d43",64).
@@ -23452,7 +24476,9 @@ needed_dw_tag_formal_parameter_size_in_bits("/code/simple-example/cpp/libmath-v1
 needed_dw_tag_formal_parameter_type_name("/code/simple-example/cpp/libmath-v1.so","cabfe8f75ab9756c07ef15866c55dfa0","double").
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","cabfe8f75ab9756c07ef15866c55dfa0",5).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","4c698ed21c0b9f868a08087dcc8c32c9").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","c9a8abe7abab0ac8dab2670cde7f2754",0).
 die_has_child("4c698ed21c0b9f868a08087dcc8c32c9","c9a8abe7abab0ac8dab2670cde7f2754").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","5f6364abcc8ef2977a0fb81fac4cd79e",1).
 die_has_child("4c698ed21c0b9f868a08087dcc8c32c9","5f6364abcc8ef2977a0fb81fac4cd79e").
 needed_dw_tag_function_name("/code/simple-example/cpp/libmath-v1.so","4c698ed21c0b9f868a08087dcc8c32c9","Divide").
 needed_dw_tag_function_size_in_bits("/code/simple-example/cpp/libmath-v1.so","4c698ed21c0b9f868a08087dcc8c32c9",64).
@@ -23484,7 +24510,9 @@ needed_dw_tag_base_type_size_in_bits("/code/simple-example/cpp/libmath-v1.so","d
 needed_dw_tag_base_type_die_size("/code/simple-example/cpp/libmath-v1.so","da5b29f1d93a145c5af59dd8df4326ac",7).
 needed_dw_tag_base_type_encoding("/code/simple-example/cpp/libmath-v1.so","da5b29f1d93a145c5af59dd8df4326ac","4	(float)").
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","2c35f6db8abd482cded4dfc55374f504").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","53bec26f00f9e47aefaab3929cb84a78",0).
 die_has_child("2c35f6db8abd482cded4dfc55374f504","53bec26f00f9e47aefaab3929cb84a78").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","141983f6e6a8b8c924512afc90134595",1).
 die_has_child("2c35f6db8abd482cded4dfc55374f504","141983f6e6a8b8c924512afc90134595").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","2c35f6db8abd482cded4dfc55374f504",24).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","2c35f6db8abd482cded4dfc55374f504",12).
@@ -23518,7 +24546,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v1.so","da
 needed_dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v1.so","da04abda71073f900f3bdc54c8f59e75",48).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","da04abda71073f900f3bdc54c8f59e75",13).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","bcd1267a1ae2a5094a8f97d190808c2e").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","42d36db0458328051c18aaae62a02225",0).
 die_has_child("bcd1267a1ae2a5094a8f97d190808c2e","42d36db0458328051c18aaae62a02225").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","46670d68fc9e11f47674b0c9ede18932",1).
 die_has_child("bcd1267a1ae2a5094a8f97d190808c2e","46670d68fc9e11f47674b0c9ede18932").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","bcd1267a1ae2a5094a8f97d190808c2e",19).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","bcd1267a1ae2a5094a8f97d190808c2e",12).
@@ -23552,7 +24582,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v1.so","b3
 needed_dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v1.so","b3d50f9c033cd02f597826f5177c8035",50).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","b3d50f9c033cd02f597826f5177c8035",13).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","359c8fa14429fba234ef057ac26fab60").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","a8ba032af58f28a53234627333195745",0).
 die_has_child("359c8fa14429fba234ef057ac26fab60","a8ba032af58f28a53234627333195745").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","f1734e50e09c3d6d0997997b8b8daa33",1).
 die_has_child("359c8fa14429fba234ef057ac26fab60","f1734e50e09c3d6d0997997b8b8daa33").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","359c8fa14429fba234ef057ac26fab60",14).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","359c8fa14429fba234ef057ac26fab60",12).
@@ -23586,7 +24618,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/cpp/libmath-v1.so","1e
 needed_dw_tag_formal_parameter_column("/code/simple-example/cpp/libmath-v1.so","1ee96c58457eadebec0ad9bc849d62e2",50).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/cpp/libmath-v1.so","1ee96c58457eadebec0ad9bc849d62e2",13).
 needed_dw_tag_function("/code/simple-example/cpp/libmath-v1.so","ce7630d5433a86802ec9adf4ee334075").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","9afab83868e3e3be39e1df884f7ff6aa",0).
 die_has_child("ce7630d5433a86802ec9adf4ee334075","9afab83868e3e3be39e1df884f7ff6aa").
+needed_dw_tag_formal_parameter_order("/code/simple-example/cpp/libmath-v1.so","e950be50b88926ced8300ce40e95bbd8",1).
 die_has_child("ce7630d5433a86802ec9adf4ee334075","e950be50b88926ced8300ce40e95bbd8").
 needed_dw_tag_function_line("/code/simple-example/cpp/libmath-v1.so","ce7630d5433a86802ec9adf4ee334075",9).
 needed_dw_tag_function_column("/code/simple-example/cpp/libmath-v1.so","ce7630d5433a86802ec9adf4ee334075",12).

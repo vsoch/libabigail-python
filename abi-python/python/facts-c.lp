@@ -2009,7 +2009,9 @@ dw_tag_compile_unit_comp_dir_path("/code/simple-example/c/libmath-v2.so","c4aa27
 dw_tag_compile_unit_address_size_bits("/code/simple-example/c/libmath-v2.so","c4aa272641f77beaffa71885f0c8ccea",64).
 dw_tag_compile_unit_language("/code/simple-example/c/libmath-v2.so","c4aa272641f77beaffa71885f0c8ccea","12	(ANSI C99)").
 dw_tag_function("/code/simple-example/c/libmath-v2.so","bdd80740fde964cab59c44e4d2b884e3").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","19064b8886388394a508e192d7c7d645",0).
 die_has_child("bdd80740fde964cab59c44e4d2b884e3","19064b8886388394a508e192d7c7d645").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","4b0aba3ced8f1e710cfb7a466252da7d",1).
 die_has_child("bdd80740fde964cab59c44e4d2b884e3","4b0aba3ced8f1e710cfb7a466252da7d").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","bdd80740fde964cab59c44e4d2b884e3","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","bdd80740fde964cab59c44e4d2b884e3",64).
@@ -2038,7 +2040,9 @@ dw_tag_base_type_size_in_bits("/code/simple-example/c/libmath-v2.so","a783553f45
 dw_tag_base_type_die_size("/code/simple-example/c/libmath-v2.so","a783553f45116daa5705b81dee057c4d",7).
 dw_tag_base_type_encoding("/code/simple-example/c/libmath-v2.so","a783553f45116daa5705b81dee057c4d","4	(float)").
 dw_tag_function("/code/simple-example/c/libmath-v2.so","ca69201f2749046615426ee9d4f64cf5").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","212353ad26678df0461d841af70fae8e",0).
 die_has_child("ca69201f2749046615426ee9d4f64cf5","212353ad26678df0461d841af70fae8e").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","a8654b3baca9476bcbd97f8db433a3fa",1).
 die_has_child("ca69201f2749046615426ee9d4f64cf5","a8654b3baca9476bcbd97f8db433a3fa").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","ca69201f2749046615426ee9d4f64cf5","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","ca69201f2749046615426ee9d4f64cf5",64).
@@ -2062,7 +2066,9 @@ dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v2.so","7e364d349a6
 dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v2.so","7e364d349a616a896cb637eed819072a",38).
 dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v2.so","7e364d349a616a896cb637eed819072a",13).
 dw_tag_function("/code/simple-example/c/libmath-v2.so","599e0290b37e0529c0103235f8ac98c1").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","743978eb94e7ff02f6fcdc357f9df0b7",0).
 die_has_child("599e0290b37e0529c0103235f8ac98c1","743978eb94e7ff02f6fcdc357f9df0b7").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","b1ac259dc798bfee95fa2c97cbecb519",1).
 die_has_child("599e0290b37e0529c0103235f8ac98c1","b1ac259dc798bfee95fa2c97cbecb519").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","599e0290b37e0529c0103235f8ac98c1","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","599e0290b37e0529c0103235f8ac98c1",64).
@@ -2086,7 +2092,9 @@ dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v2.so","1f3bdfcc95d
 dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v2.so","1f3bdfcc95d53b077895702bfc6ace35",38).
 dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v2.so","1f3bdfcc95d53b077895702bfc6ace35",13).
 dw_tag_function("/code/simple-example/c/libmath-v2.so","1aae5f605303d5b3c3ea87ce0d099310").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","d87491d4d093edd877b10d3e91c2ee80",0).
 die_has_child("1aae5f605303d5b3c3ea87ce0d099310","d87491d4d093edd877b10d3e91c2ee80").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","23fdbc9744864126eb67126b67c8bea7",1).
 die_has_child("1aae5f605303d5b3c3ea87ce0d099310","23fdbc9744864126eb67126b67c8bea7").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","1aae5f605303d5b3c3ea87ce0d099310","Add").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","1aae5f605303d5b3c3ea87ce0d099310",32).
@@ -2115,7 +2123,9 @@ dw_tag_base_type_size_in_bits("/code/simple-example/c/libmath-v2.so","9ee47388b8
 dw_tag_base_type_die_size("/code/simple-example/c/libmath-v2.so","9ee47388b868f171d4850a250addeb5c",7).
 dw_tag_base_type_encoding("/code/simple-example/c/libmath-v2.so","9ee47388b868f171d4850a250addeb5c","5	(signed)").
 dw_tag_function("/code/simple-example/c/libmath-v2.so","3814b2014a6b59ce3180e0af0684ce11").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","80a2e45881e22bb5a962859b9fc31534",0).
 die_has_child("3814b2014a6b59ce3180e0af0684ce11","80a2e45881e22bb5a962859b9fc31534").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","d2419831b337221ba1b58dba89031993",1).
 die_has_child("3814b2014a6b59ce3180e0af0684ce11","d2419831b337221ba1b58dba89031993").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","3814b2014a6b59ce3180e0af0684ce11","Divide").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","3814b2014a6b59ce3180e0af0684ce11",64).
@@ -2158,7 +2168,9 @@ dw_tag_base_type_size_in_bits("/code/simple-example/c/libmath-v2.so","c176dd5f4d
 dw_tag_base_type_die_size("/code/simple-example/c/libmath-v2.so","c176dd5f4d8bf6204717cfc2c36c96a6",7).
 dw_tag_base_type_encoding("/code/simple-example/c/libmath-v2.so","c176dd5f4d8bf6204717cfc2c36c96a6","4	(float)").
 dw_tag_function("/code/simple-example/c/libmath-v2.so","255614d072b0432683588ea5d40d1836").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","d2d03b92ac9d4f015085ff09eb6b31e8",0).
 die_has_child("255614d072b0432683588ea5d40d1836","d2d03b92ac9d4f015085ff09eb6b31e8").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","6eff4af07fbfa1f0709d25a3f6749523",1).
 die_has_child("255614d072b0432683588ea5d40d1836","6eff4af07fbfa1f0709d25a3f6749523").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","255614d072b0432683588ea5d40d1836","Multiply").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","255614d072b0432683588ea5d40d1836",64).
@@ -2196,7 +2208,9 @@ dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v2.so","dbd3845f409
 dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v2.so","dbd3845f409148771830a449db0809e4",38).
 dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v2.so","dbd3845f409148771830a449db0809e4",13).
 dw_tag_function("/code/simple-example/c/libmath-v2.so","e1e9ff951f456ef02c682a310fc16327").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","31c41770d4f5ac75e9075749b4ca68b1",0).
 die_has_child("e1e9ff951f456ef02c682a310fc16327","31c41770d4f5ac75e9075749b4ca68b1").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","d8ef908dfbb6ec1f4794889184e4e18e",1).
 die_has_child("e1e9ff951f456ef02c682a310fc16327","d8ef908dfbb6ec1f4794889184e4e18e").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","e1e9ff951f456ef02c682a310fc16327","Subtract").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","e1e9ff951f456ef02c682a310fc16327",64).
@@ -2234,7 +2248,9 @@ dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v2.so","eaef5f9f856
 dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v2.so","eaef5f9f856565a50309bf478168bb10",38).
 dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v2.so","eaef5f9f856565a50309bf478168bb10",13).
 dw_tag_function("/code/simple-example/c/libmath-v2.so","779e812529001085e407d8b483f1a8c5").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","cf47df30456b45d2571b61566affa587",0).
 die_has_child("779e812529001085e407d8b483f1a8c5","cf47df30456b45d2571b61566affa587").
+dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v2.so","989b8fb7f83cadeebccd8c95b93fb8bc",1).
 die_has_child("779e812529001085e407d8b483f1a8c5","989b8fb7f83cadeebccd8c95b93fb8bc").
 dw_tag_function_name("/code/simple-example/c/libmath-v2.so","779e812529001085e407d8b483f1a8c5","Add").
 dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v2.so","779e812529001085e407d8b483f1a8c5",32).
@@ -2293,7 +2309,9 @@ dw_tag_compile_unit_comp_dir_path("/code/simple-example/c/libmath-v1.so","d1beeb
 dw_tag_compile_unit_address_size_bits("/code/simple-example/c/libmath-v1.so","d1beeb3823ec26e5511b43aa68787d5e",64).
 dw_tag_compile_unit_language("/code/simple-example/c/libmath-v1.so","d1beeb3823ec26e5511b43aa68787d5e","12	(ANSI C99)").
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","8d9dd3de43d931f4952646bcdede7e58").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","8cfc488097e55bdd0ebd8096c09723c7",0).
 die_has_child("8d9dd3de43d931f4952646bcdede7e58","8cfc488097e55bdd0ebd8096c09723c7").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","5c5081286b112ebd5fb20496cdd90a4e",1).
 die_has_child("8d9dd3de43d931f4952646bcdede7e58","5c5081286b112ebd5fb20496cdd90a4e").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","8d9dd3de43d931f4952646bcdede7e58","Divide").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","8d9dd3de43d931f4952646bcdede7e58",64).
@@ -2322,7 +2340,9 @@ needed_dw_tag_base_type_size_in_bits("/code/simple-example/c/libmath-v1.so","c27
 needed_dw_tag_base_type_die_size("/code/simple-example/c/libmath-v1.so","c27511d7bd45b7d2b0d84e8de6f3bf95",7).
 needed_dw_tag_base_type_encoding("/code/simple-example/c/libmath-v1.so","c27511d7bd45b7d2b0d84e8de6f3bf95","4	(float)").
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","4f1306716a2f3a4569e3a43c6436749b").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","3f76391883407ccbf547de9626ae03b0",0).
 die_has_child("4f1306716a2f3a4569e3a43c6436749b","3f76391883407ccbf547de9626ae03b0").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","96d8bbc4da9ce7c9ef11eb5b61122940",1).
 die_has_child("4f1306716a2f3a4569e3a43c6436749b","96d8bbc4da9ce7c9ef11eb5b61122940").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","4f1306716a2f3a4569e3a43c6436749b","Multiply").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","4f1306716a2f3a4569e3a43c6436749b",64).
@@ -2346,7 +2366,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v1.so","55fb
 needed_dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v1.so","55fb898208bab605dd958b276e438e44",38).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v1.so","55fb898208bab605dd958b276e438e44",13).
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","ad21e29d0f2ea88b5eac16f5b6b4536b").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","ecd2e0ec090ef23e78e1c25c3a811e0c",0).
 die_has_child("ad21e29d0f2ea88b5eac16f5b6b4536b","ecd2e0ec090ef23e78e1c25c3a811e0c").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","8ce0cfa59c76d6295f394117f9198407",1).
 die_has_child("ad21e29d0f2ea88b5eac16f5b6b4536b","8ce0cfa59c76d6295f394117f9198407").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","ad21e29d0f2ea88b5eac16f5b6b4536b","Subtract").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","ad21e29d0f2ea88b5eac16f5b6b4536b",64).
@@ -2370,7 +2392,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v1.so","a6d9
 needed_dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v1.so","a6d9bbed0abc0fd1abd20f725df50698",38).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v1.so","a6d9bbed0abc0fd1abd20f725df50698",13).
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","011c02ebd62dc9373b1cf42394dc846e").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","bfd816f13f0ebba70153cf743f450162",0).
 die_has_child("011c02ebd62dc9373b1cf42394dc846e","bfd816f13f0ebba70153cf743f450162").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","2f70c91e2ef580457001c244ba7859f2",1).
 die_has_child("011c02ebd62dc9373b1cf42394dc846e","2f70c91e2ef580457001c244ba7859f2").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","011c02ebd62dc9373b1cf42394dc846e","Add").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","011c02ebd62dc9373b1cf42394dc846e",64).
@@ -2394,7 +2418,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v1.so","d277
 needed_dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v1.so","d277c3702e0088b1c693170a708bf39b",33).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v1.so","d277c3702e0088b1c693170a708bf39b",13).
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","57282fc55bfabe45aac420fa2bac8d14").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","558eebbbe543e0b2e047c9db944bee02",0).
 die_has_child("57282fc55bfabe45aac420fa2bac8d14","558eebbbe543e0b2e047c9db944bee02").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","d3bd2ff04caa962b233dacc5cfcab595",1).
 die_has_child("57282fc55bfabe45aac420fa2bac8d14","d3bd2ff04caa962b233dacc5cfcab595").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","57282fc55bfabe45aac420fa2bac8d14","Divide").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","57282fc55bfabe45aac420fa2bac8d14",64).
@@ -2437,7 +2463,9 @@ needed_dw_tag_base_type_size_in_bits("/code/simple-example/c/libmath-v1.so","7e5
 needed_dw_tag_base_type_die_size("/code/simple-example/c/libmath-v1.so","7e57c4d4ced58e95962ba17d2d1b9f25",7).
 needed_dw_tag_base_type_encoding("/code/simple-example/c/libmath-v1.so","7e57c4d4ced58e95962ba17d2d1b9f25","4	(float)").
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","ed97137fae5aae66a5105d6ab5868f8d").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","2e640c1bd7e56c3913012f7c297753ed",0).
 die_has_child("ed97137fae5aae66a5105d6ab5868f8d","2e640c1bd7e56c3913012f7c297753ed").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","a815e48466d55ae4b777915842db9e36",1).
 die_has_child("ed97137fae5aae66a5105d6ab5868f8d","a815e48466d55ae4b777915842db9e36").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","ed97137fae5aae66a5105d6ab5868f8d","Multiply").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","ed97137fae5aae66a5105d6ab5868f8d",64).
@@ -2475,7 +2503,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v1.so","9182
 needed_dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v1.so","91821eb3b3d38480c92f8d2d9ad874c5",38).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v1.so","91821eb3b3d38480c92f8d2d9ad874c5",13).
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","bd4cbf20adc42b63957263d984381486").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","6e9f99139c8b20a5650bfd1813807ee5",0).
 die_has_child("bd4cbf20adc42b63957263d984381486","6e9f99139c8b20a5650bfd1813807ee5").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","b705be7364beb1142569aae38a43cfc4",1).
 die_has_child("bd4cbf20adc42b63957263d984381486","b705be7364beb1142569aae38a43cfc4").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","bd4cbf20adc42b63957263d984381486","Subtract").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","bd4cbf20adc42b63957263d984381486",64).
@@ -2513,7 +2543,9 @@ needed_dw_tag_formal_parameter_line("/code/simple-example/c/libmath-v1.so","fc6e
 needed_dw_tag_formal_parameter_column("/code/simple-example/c/libmath-v1.so","fc6e1c03f9551ae9b8844fa93a9dfc63",38).
 needed_dw_tag_formal_parameter_die_size("/code/simple-example/c/libmath-v1.so","fc6e1c03f9551ae9b8844fa93a9dfc63",13).
 needed_dw_tag_function("/code/simple-example/c/libmath-v1.so","72cf8f3a558b6db2881d2b4cbe64bff4").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","b5bbb2f390273471f5b438e4fd967649",0).
 die_has_child("72cf8f3a558b6db2881d2b4cbe64bff4","b5bbb2f390273471f5b438e4fd967649").
+needed_dw_tag_formal_parameter_order("/code/simple-example/c/libmath-v1.so","80c14ede17b202a5d1b7270adcc5ef57",1).
 die_has_child("72cf8f3a558b6db2881d2b4cbe64bff4","80c14ede17b202a5d1b7270adcc5ef57").
 needed_dw_tag_function_name("/code/simple-example/c/libmath-v1.so","72cf8f3a558b6db2881d2b4cbe64bff4","Add").
 needed_dw_tag_function_size_in_bits("/code/simple-example/c/libmath-v1.so","72cf8f3a558b6db2881d2b4cbe64bff4",64).
