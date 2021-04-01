@@ -147,7 +147,7 @@ function_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB)
 
 % First we find matching parameters based on function, formal param, and order
 % We can't really assume we have the same names. But order should be the same
-function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order)
+function_parameters_found(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB)
 
     % Subset to those that have matching symbols
     :- function_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB),
@@ -158,12 +158,50 @@ function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Or
 
        % subset to children that are formal parameters
        needed_dw_tag_formal_parameter(CorpusA, ChildA),
-       dw_tag_formal_parameter(CorpusB, ChildB),   
+       dw_tag_formal_parameter(CorpusB, ChildB).
+
+
+% First we find matching parameters based on function, formal param, and order
+% We can't really assume we have the same names. But order should be the same
+function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order)
+
+    % Subset to those that have matching symbols
+    :- function_parameters_found(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB),
 
        % The formal parameters must have matching name (can we assume with
        % clingo if we use two different variable names, they must be different?
        needed_dw_tag_formal_parameter_order(CorpusA, ChildA, Order),
        dw_tag_formal_parameter_order(CorpusB, ChildB, Order).
+
+
+% We also need to know if a parameter is missing
+function_parameters_missing(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order)
+
+
+    % Subset to those that have matching symbols
+    :- function_parameters_found(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB),
+       
+       % The formal parameters must have matching name (can we assume with
+       % clingo if we use two different variable names, they must be different?
+       needed_dw_tag_formal_parameter_order(CorpusA, ChildA, Order),
+       not dw_tag_formal_parameter_order(CorpusB, ChildB, Order).
+
+% or the other way around
+function_parameters_missing(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order)
+
+
+    % Subset to those that have matching symbols
+    :- function_parameters_found(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order),
+       
+       % The formal parameters must have matching name (can we assume with
+       % clingo if we use two different variable names, they must be different?
+       not needed_dw_tag_formal_parameter_order(CorpusA, ChildA, Order),
+       dw_tag_formal_parameter_order(CorpusB, ChildB, Order).
+
+
+get_function_parameters_missing(A) :- function_parameters_missing(_,_,_,_,_,_,_,_,A).
+count_function_parameters_missing(N) :- #count{X:get_function_parameters_missing(X)} = K, K=N.
+
 
 % function params are not equal in size
 function_parameters_size_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Order, SizeA, SizeB)
@@ -286,3 +324,4 @@ are_compatible()
 #show formal_parameter_counts_equal/2.
 #show count_function_parameters_size_mismatch/1.
 #show count_function_parameters_type_mismatch/1.
+#show count_function_parameters_missing/1.
