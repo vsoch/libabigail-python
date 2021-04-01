@@ -107,52 +107,52 @@ soname_count(N) :- #count{X:get_soname(X)} = K, K=N.
 % structures part of a parameter, look at layout of structures?
 %=============================================================================
 
-% General function to mark a subprogram based on id and known needed symbol
-entity_has_subprogram(Corpus, Id, Symbol)
+% General function to mark a function based on id and known needed symbol
+entity_has_function(Corpus, Id, Symbol)
 
-   % It's marked as a subprogram   
-   :- dw_tag_subprogram(Corpus, Id),
+   % It's marked as a function   
+   :- dw_tag_function(Corpus, Id),
       
       % that maches a symbol we know is needed
       known_needed_symbol(Symbol).
 
 % C++ will subset that set to those with a mangled name
-library_has_subprogram(Corpus, Id, Symbol)
-    :- entity_has_subprogram(Corpus, Id, Symbol),
+library_has_function(Corpus, Id, Symbol)
+    :- entity_has_function(Corpus, Id, Symbol),
 
       % it has a mangled string with a symbol
-      dw_tag_subprogram_mangled_name(Corpus, Id, Symbol).
+      dw_tag_function_mangled_name(Corpus, Id, Symbol).
 
 % OR
       
 % C: doesn't have mangled name, uses name instead
-library_has_subprogram(Corpus, Id, Symbol)
-    :- entity_has_subprogram(Corpus, Id, Symbol),
+library_has_function(Corpus, Id, Symbol)
+    :- entity_has_function(Corpus, Id, Symbol),
 
       % it has a mangled string with a symbol
-      dw_tag_subprogram_name(Corpus, Id, Symbol).
+      dw_tag_function_name(Corpus, Id, Symbol).
 
-% Compare subprogram symbols working (needed) and testing library
+% Compare function symbols working (needed) and testing library
 % For C, they will be the same even if parameters don't match
 % Keep track of die ids - we will use them to find parameters
-subprogram_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB)
+function_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB)
 
     % corpusA is the library that works, and B is the one we are testing
     :- is_needed(CorpusA),
        is_library(CorpusB),
 
        % Both have a symbol with the same name
-       needed_dw_tag_subprogram_name(CorpusA, IdA , Symbol),
-       dw_tag_subprogram_name(CorpusB, IdB , Symbol).
+       needed_dw_tag_function_name(CorpusA, IdA , Symbol),
+       dw_tag_function_name(CorpusB, IdB , Symbol).
 
-% First we find matching parameters based on subprogram, formal param, and name
+% First we find matching parameters based on function, formal param, and name
 % This assumes we have the same names
-subprogram_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param)
+function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param)
 
     % Subset to those that have matching symbols
-    :- subprogram_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB),
+    :- function_symbols_match(CorpusA, CorpusB, Symbol, IdA, IdB),
        
-       % Find parameter as a child of the subprogram die
+       % Find parameter as a child of the function die
        die_has_child(IdA, ChildA),
        die_has_child(IdB, ChildB),
 
@@ -165,29 +165,29 @@ subprogram_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, 
        needed_dw_tag_formal_parameter_name(CorpusA, ChildA, Param),
        dw_tag_formal_parameter_name(CorpusB, ChildB, Param).
 
-% Subprogram params are not equal in size
-subprogram_parameters_size_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param, SizeA, SizeB)
-    :- subprogram_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param),
+% function params are not equal in size
+function_parameters_size_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param, SizeA, SizeB)
+    :- function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param),
 
     % The sizes are not equal (this returns all pairs of sizes, equal and not)
     needed_dw_tag_formal_parameter_size_in_bits(CorpusA, ChildA, SizeA),
     dw_tag_formal_parameter_size_in_bits(CorpusB, ChildB, SizeB),
     SizeA != SizeB.
 
-get_subprogram_parameters_size_mismatch(A) :- subprogram_parameters_size_mismatch(_,_,_,_,_,_,_,_,_,A).
-count_subprogram_parameters_size_mismatch(N) :- #count{X:get_subprogram_parameters_size_mismatch(X)} = K, K=N.
+get_function_parameters_size_mismatch(A) :- function_parameters_size_mismatch(_,_,_,_,_,_,_,_,_,A).
+count_function_parameters_size_mismatch(N) :- #count{X:get_function_parameters_size_mismatch(X)} = K, K=N.
 
-% Subprogram params are not equal in type
-subprogram_parameters_type_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param, TypeA, TypeB)
-    :- subprogram_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param),
+% function params are not equal in type
+function_parameters_type_mismatch(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param, TypeA, TypeB)
+    :- function_parameters_match(CorpusA, CorpusB, Symbol, IdA, IdB, ChildA, ChildB, Param),
 
     % The type names are not equal
     needed_dw_tag_formal_parameter_type_name(CorpusA, ChildA, TypeA),
     dw_tag_formal_parameter_type_name(CorpusB, ChildB, TypeB),
     TypeA != TypeB.
 
-get_subprogram_parameters_type_mismatch(A) :- subprogram_parameters_type_mismatch(_,_,_,_,_,_,_,_,_,A).
-count_subprogram_parameters_type_mismatch(N) :- #count{X:get_subprogram_parameters_type_mismatch(X)} = K, K=N.
+get_function_parameters_type_mismatch(A) :- function_parameters_type_mismatch(_,_,_,_,_,_,_,_,_,A).
+count_function_parameters_type_mismatch(N) :- #count{X:get_function_parameters_type_mismatch(X)} = K, K=N.
 
 % Check for the number of parameters the same 
 % First write a general rule to find formal parameters
@@ -210,13 +210,13 @@ is_shared_symbol(Symbol) :- shared_symbols(_,_,Symbol).
 % A general rule to get formal parameters, but only for shared symbols
 entity_formal_parameters(Corpus, Id, Symbol, Child)
 
-    % Find all subprograms for the library or main
-    :- library_has_subprogram(Corpus, Id, Symbol),
+    % Find all functions for the library or main
+    :- library_has_function(Corpus, Id, Symbol),
 
        % the symbol must be shared
        is_shared_symbol(Symbol), 
                   
-       % Find parameter as a child of the subprogram die
+       % Find parameter as a child of the function die
        die_has_child(Id, Child),
 
        % subset to children that are formal parameters (this is for library)
@@ -226,7 +226,7 @@ entity_formal_parameters(Corpus, Id, Symbol, Child)
 % now we want to check the library vs. main program
 library_formal_parameters(Corpus, Id, Symbol, Child)
 
-    % Find all subprograms for the library or main
+    % Find all functions for the library or main
     :- entity_formal_parameters(Corpus, Id, Symbol, Child),
      
        % We want to check the library
@@ -234,7 +234,7 @@ library_formal_parameters(Corpus, Id, Symbol, Child)
 
 main_formal_parameters(Corpus, Id, Symbol, Child)
 
-    % Find all subprograms for the library or main
+    % Find all functions for the library or main
     :- entity_formal_parameters(Corpus, Id, Symbol, Child),
      
        % We want to check the library
@@ -284,8 +284,5 @@ are_compatible()
 #show get_formal_parameter_count_main/1.
 #show get_formal_parameter_count_library/1.
 #show formal_parameter_counts_equal/2.
-%#show subprogram_symbols_match/5.
-%#show subprogram_parameters_match/8.
-%#show subprogram_parameters_size_mismatch/10.
-#show count_subprogram_parameters_size_mismatch/1.
-#show count_subprogram_parameters_type_mismatch/1.
+#show count_function_parameters_size_mismatch/1.
+#show count_function_parameters_type_mismatch/1.

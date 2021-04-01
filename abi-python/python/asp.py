@@ -8,6 +8,7 @@ import hashlib
 import itertools
 import os
 import pprint
+import re
 import sys
 import time
 import types
@@ -412,11 +413,12 @@ class ABICompatSolverSetup(object):
 
     def _die_hash(self, die, corpus, parent):
         """
-        We need a unique id for a die entry based on it's corpus and content
+        We need a unique id for a die entry based on it's corpus, cu, content
         """
         hasher = hashlib.md5()
         hasher.update(str(die).encode("utf-8"))
         hasher.update(corpus.path.encode("utf-8"))
+        hasher.update(str(die.cu.cu_offset).encode('utf-8'))
         if parent:
             hasher.update(parent.encode("utf-8"))
         return hasher.hexdigest()
@@ -477,6 +479,24 @@ class ABICompatSolverSetup(object):
             lookup[die.unique_id].add(child_id)
             self.gen.fact(fn.die_has_child(die.unique_id, child_id))
 
+    def _get_tag(self, die, prefix):
+        """Get a clingo appropriate tag name.
+        
+        The die tag needs to be parsed to be all lowercase, and for some 
+        die tags, we want to remove the "Dwarf specific words." (e.g.,
+        a subprogram --> a function
+        """
+        tag = die.tag.lower()
+
+        # A subprogram is a function
+        if "subprogram" in tag:
+            tag = re.sub('subprogram', 'function', tag)
+
+        # Special cases of
+        if prefix:
+            tag = "%s_%s" % (prefix.lower(), tag)
+        return tag
+
     def _parse_die_children(self, corpus, die, parent=None, prefix=""):
         """
         Parse die children, writing facts for attributions and relationships.
@@ -497,9 +517,8 @@ class ABICompatSolverSetup(object):
         TODO: read through http://dwarfstd.org/doc/dwarf_1_1_0.pdf for each type
         and make sure not missing anything. Tags are on page 28.
         """
-        tag = die.tag.lower()
-        if prefix:
-            tag = "%s_%s" % (prefix.lower(), tag)
+        # Get the tag for the die
+        tag = self._get_tag(die, prefix)
 
         # Keep track of unique id for relationships (hash of attributes, parent, and corpus)
         die.unique_id = self._die_hash(die, corpus, parent)
