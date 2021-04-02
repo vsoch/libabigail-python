@@ -855,13 +855,14 @@ class ABICompatSolverSetup(object):
 
             # If it's a pointer, we have the byte size (no name)
             if type_die.tag == "DW_TAG_pointer_type":
-                size_in_bits = type_die.attributes["DW_AT_byte_size"].value * 8
-                self.gen.fact(
-                    AspFunction(
-                        tag + "_size_in_bits",
-                        args=[corpus.path, die.unique_id, size_in_bits],
+                if "DW_AT_byte_size" in type_die.attributes:
+                    size_in_bits = type_die.attributes["DW_AT_byte_size"].value * 8
+                    self.gen.fact(
+                        AspFunction(
+                            tag + "_size_in_bits",
+                            args=[corpus.path, die.unique_id, size_in_bits],
+                        )
                     )
-                )
 
             # Not sure how to parse non complete types
             # https://stackoverflow.com/questions/38225269/dwarf-reading-not-complete-types
