@@ -2753,11 +2753,11 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","1f591ef8377d284205abf3c61f28a2ac",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","1f591ef8377d284205abf3c61f28a2ac","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","1f591ef8377d284205abf3c61f28a2ac",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","8f1cc83b23d9d52db34c3e8e7448419a").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","8f1cc83b23d9d52db34c3e8e7448419a","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","8f1cc83b23d9d52db34c3e8e7448419a",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_function("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","ee2aa2bad217b90279cd7bed7899b0a8").
 dw_tag_formal_parameter_order("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a095d9a688b4a9bce8ea1634b5020e20",0).
 die_has_child("ee2aa2bad217b90279cd7bed7899b0a8","a095d9a688b4a9bce8ea1634b5020e20").
@@ -2798,7 +2798,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","8ef55106443473b537098278fe361d08",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","8ef55106443473b537098278fe361d08","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","8ef55106443473b537098278fe361d08",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","7efe5025965a1a07247ae0597fe55e67").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","7efe5025965a1a07247ae0597fe55e67",32).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","7efe5025965a1a07247ae0597fe55e67","wchar_t").
@@ -2926,7 +2926,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","773efb20956d41c6322bcccd3550fccf",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","773efb20956d41c6322bcccd3550fccf","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","773efb20956d41c6322bcccd3550fccf",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","0dfe3dc66adb326bafed28216a4fb99f").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","0dfe3dc66adb326bafed28216a4fb99f",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","0dfe3dc66adb326bafed28216a4fb99f","char").
@@ -2939,7 +2939,7 @@ dw_tag_const_type_const("/g/g0/sochat1/code/libabigail-python/abi-python/simple-
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","416c1e6198b56d90f943bbb39ffc498e").
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","416c1e6198b56d90f943bbb39ffc498e",64).
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","416c1e6198b56d90f943bbb39ffc498e",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","30fb48d4d7a2351a065da8aa445a0703").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","30fb48d4d7a2351a065da8aa445a0703",64).
 dw_tag_pointer_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","30fb48d4d7a2351a065da8aa445a0703",5).
@@ -3026,7 +3026,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","57c7d578adf95c6c445dd84b13db8faa",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","57c7d578adf95c6c445dd84b13db8faa","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","57c7d578adf95c6c445dd84b13db8faa",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","437804d3382f231cedd223d7dfb377b0").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","437804d3382f231cedd223d7dfb377b0",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","437804d3382f231cedd223d7dfb377b0","char").
@@ -3331,7 +3331,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","454e170ac5f14f58c9db00043cdcb3ad",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","454e170ac5f14f58c9db00043cdcb3ad","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","454e170ac5f14f58c9db00043cdcb3ad",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","e83f71125459b020540f4716888f8375").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","e83f71125459b020540f4716888f8375",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","e83f71125459b020540f4716888f8375","char").
@@ -3464,7 +3464,7 @@ dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-pytho
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a23c3d082a3611dd9c44554bba6bd3d6").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a23c3d082a3611dd9c44554bba6bd3d6","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a23c3d082a3611dd9c44554bba6bd3d6",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","cf6012616846c6506386ecd2ee1dff2f").
 dw_tag_pointer_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","cf6012616846c6506386ecd2ee1dff2f","yes").
 dw_tag_pointer_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","cf6012616846c6506386ecd2ee1dff2f",5).
@@ -3598,7 +3598,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f7e1522e44d453c6885d6251c2a247ad",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f7e1522e44d453c6885d6251c2a247ad","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f7e1522e44d453c6885d6251c2a247ad",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4d4e65b82f30ff5e4cf2ad7801582941").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4d4e65b82f30ff5e4cf2ad7801582941",32).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4d4e65b82f30ff5e4cf2ad7801582941","wchar_t").
@@ -3650,7 +3650,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","6de8911d141e18d0ddadaa36ff3b2f13",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","6de8911d141e18d0ddadaa36ff3b2f13","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","6de8911d141e18d0ddadaa36ff3b2f13",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","81168d1dd72695893def9a96a5369868").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","81168d1dd72695893def9a96a5369868",32).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","81168d1dd72695893def9a96a5369868","wchar_t").
@@ -5104,7 +5104,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","b8147f2aa24ffddd39f60cf0cb829813",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","b8147f2aa24ffddd39f60cf0cb829813","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","b8147f2aa24ffddd39f60cf0cb829813",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","72bea858dfaf8d1b0b7b8c56f5ea2560").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","72bea858dfaf8d1b0b7b8c56f5ea2560",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","72bea858dfaf8d1b0b7b8c56f5ea2560","char").
@@ -5494,11 +5494,11 @@ dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-pytho
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f8161e4a16e46e097d9d05180467fa97").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f8161e4a16e46e097d9d05180467fa97","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f8161e4a16e46e097d9d05180467fa97",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","08ad1c26549136472346fbacdba80cc2").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","08ad1c26549136472346fbacdba80cc2","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","08ad1c26549136472346fbacdba80cc2",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4c1a14de16303099820726aa68360420").
 dw_tag_pointer_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4c1a14de16303099820726aa68360420","yes").
 dw_tag_pointer_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4c1a14de16303099820726aa68360420",5).
@@ -5631,7 +5631,7 @@ dw_tag_formal_parameter_non_complete_type("/g/g0/sochat1/code/libabigail-python/
 dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","ea8c7e1164673f9446e2badbe729aa74",5).
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","05a84d8c3c8a7d67b3b6a370c4a43a14").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","05a84d8c3c8a7d67b3b6a370c4a43a14",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_function("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","d43b7bcd243deec73b8efc9ec7243ca0").
 dw_tag_formal_parameter_order("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","c5d9564639867c4538f5adfd12527652",0).
 die_has_child("d43b7bcd243deec73b8efc9ec7243ca0","c5d9564639867c4538f5adfd12527652").
@@ -5766,7 +5766,7 @@ dw_tag_formal_parameter_non_complete_type("/g/g0/sochat1/code/libabigail-python/
 dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a04f857ea2a2169bfc1ac8f10188ba01",5).
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a30ffdacadf466b3a64afb61177ba578").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a30ffdacadf466b3a64afb61177ba578",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_function("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","cb4efb5f99facbf8aafe426788ac1b42").
 dw_tag_formal_parameter_order("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","61c1184c27847f4a8200ed94829737eb",0).
 die_has_child("cb4efb5f99facbf8aafe426788ac1b42","61c1184c27847f4a8200ed94829737eb").
@@ -9606,11 +9606,11 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","aaa9c08771e4a83a28d72c10af03db41",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","aaa9c08771e4a83a28d72c10af03db41","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","aaa9c08771e4a83a28d72c10af03db41",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","e63958a864d71b5b0dd75eed3d747fcb").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","e63958a864d71b5b0dd75eed3d747fcb","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","e63958a864d71b5b0dd75eed3d747fcb",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_function("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","03a47affb03b4093672a09e623243ade").
 dw_tag_formal_parameter_order("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3064f43ff3c2b67dd9c3fdfc97ca29a4",0).
 die_has_child("03a47affb03b4093672a09e623243ade","3064f43ff3c2b67dd9c3fdfc97ca29a4").
@@ -9665,7 +9665,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","0c52d87e6200e82e09dfb263a3eb7be5",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","0c52d87e6200e82e09dfb263a3eb7be5","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","0c52d87e6200e82e09dfb263a3eb7be5",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a41bf46684c370812c72bdc8587211d9").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a41bf46684c370812c72bdc8587211d9",32).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a41bf46684c370812c72bdc8587211d9","wchar_t").
@@ -9832,7 +9832,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","785fa5a1a4c562c4a1aea1fb8de69478",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","785fa5a1a4c562c4a1aea1fb8de69478","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","785fa5a1a4c562c4a1aea1fb8de69478",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","13f2f40d9c20d11e7d8f55a0a918b0a6").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","13f2f40d9c20d11e7d8f55a0a918b0a6",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","13f2f40d9c20d11e7d8f55a0a918b0a6","char").
@@ -9845,7 +9845,7 @@ dw_tag_const_type_const("/g/g0/sochat1/code/libabigail-python/abi-python/simple-
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","df11be79e4e9bc78e9bc0fcb53e524f2").
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","df11be79e4e9bc78e9bc0fcb53e524f2",64).
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","df11be79e4e9bc78e9bc0fcb53e524f2",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","36740771844768adf98c0fa78439eaff").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","36740771844768adf98c0fa78439eaff",64).
 dw_tag_pointer_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","36740771844768adf98c0fa78439eaff",5).
@@ -9965,7 +9965,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","764e516b8397bb265e3acce38cea9a1e",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","764e516b8397bb265e3acce38cea9a1e","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","764e516b8397bb265e3acce38cea9a1e",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3ab4e850116b75328feb7c6542633df5").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3ab4e850116b75328feb7c6542633df5",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3ab4e850116b75328feb7c6542633df5","char").
@@ -10405,7 +10405,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","7fb3cd37ef3b559fc9241372dc977857",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","7fb3cd37ef3b559fc9241372dc977857","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","7fb3cd37ef3b559fc9241372dc977857",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","9340ecf80e1abd96350375b04ac2d439").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","9340ecf80e1abd96350375b04ac2d439",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","9340ecf80e1abd96350375b04ac2d439","char").
@@ -10593,7 +10593,7 @@ dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-pytho
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","89bb40ef694f57b40cece2781600bcea").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","89bb40ef694f57b40cece2781600bcea","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","89bb40ef694f57b40cece2781600bcea",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a1a940e4bb89a9da8a325cb88c11f5d6").
 dw_tag_pointer_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a1a940e4bb89a9da8a325cb88c11f5d6","yes").
 dw_tag_pointer_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a1a940e4bb89a9da8a325cb88c11f5d6",5).
@@ -10782,7 +10782,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","07ec1a708f97727baf2747b17ee7d952",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","07ec1a708f97727baf2747b17ee7d952","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","07ec1a708f97727baf2747b17ee7d952",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3970865d4b5a49659b99bafa90a2be66").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3970865d4b5a49659b99bafa90a2be66",32).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3970865d4b5a49659b99bafa90a2be66","wchar_t").
@@ -10850,7 +10850,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","1a106468438df31f7c7339d0c45075f4",32).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","1a106468438df31f7c7339d0c45075f4","wchar_t").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","1a106468438df31f7c7339d0c45075f4",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a30415046d7bccfe4998cc609497b63d").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a30415046d7bccfe4998cc609497b63d",32).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","a30415046d7bccfe4998cc609497b63d","wchar_t").
@@ -12813,7 +12813,7 @@ dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-exa
 dw_tag_restrict_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3b39169b82ec02c226b828b908a118c4",8).
 dw_tag_restrict_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3b39169b82ec02c226b828b908a118c4","char").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3b39169b82ec02c226b828b908a118c4",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3a2543f0475870399c9ad2ba5e213dd6").
 dw_tag_pointer_type_size_in_bits("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3a2543f0475870399c9ad2ba5e213dd6",8).
 dw_tag_pointer_type_type_name("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","3a2543f0475870399c9ad2ba5e213dd6","char").
@@ -13347,11 +13347,11 @@ dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-pytho
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","141c733f5fbc13f654c2f1305bd487e4").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","141c733f5fbc13f654c2f1305bd487e4","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","141c733f5fbc13f654c2f1305bd487e4",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4aa3656f9ffcafce0754da8245a73cd9").
 dw_tag_restrict_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4aa3656f9ffcafce0754da8245a73cd9","yes").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","4aa3656f9ffcafce0754da8245a73cd9",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_pointer_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","b3cc8db4143611fccccba98a11ae33ce").
 dw_tag_pointer_type_non_complete_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","b3cc8db4143611fccccba98a11ae33ce","yes").
 dw_tag_pointer_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","b3cc8db4143611fccccba98a11ae33ce",5).
@@ -13539,7 +13539,7 @@ dw_tag_formal_parameter_non_complete_type("/g/g0/sochat1/code/libabigail-python/
 dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","173fd0ca385db7343ddababc9a8fb35a",5).
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","c87590cd65d13448e14756372ad5d87b").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","c87590cd65d13448e14756372ad5d87b",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_function("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","66c1b14505febb9858e15930d5cbe87a").
 dw_tag_formal_parameter_order("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","fc08ecfabc218a6541be34015e497600",0).
 die_has_child("66c1b14505febb9858e15930d5cbe87a","fc08ecfabc218a6541be34015e497600").
@@ -13727,7 +13727,7 @@ dw_tag_formal_parameter_non_complete_type("/g/g0/sochat1/code/libabigail-python/
 dw_tag_formal_parameter_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","70ff899e92aac99ea766753800d7bde0",5).
 dw_tag_restrict_type("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","726ec0ba811274c90045d208c7e20438").
 dw_tag_restrict_type_die_size("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","726ec0ba811274c90045d208c7e20438",5).
-dw_tag_restrict_type not parsed.
+% dw_tag_restrict_type not parsed.
 dw_tag_function("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","5aa221976d2a5a1090c4407a1cdf890c").
 dw_tag_formal_parameter_order("/g/g0/sochat1/code/libabigail-python/abi-python/simple-example/clangpp/math-client","f26534cb87fd04c9cb7172f9df491e3c",0).
 die_has_child("5aa221976d2a5a1090c4407a1cdf890c","f26534cb87fd04c9cb7172f9df491e3c").

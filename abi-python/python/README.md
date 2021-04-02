@@ -188,7 +188,16 @@ Calls        : 1
 Time         : 0.019s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.019s
 ```
+## 5. Testing Different Compilers
 
-**Question**: for the c version, the main-client doesn't seem to have the subprogram entries, so in the
-above we only see entries for the library. The fix to this is to instead compare the two librares, but
-I want to ask why we don't see them (but we do for the C++).
+I noticed that for the c version, the main-client doesn't seem to have the formal parameter, so in the
+above we only see entries for the library. Chatting with Matt, this is a decision by the compiler.
+I tested for the following compilers:
+
+ - **g++**: does have entries
+ - **gcc**: does not have entries
+ - **icc**: does not have entries
+ - **icpc**: does not have entries
+ - **clang**: does not have entries
+ - **clang++** does not have entries
+ 
