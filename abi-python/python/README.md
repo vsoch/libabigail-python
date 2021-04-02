@@ -49,7 +49,7 @@ generate_facts([
 Here is how I'm dumping a bunch of facts to look at:
 
 ```python
-$ python dump.py > facts.lp
+$ python dump.py > facts/facts.lp
 ```
 
 The facts have headers, and for the most part it's fairly straight forward.
@@ -127,9 +127,9 @@ We can see the current output below (for the C++) is able to:
 5. See the rule that the parameter counts (between main and the library, for shared symbols) are equal.
 
 ```bash
-(clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n facts.lp is_compatible.lp 
+(clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n facts/facts.lp is_compatible.lp 
 clingo version 5.4.0
-Reading from facts.lp ...
+Reading from facts/facts.lp ...
 ...
 Solving...
 Answer: 1
@@ -162,10 +162,10 @@ having different parameters. But now since we added types and sizes we can
 see there is aboth a size and type mismatch:
 
 ```bash
-$ python dump-c.py > facts-c.lp
-# clingo --out-ifs=\\n facts-c.lp is_compatible.lp 
+$ python dump-c.py > facts/facts-c.lp
+# clingo --out-ifs=\\n facts/facts-c.lp is_compatible.lp 
 clingo version 5.4.0
-Reading from facts-c.lp ...
+Reading from facts/facts-c.lp ...
 ...
 
 Solving...
