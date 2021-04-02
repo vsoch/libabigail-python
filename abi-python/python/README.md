@@ -196,8 +196,9 @@ I tested for the following compilers:
 
  - **g++**: does have entries
  - **gcc**: does not have entries
+ - **gcc-10**: does not have entries
  - **icc**: does not have entries
  - **icpc**: does not have entries
  - **clang**: does not have entries
- - **clang++** does not have entries
- 
+ - **clang-10**: does not have entries
+ - **clang++** looks like it has entries, but doesn't show up with same is_compatible.lp script.

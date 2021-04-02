@@ -132,6 +132,7 @@ library_has_function(Corpus, Id, Symbol)
       % it has a mangled string with a symbol
       dw_tag_function_name(Corpus, Id, Symbol).
 
+
 % Compare function symbols working (needed) and testing library
 % For C, they will be the same even if parameters don't match
 % Keep track of die ids - we will use them to find parameters
@@ -310,6 +311,8 @@ are_compatible()
 #show is_main/1.
 #show is_library/1.
 #show is_needed/1.
+%#show is_shared_symbol/1.
+%#show entity_has_function/3.
 
 #show get_architecture/1.
 #show architecture_count/1.
