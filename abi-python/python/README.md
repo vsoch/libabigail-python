@@ -46,12 +46,13 @@ generate_facts([
 ])
 ```
 
+The above is hard coded in a bunch of pre-written files in [dump](dump)
+to make it easy to run for different compilers.
 Here is how I'm dumping a bunch of facts to look at:
 
 ```python
-$ python dump.py > facts/facts.lp
+$ python dump/cpp.py > facts/facts.lp
 ```
-
 The facts have headers, and for the most part it's fairly straight forward.
 The symbols in the "known to work" library that we need to match in the
 library of question look like the following:
@@ -69,7 +70,7 @@ needed_symbol_visibility("__cxa_finalize","DEFAULT").
 needed_symbol_definition("__cxa_finalize","UND").
 ```
 
-## 4. Figuring out Rules
+## 4. Figuring out Symbol Rules
 
 Okay, the first thing I want to do is figure out what symbols the client needs,
 vs. what symbols the library provides. From the source code we can take an example -
@@ -95,29 +96,32 @@ symbol_visibility("_ZN11MathLibrary10Arithmetic8SubtractEdd","STV_DEFAULT").
 has_symbol("/code/simple-example/libmath-v1.so","_ZN11MathLibrary10Arithmetic8SubtractEdd").
 ```
 
-At the onset of parsing, I don't know that the client needs this library. How
-do I figure that out? Here we see it's referenced in a DIE for the math client:
-
-```lp
-DW_TAG_subprogram_attr("/code/simple-example/math-client:94","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8SubtractEdd").
-```
-
-and for the library itself:
-
-```lp
-DW_TAG_subprogram_attr("/code/simple-example/libmath-v1.so:6","DW_AT_linkage_name","_ZN11MathLibrary10Arithmetic8SubtractEdd").
-```
+I was able to update [asp.py](asp.py) and [corpus.py](corpus.py) to determine
+when we have missing symbols based on these facts.
 
 **Update**: @tgamblin suggested using libabigail xml for this task, but we cannot
 at this point because it does not include undefined symbols. For the time being,
 I added symbol_definition to say if a symbol is defined/undefined, and
 we can use that to try and write a logic program. I also added in the third library
 because it became clear that we could never know the set of symbols that are supposed
-to be provided, and these are the `needed_symbol` groups. Now I'm working on writing logic in [is_compatible.lp](is_compatible.lp)
-to first derive this set of needed symbols. After that, I'll look at [compute_diff](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L11031) in libabigail to derive more rules after that.
+to be provided, and these are the `needed_symbol` groups. 
 
-See [rules.md](rules.md) for breaking down this function in libabigail, and also
-the logic in glibc. In the facts,
+## 4. Figuring out Generic Rules
+
+See [rules.md](rules.md) for breaking down generic rules in libabigail, and also glibc. 
+
+
+## 5. Figuring out Diffing for Types
+
+It's clear that the core of libabigail is running `compute_diff` for many different types.
+Instead of trying to go through the code files for libabigail in terms of execution, I want
+to first walk through each of these functions and try to understand what is going on.
+See [diffs.md](diffs.md) for this exercise.
+
+## 6. is_compatible
+
+I'm working on writing logic in [is_compatible.lp](is_compatible.lp)
+to first derive this set of needed symbols.
 We can see the current output below (for the C++) is able to:
 
 1. Identify the missing symbol, and say there is 1 missing symbol
@@ -125,6 +129,8 @@ We can see the current output below (for the C++) is able to:
 3. No size or type mismatches
 4. Clarify the main program (math-client), the working library (libmath-v1.so) and the one we are testing (libmath-v2.so).
 5. See the rule that the parameter counts (between main and the library, for shared symbols) are equal.
+
+
 
 ```bash
 (clingo-env) root@12069473da65:/code/python# clingo --out-ifs=\\n facts/facts.lp is_compatible.lp 
@@ -188,7 +194,8 @@ Calls        : 1
 Time         : 0.019s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.019s
 ```
-## 5. Testing Different Compilers
+
+## 7. Testing Different Compilers
 
 I noticed that for the c version, the main-client doesn't seem to have the formal parameter, so in the
 above we only see entries for the library. Chatting with Matt, this is a decision by the compiler.
@@ -200,5 +207,5 @@ I tested for the following compilers:
  - **icc**: does not have entries
  - **icpc**: does not have entries
  - **clang**: does not have entries
- - **clang-10**: does not have entries
+ - **clang-10**: does not have entries for 10.1, does have entries for 10.2 (bleeding edge!)
  - **clang++** looks like it has entries, but doesn't show up with same is_compatible.lp script.
