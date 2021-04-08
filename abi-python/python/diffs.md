@@ -725,40 +725,551 @@ This is the function we already reviewed in [rules.md](rules.md) that starts the
 entire comparison process. There is another function below it for corpus groups
 that I'm skipping for now.
 
-# abg-comp-filter.cc
+## has changes
 
-In most of the above, we are just returning some base diff instance that probably
-has underlying logic to actual look at different attributes, and this is done when a node
-is "visited?" (I'm doing my best with all
-this C++ here!) So I think that this file has a bunch of functions that are called when we "visit" a node
-to calculate a diff, and just reading them verbatim can help us understand what
-is going on. Maybe we don't have to understand how we got there through this hairball of
-code if we understand the basic comparisons (types and checks) that are done. It's this function:
+It looks like each type has a function called `has_changes` that typically just asks
+if the first is equal to the second, e.g.,
 
 ```cpp
+/// @return true if the two subjects of the diff are different, false
+/// otherwise.
+bool
+distinct_diff::has_changes() const
+{return first() != second();}
+```
 
-/// Walk the diff sub-trees of a a @ref corpus_diff and apply a filter
-/// to the nodes visted.  The filter categorizes each node, assigning
-/// it into one or several categories.
+But some of them (like the array type) do more! For example, here we check
+that the names are the same, the size in bits are the same, and alignment in bits 
+are the same:
+
+```cpp
+/// Return true iff the current diff node carries a change.
 ///
-/// @param filter the filter to apply to the diff nodes
-///
-/// @param d the corpus diff to apply the filter to.
-void
-apply_filter(filter_base& filter, corpus_diff_sptr d)
+/// @return true iff the current diff node carries a change.
+bool
+array_diff::has_changes() const
 {
-  bool s = d->context()->visiting_a_node_twice_is_forbidden();
-  d->context()->forbid_visiting_a_node_twice(false);
-  d->traverse(filter);
-  d->context()->forbid_visiting_a_node_twice(s);
+  bool l = false;
+
+  //  the array element types match check for differing dimensions
+  //  etc...
+  array_type_def_sptr
+    f = dynamic_pointer_cast<array_type_def>(first_subject()),
+    s = dynamic_pointer_cast<array_type_def>(second_subject());
+
+  if (f->get_name() != s->get_name())
+    l |= true;
+  if (f->get_size_in_bits() != s->get_size_in_bits())
+    l |= true;
+  if (f->get_alignment_in_bits() != s->get_alignment_in_bits())
+    l |= true;
+
+  l |=  element_type_diff()
+    ? element_type_diff()->has_changes()
+    : false;
+
+  return l;
 }
 ```
 
-That has me thinking that we take these diff objects, and then try to filter
-them to determine if they are compatible or not. There are several versions
-[starting here](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L33).
+The only other different ones are scope diffs, which looks  at if size changed:
 
-**TODO**
+```cpp
+/// Return true iff the current diff node carries a change.
+///
+/// Return true iff the current diff node carries a change.
+bool
+scope_diff::has_changes() const
+{
+  // TODO: add the number of really removed/added stuff.
+  return changed_types().size() + changed_decls().size();
+}
+```
+
+and then the parent function of all of those:
+
+```cpp
+/// Return true iff the current @ref corpus_diff node carries a
+/// change.
+///
+/// @return true iff the current diff node carries a change.
+bool
+corpus_diff::has_changes() const
+{
+  return (soname_changed()
+	  || architecture_changed()
+	  || !(priv_->deleted_fns_.empty()
+	       && priv_->added_fns_.empty()
+	       && priv_->changed_fns_map_.empty()
+	       && priv_->deleted_vars_.empty()
+	       && priv_->added_vars_.empty()
+	       && priv_->changed_vars_map_.empty()
+	       && priv_->added_unrefed_fn_syms_.empty()
+	       && priv_->deleted_unrefed_fn_syms_.empty()
+	       && priv_->added_unrefed_var_syms_.empty()
+	       && priv_->deleted_unrefed_var_syms_.empty()
+	       && priv_->deleted_unreachable_types_.empty()
+	       && priv_->added_unreachable_types_.empty()
+	       && priv_->changed_unreachable_types_.empty()));
+}
+```
+So I think the above is called after the entire tree has been traversed,
+and any of those particular attributes not being empty indicates there is a change.
+This also hints that it's being stored in whatever this "priv" attribute is.
+
+# abg-comp-filter.cc
+
+I kind of think that libabigail goes back retroactively and, for a diff that
+is identified, then runs it through [a filter](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L9816) to determine
+why it's different (maybe for a human readable thing). Or it could be that we do these checks when a node is visited. The
+more I read this code base the less I'm sure about any of this. It's not totally clear to me
+when the functions in this file get called (outside of apply_filter) but I suspect they
+help to categorize the kind of differences. So I think just reading them verbatim can help us understand what
+is going on. 
+
+Notably, if we look at when we create a diff context, it sets up this filter [here](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comparison.cc#L894)
+as the "default" traverse function:
+
+```cpp
+diff_context::diff_context()
+  : priv_(new diff_context::priv)
+{
+  // Setup all the diff output filters we have.
+  filtering::filter_base_sptr f;
+
+  f.reset(new filtering::harmless_harmful_filter);
+  add_diff_filter(f);
+
+  // f.reset(new filtering::harmless_filter);
+  // add_diff_filter(f);
+
+  // f.reset(new filtering::harmful_filter);
+  // add_diff_filter(f);
+}
+```
+So maybe this `harmless_harmful_filter` is the default (and the others are skipped as
+they are commented out?). This filter is defined [here](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L1738) and it calls
+functions to categorize each of harmless and harmful diff nodes for a visit start:
+
+```cpp
+bool
+harmless_harmful_filter::visit(diff* d, bool pre)
+{
+  return (categorize_harmless_diff_node(d, pre)
+	  && categorize_harmful_diff_node(d, pre));
+}
+```
+
+and end (probably not useful for us to understand since it's just closing things up
+for whatever the libabigial implementation is). I think there is a lot of information in
+the functions for [categorize_harmless_diff_node](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L1599) and 
+[categorize_harmful_diff_node](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L1687). Specifically:
+
+## categorize_harmless_diff_node
+
+The default value for the kind of change is 
+`NO_CHANGE_CATEGORY`. This might mean "it's not harmful" or just "I don't know."
+
+A diff node is harmless if:
+
+**it doesn't have any changes**
+
+```cpp
+if (!d->has_changes())
+    return true;
+```
+
+**if it's a class or enum declaration only change**
+
+```cpp
+      if (has_class_decl_only_def_change(d)
+	  || has_enum_decl_only_def_change(d))
+	category |= TYPE_DECL_ONLY_DEF_CHANGE_CATEGORY;
+```
+
+For the class declaration only change, they both need to be defined,
+have the same qualified names, and both be declarations only to be true.
+
+```cpp
+bool
+has_class_decl_only_def_change(const class_or_union_sptr& first,
+                               const class_or_union_sptr& second)
+{
+  if (!first || !second)
+    return false;
+
+  class_or_union_sptr f =
+    look_through_decl_only_class(first);
+  class_or_union_sptr s =
+    look_through_decl_only_class(second);
+
+  if (f->get_qualified_name() != s->get_qualified_name())
+    return false;
+
+  return f->get_is_declaration_only() != s->get_is_declaration_only();
+}
+```
+
+For the second we possibly walk through the enum and call the function on itself
+
+```cpp
+/// Test if a enum_diff carries a change in which the two enums are
+/// different by the fact that one is a decl-only and the other one is
+/// defined.
+///
+/// @param diff the diff node to consider.
+///
+/// @return true if the enum_diff carries a change in which the two
+/// enums are different by the fact that one is a decl-only and the
+/// other one is defined.
+bool
+has_enum_decl_only_def_change(const diff *diff)
+{
+  const enum_diff *d = dynamic_cast<const enum_diff*>(diff);
+  if (!d)
+    return false;
+
+  enum_type_decl_sptr f = look_through_decl_only_enum(d->first_enum());
+  enum_type_decl_sptr s = look_through_decl_only_enum(d->second_enum());
+
+  return has_enum_decl_only_def_change(f, s);
+}
+```
+
+**if it's an access changes**
+
+```cpp
+ if (access_changed(f, s))
+	category |= ACCESS_CHANGE_CATEGORY;
+```
+which basically says that they both need to be member declarations, and
+they "member access specifiers" need to be the same:
+
+```cpp
+static bool
+access_changed(const decl_base_sptr& f, const decl_base_sptr& s)
+{
+  if (!is_member_decl(f)
+      || !is_member_decl(s))
+    return false;
+
+  access_specifier fa = get_member_access_specifier(f),
+    sa = get_member_access_specifier(s);
+
+  if (sa != fa)
+    return true;
+
+  return false;
+}
+```
+in order for the change to be harmless.
+
+**if it's a compatible change**
+
+```cpp
+f (is_compatible_change(f, s))
+	category |= COMPATIBLE_TYPE_CHANGE_CATEGORY;
+```
+
+which seems to require that they both are defined, not equal, but the types
+are compatible.
+
+```cpp
+static bool
+is_compatible_change(const decl_base_sptr& d1, const decl_base_sptr& d2)
+{
+  if ((d1 && d2)
+      && (d1 != d2)
+      && types_are_compatible(d1, d2))
+    return true;
+  return false;
+}
+```
+
+**if there is a harmless name change OR a class diff has a harmless odr violation**
+
+```cpp
+if (has_harmless_name_change(f, s)
+          || class_diff_has_harmless_odr_violation_change(d))
+        category |= HARMLESS_DECL_NAME_CHANGE_CATEGORY;
+```
+
+[has_harmless_name_change](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L432) is only considered for a typedef or data
+member. It is fairly well documented.
+
+A harmless name change happens if:
+
+1. an anonymous declaration name changed into another anonymous declaration change OR
+2. a typedef name change without having the underlying type changed OR
+3. a data member name change without having its type changed OR
+4. an enum name change without having any other part of the enum to change.
+
+[class_diff_has_harmless_odr_violation_change](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L592) is also well documented! 
+
+```cpp
+/// Test if a class_diff node has a harmless "One Definition Rule"
+/// violation that will cause a diagnostic rule.
+///
+/// The conditions this function looks for are:
+///
+///  1/ The two subject of the diff must be canonically different
+///
+///  2/ The two subjects of the diff must be structurally equal
+///
+///  3/ The canonical types of the subjects of the diff must be
+///  structurally different.
+///
+/// These conditions makes the diff node appears as it carries changes
+/// (because of a ODR glitch present in the binary), but the glitch
+/// has no effect on the structural equality of the subjects of the
+/// diff.  If we do not detect these conditions, we'd end up with a
+/// diagnostic glitch where the reporter thinks there is an ABI change
+/// (because of the canonical difference), but then it fails to give
+/// any detail about it, because there is no structural change.
+```
+
+**if a union diff has harmless changes**
+
+```cpp
+ if (union_diff_has_harmless_changes(d))
+        category |= HARMLESS_UNION_CHANGE_CATEGORY;
+```
+
+This seems to be looking at changes that don't impact the size. The change
+is harmless if it's a union diff, the diff has changes, but does not have type
+size changes.
+
+**if there are non virtual memory fuction changes**
+
+```cpp
+      if (has_non_virtual_mem_fn_change(d))
+        category |= NON_VIRT_MEM_FUN_CHANGE_CATEGORY;
+```
+
+For these changes to be harmless under this category, we require having a diff
+the diff cannot involve a declaration only class, and it looks like we look through
+each of deleted, inserted, and changed member functions, and exit early with "yes this
+is of this category, a harmless change" if any of them are not virtual:
+
+```cpp
+static bool
+has_non_virtual_mem_fn_change(const class_diff* diff)
+{
+  if (!diff || diff_involves_decl_only_class(diff))
+    return false;
+
+  for (string_member_function_sptr_map::const_iterator i =
+         diff->deleted_member_fns().begin();
+       i != diff->deleted_member_fns().end();
+       ++i)
+    if (!get_member_function_is_virtual(i->second))
+      return true;
+
+  for (string_member_function_sptr_map::const_iterator i =
+         diff->inserted_member_fns().begin();
+       i != diff->inserted_member_fns().end();
+       ++i)
+    if (!get_member_function_is_virtual(i->second))
+      return true;
+
+  for (function_decl_diff_sptrs_type::const_iterator i =
+         diff->changed_member_fns().begin();
+       i != diff->changed_member_fns().end();
+       ++i)
+    if(!get_member_function_is_virtual((*i)->first_function_decl())
+       && !get_member_function_is_virtual((*i)->second_function_decl()))
+      return true;
+
+  return false;
+}
+```
+
+I don't know why we wouldn't want to check them all, or why finding one non virtual
+function is grounds to call it harmless?
+
+**if a static data member is added or removed OR a static data member type size changed**
+
+```cpp
+ if (static_data_member_added_or_removed(d)
+          || static_data_member_type_size_changed(f, s))
+        category |= STATIC_DATA_MEMBER_CHANGE_CATEGORY;
+```
+For the first, we cut out early and return true if any inserted or
+deleted data members are static (I again don't follow this logic):
+
+```cpp
+tatic bool
+static_data_member_added_or_removed(const class_diff* diff)
+{
+  if (diff && !diff_involves_decl_only_class(diff))
+    {
+      for (string_decl_base_sptr_map::const_iterator i =
+             diff->inserted_data_members().begin();
+           i != diff->inserted_data_members().end();
+           ++i)
+        if (get_member_is_static(i->second))
+          return true;
+
+      for (string_decl_base_sptr_map::const_iterator i =
+             diff->deleted_data_members().begin();
+           i != diff->deleted_data_members().end();
+           ++i)
+        if (get_member_is_static(i->second))
+          return true;
+    }
+
+  return false;
+}
+```
+
+For the second, we require both to be member declarations, both to have
+some kind of dynamic pointer cast, and both of those to not be static. Then
+we call `type_size_changed` on the types of the pointers, 
+
+**if a data member is replaced by an anonymous data member**
+
+```cpp
+if (has_data_member_replaced_by_anon_dm(d))
+        category |= HARMLESS_DATA_MEMBER_CHANGE_CATEGORY;
+```
+
+And this is described well in the docstring:
+
+```cpp
+/// Test if a @ref class_or_union_diff has a data member replaced by
+/// an anonymous data member in a harmless way.  That means, the new
+/// anonymous data member somehow contains the replaced data member
+/// and it doesn't break the layout of the containing class.
+```
+
+**if the diff has an enumerator insertion, and it's not a harmful enum change OR has a harmless enum to int change**
+
+```cpp
+if ((has_enumerator_insertion(d)
+           && !has_harmful_enum_change(d))
+          || has_harmless_enum_to_int_change(d))
+        category |= HARMLESS_ENUM_CHANGE_CATEGORY;
+```
+
+For the first, a harmful enum change seems to be if it's removed or changed OR has a type size
+change:
+
+```cpp
+has_harmful_enum_change(const diff* diff)
+{
+  if (const enum_diff* d = dynamic_cast<const enum_diff*>(diff))
+    return (has_enumerator_removal_or_change(d)
+            || has_type_size_change(d));
+  return false;
+}
+```
+
+**if a function name changed but not the symbol**
+
+```cpp
+if (function_name_changed_but_not_symbol(d))
+        category |= HARMLESS_SYMBOL_ALIAS_CHANGE_CATEGORY;
+```
+
+Does that happen?
+
+```cpp
+/// Test if the current diff tree node carries a function name change,
+/// in which there there was no change in the name of the underlying
+/// symbol.  IOW, if the name of a function changed, but the symbol of
+/// the new function is equal to the symbol of the old one, or is
+/// equal to an alians of the symbol of the old function.
+
+```
+
+**if the function parameter diff has a top cv qualifier change on the type, return type, or variable type of the function parameter**
+
+```cpp
+      if (has_fn_parm_type_top_cv_qual_change(d))
+        category |= FN_PARM_TYPE_TOP_CV_CHANGE_CATEGORY;
+```
+
+This one has a lot of conditions for "bailing out" - e.g., if there isn't a diff or no changes.
+We then get the first and second parameter from the diff, get their types, and
+ensure they are both qualified (otherwise return false). I'm not sure I follow the rest - I don't
+know what a CV is or a peeled type.
+
+The rest of the checks are similar but for different attributes (e.g., return or variable)
+
+```cpp
+      if (has_fn_return_type_cv_qual_change(d))
+        category |= FN_RETURN_TYPE_CV_CHANGE_CATEGORY;
+
+      if (has_var_type_cv_qual_change(d))
+        category |= VAR_TYPE_CV_CHANGE_CATEGORY;
+```
+
+
+The second seems to consider that an enum changing to an integer is also okay, the
+function is [here](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L1249).
+
+**if it has a void pointer to pointer change**
+
+```cpp
+if (has_void_ptr_to_ptr_change(d))
+        category |= VOID_PTR_TO_PTR_CHANGE_CATEGORY;
+```
+or 
+
+**if it has a benign infinite array change**
+
+```cpp
+if (has_benign_infinite_array_change(d))
+        category |= BENIGN_INFINITE_ARRAY_CHANGE_CATEGORY;
+```
+
+
+And we can only make most of these assertions if it's being visited before it's children
+(the variable pre).
+
+## categorize_harmful_diff_node
+
+[This function](https://github.com/woodard/libabigail/blob/40aab37cf04214504804ae9fe7b6c7ff4fd1500f/src/abg-comp-filter.cc#L1687) returns true if the diff doesn't have changes, which means that
+the harmless function was non-conclusive but there aren't any changes. I guess both
+fuctions return true but don't do anything? Why don't they return false?
+
+This function also defaults to `NO_CHANGE_CATEGORY` but only if pre (if the children
+have not been visited) is true. A diff change is considered harmful if:
+
+**if there is a class or enum declaration change and a type size change**
+
+```cpp
+if (!has_class_decl_only_def_change(d)
+	  && !has_enum_decl_only_def_change(d)
+	  && (type_size_changed(f, s)
+	      || data_member_offset_changed(f, s)
+	      || non_static_data_member_type_size_changed(f, s)
+	      || non_static_data_member_added_or_removed(d)
+	      || base_classes_added_or_removed(d)
+	      || has_harmful_enum_change(d)))
+	category |= SIZE_OR_OFFSET_CHANGE_CATEGORY;
+```
+either meaning:
+
+- a data member offset change
+- a non static data member type size change
+- a non static data member added or removed
+- a base class added or removed
+- or a harmful enum change.
+
+
+or
+
+**if there is a virtual memory function changed**
+
+```cpp
+if (has_virtual_mem_fn_change(d))
+        category |= VIRTUAL_MEMBER_CHANGE_CATEGORY;
+
+```
+
+This seems like quite a smaller set.
+
 
 # Next Steps
 
