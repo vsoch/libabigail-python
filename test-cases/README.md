@@ -45,6 +45,30 @@ First build the container, which has both libabigail and gdb.
 $ docker build -t abigail .
 ```
 
+Then shell into the image, binding the present working directory.
+
+```bash
+$ docker run --rm -it -v $PWD/:/code abigail bash
+```
+
+Then you can navigate to an example (and run make if you haven't built the libraries
+yet)
+
+```bash
+cd examples/array_size_change/cpp
+```
+
+And for now, we can run abicompat.
+
+```bash
+$ # abicompat math-client libmath-v1.so  libmath-v2.so 
+root@01fec8283fad:/code/examples/array_size_change/cpp# echo $?
+0
+```
+
+Eventually we will have a whole suite of tests, and run each against abicompat
+and our custom tool.
+
 ## gdb
 
 Here are instructions from Matt that I'll use for gdb, when the time comes.
