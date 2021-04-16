@@ -1,0 +1,19 @@
+FROM ghcr.io/autamus/clingo:latest
+# docker build -f Dockerfile.clingo -t clingo .
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PATH=/opt/conda/bin:$PATH
+RUN apt-get update && apt-get install -y curl
+RUN /bin/bash -c "curl -L https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh > miniconda.sh && \
+    bash miniconda.sh -b -p /opt/conda && \
+    rm miniconda.sh"
+RUN /bin/bash -c "conda install -y -c conda-forge mamba && \
+    mamba create -q -y -c potassco -n clingo-env clingo && \
+    source activate clingo-env && \
+    conda clean --all -y && \
+    pip install pyelftools && \
+    conda install clingo ipython six"
+RUN echo "source activate clingo-env" > ~/.bashrc
+ENV PATH /opt/conda/envs/clingo-env/bin:${PATH}
+ENTRYPOINT /bin/bash
+WORKDIR /code
+ADD . /code
